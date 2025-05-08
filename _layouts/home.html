@@ -66,82 +66,100 @@
                 <p>Explore and filter through hundreds of crypto projects with our intuitive categorization system</p>
             </section>
 
-            <!-- Timeline Navigation (Timeframe) -->
-            <section class="timeline-nav">
-                <h2>Timeframe</h2>
-                <div class="timeline">
-                    <div class="timeline-item" data-year="2021">
-                        <span class="year">2021</span>
-                        <span class="dot"></span>
-                        <span class="count">27</span>
-                    </div>
-                    <div class="timeline-item" data-year="2022">
-                        <span class="year">2022</span>
-                        <span class="dot"></span>
-                        <span class="count">30</span>
-                    </div>
-                    <div class="timeline-item active" data-year="2023">
-                        <span class="year">2023</span>
-                        <span class="dot"></span>
-                        <span class="count">45</span>
-                    </div>
-                    <div class="timeline-item" data-year="2024">
-                        <span class="year">2024</span>
-                        <span class="dot"></span>
-                        <span class="count">127</span>
-                    </div>
-                    <div class="timeline-item" data-year="2025">
-                        <span class="year">2025</span>
-                        <span class="dot"></span>
-                        <span class="count">58</span>
-                    </div>
-                </div>
-            </section>
+            <div class="content-wrapper three-column">
+                <!-- Left Sidebar -->
+                <aside class="sidebar left-sidebar">
+                    <!-- Timeframe Filter -->
+                    <section class="filter-section">
+                        <h2>Timeframe</h2>
+                        <div class="filter-options">
+                            <label class="checkbox">
+                                <input type="checkbox" data-year="2021">
+                                <span class="checkmark"></span>
+                                <span>2021</span>
+                                <span class="count">27</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-year="2022">
+                                <span class="checkmark"></span>
+                                <span>2022</span>
+                                <span class="count">30</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-year="2023" checked>
+                                <span class="checkmark"></span>
+                                <span>2023</span>
+                                <span class="count">45</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-year="2024">
+                                <span class="checkmark"></span>
+                                <span>2024</span>
+                                <span class="count">127</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-year="2025">
+                                <span class="checkmark"></span>
+                                <span>2025</span>
+                                <span class="count">58</span>
+                            </label>
+                        </div>
+                    </section>
 
-            <!-- Function Navigation -->
-            <section class="function-nav">
-                <h2>Function</h2>
-                <div class="function-grid">
-                    <div class="function-item">
-                        <div class="icon"><i class="fas fa-layer-group"></i></div>
-                        <span>Scaling</span>
-                    </div>
-                    <div class="function-item active">
-                        <div class="icon"><i class="fas fa-chart-line"></i></div>
-                        <span>DeFi</span>
-                    </div>
-                    <div class="function-item">
-                        <div class="icon"><i class="fas fa-server"></i></div>
-                        <span>Infrastructure</span>
-                    </div>
-                    <div class="function-item">
-                        <div class="icon"><i class="fas fa-image"></i></div>
-                        <span>NFT</span>
-                    </div>
-                    <div class="function-item">
-                        <div class="icon"><i class="fas fa-users"></i></div>
-                        <span>Social</span>
-                    </div>
-                    <div class="function-item">
-                        <div class="icon"><i class="fas fa-gamepad"></i></div>
-                        <span>Gaming</span>
-                    </div>
-                    <div class="function-item">
-                        <div class="icon"><i class="fas fa-user-secret"></i></div>
-                        <span>Privacy</span>
-                    </div>
-                    <div class="function-item">
-                        <div class="icon"><i class="fas fa-database"></i></div>
-                        <span>Data</span>
-                    </div>
-                    <div class="function-item">
-                        <div class="icon"><i class="fas fa-brain"></i></div>
-                        <span>AI</span>
-                    </div>
-                </div>
-            </section>
+                    <!-- Function Filter -->
+                    <section class="filter-section">
+                        <h2>Function</h2>
+                        <div class="filter-options">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Scaling</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span>DeFi</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Infrastructure</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>NFT</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Social</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Gaming</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Privacy</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Data</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>AI</span>
+                            </label>
+                        </div>
+                    </section>
+                </aside>
 
-            <div class="content-wrapper">
+                <!-- Main Content -->
                 <div class="main-content">
                     <!-- Active Filters -->
                     <section class="active-filters">
@@ -204,7 +222,8 @@
                     </section>
                 </div>
 
-                <aside class="sidebar">
+                <!-- Right Sidebar -->
+                <aside class="sidebar right-sidebar">
                     <!-- Ecosystem Filter -->
                     <section class="filter-section ecosystem-filter">
                         <h2>Ecosystem</h2>
