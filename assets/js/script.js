@@ -237,4 +237,44 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Mobile Filter Toggle
+    const mobileFilterToggle = document.querySelector('.mobile-filter-toggle');
+    const leftSidebar = document.querySelector('.left-sidebar');
+    const rightSidebar = document.querySelector('.right-sidebar');
+    let activeSidebar = null;
+
+    mobileFilterToggle.addEventListener('click', () => {
+        if (activeSidebar) {
+            activeSidebar.classList.remove('active');
+            activeSidebar = null;
+        } else {
+            leftSidebar.classList.add('active');
+            activeSidebar = leftSidebar;
+        }
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', (e) => {
+        if (activeSidebar && !e.target.closest('.sidebar') && !e.target.closest('.mobile-filter-toggle')) {
+            activeSidebar.classList.remove('active');
+            activeSidebar = null;
+        }
+    });
+
+    // Toggle between left and right sidebar on mobile
+    document.querySelectorAll('.filter-section').forEach(section => {
+        section.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992) {
+                const sidebar = e.target.closest('.sidebar');
+                if (sidebar && sidebar !== activeSidebar) {
+                    if (activeSidebar) {
+                        activeSidebar.classList.remove('active');
+                    }
+                    sidebar.classList.add('active');
+                    activeSidebar = sidebar;
+                }
+            }
+        });
+    });
 });
