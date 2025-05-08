@@ -115,12 +115,75 @@ function filterProjects(projects, filters) {
     });
 }
 
+// Blockchain Stack Selection
+function initBlockchainStack() {
+    const stackLayers = document.querySelectorAll('.stack-layer');
+    const stackBtns = document.querySelectorAll('.stack-btn');
+    let selectedLayers = new Set();
+
+    // Handle individual layer clicks
+    stackLayers.forEach(layer => {
+        const layerBox = layer.querySelector('.layer-box');
+        layerBox.addEventListener('click', () => {
+            const layerType = layer.dataset.layer;
+            if (selectedLayers.has(layerType)) {
+                selectedLayers.delete(layerType);
+                layer.dataset.selected = 'false';
+            } else {
+                selectedLayers.add(layerType);
+                layer.dataset.selected = 'true';
+            }
+            updateStackSelection();
+        });
+    });
+
+    // Handle selection mode buttons
+    stackBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const selection = btn.dataset.selection;
+            stackBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Clear previous selections
+            selectedLayers.clear();
+            stackLayers.forEach(layer => layer.dataset.selected = 'false');
+
+            // Apply new selection
+            switch (selection) {
+                case 'single':
+                    // Select only Layer 2 by default
+                    selectedLayers.add('layer-2');
+                    document.querySelector('[data-layer="layer-2"]').dataset.selected = 'true';
+                    break;
+                case 'double':
+                    // Select Layer 1 and Layer 2
+                    selectedLayers.add('layer-1');
+                    selectedLayers.add('layer-2');
+                    document.querySelector('[data-layer="layer-1"]').dataset.selected = 'true';
+                    document.querySelector('[data-layer="layer-2"]').dataset.selected = 'true';
+                    break;
+                case 'all':
+                    // Select all layers
+                    stackLayers.forEach(layer => {
+                        selectedLayers.add(layer.dataset.layer);
+                        layer.dataset.selected = 'true';
+                    });
+                    break;
+            }
+        });
+    });
+
+    // Initialize with single layer selection
+    document.querySelector('[data-selection="single"]').click();
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     const projects = getProjects();
     updateProjectCards(projects);
     updateTimelineCounts(projects);
     updateFunctionCounts(projects);
+    initBlockchainStack();
 
     // Timeline navigation
     const timelineItems = document.querySelectorAll('.timeline-item');
