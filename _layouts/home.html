@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Airdrop Archive - Modern UI Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <script>
+        // Inject Jekyll data
+        window.siteData = {
+            posts: [
+                {% for post in site.posts %}
+                {
+                    title: "{{ post.title }}",
+                    date: "{{ post.date }}",
+                    timeframe: {{ post.timeframe | jsonify }},
+                    ecosystem: {{ post.ecosystem | jsonify }},
+                    distribution: {{ post.distribution | jsonify }},
+                    function: {{ post.function | jsonify }},
+                    status: {{ post.status | jsonify }},
+                    blockchain_stack: {{ post.blockchain-stack | jsonify }},
+                    blockchain_type: {{ post.blockchain-type | jsonify }},
+                    description: "{{ post.description | strip_html | strip_newlines | escape }}"
+                }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ]
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
+                <span>Crypto Airdrop Archive</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}" class="active">HOME</a></li>
+                    <li><a href="{{ '/learn' | relative_url }}">LEARN</a></li>
+                    <li><a href="{{ '/timeline' | relative_url }}">TIMELINE</a></li>
+                    <li><a href="{{ '/hall-of-fame' | relative_url }}">HALL OF FAME</a></li>
+                    <li><a href="{{ '/about' | relative_url }}">ABOUT</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Discover Cryptocurrency Projects</h1>
+                <p>Explore and filter through hundreds of crypto projects with our intuitive categorization system</p>
+            </section>
+
+            <!-- Timeline Navigation (Timeframe) -->
+            <section class="timeline-nav">
+                <h2>Timeframe</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-year="2021">
+                        <span class="year">2021</span>
+                        <span class="dot"></span>
+                        <span class="count">27</span>
+                    </div>
+                    <div class="timeline-item" data-year="2022">
+                        <span class="year">2022</span>
+                        <span class="dot"></span>
+                        <span class="count">30</span>
+                    </div>
+                    <div class="timeline-item active" data-year="2023">
+                        <span class="year">2023</span>
+                        <span class="dot"></span>
+                        <span class="count">45</span>
+                    </div>
+                    <div class="timeline-item" data-year="2024">
+                        <span class="year">2024</span>
+                        <span class="dot"></span>
+                        <span class="count">127</span>
+                    </div>
+                    <div class="timeline-item" data-year="2025">
+                        <span class="year">2025</span>
+                        <span class="dot"></span>
+                        <span class="count">58</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Function Navigation -->
+            <section class="function-nav">
+                <h2>Function</h2>
+                <div class="function-grid">
+                    <div class="function-item">
+                        <div class="icon"><i class="fas fa-layer-group"></i></div>
+                        <span>Scaling</span>
+                    </div>
+                    <div class="function-item active">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <span>DeFi</span>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon"><i class="fas fa-server"></i></div>
+                        <span>Infrastructure</span>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon"><i class="fas fa-image"></i></div>
+                        <span>NFT</span>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <span>Social</span>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon"><i class="fas fa-gamepad"></i></div>
+                        <span>Gaming</span>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon"><i class="fas fa-user-secret"></i></div>
+                        <span>Privacy</span>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon"><i class="fas fa-database"></i></div>
+                        <span>Data</span>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon"><i class="fas fa-brain"></i></div>
+                        <span>AI</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-wrapper">
+                <div class="main-content">
+                    <!-- Active Filters -->
+                    <section class="active-filters">
+                        <h2>Active Filters</h2>
+                        <div class="filter-tags">
+                            <div class="filter-tag" data-category="timeframe">
+                                <span>2023</span>
+                                <button><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="filter-tag" data-category="function">
+                                <span>DeFi</span>
+                                <button><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="filter-tag" data-category="distribution">
+                                <span>Retroactive</span>
+                                <button><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="filter-tag" data-category="status">
+                                <span>Alive</span>
+                                <button><i class="fas fa-times"></i></button>
+                            </div>
+                            <button class="clear-all">Clear All</button>
+                        </div>
+                    </section>
+
+                    <!-- Projects Grid -->
+                    <section class="projects-grid">
+                        <h2>Projects <span class="project-count">(0)</span></h2>
+                        <div class="grid">
+                            <!-- Loading state -->
+                            <div class="project-card loading">
+                                <div class="card-header">
+                                    <h3>Loading...</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Loading project information...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Empty state (hidden by default) -->
+                        <div class="empty-state" style="display: none;">
+                            <i class="fas fa-folder-open"></i>
+                            <h3>No Projects Found</h3>
+                            <p>Try adjusting your filters to see more results</p>
+                        </div>
+                        <!-- Error state (hidden by default) -->
+                        <div class="error-state" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <h3>Error Loading Projects</h3>
+                            <p>Please try refreshing the page</p>
+                        </div>
+                        <div class="pagination">
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <span>...</span>
+                            <button>5</button>
+                            <button class="next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="sidebar">
+                    <!-- Ecosystem Filter -->
+                    <section class="filter-section ecosystem-filter">
+                        <h2>Ecosystem</h2>
+                        <div class="ecosystem-grid">
+                            <div class="ecosystem-item active">
+                                <img src="{{ '/assets/images/ecosystem_icons/ethereum.svg' | relative_url }}" alt="Ethereum">
+                                <span>Ethereum</span>
+                            </div>
+                            <div class="ecosystem-item">
+                                <img src="{{ '/assets/images/ecosystem_icons/solana.svg' | relative_url }}" alt="Solana">
+                                <span>Solana</span>
+                            </div>
+                            <div class="ecosystem-item">
+                                <img src="{{ '/assets/images/ecosystem_icons/polkadot.svg' | relative_url }}" alt="Polkadot">
+                                <span>Polkadot</span>
+                            </div>
+                            <div class="ecosystem-item">
+                                <img src="{{ '/assets/images/ecosystem_icons/cosmos.svg' | relative_url }}" alt="Cosmos">
+                                <span>Cosmos</span>
+                            </div>
+                            <div class="ecosystem-item">
+                                <img src="{{ '/assets/images/ecosystem_icons/avalanche.svg' | relative_url }}" alt="Avalanche">
+                                <span>Avalanche</span>
+                            </div>
+                            <div class="ecosystem-item">
+                                <img src="{{ '/assets/images/ecosystem_icons/sui.svg' | relative_url }}" alt="Sui">
+                                <span>Sui</span>
+                            </div>
+                            <div class="ecosystem-item">
+                                <img src="{{ '/assets/images/ecosystem_icons/aptos.svg' | relative_url }}" alt="Aptos">
+                                <span>Aptos</span>
+                            </div>
+                            <div class="ecosystem-item">
+                                <img src="{{ '/assets/images/ecosystem_icons/more.svg' | relative_url }}" alt="More">
+                                <span>More</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Distribution Filter -->
+                    <section class="filter-section">
+                        <h2>Distribution</h2>
+                        <div class="filter-options">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span>Retroactive</span>
+                                <span class="count">272</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Testnet</span>
+                                <span class="count">34</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Holder</span>
+                                <span class="count">32</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Free</span>
+                                <span class="count">8</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Staking</span>
+                                <span class="count">6</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- Status Filter -->
+                    <section class="filter-section">
+                        <h2>Status</h2>
+                        <div class="status-toggles">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="slider alive"></span>
+                                <span>Alive</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span class="slider dead"></span>
+                                <span>Dead</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span class="slider upcoming"></span>
+                                <span>Upcoming</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- Advanced Filters (Collapsible) -->
+                    <section class="filter-section advanced-filters">
+                        <div class="section-header collapsible">
+                            <h2>Advanced Filters</h2>
+                            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="collapsible-content">
+                            <!-- Blockchain Stack -->
+                            <div class="stack-filter">
+                                <h3>Blockchain Stack</h3>
+                                <div class="stack-visualization">
+                                    <div class="stack-layer" data-layer="layer-3">
+                                        <span>Layer 3</span>
+                                        <div class="layer-box"></div>
+                                    </div>
+                                    <div class="stack-layer" data-layer="layer-2">
+                                        <span>Layer 2</span>
+                                        <div class="layer-box active"></div>
+                                    </div>
+                                    <div class="stack-layer" data-layer="layer-1">
+                                        <span>Layer 1</span>
+                                        <div class="layer-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blockchain Type -->
+                            <div class="type-filter">
+                                <h3>Blockchain Type</h3>
+                                <div class="filter-options">
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        <span>Rollup</span>
+                                        <i class="fas fa-info-circle tooltip" title="A scaling solution that executes transactions off-chain and posts transaction data on-chain"></i>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <span>Sidechain</span>
+                                        <i class="fas fa-info-circle tooltip" title="A separate blockchain that runs parallel to the main blockchain"></i>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <span>Plasma</span>
+                                        <i class="fas fa-info-circle tooltip" title="A framework for building scalable applications on Ethereum"></i>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <span>State Channel</span>
+                                        <i class="fas fa-info-circle tooltip" title="Allows participants to conduct transactions off-chain"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Trending Tags -->
+                    <section class="trending-tags">
+                        <h2>Trending Tags</h2>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag-item large">retroactive</a>
+                            <a href="#" class="tag-item medium">2k24</a>
+                            <a href="#" class="tag-item small">2k23</a>
+                            <a href="#" class="tag-item medium">testnet</a>
+                            <a href="#" class="tag-item small">holder</a>
+                            <a href="#" class="tag-item small">2k22</a>
+                            <a href="#" class="tag-item small">2k21</a>
+                            <a href="#" class="tag-item medium">nft</a>
+                            <a href="#" class="tag-item small">defi</a>
+                            <a href="#" class="tag-item small">staking</a>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
+                    <p>Navigating the History of Crypto Skies</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                            <li><a href="{{ '/learn' | relative_url }}">Learn</a></li>
+                            <li><a href="{{ '/timeline' | relative_url }}">Timeline</a></li>
+                            <li><a href="{{ '/hall-of-fame' | relative_url }}">Hall of Fame</a></li>
+                            <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="{{ '/learn/basics' | relative_url }}">Airdrop Basics</a></li>
+                            <li><a href="{{ '/learn/terminology' | relative_url }}">Terminology</a></li>
+                            <li><a href="{{ '/learn/hunting' | relative_url }}">How to Hunt Airdrops</a></li>
+                            <li><a href="{{ '/learn/essential' | relative_url }}">Essential Knowledge</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                            <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Crypto Airdrop Archive. Some rights reserved.</p>
+                <p>Using the <a href="#">Jekyll</a> theme <a href="#">Chirpy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+</html>
