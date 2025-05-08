@@ -459,25 +459,17 @@ main {
 .grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
 }
 
 @media (max-width: 1200px) {
-    .main-content {
-        position: static;
-        left: unset;
-        right: unset;
-        width: 100vw;
-        padding: var(--main-padding) 0.5rem;
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 900px) {
-    .main-content {
-        width: 100vw;
-        padding: 1rem 0.25rem;
-    }
+@media (max-width: 700px) {
     .grid {
         grid-template-columns: 1fr;
     }
