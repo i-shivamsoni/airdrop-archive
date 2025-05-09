@@ -1,7 +1,17 @@
 // Data handling for Jekyll
 function getProjects() {
     // Jekyll will inject this data
-    return window.siteData.posts || [];
+    const allPosts = window.siteData.posts || [];
+    console.log('All posts:', allPosts); // Debug log
+    
+    // Filter only projects and log the result
+    const projects = allPosts.filter(post => {
+        console.log('Post:', post); // Debug log for each post
+        return post.pagetype === "project";
+    });
+    console.log('Filtered projects:', projects); // Debug log
+    
+    return projects;
 }
 
 function parseFrontMatter(content) {
@@ -27,9 +37,32 @@ function parseFrontMatter(content) {
     return metadata;
 }
 
-function updateProjectCards(projects) {
+// Store the current filtered projects globally
+let currentFilteredProjects = [];
+
+function updateProjectCards(projects, page = 1) {
+    // Store the filtered projects globally
+    currentFilteredProjects = projects;
+    
     const grid = document.querySelector('.grid');
     const projectCount = document.querySelector('.project-count');
+    const itemsPerPage = 12;
+    
+    // Ensure we have valid projects array
+    if (!Array.isArray(projects)) {
+        projects = [];
+    }
+    
+    // Calculate total pages, ensuring at least 1 page
+    const totalPages = Math.max(1, Math.ceil(projects.length / itemsPerPage));
+    
+    // Ensure page number is valid
+    page = Math.min(Math.max(1, page), totalPages);
+    
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, projects.length);
+    const paginatedProjects = projects.slice(startIndex, endIndex);
+    
     grid.innerHTML = '';
     
     if (projects.length === 0) {
@@ -41,10 +74,194 @@ function updateProjectCards(projects) {
     document.querySelector('.empty-state').style.display = 'none';
     projectCount.textContent = `(${projects.length})`;
 
-    projects.forEach(project => {
+    paginatedProjects.forEach(project => {
         const card = createProjectCard(project);
         grid.appendChild(card);
     });
+
+    // Update pagination
+    updatePagination(totalPages, page);
+}
+
+function updatePagination(totalPages, currentPage) {
+    const pagination = document.querySelector('.pagination');
+    pagination.innerHTML = '';
+
+    // Don't show pagination if there's only one page
+    if (totalPages <= 1) {
+        return;
+    }
+
+    // Previous button
+    const prevButton = document.createElement('button');
+    prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+    prevButton.disabled = currentPage === 1;
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            updateProjectCards(currentFilteredProjects, currentPage - 1);
+        }
+    });
+    pagination.appendChild(prevButton);
+
+    // Page numbers
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    if (endPage - startPage + 1 < maxVisiblePages) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    if (startPage > 1) {
+        const firstPage = document.createElement('button');
+        firstPage.textContent = '1';
+        firstPage.addEventListener('click', () => {
+            updateProjectCards(currentFilteredProjects, 1);
+        });
+        pagination.appendChild(firstPage);
+
+        if (startPage > 2) {
+            const ellipsis = document.createElement('span');
+            ellipsis.textContent = '...';
+            pagination.appendChild(ellipsis);
+        }
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.textContent = i;
+        if (i === currentPage) {
+            pageButton.classList.add('active');
+        }
+        pageButton.addEventListener('click', () => {
+            updateProjectCards(currentFilteredProjects, i);
+        });
+        pagination.appendChild(pageButton);
+    }
+
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+            const ellipsis = document.createElement('span');
+            ellipsis.textContent = '...';
+            pagination.appendChild(ellipsis);
+        }
+        const lastPage = document.createElement('button');
+        lastPage.textContent = totalPages;
+        lastPage.addEventListener('click', () => {
+            updateProjectCards(currentFilteredProjects, totalPages);
+        });
+        pagination.appendChild(lastPage);
+    }
+
+    // Add page input field
+    const pageInputContainer = document.createElement('div');
+    pageInputContainer.className = 'page-input-container';
+    
+    const pageInput = document.createElement('input');
+    pageInput.type = 'number';
+    pageInput.min = '1';
+    pageInput.max = totalPages;
+    pageInput.value = currentPage;
+    pageInput.className = 'page-input';
+    pageInput.placeholder = 'Page';
+    
+    const goButton = document.createElement('button');
+    goButton.textContent = 'Go';
+    goButton.className = 'go-button';
+    
+    const handlePageJump = () => {
+        const pageNum = parseInt(pageInput.value);
+        if (pageNum >= 1 && pageNum <= totalPages) {
+            updateProjectCards(currentFilteredProjects, pageNum);
+        } else {
+            pageInput.value = currentPage;
+        }
+    };
+    
+    pageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            handlePageJump();
+        }
+    });
+    
+    goButton.addEventListener('click', handlePageJump);
+    
+    pageInputContainer.appendChild(pageInput);
+    pageInputContainer.appendChild(goButton);
+    pagination.appendChild(pageInputContainer);
+
+    // Next button
+    const nextButton = document.createElement('button');
+    nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            updateProjectCards(currentFilteredProjects, currentPage + 1);
+        }
+    });
+    pagination.appendChild(nextButton);
+}
+
+// Helper function to get currently filtered projects
+function getFilteredProjects() {
+    const projects = getProjects();
+    const filters = getActiveFilters();
+    return filterProjects(projects, filters);
+}
+
+// Helper function to get active filters
+function getActiveFilters() {
+    const filters = {
+        timeframe: [],
+        function: [],
+        status: [],
+        ecosystem: [],
+        distribution: []
+    };
+
+    // Get timeframe filters
+    document.querySelectorAll('.filter-options input[type="checkbox"]:checked').forEach(checkbox => {
+        if (checkbox.dataset.year) {
+            filters.timeframe.push(checkbox.dataset.year);
+        }
+    });
+
+    // Get function filters
+    document.querySelectorAll('.function-item.active').forEach(item => {
+        filters.function.push(item.querySelector('span').textContent);
+    });
+
+    // Get status filters
+    document.querySelectorAll('.status-toggles input[type="checkbox"]:checked').forEach(checkbox => {
+        const status = checkbox.nextElementSibling.nextElementSibling.textContent.toLowerCase();
+        filters.status.push(status);
+    });
+
+    // Get ecosystem filters
+    document.querySelectorAll('.ecosystem-item.active').forEach(item => {
+        filters.ecosystem.push(item.querySelector('span').textContent);
+    });
+
+    // Get distribution filters
+    document.querySelectorAll('.filter-options input[type="checkbox"]:checked').forEach(checkbox => {
+        const distribution = checkbox.nextElementSibling.nextElementSibling.textContent;
+        if (['Retroactive', 'Testnet', 'Holder', 'Free', 'Staking'].includes(distribution)) {
+            filters.distribution.push(distribution);
+        }
+    });
+
+    return filters;
+}
+
+function formatDate(dateString) {
+    // Handle different date formats
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) {
+        // If date is invalid, return the original string
+        return dateString;
+    }
+    // Format as YYYY-MM-DD
+    return date.toISOString().split('T')[0];
 }
 
 function createProjectCard(project) {
@@ -60,7 +277,7 @@ function createProjectCard(project) {
             <p>${project.description || 'No description available'}</p>
         </div>
         <div class="card-meta">
-            <div class="date">${project.date}</div>
+            <div class="date">${formatDate(project.date)}</div>
         </div>
         <div class="card-tags">
             ${project.function.map(f => `<span class="tag function">${f}</span>`).join('')}
@@ -105,6 +322,20 @@ function updateFunctionCounts(projects) {
 // Filter functions
 function filterProjects(projects, filters) {
     return projects.filter(project => {
+        // Timeframe filter
+        if (filters.timeframe && filters.timeframe.length > 0) {
+            const projectYear = new Date(project.date).getFullYear();
+            const isBefore2020 = projectYear < 2020;
+            const is2020 = projectYear === 2020;
+            
+            if (!filters.timeframe.some(year => {
+                if (year === 'before2020') return isBefore2020;
+                if (year === '2020') return is2020;
+                return projectYear === parseInt(year);
+            })) {
+                return false;
+            }
+        }
         return Object.entries(filters).every(([key, value]) => {
             if (!value) return true;
             if (Array.isArray(project[key])) {
@@ -180,10 +411,19 @@ function initBlockchainStack() {
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     const projects = getProjects();
-    updateProjectCards(projects);
+    console.log('Initial projects:', projects); // Debug log
+    currentFilteredProjects = projects; // Initialize with all projects
+    updateProjectCards(projects, 1);
     updateTimelineCounts(projects);
     updateFunctionCounts(projects);
     initBlockchainStack();
+
+    // Update all filter event listeners to use the new pagination
+    const updateFilters = () => {
+        const filteredProjects = getFilteredProjects();
+        currentFilteredProjects = filteredProjects; // Update the global filtered projects
+        updateProjectCards(filteredProjects, 1);
+    };
 
     // Timeline navigation
     const timelineItems = document.querySelectorAll('.timeline-item');
@@ -191,10 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             timelineItems.forEach(i => i.classList.remove('active'));
             this.classList.add('active');
-            
-            const year = this.dataset.year;
-            const filteredProjects = filterProjects(projects, { timeframe: [year] });
-            updateProjectCards(filteredProjects);
+            updateFilters();
         });
     });
 
@@ -204,31 +441,78 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             functionItems.forEach(i => i.classList.remove('active'));
             this.classList.add('active');
-            
-            const functionName = this.querySelector('span').textContent;
-            const filteredProjects = filterProjects(projects, { function: [functionName] });
-            updateProjectCards(filteredProjects);
+            updateFilters();
         });
     });
 
     // Search functionality
     const searchInput = document.querySelector('.search-bar input');
     searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-        const filteredProjects = projects.filter(project => 
-            project.title.toLowerCase().includes(searchTerm) ||
-            (project.description && project.description.toLowerCase().includes(searchTerm))
-        );
-        updateProjectCards(filteredProjects);
+        updateFilters();
     });
 
     // Clear all filters
     const clearAllBtn = document.querySelector('.clear-all');
     clearAllBtn.addEventListener('click', function() {
+        // Clear filter tags
         document.querySelectorAll('.filter-tag').forEach(tag => {
             tag.remove();
         });
-        updateProjectCards(projects);
+
+        // Reset all checkboxes in timeframe filter
+        document.querySelectorAll('.filter-options input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Reset function items
+        document.querySelectorAll('.function-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Reset ecosystem items
+        document.querySelectorAll('.ecosystem-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Reset timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Reset status toggles
+        document.querySelectorAll('.status-toggles input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Reset search input
+        document.querySelector('.search-bar input').value = '';
+
+        // Reset blockchain stack
+        document.querySelectorAll('.stack-layer').forEach(layer => {
+            layer.dataset.selected = 'false';
+        });
+        document.querySelectorAll('.layer-box').forEach(box => {
+            box.classList.remove('active');
+        });
+
+        // Reset distribution checkboxes
+        document.querySelectorAll('.filter-section:has(h2:contains("Distribution")) input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Reset blockchain type checkboxes
+        document.querySelectorAll('.type-filter input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Show all projects
+        currentFilteredProjects = projects;
+        updateProjectCards(projects, 1);
+
+        // Update active filters section
+        const activeFilters = document.querySelector('.active-filters');
+        const filterTags = activeFilters.querySelector('.filter-tags');
+        filterTags.innerHTML = '<button class="clear-all">Clear All</button>';
     });
 
     // Ecosystem navigation
