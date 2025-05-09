@@ -408,21 +408,111 @@ function initBlockchainStack() {
     document.querySelector('[data-selection="single"]').click();
 }
 
+// Helper function to save filter states to localStorage
+function saveFilterStates() {
+    const filterStates = {
+        timeframe: Array.from(document.querySelectorAll('.filter-options input[type="checkbox"][data-year]:checked')).map(cb => cb.dataset.year),
+        function: Array.from(document.querySelectorAll('.function-item.active')).map(item => item.querySelector('span').textContent),
+        status: Array.from(document.querySelectorAll('.status-toggles input[type="checkbox"]:checked')).map(cb => cb.nextElementSibling.nextElementSibling.textContent.toLowerCase()),
+        ecosystem: Array.from(document.querySelectorAll('.ecosystem-item.active')).map(item => item.querySelector('span').textContent),
+        distribution: Array.from(document.querySelectorAll('.filter-section:has(h2:contains("Distribution")) input[type="checkbox"]:checked')).map(cb => cb.nextElementSibling.nextElementSibling.textContent),
+        blockchain_stack: Array.from(document.querySelectorAll('.stack-layer[data-selected="true"]')).map(layer => layer.dataset.layer),
+        blockchain_type: Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]:checked')).map(cb => cb.nextElementSibling.nextElementSibling.textContent)
+    };
+    localStorage.setItem('filterStates', JSON.stringify(filterStates));
+}
+
+// Helper function to restore filter states from localStorage
+function restoreFilterStates() {
+    const savedStates = localStorage.getItem('filterStates');
+    if (!savedStates) return;
+
+    const filterStates = JSON.parse(savedStates);
+
+    // Restore timeframe filters
+    filterStates.timeframe.forEach(year => {
+        const checkbox = document.querySelector(`.filter-options input[type="checkbox"][data-year="${year}"]`);
+        if (checkbox) checkbox.checked = true;
+    });
+
+    // Restore function filters
+    filterStates.function.forEach(func => {
+        const item = Array.from(document.querySelectorAll('.function-item')).find(item => 
+            item.querySelector('span').textContent === func
+        );
+        if (item) item.classList.add('active');
+    });
+
+    // Restore status filters
+    filterStates.status.forEach(status => {
+        const checkbox = Array.from(document.querySelectorAll('.status-toggles input[type="checkbox"]')).find(cb => 
+            cb.nextElementSibling.nextElementSibling.textContent.toLowerCase() === status
+        );
+        if (checkbox) checkbox.checked = true;
+    });
+
+    // Restore ecosystem filters
+    filterStates.ecosystem.forEach(eco => {
+        const item = Array.from(document.querySelectorAll('.ecosystem-item')).find(item => 
+            item.querySelector('span').textContent === eco
+        );
+        if (item) item.classList.add('active');
+    });
+
+    // Restore distribution filters
+    filterStates.distribution.forEach(dist => {
+        const checkbox = Array.from(document.querySelectorAll('.filter-section:has(h2:contains("Distribution")) input[type="checkbox"]')).find(cb => 
+            cb.nextElementSibling.nextElementSibling.textContent === dist
+        );
+        if (checkbox) checkbox.checked = true;
+    });
+
+    // Restore blockchain stack filters
+    filterStates.blockchain_stack.forEach(layer => {
+        const layerElement = document.querySelector(`.stack-layer[data-layer="${layer}"]`);
+        if (layerElement) layerElement.dataset.selected = 'true';
+    });
+
+    // Restore blockchain type filters
+    filterStates.blockchain_type.forEach(type => {
+        const checkbox = Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]')).find(cb => 
+            cb.nextElementSibling.nextElementSibling.textContent === type
+        );
+        if (checkbox) checkbox.checked = true;
+    });
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     const projects = getProjects();
     console.log('Initial projects:', projects); // Debug log
-    currentFilteredProjects = projects; // Initialize with all projects
+    
+    // Initialize with all projects first
+    currentFilteredProjects = projects;
     updateProjectCards(projects, 1);
     updateTimelineCounts(projects);
     updateFunctionCounts(projects);
     initBlockchainStack();
-
-    // Update all filter event listeners to use the new pagination
-    const updateFilters = () => {
-        const filteredProjects = getFilteredProjects();
-        currentFilteredProjects = filteredProjects; // Update the global filtered projects
+    
+    // Then restore saved filter states if they exist
+    const savedStates = localStorage.getItem('filterStates');
+    if (savedStates) {
+        restoreFilterStates();
+        const filters = getActiveFilters();
+        const filteredProjects = filterProjects(projects, filters);
+        currentFilteredProjects = filteredProjects;
         updateProjectCards(filteredProjects, 1);
+        updateActiveFilters(filters);
+    }
+
+    // Update all filter event listeners to use the new pagination and save states
+    const updateFilters = () => {
+        const filters = getActiveFilters();
+        const filteredProjects = filterProjects(projects, filters);
+        currentFilteredProjects = filteredProjects;
+        updateProjectCards(filteredProjects, 1);
+        updateActiveFilters(filters);
+        saveFilterStates();
     };
 
     // Timeline navigation
@@ -445,11 +535,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Status toggle event listeners
+    document.querySelectorAll('.status-toggles input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', updateFilters);
+    });
+
+    // Distribution checkbox event listeners
+    document.querySelectorAll('.filter-section:has(h2:contains("Distribution")) input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', updateFilters);
+    });
+
     // Search functionality
     const searchInput = document.querySelector('.search-bar input');
-    searchInput.addEventListener('input', function() {
-        updateFilters();
-    });
+    searchInput.addEventListener('input', updateFilters);
 
     // Clear all filters
     const clearAllBtn = document.querySelector('.clear-all');
@@ -513,6 +611,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const activeFilters = document.querySelector('.active-filters');
         const filterTags = activeFilters.querySelector('.filter-tags');
         filterTags.innerHTML = '<button class="clear-all">Clear All</button>';
+
+        // Clear saved filter states
+        localStorage.removeItem('filterStates');
     });
 
     // Ecosystem navigation
