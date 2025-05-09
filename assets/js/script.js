@@ -2,14 +2,9 @@
 function getProjects() {
     // Jekyll will inject this data
     const allPosts = window.siteData.posts || [];
-    console.log('All posts:', allPosts); // Debug log
     
-    // Filter only projects and log the result
-    const projects = allPosts.filter(post => {
-        console.log('Post:', post); // Debug log for each post
-        return post.pagetype === "project";
-    });
-    console.log('Filtered projects:', projects); // Debug log
+    // Filter only projects
+    const projects = allPosts.filter(post => post.pagetype === "project");
     
     return projects;
 }
@@ -235,10 +230,7 @@ function getActiveFilters() {
     });
 
     // Get status filters
-    document.querySelectorAll('.status-toggles input[type="checkbox"]:checked').forEach(checkbox => {
-        const status = checkbox.nextElementSibling.nextElementSibling.textContent.toLowerCase();
-        filters.status.push(status);
-    });
+    filters.status = getStatusFilters();
 
     // Get ecosystem filters
     document.querySelectorAll('.ecosystem-item.active').forEach(item => {
@@ -378,7 +370,13 @@ function filterProjects(projects, filters) {
             if (!project.status || !Array.isArray(project.status) || project.status.length === 0) {
                 return false;
             }
-            if (!project.status.some(s => filters.status.includes(s.toLowerCase()))) {
+            const hasMatchingStatus = project.status.some(s => {
+                const projectStatusLower = s.toLowerCase();
+                return filters.status.some(filterStatus => 
+                    filterStatus.toLowerCase() === projectStatusLower
+                );
+            });
+            if (!hasMatchingStatus) {
                 return false;
             }
         }
@@ -542,11 +540,10 @@ function restoreFunctionFilters(functions) {
 }
 
 function restoreStatusFilters(statuses) {
-    statuses.forEach(status => {
-        const checkbox = Array.from(document.querySelectorAll('.status-toggles input[type="checkbox"]')).find(cb => 
-            cb.nextElementSibling.nextElementSibling.textContent.toLowerCase() === status
-        );
-        if (checkbox) checkbox.checked = true;
+    const statusCheckboxes = document.querySelectorAll('.status-toggles input[type="checkbox"]');
+    statusCheckboxes.forEach(checkbox => {
+        const status = checkbox.nextElementSibling.nextElementSibling.textContent.toLowerCase();
+        checkbox.checked = statuses.includes(status);
     });
 }
 
@@ -792,35 +789,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add filter change listeners
     addFilterChangeListeners();
     
+    // Initialize status filters
+    const statusCheckboxes = document.querySelectorAll('.status-toggles input[type="checkbox"]');
+    statusCheckboxes.forEach(checkbox => {
+        checkbox.checked = true;
+    });
+    
     // Restore saved filter states if they exist
     const savedStates = localStorage.getItem('filterStates');
-    console.log('Checking for saved states:', savedStates);
     
     if (savedStates) {
         try {
             const filterStates = JSON.parse(savedStates);
-            console.log('Parsed saved states:', filterStates);
             
             if (validateFilterState(filterStates)) {
-                console.log('Valid filter state detected, restoring...');
-        restoreFilterStates();
+                restoreFilterStates();
+                const filters = getActiveFilters();
+                const filteredProjects = filterProjects(projects, filters);
+                currentFilteredProjects = filteredProjects;
+                updateProjectCards(filteredProjects, 1);
+                updateActiveFilters(filters);
+            } else {
+                handleFilterStateError();
+            }
+        } catch (error) {
+            handleFilterStateError();
+        }
+    } else {
+        // Apply initial filters with all statuses checked
         const filters = getActiveFilters();
-                console.log('Active filters after restoration:', filters);
-                
         const filteredProjects = filterProjects(projects, filters);
         currentFilteredProjects = filteredProjects;
         updateProjectCards(filteredProjects, 1);
         updateActiveFilters(filters);
-            } else {
-                console.warn('Invalid saved filter state detected');
-                handleFilterStateError();
-            }
-        } catch (error) {
-            console.error('Error restoring filter states:', error);
-            handleFilterStateError();
-        }
-    } else {
-        console.log('No saved states found, starting fresh');
     }
 
     // Timeline navigation

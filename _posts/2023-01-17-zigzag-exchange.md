@@ -6,7 +6,7 @@ timeframe: ["not-known"]
 ecosystem: ["zksync-ecosystem"]
 distribution: ["retroactive"]
 function: ["defi", "dex"]
-status: ["alive"]
+status: ["dead"]
 pagetype: "project"
 ---
 

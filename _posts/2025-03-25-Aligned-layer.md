@@ -3,7 +3,7 @@ layout: "post"
 title: "zkSync"
 date: "2024-06-17"
 timeframe: ["not-known"]
-ecosystem: ["ethereum"]
+ecosystem: ["ethereum-ecosystem"]
 distribution: ["holder", "retroactive", "testnet"]
 function: ["scaling", "ethereum"]
 status: ["alive"]

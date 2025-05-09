@@ -6,7 +6,7 @@ timeframe: ["2k22"]
 ecosystem: ["not-known"]
 distribution: ["retroactive"]
 function: ["defi", "rwa", "yield"]
-status: ["alive"]
+status: ["dead"]
 pagetype: "project"
 ---
 

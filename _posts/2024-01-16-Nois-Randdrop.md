@@ -6,7 +6,7 @@ timeframe: ["2k23"]
 ecosystem: ["osmosis-ecosystem"]
 distribution: ["staking"]
 function: ["staking", "infrastructure", "randomness"]
-status: ["alive"]
+status: ["dead"]
 pagetype: "project"
 ---
 
