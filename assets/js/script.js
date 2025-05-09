@@ -482,6 +482,157 @@ function restoreFilterStates() {
     });
 }
 
+function updateActiveFilters(filters) {
+    const activeFilters = document.querySelector('.active-filters');
+    const filterTags = activeFilters.querySelector('.filter-tags');
+    filterTags.innerHTML = '<button class="clear-all">Clear All</button>';
+
+    // Add timeframe filters
+    if (filters.timeframe && filters.timeframe.length > 0) {
+        filters.timeframe.forEach(year => {
+            const tag = document.createElement('div');
+            tag.className = 'filter-tag';
+            tag.innerHTML = `
+                <span>Timeframe: ${year === 'before2020' ? 'Before 2020' : year}</span>
+                <button><i class="fas fa-times"></i></button>
+            `;
+            filterTags.appendChild(tag);
+        });
+    }
+
+    // Add function filters
+    if (filters.function && filters.function.length > 0) {
+        filters.function.forEach(func => {
+            const tag = document.createElement('div');
+            tag.className = 'filter-tag';
+            tag.innerHTML = `
+                <span>Function: ${func}</span>
+                <button><i class="fas fa-times"></i></button>
+            `;
+            filterTags.appendChild(tag);
+        });
+    }
+
+    // Add status filters
+    if (filters.status && filters.status.length > 0) {
+        filters.status.forEach(status => {
+            const tag = document.createElement('div');
+            tag.className = 'filter-tag';
+            tag.innerHTML = `
+                <span>Status: ${status.charAt(0).toUpperCase() + status.slice(1)}</span>
+                <button><i class="fas fa-times"></i></button>
+            `;
+            filterTags.appendChild(tag);
+        });
+    }
+
+    // Add ecosystem filters
+    if (filters.ecosystem && filters.ecosystem.length > 0) {
+        filters.ecosystem.forEach(eco => {
+            const tag = document.createElement('div');
+            tag.className = 'filter-tag';
+            tag.innerHTML = `
+                <span>Ecosystem: ${eco}</span>
+                <button><i class="fas fa-times"></i></button>
+            `;
+            filterTags.appendChild(tag);
+        });
+    }
+
+    // Add distribution filters
+    if (filters.distribution && filters.distribution.length > 0) {
+        filters.distribution.forEach(dist => {
+            const tag = document.createElement('div');
+            tag.className = 'filter-tag';
+            tag.innerHTML = `
+                <span>Distribution: ${dist}</span>
+                <button><i class="fas fa-times"></i></button>
+            `;
+            filterTags.appendChild(tag);
+        });
+    }
+
+    // Add blockchain stack filters
+    if (filters.blockchain_stack && filters.blockchain_stack.length > 0) {
+        filters.blockchain_stack.forEach(stack => {
+            const tag = document.createElement('div');
+            tag.className = 'filter-tag';
+            tag.innerHTML = `
+                <span>Stack: ${stack}</span>
+                <button><i class="fas fa-times"></i></button>
+            `;
+            filterTags.appendChild(tag);
+        });
+    }
+
+    // Add blockchain type filters
+    if (filters.blockchain_type && filters.blockchain_type.length > 0) {
+        filters.blockchain_type.forEach(type => {
+            const tag = document.createElement('div');
+            tag.className = 'filter-tag';
+            tag.innerHTML = `
+                <span>Type: ${type}</span>
+                <button><i class="fas fa-times"></i></button>
+            `;
+            filterTags.appendChild(tag);
+        });
+    }
+
+    // Add event listeners to remove buttons
+    filterTags.querySelectorAll('.filter-tag button').forEach(button => {
+        button.addEventListener('click', function() {
+            const tag = this.parentElement;
+            const filterType = tag.querySelector('span').textContent.split(':')[0].trim().toLowerCase();
+            const filterValue = tag.querySelector('span').textContent.split(':')[1].trim();
+            
+            // Remove the filter
+            switch(filterType) {
+                case 'timeframe':
+                    const yearCheckbox = document.querySelector(`.filter-options input[type="checkbox"][data-year="${filterValue === 'Before 2020' ? 'before2020' : filterValue}"]`);
+                    if (yearCheckbox) yearCheckbox.checked = false;
+                    break;
+                case 'function':
+                    const funcItem = Array.from(document.querySelectorAll('.function-item')).find(item => 
+                        item.querySelector('span').textContent === filterValue
+                    );
+                    if (funcItem) funcItem.classList.remove('active');
+                    break;
+                case 'status':
+                    const statusCheckbox = Array.from(document.querySelectorAll('.status-toggles input[type="checkbox"]')).find(cb => 
+                        cb.nextElementSibling.nextElementSibling.textContent.toLowerCase() === filterValue.toLowerCase()
+                    );
+                    if (statusCheckbox) statusCheckbox.checked = false;
+                    break;
+                case 'ecosystem':
+                    const ecoItem = Array.from(document.querySelectorAll('.ecosystem-item')).find(item => 
+                        item.querySelector('span').textContent === filterValue
+                    );
+                    if (ecoItem) ecoItem.classList.remove('active');
+                    break;
+                case 'distribution':
+                    const distCheckbox = Array.from(document.querySelectorAll('.filter-section:has(h2:contains("Distribution")) input[type="checkbox"]')).find(cb => 
+                        cb.nextElementSibling.nextElementSibling.textContent === filterValue
+                    );
+                    if (distCheckbox) distCheckbox.checked = false;
+                    break;
+                case 'stack':
+                    const stackLayer = document.querySelector(`.stack-layer[data-layer="${filterValue}"]`);
+                    if (stackLayer) stackLayer.dataset.selected = 'false';
+                    break;
+                case 'type':
+                    const typeCheckbox = Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]')).find(cb => 
+                        cb.nextElementSibling.nextElementSibling.textContent === filterValue
+                    );
+                    if (typeCheckbox) typeCheckbox.checked = false;
+                    break;
+            }
+            
+            tag.remove();
+            updateFilters();
+        });
+    });
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     const projects = getProjects();
@@ -512,7 +663,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentFilteredProjects = filteredProjects;
         updateProjectCards(filteredProjects, 1);
         updateActiveFilters(filters);
-        saveFilterStates();
+        saveFilterStates(); // Save filter states after each update
     };
 
     // Timeline navigation
