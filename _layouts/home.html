@@ -119,83 +119,6 @@
                         </div>
                     </section>
 
-                    <!-- Function Filter -->
-                    <section class="filter-section">
-                        <h2>Categories</h2>
-                        <div class="filter-options">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Scaling</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>DeFi</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Infrastructure</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>NFT</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Social</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Gaming</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Privacy</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Data</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>AI</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Utilities</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Other</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>MEME</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>RWA</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Stablecoin</span>
-                            </label>
-                        </div>
-                    </section>
-
                     <!-- Status Filter -->
                     <section class="filter-section">
                         <h2>Status</h2>
@@ -215,6 +138,115 @@
                                 <span class="slider upcoming"></span>
                                 <span>Upcoming</span>
                             </label>
+                        </div>
+                    </section>
+
+                    <!-- Function Filter -->
+                    <section class="filter-section categories-filter">
+                        <h2>Categories</h2>
+                        <div class="categories-container">
+                            <div class="category-group">
+                                <button class="category-header" data-group="core">
+                                    <span>Core</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="category-items" id="core-items">
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="defi">
+                                        <span class="checkmark"></span>
+                                        <span>DeFi</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="nft">
+                                        <span class="checkmark"></span>
+                                        <span>NFT</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="gaming">
+                                        <span class="checkmark"></span>
+                                        <span>Gaming</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="social">
+                                        <span class="checkmark"></span>
+                                        <span>Social</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="category-group">
+                                <button class="category-header" data-group="infrastructure">
+                                    <span>Infrastructure</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="category-items" id="infrastructure-items">
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="scaling">
+                                        <span class="checkmark"></span>
+                                        <span>Scaling</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="infrastructure">
+                                        <span class="checkmark"></span>
+                                        <span>Infrastructure</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="utilities">
+                                        <span class="checkmark"></span>
+                                        <span>Utilities</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="category-group">
+                                <button class="category-header" data-group="technology">
+                                    <span>Technology</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="category-items" id="technology-items">
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="ai">
+                                        <span class="checkmark"></span>
+                                        <span>AI</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="privacy">
+                                        <span class="checkmark"></span>
+                                        <span>Privacy</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="data">
+                                        <span class="checkmark"></span>
+                                        <span>Data</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="category-group">
+                                <button class="category-header" data-group="assets">
+                                    <span>Assets</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="category-items" id="assets-items">
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="stablecoin">
+                                        <span class="checkmark"></span>
+                                        <span>Stablecoin</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="rwa">
+                                        <span class="checkmark"></span>
+                                        <span>RWA</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="meme">
+                                        <span class="checkmark"></span>
+                                        <span>MEME</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" data-category="other">
+                                        <span class="checkmark"></span>
+                                        <span>Other</span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </aside>
