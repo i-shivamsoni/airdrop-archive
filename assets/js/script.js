@@ -236,9 +236,7 @@ function getActiveFilters() {
     });
 
     // Get categories filters
-    document.querySelectorAll('.function-item.active').forEach(item => {
-        filters.categories.push(item.querySelector('span').textContent);
-    });
+    filters.categories = getCategoryFilters();
 
     // Get status filters
     filters.status = getStatusFilters();
@@ -390,7 +388,11 @@ function filterProjects(projects, filters) {
             if (!project.function || !Array.isArray(project.function) || project.function.length === 0) {
                 return false;
             }
-            if (!project.function.some(f => filters.categories.includes(f))) {
+            if (!project.function.some(f => 
+                filters.categories.some(cat => 
+                    cat.toLowerCase() === f.toLowerCase()
+                )
+            )) {
                 return false;
             }
         }
@@ -1100,6 +1102,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Add category change listeners
+    addCategoryChangeListeners();
 });
 
 function updateActiveFilters(filters) {
@@ -1265,4 +1270,21 @@ function updateStackSelection() {
     currentFilteredProjects = filteredProjects;
     updateProjectCards(filteredProjects, 1);
     updateActiveFilters(filters);
+}
+
+// Get categories filters
+function getCategoryFilters() {
+    return Array.from(document.querySelectorAll('.category-item input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.dataset.category);
+}
+
+// Add category checkbox event listeners
+function addCategoryChangeListeners() {
+    document.querySelectorAll('.category-item input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            console.log('Category filter changed:', checkbox.dataset.category, checkbox.checked);
+            debouncedSaveFilterStates();
+            updateFilters();
+        });
+    });
 }
