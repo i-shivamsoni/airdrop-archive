@@ -5,6 +5,7 @@ date: "2023-09-15"
 timeframe: ["2k23"]
 ecosystem: ["base-ecosystem"]
 rewardedActivity: ["holder"]
+category: [""]
 function: ["yield-farming", "defi", "liquidity"]
 status: ["alive"]
 pagetype: "project"

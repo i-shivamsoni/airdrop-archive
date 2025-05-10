@@ -5,6 +5,7 @@ date: "2025-01-27"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["defi", "protocol", "governance", "btcfi"]
 status: ["alive"]
 pagetype: "project"

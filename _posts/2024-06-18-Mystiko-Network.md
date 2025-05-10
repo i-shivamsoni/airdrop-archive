@@ -5,6 +5,7 @@ date: "2024-06-18"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["not-known"]
+category: [""]
 function: ["development", "privacy", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

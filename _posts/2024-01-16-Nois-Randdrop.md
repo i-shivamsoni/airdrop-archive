@@ -5,6 +5,7 @@ date: "2023-12-21"
 timeframe: ["2k23"]
 ecosystem: ["osmosis-ecosystem"]
 rewardedActivity: ["staking"]
+category: [""]
 function: ["staking", "infrastructure", "randomness"]
 status: ["dead"]
 pagetype: "project"

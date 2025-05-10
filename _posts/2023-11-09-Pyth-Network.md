@@ -5,6 +5,7 @@ date: "2023-11-20"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder", "retroactive"]
+category: [""]
 function: ["oracle", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

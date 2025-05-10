@@ -5,6 +5,7 @@ date: "2024-06-19"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["gaming"]
 status: ["alive"]
 pagetype: "project"

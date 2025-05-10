@@ -5,6 +5,7 @@ date: "2024-07-26 04:33 +0530"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["dao", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

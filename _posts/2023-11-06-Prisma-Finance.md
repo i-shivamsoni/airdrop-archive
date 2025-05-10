@@ -5,6 +5,7 @@ date: "2023-11-04"
 timeframe: ["not-known"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder", "retroactive"]
+category: [""]
 function: ["defi", "stablecoin", "yield"]
 status: ["alive"]
 pagetype: "project"

@@ -5,6 +5,7 @@ date: "2024-01-27"
 timeframe: ["2k23"]
 ecosystem: ["solana-ecosystem"]
 rewardedActivity: ["not-known"]
+category: [""]
 function: ["charity", "social"]
 status: ["alive"]
 pagetype: "project"

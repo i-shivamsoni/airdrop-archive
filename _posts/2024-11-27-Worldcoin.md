@@ -5,6 +5,7 @@ date: "2024-11-27"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["identity", "infrastructure", "finance"]
 status: ["alive"]
 pagetype: "project"

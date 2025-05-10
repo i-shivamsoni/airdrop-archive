@@ -5,6 +5,7 @@ date: "2023-07-25"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["defi", "lending"]
 status: ["alive"]
 pagetype: "project"

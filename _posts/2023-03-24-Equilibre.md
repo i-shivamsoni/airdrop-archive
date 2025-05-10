@@ -5,6 +5,7 @@ date: "2023-03-24"
 timeframe: ["2k23"]
 ecosystem: ["kava-ecosystem"]
 rewardedActivity: ["testnet"]
+category: [""]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"

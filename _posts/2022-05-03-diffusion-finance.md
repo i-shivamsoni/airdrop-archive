@@ -5,6 +5,7 @@ date: "2022-05-03 04:22 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder", "staking"]
+category: [""]
 function: ["defi", "dex", "staking"]
 status: ["alive"]
 pagetype: "project"

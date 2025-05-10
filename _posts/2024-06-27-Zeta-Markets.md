@@ -5,6 +5,7 @@ date: "2024-06-27"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["defi", "trading", "dex"]
 status: ["alive"]
 pagetype: "project"

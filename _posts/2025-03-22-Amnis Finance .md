@@ -5,6 +5,7 @@ date: "2025-03-22"
 timeframe: ["2k25"]
 ecosystem: ["aptos-ecosystem"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["staking"]
 status: ["alive"]
 pagetype: "project"

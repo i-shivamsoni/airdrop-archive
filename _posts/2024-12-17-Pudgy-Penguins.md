@@ -5,6 +5,7 @@ date: "2024-12-17"
 timeframe: ["2k24"]
 ecosystem: ["solana-ecosystem"]
 rewardedActivity: ["retroactive", "nft"]
+category: [""]
 function: ["nft", "collection", "meme"]
 status: ["alive"]
 pagetype: "project"

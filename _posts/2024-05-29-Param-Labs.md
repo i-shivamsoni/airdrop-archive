@@ -5,6 +5,7 @@ date: "2024-05-29"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["gaming", "interoperability", "blockchain"]
 status: ["alive"]
 pagetype: "project"

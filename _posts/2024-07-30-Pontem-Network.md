@@ -5,6 +5,7 @@ date: "2024-07-30"
 timeframe: ["2k24"]
 ecosystem: ["aptos-ecosystem"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["dex"]
 status: ["alive"]
 pagetype: "project"

@@ -5,6 +5,7 @@ date: "2025-03-19"
 timeframe: ["2k25"]
 ecosystem: ["ethereum-ecosystem"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"

@@ -5,6 +5,7 @@ date: "2024-03-19"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive", "testnet"]
+category: [""]
 function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"

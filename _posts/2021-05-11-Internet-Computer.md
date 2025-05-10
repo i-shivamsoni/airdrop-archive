@@ -5,6 +5,7 @@ date: "2021-05-11 03:21:08 +0530"
 timeframe: ["2k18"]
 ecosystem: ["not-known"]
 rewardedActivity: ["loyalty"]
+category: [""]
 function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"

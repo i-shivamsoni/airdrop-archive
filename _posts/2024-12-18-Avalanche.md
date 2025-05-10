@@ -5,6 +5,7 @@ date: "2024-12-18"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"

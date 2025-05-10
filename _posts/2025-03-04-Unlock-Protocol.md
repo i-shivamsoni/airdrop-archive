@@ -5,6 +5,7 @@ date: "2025-03-04 03:21:08 +0530"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["infrastructure", "access", "control"]
 status: ["alive"]
 pagetype: "project"

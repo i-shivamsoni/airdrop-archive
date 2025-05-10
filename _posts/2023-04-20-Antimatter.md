@@ -5,6 +5,7 @@ date: "2023-04-20"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["defi", "derivatives", "options"]
 status: ["alive"]
 pagetype: "project"

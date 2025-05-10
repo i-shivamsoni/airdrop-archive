@@ -5,6 +5,7 @@ date: "2025-03-06"
 timeframe: ["2k25"]
 ecosystem: ["optimism", "ethereum"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["scaling", "ethereum"]
 status: ["alive"]
 pagetype: "project"

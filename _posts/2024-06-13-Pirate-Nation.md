@@ -5,6 +5,7 @@ date: "2024-06-13"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["free", "retroactive"]
+category: [""]
 function: ["gaming", "nft"]
 status: ["alive"]
 pagetype: "project"

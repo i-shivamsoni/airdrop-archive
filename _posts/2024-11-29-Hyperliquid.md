@@ -5,6 +5,7 @@ date: "2024-11-29"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["perpetuals", "defi"]
 status: ["alive"]
 pagetype: "project"

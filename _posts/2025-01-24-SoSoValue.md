@@ -5,6 +5,7 @@ date: "2025-01-24"
 timeframe: ["2k25"]
 ecosystem: ["ethereum-ecosystem", "base-ecosystem"]
 rewardedActivity: ["retroactive", "social"]
+category: [""]
 function: ["ai", "analytics", "social"]
 status: ["alive"]
 pagetype: "project"

@@ -5,6 +5,7 @@ date: "2025-03-13"
 timeframe: ["2k25"]
 ecosystem: ["btc-ecosystem"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["staking"]
 status: ["alive"]
 pagetype: "project"

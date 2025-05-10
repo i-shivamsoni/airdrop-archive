@@ -5,6 +5,7 @@ date: "2024-01-02"
 timeframe: ["not-known"]
 ecosystem: ["not-known"]
 rewardedActivity: ["nft", "holder", "retroactive"]
+category: [""]
 function: ["nft", "blockchain"]
 status: ["alive"]
 pagetype: "project"

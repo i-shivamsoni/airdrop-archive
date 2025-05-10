@@ -5,6 +5,7 @@ date: "2024-09-17"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["defi", "staking", "restaking"]
 status: ["alive"]
 pagetype: "project"

@@ -5,6 +5,7 @@ date: "2022-11-28 03:21:08 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["liquidity", "infrastructure", "cross-chain"]
 status: ["alive"]
 pagetype: "project"

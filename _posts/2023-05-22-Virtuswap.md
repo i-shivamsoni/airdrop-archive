@@ -5,6 +5,7 @@ date: "2023-05-22"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"

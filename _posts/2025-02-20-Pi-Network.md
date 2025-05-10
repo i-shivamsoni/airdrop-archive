@@ -5,6 +5,7 @@ date: "2025-02-20"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
 rewardedActivity: ["free", "mining"]
+category: [""]
 function: ["mining"]
 status: ["alive"]
 pagetype: "project"

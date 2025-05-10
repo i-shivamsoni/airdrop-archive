@@ -5,6 +5,7 @@ date: "2024-01-06"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet", "holder", "staking"]
+category: [""]
 function: ["infrastructure", "performance", "staking", "depin", "scaling"]
 status: ["alive"]
 pagetype: "project"

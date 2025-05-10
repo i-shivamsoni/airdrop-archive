@@ -5,6 +5,7 @@ date: "2024-05-20"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
+category: [""]
 function: ["defi", "options"]
 status: ["alive"]
 pagetype: "project"

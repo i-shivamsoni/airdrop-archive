@@ -5,6 +5,7 @@ date: "2024-12-05"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet"]
+category: [""]
 function: ["not-known"]
 status: ["alive"]
 pagetype: "project"

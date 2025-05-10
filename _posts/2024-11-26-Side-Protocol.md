@@ -5,6 +5,7 @@ date: "2024-11-26"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive", "holder", "nft"]
+category: [""]
 function: ["defi", "infrastructure", "nft", "tokenization"]
 status: ["alive"]
 pagetype: "project"

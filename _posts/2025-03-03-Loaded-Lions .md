@@ -5,6 +5,7 @@ date: "2025-03-03"
 timeframe: ["2k25"]
 ecosystem: ["solana-ecosystem"]
 rewardedActivity: ["retroactive", "nft"]
+category: [""]
 function: ["nft", "staking"]
 status: ["alive"]
 pagetype: "project"
