@@ -5,7 +5,7 @@ date: "2022-06-22 04:13 +0530"
 timeframe: ["2k22"]
 ecosystem: ["optimism-ecosystem"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"

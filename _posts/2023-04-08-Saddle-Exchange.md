@@ -5,7 +5,7 @@ date: "2023-04-08 03:21:08 +0530"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder", "retroactive"]
-category: [""]
+category: [stablecoin,defi]
 function: ["defi", "exchange", "stablecoin"]
 status: ["alive"]
 pagetype: "project"

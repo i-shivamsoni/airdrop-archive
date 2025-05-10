@@ -5,8 +5,8 @@ date: "2025-02-13"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet"]
-category: [""]
-function: ["not-known"]
+category: ["infrastructure"]
+function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]

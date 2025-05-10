@@ -5,7 +5,7 @@ date: "2025-01-15"
 timeframe: ["2k25"]
 ecosystem: ["solana-ecosystem"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["defi", "aggregator", "dex"]
 status: ["alive"]
 pagetype: "project"

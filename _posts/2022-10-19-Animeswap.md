@@ -5,7 +5,7 @@ date: "2022-10-19"
 timeframe: ["2k22"]
 ecosystem: ["aptos-ecosystem"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: ["defi"]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"

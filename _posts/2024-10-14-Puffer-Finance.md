@@ -5,7 +5,7 @@ date: "2024-10-14"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["defi", "restaking", "yield"]
 status: ["alive"]
 pagetype: "project"

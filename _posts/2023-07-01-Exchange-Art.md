@@ -5,7 +5,7 @@ date: "2024-07-29"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [nft]
 function: ["marketplace", "nft"]
 status: ["alive"]
 pagetype: "project"

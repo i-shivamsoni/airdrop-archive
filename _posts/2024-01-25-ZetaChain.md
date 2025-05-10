@@ -5,7 +5,7 @@ date: "2024-01-25"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: ["infrastructure"]
 function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"

@@ -5,7 +5,7 @@ date: "2024-11-27"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [privacy,defi,infrastructure]
 function: ["privacy", "infrastructure", "defi"]
 status: ["alive"]
 pagetype: "project"

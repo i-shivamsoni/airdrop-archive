@@ -5,7 +5,7 @@ date: "2024-12-13"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["defi", "aggregator", "dex"]
 status: ["alive"]
 pagetype: "project"

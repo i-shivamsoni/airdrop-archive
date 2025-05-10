@@ -5,7 +5,7 @@ date: "2023-11-27 03:21:08 +0530"
 timeframe: ["2k23"]
 ecosystem: ["zksync-ecosystem"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [infrastructure]
 function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"

@@ -5,7 +5,7 @@ date: "2024-06-17"
 timeframe: ["not-known"]
 ecosystem: ["ethereum-ecosystem"]
 rewardedActivity: ["holder", "retroactive", "testnet"]
-category: [""]
+category: [scaling]
 function: ["scaling", "ethereum"]
 status: ["alive"]
 pagetype: "project"

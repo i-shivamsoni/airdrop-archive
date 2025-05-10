@@ -5,7 +5,7 @@ date: "2023-02-23 04:15 +0530"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: ["infrastructure"]
 function: ["infrastructure", "community"]
 status: ["alive"]
 pagetype: "project"

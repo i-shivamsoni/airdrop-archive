@@ -220,7 +220,7 @@ function getFilteredProjects() {
 function getActiveFilters() {
     const filters = {
         timeframe: [],
-        function: [],
+        categories: [],
         status: [],
         ecosystem: [],
         rewardedActivity: [],
@@ -235,9 +235,9 @@ function getActiveFilters() {
         }
     });
 
-    // Get function filters
+    // Get categories filters
     document.querySelectorAll('.function-item.active').forEach(item => {
-        filters.function.push(item.querySelector('span').textContent);
+        filters.categories.push(item.querySelector('span').textContent);
     });
 
     // Get status filters
@@ -385,12 +385,12 @@ function filterProjects(projects, filters) {
             }
         }
 
-        // Function filter
-        if (filters.function && filters.function.length > 0) {
+        // Categories filter
+        if (filters.categories && filters.categories.length > 0) {
             if (!project.function || !Array.isArray(project.function) || project.function.length === 0) {
                 return false;
             }
-            if (!project.function.some(f => filters.function.includes(f))) {
+            if (!project.function.some(f => filters.categories.includes(f))) {
                 return false;
             }
         }
@@ -613,7 +613,7 @@ function restoreBlockchainTypeFilters(types) {
 
 // Validation function
 function validateFilterState(state) {
-    const requiredKeys = ['timeframe', 'function', 'status', 'ecosystem', 'rewardedActivity', 'blockchain_stack', 'blockchain_type'];
+    const requiredKeys = ['timeframe', 'categories', 'status', 'ecosystem', 'rewardedActivity', 'blockchain_stack', 'blockchain_type'];
     return requiredKeys.every(key => Array.isArray(state[key]));
 }
 
@@ -634,7 +634,7 @@ function debounce(func, wait) {
 function saveFilterStates() {
     const filterStates = {
         timeframe: getTimeframeFilters(),
-        function: getFunctionFilters(),
+        categories: getFunctionFilters(),
         status: getStatusFilters(),
         ecosystem: getEcosystemFilters(),
         rewardedActivity: getDistributionFilters(),
@@ -674,8 +674,8 @@ function restoreFilterStates() {
             console.log('Restoring timeframe filters:', filterStates.timeframe);
             restoreTimeframeFilters(filterStates.timeframe);
             
-            console.log('Restoring function filters:', filterStates.function);
-            restoreFunctionFilters(filterStates.function);
+            console.log('Restoring function filters:', filterStates.categories);
+            restoreFunctionFilters(filterStates.categories);
             
             console.log('Restoring status filters:', filterStates.status);
             restoreStatusFilters(filterStates.status);
@@ -894,7 +894,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset all filter states
         const filters = {
             timeframe: [],
-            function: [],
+            categories: [],
             status: [],
             ecosystem: [],
             rewardedActivity: [],
@@ -1099,13 +1099,13 @@ function updateActiveFilters(filters) {
         });
     }
 
-    // Add function filters
-    if (filters.function && filters.function.length > 0) {
-        filters.function.forEach(func => {
+    // Add categories filters
+    if (filters.categories && filters.categories.length > 0) {
+        filters.categories.forEach(cat => {
             const tag = document.createElement('div');
             tag.className = 'filter-tag';
             tag.innerHTML = `
-                <span>Function: ${func}</span>
+                <span>Categories: ${cat}</span>
                 <button><i class="fas fa-times"></i></button>
             `;
             filterTags.appendChild(tag);
@@ -1190,11 +1190,11 @@ function updateActiveFilters(filters) {
                     const yearCheckbox = document.querySelector(`.filter-options input[type="checkbox"][data-year="${filterValue === 'Before 2020' ? 'before2020' : filterValue}"]`);
                     if (yearCheckbox) yearCheckbox.checked = false;
                     break;
-                case 'function':
-                    const funcItem = Array.from(document.querySelectorAll('.function-item')).find(item => 
+                case 'categories':
+                    const catItem = Array.from(document.querySelectorAll('.function-item')).find(item => 
                         item.querySelector('span').textContent === filterValue
                     );
-                    if (funcItem) funcItem.classList.remove('active');
+                    if (catItem) catItem.classList.remove('active');
                     break;
                 case 'status':
                     const statusCheckbox = Array.from(document.querySelectorAll('.status-toggles input[type="checkbox"]')).find(cb => 

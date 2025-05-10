@@ -5,8 +5,8 @@ date: "2024-12-05"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet"]
-category: [""]
-function: ["not-known"]
+category: ["infrastructure"]
+function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]

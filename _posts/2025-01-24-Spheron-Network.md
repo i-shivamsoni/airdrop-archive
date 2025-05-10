@@ -5,7 +5,7 @@ date: "2025-01-24"
 timeframe: ["2k25"]
 ecosystem: ["stellar-ecosystem"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: ["ai"]
 function: ["ai"]
 status: ["alive"]
 pagetype: "project"

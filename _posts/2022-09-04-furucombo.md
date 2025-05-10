@@ -5,7 +5,7 @@ date: "2022-09-04 04:47 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: ["defi"]
 function: ["defi", "automation", "strategy"]
 status: ["alive"]
 pagetype: "project"

@@ -5,7 +5,7 @@ date: "2024-11-01"
 timeframe: ["2k24"]
 ecosystem: ["solana-ecosystem"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"

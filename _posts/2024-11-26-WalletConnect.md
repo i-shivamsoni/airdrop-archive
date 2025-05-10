@@ -5,7 +5,7 @@ date: "2024-11-27"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [infrastructure]
 function: ["infrastructure", "wallet", "protocol"]
 status: ["alive"]
 pagetype: "project"

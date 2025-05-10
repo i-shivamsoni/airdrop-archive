@@ -5,7 +5,7 @@ date: "2025-03-22"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["defi", "staking"]
 status: ["alive"]
 pagetype: "project"

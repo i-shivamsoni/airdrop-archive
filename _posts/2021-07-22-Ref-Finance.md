@@ -5,7 +5,7 @@ date: "2021-07-22 03:21:08 +0530"
 timeframe: ["2k21"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [stablecoin,defi]
 function: ["algorithmic", "defi", "stablecoin"]
 status: ["alive"]
 pagetype: "project"

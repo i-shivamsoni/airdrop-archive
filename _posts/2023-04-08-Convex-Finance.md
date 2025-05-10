@@ -5,7 +5,7 @@ date: "2023-04-08 03:21:08 +0530"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["defi", "optimizer", "yield"]
 status: ["alive"]
 pagetype: "project"

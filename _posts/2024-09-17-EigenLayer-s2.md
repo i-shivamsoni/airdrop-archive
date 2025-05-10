@@ -3,9 +3,9 @@ layout: "post"
 title: "EigenLayer Season 2"
 date: "2024-09-17"
 timeframe: ["2k24"]
-ecosystem: ["not-known"]
+ecosystem: ["ethereum"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: ["defi"]
 function: ["defi", "staking", "restaking"]
 status: ["alive"]
 pagetype: "project"

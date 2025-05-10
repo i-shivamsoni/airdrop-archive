@@ -5,7 +5,7 @@ date: "2025-01-23"
 timeframe: ["2k25"]
 ecosystem: ["ethereum-ecosystem", "arbitrum-ecosystem"]
 rewardedActivity: ["nft", "holder"]
-category: [""]
+category: [social,nft]
 function: ["community", "nft", "social"]
 status: ["alive"]
 pagetype: "project"

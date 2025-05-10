@@ -5,7 +5,7 @@ date: "2022-11-04 03:21:08 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["synthetics", "defi", "lending"]
 status: ["alive"]
 pagetype: "project"

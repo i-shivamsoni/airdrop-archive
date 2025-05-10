@@ -5,7 +5,7 @@ date: "2024-12-07"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [infrastructure,defi]
 function: ["payment-streaming", "defi", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

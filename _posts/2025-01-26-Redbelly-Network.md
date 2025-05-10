@@ -5,7 +5,7 @@ date: "2025-01-26"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet", "social"]
-category: [""]
+category: [social,infrastructure]
 function: ["infrastructure", "finance", "social"]
 status: ["alive"]
 pagetype: "project"

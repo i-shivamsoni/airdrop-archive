@@ -5,7 +5,7 @@ date: "2024-10-29"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [social]
 function: ["professional", "reputation", "social"]
 status: ["alive"]
 pagetype: "project"

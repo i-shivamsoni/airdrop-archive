@@ -5,7 +5,7 @@ date: "2025-03-11"
 timeframe: ["2k25"]
 ecosystem: ["bnb-ecosystem", "solana-ecosystem"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [data,infrastructure]
 function: ["infrastructure", "analytics", "data"]
 status: ["alive"]
 pagetype: "project"

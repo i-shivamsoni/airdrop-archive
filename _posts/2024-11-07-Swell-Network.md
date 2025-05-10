@@ -5,7 +5,7 @@ date: "2024-11-07"
 timeframe: ["2k24"]
 ecosystem: ["ethereum-ecosystem"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [scaling,defi]
 function: ["ethereum", "defi", "staking"]
 status: ["alive"]
 pagetype: "project"

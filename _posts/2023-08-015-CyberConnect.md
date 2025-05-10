@@ -5,7 +5,7 @@ date: "2023-08-15"
 timeframe: ["not-known"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder"]
-category: [""]
+category: ["infrastructure"]
 function: ["social"]
 status: ["alive"]
 pagetype: "project"

@@ -5,7 +5,7 @@ date: "2024-12-16"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [rwa,infrastructure]
 function: ["infrastructure", "real-assets", "tokenization"]
 status: ["alive"]
 pagetype: "project"

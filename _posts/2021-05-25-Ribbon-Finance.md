@@ -5,7 +5,7 @@ date: "2021-05-25 03:21:08 +0530"
 timeframe: ["2k21"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
-category: [""]
+category: [defi]
 function: ["defi", "options"]
 status: ["alive"]
 pagetype: "project"
