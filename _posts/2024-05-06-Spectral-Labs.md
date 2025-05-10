@@ -4,7 +4,7 @@ title: "Spectral Labs"
 date: "2024-05-06"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["visualization", "infrastructure", "analytics"]
 status: ["alive"]
 pagetype: "project"

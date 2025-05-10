@@ -4,7 +4,7 @@ title: "Pencil Protocol"
 date: "2024-09-27"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["marketplace", "art", "nft"]
 status: ["alive"]
 pagetype: "project"

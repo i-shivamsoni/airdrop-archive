@@ -4,7 +4,7 @@ title: "Zeta Markets"
 date: "2024-06-27"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "trading", "dex"]
 status: ["alive"]
 pagetype: "project"

@@ -4,7 +4,7 @@ title: "Reflexer finance"
 date: "2021-04-13 03:21:08 +0530"
 timeframe: ["2k21"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["algorithmic", "defi", "stablecoin"]
 status: ["alive"]
 pagetype: "project"

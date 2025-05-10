@@ -4,7 +4,7 @@ title: "Rage Trade"
 date: "2024-08-15"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["not-known"]
+rewardedActivity: ["not-known"]
 function: ["defi", "trading"]
 status: ["alive"]
 pagetype: "project"

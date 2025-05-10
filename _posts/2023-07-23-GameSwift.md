@@ -4,7 +4,7 @@ title: "GameSwift"
 date: "2023-07-23"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
-distribution: ["retroactive", "holders"]
+rewardedActivity: ["retroactive", "holders"]
 function: ["gaming", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

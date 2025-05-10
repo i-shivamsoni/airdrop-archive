@@ -4,7 +4,7 @@ title: "CollabLand"
 date: "2023-02-23 04:15 +0530"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["infrastructure", "community"]
 status: ["alive"]
 pagetype: "project"

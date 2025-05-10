@@ -4,7 +4,7 @@ title: "Hats finance"
 date: "2024-07-26 04:33 +0530"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["dao", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

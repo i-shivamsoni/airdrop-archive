@@ -4,7 +4,7 @@ title: "SwanChain"
 date: "2024-12-16"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["infrastructure", "real-assets", "tokenization"]
 status: ["alive"]
 pagetype: "project"

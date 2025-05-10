@@ -4,7 +4,7 @@ title: "BounceBit"
 date: "2024-05-13"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive", "testnet"]
+rewardedActivity: ["retroactive", "testnet"]
 function: ["defi", "token-distribution", "auctions"]
 status: ["alive"]
 pagetype: "project"

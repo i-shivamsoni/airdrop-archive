@@ -4,7 +4,7 @@ title: "Hyperliquid"
 date: "2024-11-29"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["perpetuals", "defi"]
 status: ["alive"]
 pagetype: "project"

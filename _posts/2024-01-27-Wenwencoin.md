@@ -4,7 +4,7 @@ title: "Wenwencoin"
 date: "2024-01-27"
 timeframe: ["2k23"]
 ecosystem: ["solana-ecosystem"]
-distribution: ["not-known"]
+rewardedActivity: ["not-known"]
 function: ["charity", "social"]
 status: ["alive"]
 pagetype: "project"

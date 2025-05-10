@@ -4,7 +4,7 @@ title: "CyberConnect"
 date: "2023-08-15"
 timeframe: ["not-known"]
 ecosystem: ["not-known"]
-distribution: ["holder"]
+rewardedActivity: ["holder"]
 function: ["social"]
 status: ["alive"]
 pagetype: "project"

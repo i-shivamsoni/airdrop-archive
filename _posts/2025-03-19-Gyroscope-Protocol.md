@@ -4,7 +4,7 @@ title: "Gyroscope Protocol"
 date: "2025-03-19"
 timeframe: ["2k25"]
 ecosystem: ["ethereum-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"

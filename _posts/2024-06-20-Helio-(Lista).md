@@ -4,7 +4,7 @@ title: "Helio (Lista)"
 date: "2024-06-22"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "aggregation", "yield"]
 status: ["alive"]
 pagetype: "project"

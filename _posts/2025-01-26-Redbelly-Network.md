@@ -4,7 +4,7 @@ title: "Redbelly Network"
 date: "2025-01-26"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["testnet", "social"]
+rewardedActivity: ["testnet", "social"]
 function: ["infrastructure", "finance", "social"]
 status: ["alive"]
 pagetype: "project"

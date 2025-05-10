@@ -4,7 +4,7 @@ title: "MON Protocol"
 date: "2024-05-25"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["gaming"]
 status: ["alive"]
 pagetype: "project"

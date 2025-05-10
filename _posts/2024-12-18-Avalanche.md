@@ -4,7 +4,7 @@ title: "Avalanche"
 date: "2024-12-18"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"

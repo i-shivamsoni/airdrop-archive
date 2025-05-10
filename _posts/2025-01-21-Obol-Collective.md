@@ -4,7 +4,7 @@ title: "Obol Collective"
 date: "2025-01-21"
 timeframe: ["2k25"]
 ecosystem: ["ethereum-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"

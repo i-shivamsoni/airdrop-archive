@@ -4,7 +4,7 @@ title: "Mocaverse"
 date: "2024-06-19"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["gaming", "blockchain", "metaverse"]
 status: ["alive"]
 pagetype: "project"

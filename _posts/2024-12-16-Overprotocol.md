@@ -4,7 +4,7 @@ title: "Overprotocol"
 date: "2024-12-16"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive", "testnet"]
+rewardedActivity: ["retroactive", "testnet"]
 function: ["interoperability", "privacy", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

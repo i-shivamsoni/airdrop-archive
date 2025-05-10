@@ -4,7 +4,7 @@ title: "LooksRare"
 date: "2022-01-11 03:21:08 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
-distribution: ["retroactive", "nft"]
+rewardedActivity: ["retroactive", "nft"]
 function: ["marketplace", "nft"]
 status: ["alive"]
 pagetype: "project"

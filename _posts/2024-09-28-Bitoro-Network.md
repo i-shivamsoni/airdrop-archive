@@ -4,7 +4,7 @@ title: "Bitoro Network"
 date: "2024-09-28"
 timeframe: ["2k24"]
 ecosystem: ["arbitrum-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"

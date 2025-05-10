@@ -4,7 +4,7 @@ title: "Exchange Art"
 date: "2024-07-29"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["marketplace", "nft"]
 status: ["alive"]
 pagetype: "project"

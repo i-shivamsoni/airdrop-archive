@@ -4,7 +4,7 @@ title: "Developer DAO"
 date: "2022-08-22 04:10 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["dao", "community", "social"]
 status: ["alive"]
 pagetype: "project"

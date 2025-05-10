@@ -4,7 +4,7 @@ title: "EtherMail"
 date: "2024-06-25"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["communication", "social"]
 status: ["alive"]
 pagetype: "project"

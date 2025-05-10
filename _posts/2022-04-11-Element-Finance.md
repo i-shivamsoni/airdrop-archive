@@ -4,7 +4,7 @@ title: "Element Finance"
 date: "2023-04-08 03:21:08 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "rwa", "yield"]
 status: ["dead"]
 pagetype: "project"

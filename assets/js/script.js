@@ -1,3 +1,14 @@
+// Error handling for Ethereum provider injection
+window.addEventListener('error', function(event) {
+    // Check if the error is related to Ethereum provider injection
+    if (event.message.includes('Cannot redefine property: ethereum') || 
+        event.message.includes('Cannot set property ethereum')) {
+        // Prevent the error from being logged to console
+        event.preventDefault();
+        return true;
+    }
+}, true);
+
 // Data handling for Jekyll
 function getProjects() {
     // Jekyll will inject this data
@@ -212,7 +223,7 @@ function getActiveFilters() {
         function: [],
         status: [],
         ecosystem: [],
-        distribution: [],
+        rewardedActivity: [],
         blockchain_stack: [],
         blockchain_type: []
     };
@@ -237,11 +248,11 @@ function getActiveFilters() {
         filters.ecosystem.push(item.querySelector('span').textContent);
     });
 
-    // Get distribution filters
+    // Get rewarded activity filters
     document.querySelectorAll('.distribution-filters input[type="checkbox"]:checked').forEach(checkbox => {
-        const distribution = checkbox.nextElementSibling.nextElementSibling.textContent;
-        if (['Retroactive', 'Testnet', 'Holder', 'Free', 'Staking'].includes(distribution)) {
-            filters.distribution.push(distribution);
+        const activity = checkbox.nextElementSibling.nextElementSibling.textContent;
+        if (['Retroactive', 'Testnet', 'Holder', 'Free', 'Staking'].includes(activity)) {
+            filters.rewardedActivity.push(activity);
         }
     });
 
@@ -286,7 +297,7 @@ function createProjectCard(project) {
         </div>
         <div class="card-tags">
             ${project.function.map(f => `<span class="tag function">${f}</span>`).join('')}
-            ${project.distribution.map(d => `<span class="tag distribution">${d}</span>`).join('')}
+            ${project.rewardedActivity.map(d => `<span class="tag distribution">${d}</span>`).join('')}
             ${project.blockchain_stack ? project.blockchain_stack.map(s => `<span class="tag blockchain-stack">${s}</span>`).join('') : ''}
             ${project.blockchain_type ? project.blockchain_type.map(t => `<span class="tag blockchain-type">${t}</span>`).join('') : ''}
         </div>
@@ -297,17 +308,36 @@ function createProjectCard(project) {
 
 function updateTimelineCounts(projects) {
     const yearCounts = {};
+    
+    // Initialize counts for all years
+    const years = ['before2020', '2020', '2021', '2022', '2023', '2024', '2025'];
+    years.forEach(year => {
+        yearCounts[year] = 0;
+    });
+
+    // Count projects for each year
     projects.forEach(project => {
-        if (project.timeframe && Array.isArray(project.timeframe) && project.timeframe.length > 0) {
-            const year = project.timeframe[0];
-            yearCounts[year] = (yearCounts[year] || 0) + 1;
+        if (project.date) {
+            const projectYear = new Date(project.date).getFullYear();
+            if (projectYear < 2020) {
+                yearCounts['before2020']++;
+            } else {
+                const yearStr = projectYear.toString();
+                if (yearCounts.hasOwnProperty(yearStr)) {
+                    yearCounts[yearStr]++;
+                }
+            }
         }
     });
 
-    document.querySelectorAll('.timeline-item').forEach(item => {
-        const year = item.dataset.year;
+    // Update the counts in the UI
+    document.querySelectorAll('.filter-options input[type="checkbox"][data-year]').forEach(checkbox => {
+        const year = checkbox.dataset.year;
         const count = yearCounts[year] || 0;
-        item.querySelector('.count').textContent = count;
+        const countElement = checkbox.parentElement.querySelector('.count');
+        if (countElement) {
+            countElement.textContent = count;
+        }
     });
 }
 
@@ -391,12 +421,12 @@ function filterProjects(projects, filters) {
             }
         }
 
-        // Distribution filter
-        if (filters.distribution && filters.distribution.length > 0) {
-            if (!project.distribution || !Array.isArray(project.distribution) || project.distribution.length === 0) {
+        // Rewarded Activity filter
+        if (filters.rewardedActivity && filters.rewardedActivity.length > 0) {
+            if (!project.rewardedActivity || !Array.isArray(project.rewardedActivity) || project.rewardedActivity.length === 0) {
                 return false;
             }
-            if (!project.distribution.some(d => filters.distribution.includes(d))) {
+            if (!project.rewardedActivity.some(d => filters.rewardedActivity.includes(d))) {
                 return false;
             }
         }
@@ -583,7 +613,7 @@ function restoreBlockchainTypeFilters(types) {
 
 // Validation function
 function validateFilterState(state) {
-    const requiredKeys = ['timeframe', 'function', 'status', 'ecosystem', 'distribution', 'blockchain_stack', 'blockchain_type'];
+    const requiredKeys = ['timeframe', 'function', 'status', 'ecosystem', 'rewardedActivity', 'blockchain_stack', 'blockchain_type'];
     return requiredKeys.every(key => Array.isArray(state[key]));
 }
 
@@ -607,7 +637,7 @@ function saveFilterStates() {
         function: getFunctionFilters(),
         status: getStatusFilters(),
         ecosystem: getEcosystemFilters(),
-        distribution: getDistributionFilters(),
+        rewardedActivity: getDistributionFilters(),
         blockchain_stack: getBlockchainStackFilters(),
         blockchain_type: getBlockchainTypeFilters()
     };
@@ -653,8 +683,8 @@ function restoreFilterStates() {
             console.log('Restoring ecosystem filters:', filterStates.ecosystem);
             restoreEcosystemFilters(filterStates.ecosystem);
             
-            console.log('Restoring distribution filters:', filterStates.distribution);
-            restoreDistributionFilters(filterStates.distribution);
+            console.log('Restoring distribution filters:', filterStates.rewardedActivity);
+            restoreDistributionFilters(filterStates.rewardedActivity);
             
             console.log('Restoring blockchain stack filters:', filterStates.blockchain_stack);
             restoreBlockchainStackFilters(filterStates.blockchain_stack);
@@ -861,10 +891,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear all filters
     const clearAllBtn = document.querySelector('.clear-all');
     clearAllBtn.addEventListener('click', function() {
+        // Reset all filter states
+        const filters = {
+            timeframe: [],
+            function: [],
+            status: [],
+            ecosystem: [],
+            rewardedActivity: [],
+            blockchain_stack: [],
+            blockchain_type: []
+        };
+
         // Clear filter tags
-        document.querySelectorAll('.filter-tag').forEach(tag => {
-            tag.remove();
-        });
+        const filterTags = document.querySelector('.filter-tags');
+        filterTags.innerHTML = '<button class="clear-all">Clear All</button>';
 
         // Reset all checkboxes in timeframe filter
         document.querySelectorAll('.filter-options input[type="checkbox"]').forEach(checkbox => {
@@ -909,20 +949,25 @@ document.addEventListener('DOMContentLoaded', function() {
             checkbox.checked = false;
         });
 
-        // Show all projects
-        currentFilteredProjects = projects;
-        updateProjectCards(projects, 1);
-
-        // Update active filters section
-        const activeFilters = document.querySelector('.active-filters');
-        const filterTags = activeFilters.querySelector('.filter-tags');
-        filterTags.innerHTML = '<button class="clear-all">Clear All</button>';
-
         // Clear saved filter states
         localStorage.removeItem('filterStates');
-        
+
+        // Reset current filtered projects to all projects
+        currentFilteredProjects = projects;
+
+        // Force update the project cards with all projects
+        updateProjectCards(projects, 1);
+
+        // Update active filters with empty state
+        updateActiveFilters(filters);
+
         // Show notification
         showNotification('All filters have been cleared');
+
+        // Force a complete filter update
+        const filteredProjects = filterProjects(projects, filters);
+        currentFilteredProjects = filteredProjects;
+        updateProjectCards(filteredProjects, 1);
     });
 
     // Ecosystem navigation
@@ -1094,12 +1139,12 @@ function updateActiveFilters(filters) {
     }
 
     // Add distribution filters
-    if (filters.distribution && filters.distribution.length > 0) {
-        filters.distribution.forEach(dist => {
+    if (filters.rewardedActivity && filters.rewardedActivity.length > 0) {
+        filters.rewardedActivity.forEach(dist => {
             const tag = document.createElement('div');
             tag.className = 'filter-tag';
             tag.innerHTML = `
-                <span>Distribution: ${dist}</span>
+                <span>Rewarded Activity: ${dist}</span>
                 <button><i class="fas fa-times"></i></button>
             `;
             filterTags.appendChild(tag);
@@ -1163,7 +1208,7 @@ function updateActiveFilters(filters) {
                     );
                     if (ecoItem) ecoItem.classList.remove('active');
                     break;
-                case 'distribution':
+                case 'rewarded activity':
                     const distCheckbox = Array.from(document.querySelectorAll('.distribution-filters input[type="checkbox"]')).find(cb => 
                         cb.nextElementSibling.nextElementSibling.textContent === filterValue
                     );

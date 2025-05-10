@@ -4,7 +4,7 @@ title: "Mystiko Network"
 date: "2024-06-18"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["not-known"]
+rewardedActivity: ["not-known"]
 function: ["development", "privacy", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

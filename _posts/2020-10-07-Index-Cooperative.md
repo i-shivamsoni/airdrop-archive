@@ -4,7 +4,7 @@ title: "Index Cooperative"
 date: "2020-10-07 04:57 +0530"
 timeframe: ["2k20"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["tokens", "defi", "index"]
 status: ["alive"]
 pagetype: "project"

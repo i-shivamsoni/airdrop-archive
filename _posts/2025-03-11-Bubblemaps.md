@@ -4,7 +4,7 @@ title: "Bubblemaps"
 date: "2025-03-11"
 timeframe: ["2k25"]
 ecosystem: ["bnb-ecosystem", "solana-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["infrastructure", "analytics", "data"]
 status: ["alive"]
 pagetype: "project"

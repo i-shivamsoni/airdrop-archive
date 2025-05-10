@@ -4,7 +4,7 @@ title: "Bera Chain"
 date: "2025-02-10 03:21:08 +0530"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["testnet", "holder"]
+rewardedActivity: ["testnet", "holder"]
 function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"

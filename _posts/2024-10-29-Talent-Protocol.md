@@ -4,7 +4,7 @@ title: "Talent Protocol"
 date: "2024-10-29"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["professional", "reputation", "social"]
 status: ["alive"]
 pagetype: "project"

@@ -4,7 +4,7 @@ title: "Piggy Superform"
 date: "2024-11-25"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["synthetics", "defi", "cross-chain"]
 status: ["alive"]
 pagetype: "project"

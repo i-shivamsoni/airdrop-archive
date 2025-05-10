@@ -4,7 +4,7 @@ title: "Lotto Finance"
 date: "2021-01-28 04:47 +0530"
 timeframe: ["2k21", "2k21"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["gambling", "defi", "lottery"]
 status: ["alive"]
 pagetype: "project"

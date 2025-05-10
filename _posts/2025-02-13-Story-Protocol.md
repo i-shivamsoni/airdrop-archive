@@ -4,7 +4,7 @@ title: "Story Protocol"
 date: "2025-02-13"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["testnet"]
+rewardedActivity: ["testnet"]
 function: ["not-known"]
 status: ["alive"]
 pagetype: "project"

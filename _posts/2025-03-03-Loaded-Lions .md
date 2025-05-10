@@ -4,7 +4,7 @@ title: "Loaded Lions"
 date: "2025-03-03"
 timeframe: ["2k25"]
 ecosystem: ["solana-ecosystem"]
-distribution: ["retroactive", "nft"]
+rewardedActivity: ["retroactive", "nft"]
 function: ["nft", "staking"]
 status: ["alive"]
 pagetype: "project"

@@ -4,7 +4,7 @@ title: "Saddle Exchange"
 date: "2023-04-08 03:21:08 +0530"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
-distribution: ["holder", "retroactive"]
+rewardedActivity: ["holder", "retroactive"]
 function: ["defi", "exchange", "stablecoin"]
 status: ["alive"]
 pagetype: "project"

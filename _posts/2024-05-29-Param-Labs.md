@@ -4,7 +4,7 @@ title: "Param Labs"
 date: "2024-05-29"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["gaming", "interoperability", "blockchain"]
 status: ["alive"]
 pagetype: "project"

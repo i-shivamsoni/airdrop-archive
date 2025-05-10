@@ -4,7 +4,7 @@ title: "BitTorrent"
 date: "2019-01-01"
 timeframe: ["2k19"]
 ecosystem: ["not-known"]
-distribution: ["holder"]
+rewardedActivity: ["holder"]
 function: ["tron", "infrastructure", "file-sharing"]
 status: ["alive"]
 pagetype: "project"

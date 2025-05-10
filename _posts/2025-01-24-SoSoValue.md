@@ -4,7 +4,7 @@ title: "SoSoValue"
 date: "2025-01-24"
 timeframe: ["2k25"]
 ecosystem: ["ethereum-ecosystem", "base-ecosystem"]
-distribution: ["retroactive", "social"]
+rewardedActivity: ["retroactive", "social"]
 function: ["ai", "analytics", "social"]
 status: ["alive"]
 pagetype: "project"

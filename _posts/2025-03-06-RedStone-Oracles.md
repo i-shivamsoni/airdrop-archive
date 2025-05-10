@@ -4,7 +4,7 @@ title: "RedStone Oracles"
 date: "2025-03-06"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["oracle", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

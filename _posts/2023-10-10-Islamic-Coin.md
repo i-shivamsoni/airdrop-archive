@@ -4,7 +4,7 @@ title: "Islamic Coin"
 date: "2023-10-11"
 timeframe: ["2k23"]
 ecosystem: ["osmosis-ecosystem"]
-distribution: ["holder", "testnet"]
+rewardedActivity: ["holder", "testnet"]
 function: ["defi", "sharia-compliant"]
 status: ["alive"]
 pagetype: "project"

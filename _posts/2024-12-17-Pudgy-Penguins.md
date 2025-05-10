@@ -4,7 +4,7 @@ title: "Pudgy Penguins"
 date: "2024-12-17"
 timeframe: ["2k24"]
 ecosystem: ["solana-ecosystem"]
-distribution: ["retroactive", "nft"]
+rewardedActivity: ["retroactive", "nft"]
 function: ["nft", "collection", "meme"]
 status: ["alive"]
 pagetype: "project"

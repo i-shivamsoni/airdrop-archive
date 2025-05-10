@@ -4,7 +4,7 @@ title: "Sturdy Finance"
 date: "2022-11-21 05:44 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "risk-management", "lending"]
 status: ["alive"]
 pagetype: "project"

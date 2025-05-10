@@ -4,7 +4,7 @@ title: "Magic Square"
 date: "2024-01-08"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["gaming", "puzzle", "blockchain"]
 status: ["alive"]
 pagetype: "project"

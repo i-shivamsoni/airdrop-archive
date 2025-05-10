@@ -4,7 +4,7 @@ title: "Unlock Protocol Season 1"
 date: "2021-09-01 03:21:08 +0530"
 timeframe: ["2k21"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["infrastructure", "access", "control"]
 status: ["alive"]
 pagetype: "project"

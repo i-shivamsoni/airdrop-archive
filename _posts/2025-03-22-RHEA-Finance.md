@@ -4,7 +4,7 @@ title: "RHEA Finance"
 date: "2025-03-22"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["algorithmic", "defi", "stablecoin"]
 status: ["alive"]
 pagetype: "project"

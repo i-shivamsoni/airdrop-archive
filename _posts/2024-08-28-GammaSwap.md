@@ -4,7 +4,7 @@ title: "GammaSwap"
 date: "2024-09-09"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "futures", "options"]
 status: ["alive"]
 pagetype: "project"

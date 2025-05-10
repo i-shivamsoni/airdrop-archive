@@ -4,7 +4,7 @@ title: "Internet Computer"
 date: "2021-05-11 03:21:08 +0530"
 timeframe: ["2k18"]
 ecosystem: ["not-known"]
-distribution: ["loyalty"]
+rewardedActivity: ["loyalty"]
 function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"

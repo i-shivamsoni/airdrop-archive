@@ -4,7 +4,7 @@ title: "ZetaChain"
 date: "2024-01-25"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"

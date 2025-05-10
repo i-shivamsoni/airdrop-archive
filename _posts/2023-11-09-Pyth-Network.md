@@ -4,7 +4,7 @@ title: "Pyth Network"
 date: "2023-11-20"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
-distribution: ["holder", "retroactive"]
+rewardedActivity: ["holder", "retroactive"]
 function: ["oracle", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

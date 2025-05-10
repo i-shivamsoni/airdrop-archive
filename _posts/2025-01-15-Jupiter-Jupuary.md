@@ -4,7 +4,7 @@ title: "Jupiter Jupuary"
 date: "2025-01-15"
 timeframe: ["2k25"]
 ecosystem: ["solana-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "aggregator", "dex"]
 status: ["alive"]
 pagetype: "project"

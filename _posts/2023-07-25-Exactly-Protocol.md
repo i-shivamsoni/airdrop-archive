@@ -4,7 +4,7 @@ title: "Exactly Protocol"
 date: "2023-07-25"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "lending"]
 status: ["alive"]
 pagetype: "project"

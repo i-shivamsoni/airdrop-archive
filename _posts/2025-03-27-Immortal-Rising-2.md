@@ -4,7 +4,7 @@ title: "Immortal Rising 2"
 date: "2025-03-27"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["gaming"]
 status: ["alive"]
 pagetype: "project"

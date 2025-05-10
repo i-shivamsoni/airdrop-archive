@@ -4,7 +4,7 @@ title: "ZigZag Exchange"
 date: "2023-01-17 05:36 +0530"
 timeframe: ["not-known"]
 ecosystem: ["zksync-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "dex"]
 status: ["dead"]
 pagetype: "project"

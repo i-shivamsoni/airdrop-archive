@@ -4,7 +4,7 @@ title: "Goldfinch fi"
 date: "2022-04-08 03:21:08 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["business", "defi", "lending"]
 status: ["alive"]
 pagetype: "project"

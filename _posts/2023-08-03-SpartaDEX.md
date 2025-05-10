@@ -4,7 +4,7 @@ title: "SpartaDEX"
 date: "2023-08-03"
 timeframe: ["2k23"]
 ecosystem: ["linea-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"

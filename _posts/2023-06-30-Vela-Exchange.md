@@ -4,7 +4,7 @@ title: "Vela Exchange"
 date: "2023-06-30"
 timeframe: ["2k23"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "trading"]
 status: ["alive"]
 pagetype: "project"

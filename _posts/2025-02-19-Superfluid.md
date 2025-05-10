@@ -4,7 +4,7 @@ title: "Superfluid"
 date: "2025-02-19"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "protocol", "dex"]
 status: ["alive"]
 pagetype: "project"

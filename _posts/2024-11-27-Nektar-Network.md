@@ -4,7 +4,7 @@ title: "Nektar Network"
 date: "2024-11-27"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["privacy", "infrastructure", "defi"]
 status: ["alive"]
 pagetype: "project"

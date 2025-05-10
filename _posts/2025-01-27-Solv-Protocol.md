@@ -4,7 +4,7 @@ title: "Solv Protocol"
 date: "2025-01-27"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "protocol", "governance", "btcfi"]
 status: ["alive"]
 pagetype: "project"

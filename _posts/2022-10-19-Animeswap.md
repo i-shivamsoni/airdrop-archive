@@ -4,7 +4,7 @@ title: "Animeswap"
 date: "2022-10-19"
 timeframe: ["2k22"]
 ecosystem: ["aptos-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"
@@ -58,7 +58,7 @@ pagetype: "project"
 
 - Early supporters with Discord OG roles were eligible.
 - Must have linked their wallet through Discord authorization before the airdrop.
-- Distribution:
+- rewardedActivity:
   - OG role: 500 ANI
   - OG2 role: 1,000 ANI
 - A total of 936 users qualified.

@@ -4,7 +4,7 @@ title: "CreatorBid"
 date: "2025-01-23"
 timeframe: ["2k25"]
 ecosystem: ["bnb-ecosystem", "base-ecosystem"]
-distribution: ["retroactive", "social"]
+rewardedActivity: ["retroactive", "social"]
 function: ["ai", "social"]
 status: ["alive"]
 pagetype: "project"

@@ -4,7 +4,7 @@ title: "Solana ID"
 date: "2025-01-30"
 timeframe: ["2k25"]
 ecosystem: ["solana-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["identity"]
 status: ["alive"]
 pagetype: "project"

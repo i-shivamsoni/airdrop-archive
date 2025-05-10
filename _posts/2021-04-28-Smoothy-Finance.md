@@ -4,7 +4,7 @@ title: "Smoothy Finance"
 date: "2021-04-28 05:10 +0530"
 timeframe: ["2k21"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "aggregation", "yield"]
 status: ["alive"]
 pagetype: "project"

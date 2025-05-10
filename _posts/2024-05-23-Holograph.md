@@ -4,7 +4,7 @@ title: "Holograph"
 date: "2024-05-23"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["infrastructure", "cross-chain"]
 status: ["alive"]
 pagetype: "project"

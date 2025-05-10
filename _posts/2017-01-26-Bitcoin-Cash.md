@@ -4,7 +4,7 @@ title: "Bitcoin Cash"
 date: "2017-01-26"
 timeframe: ["2k17"]
 ecosystem: ["not-known"]
-distribution: ["fork", "holder"]
+rewardedActivity: ["fork", "holder"]
 function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"

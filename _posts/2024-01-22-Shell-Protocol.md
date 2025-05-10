@@ -4,7 +4,7 @@ title: "Shell Protocol"
 date: "2024-01-22"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "infrastructure"]
 status: ["alive"]
 pagetype: "project"

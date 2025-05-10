@@ -4,7 +4,7 @@ title: "Masa Finance"
 date: "2024-05-11"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive", "testnet"]
+rewardedActivity: ["retroactive", "testnet"]
 function: ["ai", "identity", "protocol"]
 status: ["alive"]
 pagetype: "project"

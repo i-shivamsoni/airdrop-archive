@@ -4,7 +4,7 @@ title: "Spheron Network"
 date: "2025-01-24"
 timeframe: ["2k25"]
 ecosystem: ["stellar-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["ai"]
 status: ["alive"]
 pagetype: "project"

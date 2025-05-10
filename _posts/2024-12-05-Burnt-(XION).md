@@ -4,7 +4,7 @@ title: "Burnt (XION)"
 date: "2024-12-05"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["testnet"]
+rewardedActivity: ["testnet"]
 function: ["not-known"]
 status: ["alive"]
 pagetype: "project"

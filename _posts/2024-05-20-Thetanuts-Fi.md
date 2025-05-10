@@ -4,7 +4,7 @@ title: "Thetanuts Fi"
 date: "2024-05-20"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "options"]
 status: ["alive"]
 pagetype: "project"

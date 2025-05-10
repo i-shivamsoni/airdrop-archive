@@ -4,7 +4,7 @@ title: "Amnis Finance"
 date: "2025-03-22"
 timeframe: ["2k25"]
 ecosystem: ["aptos-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["staking"]
 status: ["alive"]
 pagetype: "project"

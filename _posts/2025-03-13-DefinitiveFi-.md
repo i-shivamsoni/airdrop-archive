@@ -4,7 +4,7 @@ title: "DefinitiveFi"
 date: "2025-03-13"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"

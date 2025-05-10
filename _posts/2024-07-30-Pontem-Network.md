@@ -4,7 +4,7 @@ title: "Pontem Network"
 date: "2024-07-30"
 timeframe: ["2k24"]
 ecosystem: ["aptos-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["dex"]
 status: ["alive"]
 pagetype: "project"
@@ -66,7 +66,7 @@ _Example_: If a user traded $100 and had a total bonus multiplier of 30% (10% + 
 ### **Wallet Maximums & Redistribution**
 
 - **Max Allocation:** 8,400 LSD per wallet.
-- **Excess Redistribution:** Tokens over this cap (30%) were redistributed to smaller users.
+- **Excess RerewardedActivity:** Tokens over this cap (30%) were redistributed to smaller users.
 - **Average User ROI:** 3x compared to whales.
 
 ## **Airdrop Methodology & Cost-Based Proportions**

@@ -4,7 +4,7 @@ title: "NX Finance"
 date: "2024-11-01"
 timeframe: ["2k24"]
 ecosystem: ["solana-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"

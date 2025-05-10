@@ -4,7 +4,7 @@ title: "Mirror Protocol"
 date: "2020-12-03 03:21:08 +0530"
 timeframe: ["2k20"]
 ecosystem: ["not-known"]
-distribution: ["holder"]
+rewardedActivity: ["holder"]
 function: ["assets", "synthetics", "defi"]
 status: ["alive"]
 pagetype: "project"

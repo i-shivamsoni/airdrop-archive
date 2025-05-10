@@ -4,7 +4,7 @@ title: "Velodrome Finance"
 date: "2022-06-22 04:13 +0530"
 timeframe: ["2k22"]
 ecosystem: ["optimism-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"

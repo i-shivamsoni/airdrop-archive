@@ -4,7 +4,7 @@ title: "Swell Network"
 date: "2024-11-07"
 timeframe: ["2k24"]
 ecosystem: ["ethereum-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["ethereum", "defi", "staking"]
 status: ["alive"]
 pagetype: "project"

@@ -4,7 +4,7 @@ title: "EigenLayer Season 2"
 date: "2024-09-17"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "staking", "restaking"]
 status: ["alive"]
 pagetype: "project"

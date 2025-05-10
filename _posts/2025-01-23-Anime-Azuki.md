@@ -4,7 +4,7 @@ title: "Anime Azuki"
 date: "2025-01-23"
 timeframe: ["2k25"]
 ecosystem: ["ethereum-ecosystem", "arbitrum-ecosystem"]
-distribution: ["nft", "holder"]
+rewardedActivity: ["nft", "holder"]
 function: ["community", "nft", "social"]
 status: ["alive"]
 pagetype: "project"

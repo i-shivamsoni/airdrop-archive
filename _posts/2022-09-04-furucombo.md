@@ -4,7 +4,7 @@ title: "FuruCombo"
 date: "2022-09-04 04:47 +0530"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "automation", "strategy"]
 status: ["alive"]
 pagetype: "project"

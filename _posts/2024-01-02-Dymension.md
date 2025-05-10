@@ -4,7 +4,7 @@ title: "Dymension"
 date: "2024-01-02"
 timeframe: ["not-known"]
 ecosystem: ["not-known"]
-distribution: ["nft", "holder", "retroactive"]
+rewardedActivity: ["nft", "holder", "retroactive"]
 function: ["nft", "blockchain"]
 status: ["alive"]
 pagetype: "project"

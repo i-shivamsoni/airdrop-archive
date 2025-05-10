@@ -4,7 +4,7 @@ title: "Mint Blockchain"
 date: "2025-03-06"
 timeframe: ["2k25"]
 ecosystem: ["optimism", "ethereum"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["scaling", "ethereum"]
 status: ["alive"]
 pagetype: "project"

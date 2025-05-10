@@ -4,7 +4,7 @@ title: "Badger DAO"
 date: "2020-12-04 03:21:08 +0530"
 timeframe: ["2k20"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["dao", "defi", "bitcoin"]
 status: ["alive"]
 pagetype: "project"

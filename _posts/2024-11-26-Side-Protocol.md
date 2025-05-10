@@ -4,7 +4,7 @@ title: "Side Protocol"
 date: "2024-11-26"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive", "holder", "nft"]
+rewardedActivity: ["retroactive", "holder", "nft"]
 function: ["defi", "infrastructure", "nft", "tokenization"]
 status: ["alive"]
 pagetype: "project"

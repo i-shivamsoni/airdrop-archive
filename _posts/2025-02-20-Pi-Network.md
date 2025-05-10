@@ -4,7 +4,7 @@ title: "Pi Network"
 date: "2025-02-20"
 timeframe: ["2k25"]
 ecosystem: ["not-known"]
-distribution: ["free", "mining"]
+rewardedActivity: ["free", "mining"]
 function: ["mining"]
 status: ["alive"]
 pagetype: "project"

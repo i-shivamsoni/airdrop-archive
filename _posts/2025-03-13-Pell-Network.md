@@ -4,7 +4,7 @@ title: "Pell Network"
 date: "2025-03-13"
 timeframe: ["2k25"]
 ecosystem: ["btc-ecosystem"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["staking"]
 status: ["alive"]
 pagetype: "project"
@@ -66,7 +66,7 @@ Eligibility is based on the Epoch 1 snapshot taken on January 31, 2025, at 00:00
 ### 2. Testnet Users (1% of Total Supply - 21,000,000 PELL)
 
 - Users who interacted with the Pell Testnet before January 31, 2025.
-- **Reward Distribution:**
+- **Reward rewardedActivity:**
   - **30% released:** March 13, 2025, 9:00 UTC.
   - **40% released:** April 14, 2025, 9:00 UTC.
   - **30% released:** May 14, 2025, 9:00 UTC.

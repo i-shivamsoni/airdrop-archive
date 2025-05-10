@@ -4,7 +4,7 @@ title: "Nois Randdrop"
 date: "2023-12-21"
 timeframe: ["2k23"]
 ecosystem: ["osmosis-ecosystem"]
-distribution: ["staking"]
+rewardedActivity: ["staking"]
 function: ["staking", "infrastructure", "randomness"]
 status: ["dead"]
 pagetype: "project"

@@ -4,7 +4,7 @@ title: "Axelar Network"
 date: "2022-09-27"
 timeframe: ["2k22"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["infrastructure", "cross-chain"]
 status: ["alive"]
 pagetype: "project"

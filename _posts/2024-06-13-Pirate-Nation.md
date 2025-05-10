@@ -4,7 +4,7 @@ title: "Pirate Nation"
 date: "2024-06-13"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["free", "retroactive"]
+rewardedActivity: ["free", "retroactive"]
 function: ["gaming", "nft"]
 status: ["alive"]
 pagetype: "project"

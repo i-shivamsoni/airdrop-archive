@@ -4,7 +4,7 @@ title: "Prisma Finance"
 date: "2023-11-04"
 timeframe: ["not-known"]
 ecosystem: ["not-known"]
-distribution: ["holder", "retroactive"]
+rewardedActivity: ["holder", "retroactive"]
 function: ["defi", "stablecoin", "yield"]
 status: ["alive"]
 pagetype: "project"

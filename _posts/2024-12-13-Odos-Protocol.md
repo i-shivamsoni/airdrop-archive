@@ -4,7 +4,7 @@ title: "Odos Protocol"
 date: "2024-12-13"
 timeframe: ["2k24"]
 ecosystem: ["not-known"]
-distribution: ["retroactive"]
+rewardedActivity: ["retroactive"]
 function: ["defi", "aggregator", "dex"]
 status: ["alive"]
 pagetype: "project"
