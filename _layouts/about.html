@@ -1,0 +1,242 @@
+---
+layout: default
+---
+
+<div class="about-hero">
+    <div class="about-hero-content">
+        <h1>{{ page.title }}</h1>
+        <p class="subtitle">{{ page.subtitle }}</p>
+        <div class="hero-stats">
+            {% for stat in page.stats %}
+            <div class="stat-item">
+                <div class="stat-value">{{ stat.value }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="about-hero-image">
+        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt }}">
+    </div>
+</div>
+
+<div class="about-content-wrapper">
+    <div class="about-main-content">
+        <!-- Intro Paragraph -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+                <h2>Our Purpose</h2>
+            </div>
+            <div class="section-content">
+                {{ content }}
+                <div class="mission-vision">
+                    <div class="mission-card">
+                        <div class="card-icon"><i class="fas fa-compass"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>{{ page.mission }}</p>
+                    </div>
+                    <div class="vision-card">
+                        <div class="card-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>{{ page.vision }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why We Built This -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                <h2>Why We Built This</h2>
+            </div>
+            <div class="section-content">
+                <p>Cryptocurrency airdrops have become an important mechanism for token distribution, community building, and project bootstrapping. However, information about airdrops is often scattered across various sources, making it difficult to find comprehensive and accurate data about distribution criteria, eligibility requirements, and historical context.</p>
+                <div class="problem-solution">
+                    <div class="problem-card">
+                        <h3>The Problem</h3>
+                        <ul>
+                            {% for item in page.problem %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Our Solution</h3>
+                        <ul>
+                            {% for item in page.solution %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="goals-container">
+                    <h3>This archive aims to solve that problem by:</h3>
+                    <div class="goals-grid">
+                        {% for goal in page.goals %}
+                        <div class="goal-item">
+                            <div class="goal-icon"><i class="{{ goal.icon }}"></i></div>
+                            <p>{{ goal.text }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h2>Our Methodology</h2>
+            </div>
+            <div class="section-content">
+                <p>Each airdrop listing in our archive is researched using multiple sources, ensuring the highest possible accuracy and completeness of information.</p>
+                <div class="methodology-process">
+                    {% for step in page.methodology %}
+                    <div class="process-step">
+                        <div class="step-number">{{ forloop.index }}</div>
+                        <div class="step-content">
+                            <h3>{{ step.title }}</h3>
+                            <p>{{ step.desc }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Sources -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-database"></i></div>
+                <h2>Our Data Sources</h2>
+            </div>
+            <div class="section-content">
+                <p>We gather information from multiple reliable sources to ensure the accuracy and completeness of our data.</p>
+                <div class="sources-grid">
+                    {% for source in page.sources %}
+                    <div class="source-item">
+                        <div class="source-icon"><i class="{{ source.icon }}"></i></div>
+                        <p>{{ source.text }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Team -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-users"></i></div>
+                <h2>Our Team</h2>
+            </div>
+            <div class="section-content">
+                <div class="team-grid">
+                    {% for member in page.team %}
+                    <div class="team-member">
+                        <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+                        <h3>{{ member.name }}</h3>
+                        <p class="role">{{ member.role }}</p>
+                        <div class="social-links">
+                            {% if member.social.twitter %}
+                            <a href="{{ member.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                            {% endif %}
+                            {% if member.social.github %}
+                            <a href="{{ member.social.github }}" target="_blank"><i class="fab fa-github"></i></a>
+                            {% endif %}
+                            {% if member.social.linkedin %}
+                            <a href="{{ member.social.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-history"></i></div>
+                <h2>Our Journey</h2>
+            </div>
+            <div class="section-content">
+                <div class="timeline">
+                    {% for event in page.timeline %}
+                    <div class="timeline-item">
+                        <div class="timeline-year">{{ event.year }}</div>
+                        <div class="timeline-content">
+                            <h3>{{ event.title }}</h3>
+                            <p>{{ event.desc }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-quote-right"></i></div>
+                <h2>What Our Community Says</h2>
+            </div>
+            <div class="section-content">
+                <div class="testimonials-grid">
+                    {% for testimonial in page.testimonials %}
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>{{ testimonial.content }}</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="{{ testimonial.image | relative_url }}" alt="{{ testimonial.author }}">
+                            <div class="author-info">
+                                <h4>{{ testimonial.author }}</h4>
+                                <p>{{ testimonial.role }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-question-circle"></i></div>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="section-content">
+                <div class="faqs">
+                    {% for faq in page.faqs %}
+                    <div class="faq-item">
+                        <h3>{{ faq.question }}</h3>
+                        <p>{{ faq.answer }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="about-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-envelope"></i></div>
+                <h2>Get in Touch</h2>
+            </div>
+            <div class="section-content">
+                <div class="contact-info">
+                    <p>Have questions or want to contribute? Reach out to us:</p>
+                    <div class="contact-links">
+                        <a href="mailto:{{ page.contact.email }}"><i class="fas fa-envelope"></i> {{ page.contact.email }}</a>
+                        <a href="https://twitter.com/{{ page.contact.twitter }}" target="_blank"><i class="fab fa-twitter"></i> {{ page.contact.twitter }}</a>
+                        <a href="{{ page.contact.discord }}" target="_blank"><i class="fab fa-discord"></i> {{ page.contact.discord }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
