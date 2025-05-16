@@ -3,7 +3,7 @@ layout: "post"
 title: "CreatorBid"
 date: "2025-01-23"
 timeframe: ["2k25"]
-ecosystem: ["bnb-ecosystem", "base-ecosystem"]
+ecosystem: ["bnb", "base"]
 rewardedActivity: ["retroactive", "social"]
 category: [ai,social]
 function: ["ai", "social"]

@@ -3,7 +3,7 @@ layout: "post"
 title: "Jupiter Jupuary"
 date: "2025-01-15"
 timeframe: ["2k25"]
-ecosystem: ["solana-ecosystem"]
+ecosystem: "solana"
 rewardedActivity: ["retroactive"]
 category: [defi]
 function: ["defi", "aggregator", "dex"]

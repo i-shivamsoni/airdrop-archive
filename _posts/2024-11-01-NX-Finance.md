@@ -3,7 +3,7 @@ layout: "post"
 title: "NX Finance"
 date: "2024-11-01"
 timeframe: ["2k24"]
-ecosystem: ["solana-ecosystem"]
+ecosystem: "solana"
 rewardedActivity: ["retroactive"]
 category: [defi]
 function: ["defi"]

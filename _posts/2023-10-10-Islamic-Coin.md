@@ -3,7 +3,7 @@ layout: "post"
 title: "Islamic Coin"
 date: "2023-10-11"
 timeframe: ["2k23"]
-ecosystem: ["osmosis-ecosystem"]
+ecosystem: ["osmosis"]
 rewardedActivity: ["holder", "testnet"]
 category: [defi]
 function: ["defi", "sharia-compliant"]

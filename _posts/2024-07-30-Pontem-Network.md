@@ -3,7 +3,7 @@ layout: "post"
 title: "Pontem Network"
 date: "2024-07-30"
 timeframe: ["2k24"]
-ecosystem: ["aptos-ecosystem"]
+ecosystem: ["aptos"]
 rewardedActivity: ["retroactive"]
 category: [social,defi]
 function: ["dex"]

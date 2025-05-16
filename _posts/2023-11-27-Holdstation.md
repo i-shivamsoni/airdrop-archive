@@ -3,7 +3,7 @@ layout: "post"
 title: "Holdstation"
 date: "2023-11-27 03:21:08 +0530"
 timeframe: ["2k23"]
-ecosystem: ["zksync-ecosystem"]
+ecosystem: ["zksync"]
 rewardedActivity: ["retroactive"]
 category: [infrastructure]
 function: ["infrastructure"]

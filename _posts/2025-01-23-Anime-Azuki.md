@@ -3,7 +3,7 @@ layout: "post"
 title: "Anime Azuki"
 date: "2025-01-23"
 timeframe: ["2k25"]
-ecosystem: ["ethereum-ecosystem", "arbitrum-ecosystem"]
+ecosystem: ["ethereum", "arbitrum-ecosystem"]
 rewardedActivity: ["nft", "holder"]
 category: [social,nft]
 function: ["community", "nft", "social"]

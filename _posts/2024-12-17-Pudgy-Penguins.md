@@ -3,7 +3,7 @@ layout: "post"
 title: "Pudgy Penguins"
 date: "2024-12-17"
 timeframe: ["2k24"]
-ecosystem: ["solana-ecosystem"]
+ecosystem: "solana"
 rewardedActivity: ["retroactive", "nft"]
 category: [meme,nft]
 function: ["nft", "collection", "meme"]

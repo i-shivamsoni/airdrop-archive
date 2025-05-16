@@ -3,7 +3,7 @@ layout: "post"
 title: "Bubblemaps"
 date: "2025-03-11"
 timeframe: ["2k25"]
-ecosystem: ["bnb-ecosystem", "solana-ecosystem"]
+ecosystem: ["bnb", "solana"]
 rewardedActivity: ["retroactive"]
 category: [data,infrastructure]
 function: ["infrastructure", "analytics", "data"]

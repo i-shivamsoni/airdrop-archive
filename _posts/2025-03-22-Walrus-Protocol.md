@@ -3,7 +3,7 @@ layout: "post"
 title: "Walrus Protocol"
 date: "2025-03-19"
 timeframe: ["2k25"]
-ecosystem: ["sui-ecosystem"]
+ecosystem: ["sui"]
 rewardedActivity: ["retroactive"]
 category: ["defi"]
 function: ["defi"]

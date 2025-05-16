@@ -3,7 +3,7 @@ layout: "post"
 title: "Swell Network"
 date: "2024-11-07"
 timeframe: ["2k24"]
-ecosystem: ["ethereum-ecosystem"]
+ecosystem: ["ethereum"]
 rewardedActivity: ["retroactive"]
 category: [scaling,defi]
 function: ["ethereum", "defi", "staking"]

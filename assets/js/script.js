@@ -412,10 +412,26 @@ function filterProjects(projects, filters) {
 
         // Ecosystem filter
         if (filters.ecosystem && filters.ecosystem.length > 0) {
-            if (!project.ecosystem || !Array.isArray(project.ecosystem) || project.ecosystem.length === 0) {
+            // Handle both explicit "not-known" in metadata and missing ecosystem cases
+            if (filters.ecosystem.includes('not-known')) {
+                if (!project.ecosystem || 
+                    !Array.isArray(project.ecosystem) || 
+                    project.ecosystem.length === 0 ||
+                    (project.ecosystem.length === 1 && project.ecosystem[0].toLowerCase() === 'not-known')) {
+                    return true; // Include projects with no ecosystem or explicit "not-known"
+                }
+            }
+            
+            // If project has no ecosystem or is explicitly "not-known" and "not-known" is not selected, exclude it
+            if (!project.ecosystem || 
+                !Array.isArray(project.ecosystem) || 
+                project.ecosystem.length === 0 ||
+                (project.ecosystem.length === 1 && project.ecosystem[0].toLowerCase() === 'not-known')) {
                 return false;
             }
-            if (!project.ecosystem.some(e => filters.ecosystem.includes(e))) {
+
+            const projectEcosystems = project.ecosystem.map(e => e.toLowerCase());
+            if (!filters.ecosystem.some(e => projectEcosystems.includes(e.toLowerCase()))) {
                 return false;
             }
         }
@@ -534,7 +550,7 @@ function getStatusFilters() {
 
 function getEcosystemFilters() {
     return Array.from(document.querySelectorAll('.ecosystem-item.active'))
-        .map(item => item.querySelector('span').textContent);
+        .map(item => item.dataset.ecosystem);
 }
 
 function getDistributionFilters() {
@@ -580,7 +596,7 @@ function restoreStatusFilters(statuses) {
 function restoreEcosystemFilters(ecosystems) {
     ecosystems.forEach(eco => {
         const item = Array.from(document.querySelectorAll('.ecosystem-item')).find(item => 
-            item.querySelector('span').textContent === eco
+            item.dataset.ecosystem === eco
         );
         if (item) item.classList.add('active');
     });
@@ -908,6 +924,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+        // Initialize ecosystem filters
+        console.log('Initializing ecosystem filters...');
+        initEcosystemFilters();
 
     } catch (error) {
         console.error('Error during initialization:', error);
@@ -1544,4 +1564,150 @@ function initCategoryGroups() {
 
     // Add category change listeners
     addCategoryChangeListeners();
+}
+
+function initEcosystemFilters() {
+    console.log('Initializing ecosystem filters');
+    
+    // Define main and more ecosystems with their icon mappings
+    const mainEcosystems = [
+        { id: 'ethereum', icon: 'ethereum.svg' },
+        { id: 'solana', icon: 'solana.svg' },
+        { id: 'optimism', icon: 'optimism.svg' },
+        { id: 'cosmos', icon: 'cosmos.svg' },
+        { id: 'sui', icon: 'sui.svg' },
+        { id: 'hyperliquid', icon: 'hyperliquid.svg' },
+        { id: 'ton', icon: 'ton.svg' },
+        { id: 'base', icon: 'base.svg' }
+    ];
+
+    const moreEcosystems = [
+        { id: 'osmosis', icon: 'osmosis.svg' },
+        { id: 'aptos', icon: 'aptos.svg' },
+        { id: 'zksync', icon: 'zksync.svg' },
+        { id: 'kava', icon: 'kava.svg' },
+        { id: 'stellar', icon: 'stellar.svg' },
+        { id: 'berachain', icon: 'berachain.svg' },
+        { id: 'bnb', icon: 'bnb.svg' },
+        { id: 'not-known', icon: 'not-known.svg' }
+    ];
+
+    // Get the ecosystem container
+    const ecosystemContainer = document.querySelector('.ecosystem-grid');
+    if (!ecosystemContainer) {
+        console.error('Ecosystem container not found');
+        return;
+    }
+
+    // Clear existing content
+    ecosystemContainer.innerHTML = '';
+
+    // Create main ecosystem items
+    mainEcosystems.forEach(eco => {
+        const item = createEcosystemItem(eco.id, eco.icon);
+        ecosystemContainer.appendChild(item);
+    });
+
+    // Create more section
+    const moreItem = document.createElement('div');
+    moreItem.className = 'ecosystem-item more-item';
+    moreItem.innerHTML = `
+        <img src="/assets/images/ecosystem_icons/more.svg" alt="More">
+        <span>More</span>
+    `;
+    ecosystemContainer.appendChild(moreItem);
+
+    // Create more content container (initially hidden)
+    const moreContent = document.createElement('div');
+    moreContent.className = 'more-ecosystems';
+    moreContent.style.display = 'none';
+    moreEcosystems.forEach(eco => {
+        const item = createEcosystemItem(eco.id, eco.icon);
+        moreContent.appendChild(item);
+    });
+    ecosystemContainer.parentElement.appendChild(moreContent);
+
+    // Add styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-sm);
+            margin: 0;
+        }
+        .ecosystem-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            width: 100%;
+        }
+        .ecosystem-item:hover {
+            background: var(--light-dark);
+        }
+        .ecosystem-item.active {
+            background: var(--light-dark);
+        }
+        .ecosystem-item img {
+            width: 28px;
+            height: 28px;
+            margin-bottom: var(--spacing-xs);
+        }
+        .ecosystem-item span {
+            font-size: 0.75rem;
+            text-align: center;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+        .more-ecosystems {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-sm);
+            padding-top: var(--spacing-sm);
+            border-top: 1px solid var(--light-dark);
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Add click handler for more section
+    moreItem.addEventListener('click', function() {
+        const isVisible = moreContent.style.display !== 'none';
+        moreContent.style.display = isVisible ? 'none' : 'grid';
+        this.classList.toggle('active');
+    });
+}
+
+function createEcosystemItem(ecosystem, iconName) {
+    const item = document.createElement('div');
+    item.className = 'ecosystem-item';
+    item.dataset.ecosystem = ecosystem;
+    
+    const iconPath = `/assets/images/ecosystem_icons/${iconName}`;
+    const displayName = ecosystem === 'not-known' 
+        ? 'Not Known'
+        : ecosystem
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+    
+    item.innerHTML = `
+        <img src="${iconPath}" alt="${displayName}" onerror="this.src='/assets/images/ecosystem_icons/not-known.svg'">
+        <span>${displayName}</span>
+    `;
+    
+    item.addEventListener('click', function() {
+        this.classList.toggle('active');
+        debouncedSaveFilterStates();
+        updateFilters();
+    });
+    
+    return item;
 }

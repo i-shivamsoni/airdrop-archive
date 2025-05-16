@@ -3,7 +3,7 @@ layout: "post"
 title: "Aerodrome"
 date: "2023-09-15"
 timeframe: ["2k23"]
-ecosystem: ["base-ecosystem"]
+ecosystem: "base"
 rewardedActivity: ["holder"]
 category: [defi]
 function: ["yield-farming", "defi", "liquidity"]

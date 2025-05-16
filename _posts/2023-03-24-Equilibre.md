@@ -3,7 +3,7 @@ layout: "post"
 title: "Equilibre"
 date: "2023-03-24"
 timeframe: ["2k23"]
-ecosystem: ["kava-ecosystem"]
+ecosystem: ["kava"]
 rewardedActivity: ["testnet"]
 category: [defi]
 function: ["defi"]

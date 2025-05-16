@@ -3,7 +3,7 @@ layout: "post"
 title: "Nois Randdrop"
 date: "2023-12-21"
 timeframe: ["2k23"]
-ecosystem: ["osmosis-ecosystem"]
+ecosystem: ["osmosis"]
 rewardedActivity: ["staking"]
 category: [infrastructure]
 function: ["staking", "infrastructure", "randomness"]
