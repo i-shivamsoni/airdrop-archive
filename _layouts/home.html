@@ -340,40 +340,154 @@
                         </div>
                     </section>
 
-                    <!-- Distribution Filter -->
-                    <section class="filter-section">
+                    <!-- Rewarded Activity Filter -->
+                    <section class="filter-section rewarded-activity-filter">
                         <h2>Rewarded Activity</h2>
-                        <div class="filter-options">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Retroactive</span>
-                                <span class="count">272</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Testnet</span>
-                                <span class="count">34</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Holder</span>
-                                <span class="count">32</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Free</span>
-                                <span class="count">8</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span>Staking</span>
-                                <span class="count">6</span>
-                            </label>
+                        <div class="activity-groups">
+                            <!-- On-chain Participation -->
+                            <div class="activity-group">
+                                <button class="activity-header" data-group="on-chain-participation">
+                                    <span>On-chain Participation</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="activity-items" id="on-chain-participation-items">
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="retroactive">
+                                        <span class="checkmark"></span>
+                                        <span>Retroactive</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="holder">
+                                        <span class="checkmark"></span>
+                                        <span>Holder</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="nft">
+                                        <span class="checkmark"></span>
+                                        <span>NFT</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="staking">
+                                        <span class="checkmark"></span>
+                                        <span>Staking</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="fork">
+                                        <span class="checkmark"></span>
+                                        <span>Fork</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="node">
+                                        <span class="checkmark"></span>
+                                        <span>Node</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Test and Build Participation -->
+                            <div class="activity-group">
+                                <button class="activity-header" data-group="test-and-build-participation">
+                                    <span>Test and Build Participation</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="activity-items" id="test-and-build-participation-items">
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="testnet">
+                                        <span class="checkmark"></span>
+                                        <span>Testnet</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="form">
+                                        <span class="checkmark"></span>
+                                        <span>Form</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="dev-work">
+                                        <span class="checkmark"></span>
+                                        <span>Dev Work</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Community and Loyalty -->
+                            <div class="activity-group">
+                                <button class="activity-header" data-group="community-and-loyalty">
+                                    <span>Community and Loyalty</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="activity-items" id="community-and-loyalty-items">
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="loyalty">
+                                        <span class="checkmark"></span>
+                                        <span>Loyalty</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="free">
+                                        <span class="checkmark"></span>
+                                        <span>Free</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="discord-role">
+                                        <span class="checkmark"></span>
+                                        <span>Discord Role</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="quest">
+                                        <span class="checkmark"></span>
+                                        <span>Quest</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Influence and Content -->
+                            <div class="activity-group">
+                                <button class="activity-header" data-group="influence-and-content">
+                                    <span>Influence and Content</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="activity-items" id="influence-and-content-items">
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="content">
+                                        <span class="checkmark"></span>
+                                        <span>Content</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="kaito-yapping">
+                                        <span class="checkmark"></span>
+                                        <span>Kaito Yapping</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Alpha Community Participation -->
+                            <div class="activity-group">
+                                <button class="activity-header" data-group="alpha-community-participation">
+                                    <span>Alpha Community Participation</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="activity-items" id="alpha-community-participation-items">
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="binance-alpha">
+                                        <span class="checkmark"></span>
+                                        <span>Binance Alpha</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="mexc-alpha">
+                                        <span class="checkmark"></span>
+                                        <span>MEXC Alpha</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="bybit-alpha">
+                                        <span class="checkmark"></span>
+                                        <span>Bybit Alpha</span>
+                                    </label>
+                                    <label class="activity-item">
+                                        <input type="checkbox" data-activity="okx-alpha">
+                                        <span class="checkmark"></span>
+                                        <span>OKX Alpha</span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
