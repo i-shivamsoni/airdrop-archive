@@ -380,18 +380,16 @@ function filterProjects(projects, filters) {
 
         // Categories filter
         if (filters.categories && filters.categories.length > 0) {
-            if ((!project.category || !Array.isArray(project.category) || project.category.length === 0) &&
-                (!project.function || !Array.isArray(project.function) || project.function.length === 0)) {
+            if (!project.category || !Array.isArray(project.category)) {
                 return false;
             }
             
-            const projectCategories = (project.category || []).map(c => c.toLowerCase());
-            const projectFunctions = (project.function || []).map(f => f.toLowerCase());
+            const projectCategories = project.category.map(c => c.toLowerCase());
+            const hasMatchingCategory = filters.categories.some(cat => 
+                projectCategories.includes(cat.toLowerCase())
+            );
             
-            if (!filters.categories.some(cat => 
-                projectCategories.includes(cat.toLowerCase()) || 
-                projectFunctions.includes(cat.toLowerCase())
-            )) {
+            if (!hasMatchingCategory) {
                 return false;
             }
         }
@@ -830,7 +828,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Initialize rewarded activity groups immediately
+        // Initialize category groups
+        console.log('Initializing category groups...');
+        initCategoryGroups();
+        
+        // Initialize rewarded activity groups
         console.log('Initializing rewarded activity groups...');
         initRewardedActivityGroups();
         
@@ -1079,8 +1081,12 @@ function updateStackSelection() {
 
 // Get categories filters
 function getCategoryFilters() {
-    return Array.from(document.querySelectorAll('.category-item input[type="checkbox"]:checked'))
-        .map(checkbox => checkbox.dataset.category);
+    const categoryFilters = [];
+    document.querySelectorAll('.category-item input[type="checkbox"]:checked').forEach(checkbox => {
+        categoryFilters.push(checkbox.dataset.category);
+    });
+    console.log('Active category filters:', categoryFilters);
+    return categoryFilters;
 }
 
 // Add category checkbox event listeners
@@ -1319,4 +1325,223 @@ function initRewardedActivityGroups() {
             }
         });
     });
+}
+
+function initCategoryGroups() {
+    console.log('Starting category groups initialization');
+    
+    // Define the category groups and their options
+    const categoryGroups = {
+        'core': ['defi', 'nft', 'gaming', 'social'],
+        'infrastructure': ['scaling', 'infrastructure', 'utilities'],
+        'technology': ['ai', 'privacy', 'data'],
+        'assets': ['stablecoin', 'rwa', 'meme', 'other']
+    };
+
+    // Add CSS styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .categories-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 5px;
+        }
+        .category-group {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+        }
+        .category-group:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transform: translateY(-1px);
+        }
+        .category-header {
+            width: 100%;
+            padding: 14px 18px;
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .category-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #3498db, #2980b9);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .category-header:hover {
+            background: linear-gradient(to right, #f1f3f5, #ffffff);
+        }
+        .category-header:hover::after {
+            transform: scaleX(1);
+        }
+        .category-header.active {
+            background: linear-gradient(to right, #e9ecef, #ffffff);
+        }
+        .category-header.active::after {
+            transform: scaleX(1);
+        }
+        .category-header i {
+            transition: transform 0.3s ease;
+            color: #3498db;
+        }
+        .category-header.active i {
+            transform: rotate(180deg);
+        }
+        .category-items {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+            opacity: 0;
+        }
+        .category-items.active {
+            padding: 12px 18px;
+            max-height: 500px;
+            opacity: 1;
+        }
+        .category-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-radius: 6px;
+            margin: 2px 0;
+        }
+        .category-item:hover {
+            background: rgba(52, 152, 219, 0.05);
+        }
+        .category-item input[type="checkbox"] {
+            margin-right: 12px;
+            opacity: 0;
+            position: absolute;
+        }
+        .category-item span:not(.checkmark) {
+            font-size: 14px;
+            color: #34495e;
+            transition: color 0.2s ease;
+        }
+        .category-item:hover span:not(.checkmark) {
+            color: #3498db;
+        }
+        .checkmark {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 2px solid #bdc3c7;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .category-item:hover .checkmark {
+            border-color: #3498db;
+        }
+        .category-item input[type="checkbox"]:checked + .checkmark {
+            background: #3498db;
+            border-color: #3498db;
+        }
+        .category-item input[type="checkbox"]:checked + .checkmark:after {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            animation: checkmark 0.2s ease-in-out;
+        }
+        @keyframes checkmark {
+            0% {
+                opacity: 0;
+                transform: rotate(45deg) scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(45deg) scale(1);
+            }
+        }
+        .category-item input[type="checkbox"]:checked ~ span:not(.checkmark) {
+            color: #3498db;
+            font-weight: 500;
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Process each category group
+    Object.entries(categoryGroups).forEach(([group, options]) => {
+        const header = document.querySelector(`.category-header[data-group="${group}"]`);
+        const itemsContainer = document.getElementById(`${group}-items`);
+        
+        if (!header || !itemsContainer) {
+            console.error(`Missing elements for group: ${group}`);
+            return;
+        }
+
+        // Clear existing items
+        itemsContainer.innerHTML = '';
+
+        // Create category items
+        options.forEach(option => {
+            const item = document.createElement('label');
+            item.className = 'category-item';
+            item.innerHTML = `
+                <input type="checkbox" data-category="${option}">
+                <span class="checkmark"></span>
+                <span>${option.charAt(0).toUpperCase() + option.slice(1)}</span>
+            `;
+            itemsContainer.appendChild(item);
+
+            // Add change event listener to the checkbox
+            const checkbox = item.querySelector('input[type="checkbox"]');
+            checkbox.addEventListener('change', function() {
+                console.log('Category filter changed:', this.dataset.category, this.checked);
+                debouncedSaveFilterStates();
+                updateFilters();
+            });
+        });
+
+        // Add click handler to header
+        header.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle current group
+            this.classList.toggle('active');
+            itemsContainer.classList.toggle('active');
+            
+            // Update icon
+            const icon = this.querySelector('i');
+            if (this.classList.contains('active')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    });
+
+    // Add category change listeners
+    addCategoryChangeListeners();
 }
