@@ -52,54 +52,6 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
-                    <p>Navigating the History of Crypto Airdrops</p>
-                </div>
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h3>Navigation</h3>
-                        <ul>
-                            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                            <li><a href="{{ '/learn' | relative_url }}">Learn</a></li>
-                            <li><a href="{{ '/timeline' | relative_url }}">Timeline</a></li>
-                            <li><a href="{{ '/hall-of-fame' | relative_url }}">Hall of Fame</a></li>
-                            <li><a href="{{ '/about' | relative_url }}">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h3>Resources</h3>
-                        <ul>
-                            <li><a href="#">Airdrop Basics</a></li>
-                            <li><a href="#">Terminology</a></li>
-                            <li><a href="#">How Airdrops are Hunted</a></li>
-                            <li><a href="#">Essential Knowledge</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h3>Connect</h3>
-                        <ul>
-                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                            <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
-                            <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; {{ site.time | date: '%Y' }} Crypto Airdrop Archive. All rights reserved.</p>
-                <p>Made with <a href="#">Chirpy Jekyll Theme</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <button id="back-to-top" aria-label="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
     {% if page.custom_js %}
         {% for js_file in page.custom_js %}

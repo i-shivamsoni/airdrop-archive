@@ -519,51 +519,78 @@
 /* Timeline Section */
 .timeline {
     position: relative;
-    padding-left: 2rem;
+    margin: 2rem 0 2rem 0;
+    padding-left: 2.5rem;
+    max-width: 700px;
 }
 
 .timeline::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: 1.25rem;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: var(--border-color);
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    border-radius: 2px;
+    z-index: 0;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    min-height: 80px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 
 .timeline-dot {
     position: absolute;
-    left: -2.5rem;
-    width: 1rem;
-    height: 1rem;
+    left: 0;
+    top: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background: var(--primary);
+    color: #fff;
     border-radius: 50%;
-    border: 2px solid var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(79,70,229,0.10);
+    z-index: 2;
+    border: 4px solid #fff;
 }
 
-.timeline-date {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
+.timeline-content {
+    margin-left: 3.5rem;
+    background: var(--bg-secondary);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    min-width: 250px;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s;
 }
 
 .timeline-content h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    color: var(--text-primary);
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 .timeline-content p {
     color: var(--text-secondary);
     margin: 0;
+    line-height: 1.6;
 }
 
 /* Testimonials Section */
@@ -933,6 +960,23 @@
 
     .section-icon {
         margin: 0 auto;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+        max-width: 100%;
+    }
+    
+    .timeline-dot {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        left: -0.25rem;
+    }
+    
+    .timeline-content {
+        margin-left: 2.5rem;
+        padding: 1rem 1.25rem;
     }
 }
 

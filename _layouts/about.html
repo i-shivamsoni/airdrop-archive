@@ -2,21 +2,21 @@
 layout: default
 ---
 
-<div class="about-hero">
-    <div class="about-hero-content">
-        <h1>{{ page.title }}</h1>
-        <p class="subtitle">{{ page.subtitle }}</p>
-        <div class="hero-stats">
+<div class="about-hero" style="background: linear-gradient(135deg, #6a85f1, #7f53ac); padding: 3rem 2rem; border-radius: 18px; margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; box-shadow: 0 6px 24px rgba(80, 80, 160, 0.10);">
+    <div class="about-hero-content" style="flex: 1; color: #fff;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: 700; color: #fff;">{{ page.title }}</h1>
+        <p class="subtitle" style="font-size: 1.3rem; color: #e0e7ff; margin-bottom: 2.5rem;">{{ page.subtitle }}</p>
+        <div class="hero-stats" style="display: flex; gap: 2rem; margin-top: 1rem;">
             {% for stat in page.stats %}
-            <div class="stat-item">
-                <div class="stat-value">{{ stat.value }}</div>
-                <div class="stat-label">{{ stat.label }}</div>
+            <div class="stat-item" style="background: rgba(255,255,255,0.12); border-radius: 12px; padding: 1.2rem 2.2rem; text-align: center; min-width: 120px; box-shadow: 0 2px 8px rgba(80,80,160,0.08);">
+                <div class="stat-value" style="font-size: 2rem; font-weight: bold; color: #fff;">{{ stat.value }}</div>
+                <div class="stat-label" style="font-size: 1rem; color: #e0e7ff; margin-top: 0.3rem;">{{ stat.label }}</div>
             </div>
             {% endfor %}
         </div>
     </div>
-    <div class="about-hero-image">
-        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt }}">
+    <div class="about-hero-image" style="flex: 1; display: flex; align-items: center; justify-content: center;">
+        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt }}" style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.12); background: rgba(255,255,255,0.04); padding: 1.5rem;">
     </div>
 </div>
 
@@ -30,13 +30,13 @@ layout: default
             </div>
             <div class="section-content">
                 {{ content }}
-                <div class="mission-vision">
-                    <div class="mission-card">
+                <div class="mission-vision" style="display: flex; gap: 2rem; margin-top: 2rem;">
+                    <div class="mission-card" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1;">
                         <div class="card-icon"><i class="fas fa-compass"></i></div>
                         <h3>Our Mission</h3>
                         <p>{{ page.mission }}</p>
                     </div>
-                    <div class="vision-card">
+                    <div class="vision-card" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1;">
                         <div class="card-icon"><i class="fas fa-eye"></i></div>
                         <h3>Our Vision</h3>
                         <p>{{ page.vision }}</p>
@@ -53,29 +53,29 @@ layout: default
             </div>
             <div class="section-content">
                 <p>Cryptocurrency airdrops have become an important mechanism for token distribution, community building, and project bootstrapping. However, information about airdrops is often scattered across various sources, making it difficult to find comprehensive and accurate data about distribution criteria, eligibility requirements, and historical context.</p>
-                <div class="problem-solution">
-                    <div class="problem-card">
+                <div class="problem-solution" style="display: flex; gap: 2rem; margin-top: 2rem;">
+                    <div class="problem-card" style="border-left: 4px solid red; padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1;">
                         <h3>The Problem</h3>
-                        <ul>
+                        <ul style="list-style-type: none; padding-left: 0;">
                             {% for item in page.problem %}
-                            <li>{{ item }}</li>
+                            <li><span style="color: red;">•</span> {{ item }}</li>
                             {% endfor %}
                         </ul>
                     </div>
-                    <div class="solution-card">
+                    <div class="solution-card" style="border-left: 4px solid green; padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1;">
                         <h3>Our Solution</h3>
-                        <ul>
+                        <ul style="list-style-type: none; padding-left: 0;">
                             {% for item in page.solution %}
-                            <li>{{ item }}</li>
+                            <li><span style="color: green;">•</span> {{ item }}</li>
                             {% endfor %}
                         </ul>
                     </div>
                 </div>
                 <div class="goals-container">
                     <h3>This archive aims to solve that problem by:</h3>
-                    <div class="goals-grid">
+                    <div class="goals-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
                         {% for goal in page.goals %}
-                        <div class="goal-item">
+                        <div class="goal-item" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                             <div class="goal-icon"><i class="{{ goal.icon }}"></i></div>
                             <p>{{ goal.text }}</p>
                         </div>
@@ -86,6 +86,7 @@ layout: default
         </div>
 
         <!-- Methodology -->
+        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
         <div class="about-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-clipboard-check"></i></div>
@@ -106,8 +107,10 @@ layout: default
                 </div>
             </div>
         </div>
+        </div>
 
         <!-- Data Sources -->
+        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
         <div class="about-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-database"></i></div>
@@ -123,7 +126,11 @@ layout: default
                     </div>
                     {% endfor %}
                 </div>
+                {% if page.sources_disclaimer %}
+                {{ page.sources_disclaimer | markdownify }}
+                {% endif %}
             </div>
+        </div>
         </div>
 
         <!-- Team -->
@@ -133,9 +140,9 @@ layout: default
                 <h2>Our Team</h2>
             </div>
             <div class="section-content">
-                <div class="team-grid">
+                <div class="team-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
                     {% for member in page.team %}
-                    <div class="team-member">
+                    <div class="team-member" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                         <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
                         <h3>{{ member.name }}</h3>
                         <p class="role">{{ member.role }}</p>
@@ -157,6 +164,7 @@ layout: default
         </div>
 
         <!-- Timeline -->
+        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
         <div class="about-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-history"></i></div>
@@ -176,6 +184,7 @@ layout: default
                 </div>
             </div>
         </div>
+        </div>
 
         <!-- Testimonials -->
         <div class="about-section">
@@ -184,9 +193,9 @@ layout: default
                 <h2>What Our Community Says</h2>
             </div>
             <div class="section-content">
-                <div class="testimonials-grid">
+                <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
                     {% for testimonial in page.testimonials %}
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                         <div class="testimonial-content">
                             <p>{{ testimonial.content }}</p>
                         </div>
@@ -204,6 +213,7 @@ layout: default
         </div>
 
         <!-- FAQs -->
+        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
         <div class="about-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-question-circle"></i></div>
@@ -220,8 +230,10 @@ layout: default
                 </div>
             </div>
         </div>
+        </div>
 
         <!-- Contact -->
+        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
         <div class="about-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-envelope"></i></div>
@@ -237,6 +249,7 @@ layout: default
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </div>

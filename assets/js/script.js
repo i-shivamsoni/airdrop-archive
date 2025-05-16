@@ -385,13 +385,17 @@ function filterProjects(projects, filters) {
 
         // Categories filter
         if (filters.categories && filters.categories.length > 0) {
-            if (!project.function || !Array.isArray(project.function) || project.function.length === 0) {
+            if ((!project.category || !Array.isArray(project.category) || project.category.length === 0) &&
+                (!project.function || !Array.isArray(project.function) || project.function.length === 0)) {
                 return false;
             }
-            if (!project.function.some(f => 
-                filters.categories.some(cat => 
-                    cat.toLowerCase() === f.toLowerCase()
-                )
+            
+            const projectCategories = (project.category || []).map(c => c.toLowerCase());
+            const projectFunctions = (project.function || []).map(f => f.toLowerCase());
+            
+            if (!filters.categories.some(cat => 
+                projectCategories.includes(cat.toLowerCase()) || 
+                projectFunctions.includes(cat.toLowerCase())
             )) {
                 return false;
             }
