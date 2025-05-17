@@ -943,6 +943,66 @@ function updateActiveFilters(filters) {
     const filterTags = activeFilters.querySelector('.filter-tags');
     filterTags.innerHTML = '<button class="clear-all">Clear All</button>';
 
+    // Add clear all functionality
+    const clearAllButton = filterTags.querySelector('.clear-all');
+    clearAllButton.addEventListener('click', () => {
+        // Clear timeframe filters
+        document.querySelectorAll('.filter-options input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Clear category filters
+        document.querySelectorAll('.category-item input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Clear status filters
+        document.querySelectorAll('.status-toggles input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Clear ecosystem filters
+        document.querySelectorAll('.ecosystem-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Clear rewarded activity filters
+        document.querySelectorAll('.activity-item input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Clear blockchain stack filters
+        document.querySelectorAll('.stack-layer').forEach(layer => {
+            layer.dataset.selected = 'false';
+        });
+
+        // Clear blockchain type filters
+        document.querySelectorAll('.type-filter input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Reset all status checkboxes to checked
+        document.querySelectorAll('.status-toggles input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = true;
+        });
+
+        // Clear saved filter states
+        localStorage.removeItem('filterStates');
+
+        // Update the UI
+        const emptyFilters = {
+            timeframe: [],
+            categories: [],
+            status: [],
+            ecosystem: [],
+            rewardedActivity: [],
+            blockchain_stack: [],
+            blockchain_type: []
+        };
+        updateFilters();
+        updateActiveFilters(emptyFilters);
+    });
+
     // Add timeframe filters
     if (filters.timeframe && filters.timeframe.length > 0) {
         filters.timeframe.forEach(year => {
