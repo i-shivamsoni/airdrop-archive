@@ -521,7 +521,7 @@ function initBlockchainStack() {
                     document.querySelector('[data-layer="layer-2"]').dataset.selected = 'true';
                     break;
                 case 'all':
-                    // Select all layers
+                    // Select all layers including Layer 0
                     stackLayers.forEach(layer => {
                         selectedLayers.add(layer.dataset.layer);
                         layer.dataset.selected = 'true';

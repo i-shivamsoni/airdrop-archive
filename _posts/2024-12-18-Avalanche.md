@@ -9,7 +9,7 @@ category: ["scaling"]
 function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"
-blockchain-stack: ["layer-1"]
+blockchain-stack: ["layer-0"]
 ---
 
 ## Basic Information
