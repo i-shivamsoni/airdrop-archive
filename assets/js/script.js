@@ -241,9 +241,12 @@ function getActiveFilters() {
     // Get status filters
     filters.status = getStatusFilters();
 
-    // Get ecosystem filters
-    document.querySelectorAll('.ecosystem-item.active').forEach(item => {
-        filters.ecosystem.push(item.querySelector('span').textContent);
+    // Get ecosystem filters - exclude the "more" item
+    document.querySelectorAll('.ecosystem-item.active:not(.more-item)').forEach(item => {
+        const ecosystem = item.querySelector('span').textContent;
+        if (ecosystem.toLowerCase() !== 'more') {
+            filters.ecosystem.push(ecosystem);
+        }
     });
 
     // Get rewarded activity filters
@@ -412,28 +415,29 @@ function filterProjects(projects, filters) {
 
         // Ecosystem filter
         if (filters.ecosystem && filters.ecosystem.length > 0) {
-            // Handle both explicit "not-known" in metadata and missing ecosystem cases
-            if (filters.ecosystem.includes('not-known')) {
-                if (!project.ecosystem || 
-                    !Array.isArray(project.ecosystem) || 
-                    project.ecosystem.length === 0 ||
-                    (project.ecosystem.length === 1 && project.ecosystem[0].toLowerCase() === 'not-known')) {
-                    return true; // Include projects with no ecosystem or explicit "not-known"
-                }
-            }
+            // Filter out the "more" option from ecosystem filters
+            const validEcosystemFilters = filters.ecosystem.filter(eco => eco.toLowerCase() !== 'more');
             
-            // If project has no ecosystem or is explicitly "not-known" and "not-known" is not selected, exclude it
+            // If no valid filters after removing "more", return true
+            if (validEcosystemFilters.length === 0) {
+                return true;
+            }
+
+            // If project has no ecosystem or is explicitly "not-known"
             if (!project.ecosystem || 
                 !Array.isArray(project.ecosystem) || 
                 project.ecosystem.length === 0 ||
                 (project.ecosystem.length === 1 && project.ecosystem[0].toLowerCase() === 'not-known')) {
-                return false;
+                // Check if "not-known" is in the selected filters
+                const hasNotKnown = validEcosystemFilters.some(eco => 
+                    eco.toLowerCase() === 'not-known' || eco.toLowerCase() === 'not known'
+                );
+                return hasNotKnown;
             }
 
+            // For projects with actual ecosystem values
             const projectEcosystems = project.ecosystem.map(e => e.toLowerCase());
-            if (!filters.ecosystem.some(e => projectEcosystems.includes(e.toLowerCase()))) {
-                return false;
-            }
+            return validEcosystemFilters.some(e => projectEcosystems.includes(e.toLowerCase()));
         }
 
         // Rewarded Activity filter
@@ -1703,11 +1707,14 @@ function createEcosystemItem(ecosystem, iconName) {
         <span>${displayName}</span>
     `;
     
-    item.addEventListener('click', function() {
-        this.classList.toggle('active');
-        debouncedSaveFilterStates();
-        updateFilters();
-    });
+    // Only add click handler if it's not the "more" item
+    if (ecosystem !== 'more') {
+        item.addEventListener('click', function() {
+            this.classList.toggle('active');
+            debouncedSaveFilterStates();
+            updateFilters();
+        });
+    }
     
     return item;
 }
