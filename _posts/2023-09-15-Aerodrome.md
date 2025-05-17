@@ -2,7 +2,7 @@
 layout: "post"
 title: "Aerodrome"
 date: "2023-09-15"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: "base"
 rewardedActivity: ["holder"]
 category: [defi]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Sturdy Finance"
 date: "2022-11-21 05:44 +0530"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

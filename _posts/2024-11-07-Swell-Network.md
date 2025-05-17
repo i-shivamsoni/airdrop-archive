@@ -2,7 +2,7 @@
 layout: "post"
 title: "Swell Network"
 date: "2024-11-07"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["ethereum"]
 rewardedActivity: ["retroactive"]
 category: [scaling,defi]

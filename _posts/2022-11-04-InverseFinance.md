@@ -2,7 +2,7 @@
 layout: "post"
 title: "InverseFinance"
 date: "2022-11-04 03:21:08 +0530"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

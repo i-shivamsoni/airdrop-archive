@@ -2,7 +2,7 @@
 layout: "post"
 title: "CyberConnect"
 date: "2023-08-15"
-timeframe: ["not-known"]
+timeframe: ["2023"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder"]
 category: ["infrastructure"]

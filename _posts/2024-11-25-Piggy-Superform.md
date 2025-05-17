@@ -2,7 +2,7 @@
 layout: "post"
 title: "Piggy Superform"
 date: "2024-11-25"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

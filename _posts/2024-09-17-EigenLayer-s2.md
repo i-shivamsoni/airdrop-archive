@@ -2,7 +2,7 @@
 layout: "post"
 title: "EigenLayer Season 2"
 date: "2024-09-17"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["ethereum"]
 rewardedActivity: ["retroactive"]
 category: ["defi"]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Obol Collective"
 date: "2025-01-21"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["ethereum"]
 rewardedActivity: ["retroactive"]
 category: [defi]

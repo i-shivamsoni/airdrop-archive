@@ -2,7 +2,7 @@
 layout: "post"
 title: "Mint Blockchain"
 date: "2025-03-06"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["optimism", "ethereum"]
 rewardedActivity: ["retroactive"]
 category: [scaling]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Diffusion Finance"
 date: "2022-05-03 04:22 +0530"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder", "staking"]
 category: [defi]

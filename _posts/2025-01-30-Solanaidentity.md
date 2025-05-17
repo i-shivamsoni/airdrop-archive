@@ -2,7 +2,7 @@
 layout: "post"
 title: "Solana ID"
 date: "2025-01-30"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: "solana"
 rewardedActivity: ["retroactive"]
 category: ["utilities"]

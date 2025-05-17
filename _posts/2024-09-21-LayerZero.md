@@ -2,7 +2,7 @@
 layout: "post"
 title: "LayerZero"
 date: "2024-06-20"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [infrastructure]

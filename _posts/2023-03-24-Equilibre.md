@@ -2,7 +2,7 @@
 layout: "post"
 title: "Equilibre"
 date: "2023-03-24"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: ["kava"]
 rewardedActivity: ["testnet"]
 category: [defi]

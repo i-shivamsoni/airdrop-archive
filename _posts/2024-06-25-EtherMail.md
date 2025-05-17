@@ -2,7 +2,7 @@
 layout: "post"
 title: "EtherMail"
 date: "2024-06-25"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [social]

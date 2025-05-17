@@ -2,7 +2,7 @@
 layout: "post"
 title: "BounceBit"
 date: "2024-05-13"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive", "testnet"]
 category: [defi]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Redbelly Network"
 date: "2025-01-26"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet", "social"]
 category: [social,infrastructure]

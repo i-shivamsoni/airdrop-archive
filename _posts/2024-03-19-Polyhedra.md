@@ -2,7 +2,7 @@
 layout: "post"
 title: "Polyhedra"
 date: "2024-03-19"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive", "testnet"]
 category: [infrastructure]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "CollabLand"
 date: "2023-02-23 04:15 +0530"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: ["infrastructure"]

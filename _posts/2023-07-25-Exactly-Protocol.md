@@ -2,7 +2,7 @@
 layout: "post"
 title: "Exactly Protocol"
 date: "2023-07-25"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

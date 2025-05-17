@@ -2,7 +2,7 @@
 layout: "post"
 title: "Side Protocol"
 date: "2024-11-26"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive", "holder", "nft"]
 category: [nft,defi,infrastructure]

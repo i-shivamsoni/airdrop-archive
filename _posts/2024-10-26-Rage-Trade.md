@@ -2,7 +2,7 @@
 layout: "post"
 title: "Rage Trade"
 date: "2024-08-15"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["not-known"]
 category: [defi]

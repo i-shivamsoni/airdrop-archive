@@ -2,7 +2,7 @@
 layout: "post"
 title: "Streamflow"
 date: "2024-12-07"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [infrastructure,defi]

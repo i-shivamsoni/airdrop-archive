@@ -2,7 +2,7 @@
 layout: "post"
 title: "Jupiter Jupuary"
 date: "2025-01-15"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: "solana"
 rewardedActivity: ["retroactive"]
 category: [defi]

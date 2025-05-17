@@ -2,7 +2,7 @@
 layout: "post"
 title: "Gro Protocol"
 date: "2022-01-22 03:21:08 +0530"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

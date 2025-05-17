@@ -2,7 +2,7 @@
 layout: "post"
 title: "Animeswap"
 date: "2022-10-19"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["aptos"]
 rewardedActivity: ["retroactive"]
 category: ["defi"]

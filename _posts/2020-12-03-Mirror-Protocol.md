@@ -2,7 +2,7 @@
 layout: "post"
 title: "Mirror Protocol"
 date: "2020-12-03 03:21:08 +0530"
-timeframe: ["2k20"]
+timeframe: ["2020"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder"]
 category: [rwa,defi]

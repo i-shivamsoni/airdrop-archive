@@ -2,7 +2,7 @@
 layout: "post"
 title: "Overprotocol"
 date: "2024-12-16"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive", "testnet"]
 category: [privacy,infrastructure]

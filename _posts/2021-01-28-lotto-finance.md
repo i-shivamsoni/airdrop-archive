@@ -2,7 +2,7 @@
 layout: "post"
 title: "Lotto Finance"
 date: "2021-01-28 04:47 +0530"
-timeframe: ["2k21", "2k21"]
+timeframe: ["2021"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

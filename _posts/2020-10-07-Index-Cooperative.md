@@ -2,7 +2,7 @@
 layout: "post"
 title: "Index Cooperative"
 date: "2020-10-07 04:57 +0530"
-timeframe: ["2k20"]
+timeframe: ["2020"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

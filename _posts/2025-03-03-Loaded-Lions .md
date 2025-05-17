@@ -2,7 +2,7 @@
 layout: "post"
 title: "Loaded Lions"
 date: "2025-03-03"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: "solana"
 rewardedActivity: ["retroactive", "nft"]
 category: ["nft"]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "WalletConnect"
 date: "2024-11-27"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [infrastructure]

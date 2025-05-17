@@ -2,7 +2,7 @@
 layout: "post"
 title: "Burnt (XION)"
 date: "2024-12-05"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet"]
 category: ["infrastructure"]

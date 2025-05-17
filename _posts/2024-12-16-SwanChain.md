@@ -2,7 +2,7 @@
 layout: "post"
 title: "SwanChain"
 date: "2024-12-16"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [rwa,infrastructure]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Nyan Heroes"
 date: "2024-06-19"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [gaming]

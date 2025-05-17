@@ -2,7 +2,7 @@
 layout: "post"
 title: "Virtuswap"
 date: "2023-05-22"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

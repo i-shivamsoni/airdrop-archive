@@ -2,7 +2,7 @@
 layout: "post"
 title: "Avalon Labs"
 date: "2025-02-15"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

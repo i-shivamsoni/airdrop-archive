@@ -2,7 +2,7 @@
 layout: "post"
 title: "Bitcoin Cash"
 date: "2017-01-26"
-timeframe: ["2k17"]
+timeframe: ["2017"]
 ecosystem: ["not-known"]
 rewardedActivity: ["fork", "holder"]
 category: ["infrastructure"]

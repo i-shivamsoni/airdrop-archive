@@ -2,7 +2,7 @@
 layout: "post"
 title: "Bitoro Network"
 date: "2024-09-28"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["arbitrum-ecosystem"]
 rewardedActivity: ["retroactive"]
 category: [defi]

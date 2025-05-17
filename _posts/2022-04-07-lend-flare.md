@@ -2,7 +2,7 @@
 layout: "post"
 title: "Lend Flare"
 date: "2022-04-07 05:34 +0530"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet"]
 category: [defi]

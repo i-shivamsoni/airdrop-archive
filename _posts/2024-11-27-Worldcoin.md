@@ -2,7 +2,7 @@
 layout: "post"
 title: "Worldcoin"
 date: "2024-11-27"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [infrastructure]

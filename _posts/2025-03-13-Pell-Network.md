@@ -2,7 +2,7 @@
 layout: "post"
 title: "Pell Network"
 date: "2025-03-13"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["btc-ecosystem"]
 rewardedActivity: ["retroactive"]
 category: ["defi"]

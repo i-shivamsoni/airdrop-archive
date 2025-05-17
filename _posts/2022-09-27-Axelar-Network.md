@@ -2,7 +2,7 @@
 layout: "post"
 title: "Axelar Network"
 date: "2022-09-27"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [infrastructure]

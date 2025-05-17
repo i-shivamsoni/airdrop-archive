@@ -2,7 +2,7 @@
 layout: "post"
 title: "SpartaDEX"
 date: "2023-08-03"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: ["linea-ecosystem"]
 rewardedActivity: ["retroactive"]
 category: [defi]

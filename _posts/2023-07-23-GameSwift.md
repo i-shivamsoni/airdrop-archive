@@ -2,7 +2,7 @@
 layout: "post"
 title: "GameSwift"
 date: "2023-07-23"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive", "holders"]
 category: [gaming,infrastructure]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Amnis Finance"
 date: "2025-03-22"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["aptos"]
 rewardedActivity: ["retroactive"]
 category: ["defi"]

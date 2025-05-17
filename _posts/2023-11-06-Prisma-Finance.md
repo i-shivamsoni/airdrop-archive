@@ -2,7 +2,7 @@
 layout: "post"
 title: "Prisma Finance"
 date: "2023-11-04"
-timeframe: ["not-known"]
+timeframe: ["2023"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder", "retroactive"]
 category: [stablecoin,defi]

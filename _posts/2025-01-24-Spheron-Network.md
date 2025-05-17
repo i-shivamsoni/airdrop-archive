@@ -2,7 +2,7 @@
 layout: "post"
 title: "Spheron Network"
 date: "2025-01-24"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["stellar"]
 rewardedActivity: ["retroactive"]
 category: ["ai"]

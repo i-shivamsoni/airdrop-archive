@@ -2,7 +2,7 @@
 layout: "post"
 title: "FuruCombo"
 date: "2022-09-04 04:47 +0530"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: ["defi"]

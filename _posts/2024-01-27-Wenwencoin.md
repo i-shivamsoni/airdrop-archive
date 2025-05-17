@@ -2,7 +2,7 @@
 layout: "post"
 title: "Wenwencoin"
 date: "2024-01-27"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: "solana"
 rewardedActivity: ["retroactive"]
 category: ["meme"]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Islamic Coin"
 date: "2023-10-11"
-timeframe: ["2k23"]
+timeframe: ["2023"]
 ecosystem: ["osmosis"]
 rewardedActivity: ["holder", "testnet"]
 category: [defi]

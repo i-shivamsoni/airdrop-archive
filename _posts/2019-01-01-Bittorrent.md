@@ -2,7 +2,7 @@
 layout: "post"
 title: "BitTorrent"
 date: "2019-01-01"
-timeframe: ["2k19"]
+timeframe: ["2019"]
 ecosystem: ["not-known"]
 rewardedActivity: ["holder"]
 category: [infrastructure]

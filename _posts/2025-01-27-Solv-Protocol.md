@@ -2,7 +2,7 @@
 layout: "post"
 title: "Solv Protocol"
 date: "2025-01-27"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: ["defi"]

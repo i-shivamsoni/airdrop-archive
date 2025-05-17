@@ -2,7 +2,7 @@
 layout: "post"
 title: "Immortal Rising 2"
 date: "2025-03-27"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [gaming]

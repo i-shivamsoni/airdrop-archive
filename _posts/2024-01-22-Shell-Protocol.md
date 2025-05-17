@@ -2,7 +2,7 @@
 layout: "post"
 title: "Shell Protocol"
 date: "2024-01-22"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [infrastructure,defi]

@@ -2,7 +2,7 @@
 layout: "post"
 title: "GammaSwap"
 date: "2024-09-09"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

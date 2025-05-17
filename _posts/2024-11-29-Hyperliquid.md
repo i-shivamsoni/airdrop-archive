@@ -2,7 +2,7 @@
 layout: "post"
 title: "Hyperliquid"
 date: "2024-11-29"
-timeframe: ["2k24"]
+timeframe: ["2024"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [defi]

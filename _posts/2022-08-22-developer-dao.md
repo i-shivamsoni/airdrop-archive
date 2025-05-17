@@ -2,7 +2,7 @@
 layout: "post"
 title: "Developer DAO"
 date: "2022-08-22 04:10 +0530"
-timeframe: ["2k22"]
+timeframe: ["2022"]
 ecosystem: ["not-known"]
 rewardedActivity: ["retroactive"]
 category: [social]

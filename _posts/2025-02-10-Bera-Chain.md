@@ -2,7 +2,7 @@
 layout: "post"
 title: "Bera Chain"
 date: "2025-02-10 03:21:08 +0530"
-timeframe: ["2k25"]
+timeframe: ["2025"]
 ecosystem: ["not-known"]
 rewardedActivity: ["testnet", "holder"]
 category: ["infrastructure"]
