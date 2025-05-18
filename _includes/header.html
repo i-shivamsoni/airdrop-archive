@@ -1,0 +1,29 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
+            <span>Crypto Airdrop Archive</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>HOME</a></li>
+                <li><a href="{{ '/learn' | relative_url }}" {% if page.url contains '/learn' %}class="active"{% endif %}>LEARN</a></li>
+                <li><a href="{{ '/timeline' | relative_url }}" {% if page.url contains '/timeline' %}class="active"{% endif %}>TIMELINE</a></li>
+                <li><a href="{{ '/hall-of-fame' | relative_url }}" {% if page.url contains '/hall-of-fame' %}class="active"{% endif %}>HALL OF FAME</a></li>
+                <li><a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>ABOUT</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header> 

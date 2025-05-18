@@ -1,0 +1,160 @@
+---
+layout: default
+title: Timeline
+description: Browse through our comprehensive collection of cryptocurrency projects and airdrops organized chronologically
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Crypto Airdrop Archive - Modern UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/timeline.css' | relative_url }}">
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <p>{{ page.description }}</p>
+        </section>
+        <div class="timeline-flex-layout">
+            <aside class="sidebar left-sidebar">
+                <!-- Year Overview -->
+                <section class="year-overview">
+                    <h2>Year Overview</h2>
+                    <div class="year-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">{{ site.posts | size }}</div>
+                            <div class="stat-label">Projects in {{ current_year }}</div>
+                        </div>
+                        <div class="stat-chart">
+                            {% assign monthly_stats = site.posts | group_by_exp: "post", "post.date | date: '%B'" %}
+                            {% for month in monthly_stats %}
+                            {% assign percentage = month.items | size | times: 100.0 | divided_by: site.posts.size %}
+                            <div class="chart-bar">
+                                <div class="bar-label">{{ month.name }}</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: {{ percentage }}%"></div>
+                                </div>
+                                <div class="bar-value">{{ month.items | size }}</div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+            </aside>
+            <div class="main-content">
+                <!-- Year Navigation -->
+                <section class="year-navigation">
+                    <div class="year-tabs">
+                        {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+                        {% for year in years %}
+                        <button class="year-tab {% if forloop.first %}active{% endif %}" data-year="{{ year.name }}">{{ year.name }}</button>
+                        {% endfor %}
+                    </div>
+                </section>
+                <!-- Timeline View -->
+                <section class="timeline-view">
+                    <div class="timeline-header">
+                        <h2>{{ years[0].name }}</h2>
+                        <div class="view-options">
+                            <button class="view-option active" data-view="timeline">
+                                <i class="fas fa-stream"></i>
+                                <span>Timeline</span>
+                            </button>
+                            <button class="view-option" data-view="grid">
+                                <i class="fas fa-th-large"></i>
+                                <span>Grid</span>
+                            </button>
+                            <button class="view-option" data-view="list">
+                                <i class="fas fa-list"></i>
+                                <span>List</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Timeline Content -->
+                    <div class="timeline-content">
+                        {% assign current_year = years[0].name %}
+                        {% assign months = years[0].items | group_by_exp: "post", "post.date | date: '%B'" | sort: "name" | reverse %}
+                        {% for month in months %}
+                        <div class="month-section {% unless forloop.first %}collapsed{% endunless %}">
+                            <div class="month-header">
+                                <h3>{{ month.name }} {{ current_year }}</h3>
+                                <span class="project-count">{{ month.items | size }} projects</span>
+                            </div>
+                            {% if forloop.first %}
+                            <div class="timeline-entries">
+                                {% for post in month.items %}
+                                <div class="timeline-entry">
+                                    <div class="entry-date">
+                                        <span class="day">{{ post.date | date: "%d" }}</span>
+                                        <span class="month">{{ post.date | date: "%b" }}</span>
+                                    </div>
+                                    <div class="entry-connector">
+                                        <div class="connector-line"></div>
+                                        <div class="connector-dot"></div>
+                                    </div>
+                                    <div class="entry-card">
+                                        <div class="card-content">
+                                            <h4>{{ post.title }}</h4>
+                                            <div class="card-tags">
+                                                {% for tag in post.tags %}
+                                                <span class="tag">{{ tag }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <a href="{{ post.url | relative_url }}" class="card-link">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="month-footer">
+                                <button class="load-more">
+                                    <span>Load More</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            {% else %}
+                            <div class="month-footer">
+                                <button class="expand-month">
+                                    <span>Expand</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            </div>
+            <aside class="sidebar right-sidebar">
+                <!-- Distribution Methods -->
+                <section class="distribution-methods">
+                    <h2>Distribution Methods</h2>
+                    <div class="distribution-table">
+                        <table>
+                            {% assign methods = site.posts | map: "distribution_method" | uniq %}
+                            {% for method in methods %}
+                            {% assign count = site.posts | where: "distribution_method", method | size %}
+                            {% assign percentage = count | times: 100.0 | divided_by: site.posts.size %}
+                            <tr>
+                                <td class="method-name {{ method | downcase }}">{{ method }}</td>
+                                <td class="method-value">{{ percentage | round }}%</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <script src="{{ '/assets/js/timeline.js' | relative_url }}"></script>
+</body>
+</html>
