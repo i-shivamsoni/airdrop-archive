@@ -199,57 +199,67 @@ layout: default
                         <div class="testimonial-content">
                             <p>{{ testimonial.content }}</p>
                         </div>
-                        <div class="testimonial-author">
-                            <img src="{{ testimonial.image | relative_url }}" alt="{{ testimonial.author }}">
-                            <div class="author-info">
-                                <h4>{{ testimonial.author }}</h4>
-                                <p>{{ testimonial.role }}</p>
-                            </div>
-                        </div>
+                        <div class="testimonial-author" style="margin-top: 1rem; font-weight: bold; color: #6a85f1;">- {{ testimonial.author }}</div>
                     </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
 
-        <!-- FAQs -->
-        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+        <!-- FAQ Section -->
         <div class="about-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-question-circle"></i></div>
                 <h2>Frequently Asked Questions</h2>
             </div>
             <div class="section-content">
-                <div class="faqs">
-                    {% for faq in page.faqs %}
+                <div class="faq-list">
                     <div class="faq-item">
-                        <h3>{{ faq.question }}</h3>
-                        <p>{{ faq.answer }}</p>
+                        <h3>What is Crypto Airdrop Archive?</h3>
+                        <p>Crypto Airdrop Archive is a comprehensive collection of cryptocurrency projects and airdrops, organized chronologically for easy browsing and research.</p>
                     </div>
-                    {% endfor %}
+                    <div class="faq-item">
+                        <h3>How do I participate in an airdrop?</h3>
+                        <p>Each project has its own requirements. Click on a project to see details and participation instructions.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How is the data verified?</h3>
+                        <p>We cross-reference information from multiple sources, including official documentation, community reports, and on-chain data.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I suggest a project or correction?</h3>
+                        <p>Yes! Please use the contact information below to reach out with suggestions or corrections.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
 
-        <!-- Contact -->
-        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+        <!-- Contact Section -->
         <div class="about-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-envelope"></i></div>
-                <h2>Get in Touch</h2>
+                <h2>Contact Us</h2>
             </div>
             <div class="section-content">
-                <div class="contact-info">
-                    <p>Have questions or want to contribute? Reach out to us:</p>
-                    <div class="contact-links">
-                        <a href="mailto:{{ page.contact.email }}"><i class="fas fa-envelope"></i> {{ page.contact.email }}</a>
-                        <a href="https://twitter.com/{{ page.contact.twitter }}" target="_blank"><i class="fab fa-twitter"></i> {{ page.contact.twitter }}</a>
-                        <a href="{{ page.contact.discord }}" target="_blank"><i class="fab fa-discord"></i> {{ page.contact.discord }}</a>
-                    </div>
-                </div>
+                <p>Have a question, suggestion, or want to get in touch? Reach out to us:</p>
+                <ul class="contact-list">
+                    <li>
+                        <a href="mailto:contact@airdroparchive.com">
+                            <i class="fas fa-envelope"></i> contact@airdroparchive.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/airdrparchive" target="_blank">
+                            <i class="fab fa-twitter"></i> @airdrparchive
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/airdrparchive" target="_blank">
+                            <i class="fab fa-github"></i> airdrparchive
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
         </div>
     </div>
 </div>

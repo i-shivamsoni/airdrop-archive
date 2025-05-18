@@ -41,15 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
       if (timeline) timeline.style.display = '';
     });
   });
-
-  // Collapsible months (direct event binding)
-  document.querySelectorAll('.toggle-month').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      const monthSection = btn.closest('.month-section');
-      if (monthSection) {
-        monthSection.classList.toggle('collapsed');
-      }
-            e.stopPropagation();
-    });
-            });
-        });
+});

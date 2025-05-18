@@ -1066,27 +1066,3 @@ main {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--border-color);
 }
-
-.month-section.collapsed .timeline-entries {
-    display: none;
-}
-
-.month-section .toggle-month {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 1rem;
-    font-size: 1.1em;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-}
-
-.month-section.collapsed .fa-chevron-down {
-    transform: rotate(-90deg);
-    transition: transform 0.2s;
-}
-
-.month-section .fa-chevron-down {
-    transition: transform 0.2s;
-}
