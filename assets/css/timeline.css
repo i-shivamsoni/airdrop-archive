@@ -2529,13 +2529,20 @@ button:active {
     margin-bottom: var(--spacing-md);
     display: flex;
     align-items: flex-start;
+    padding-left: 4.5rem;
 }
 
 .entry-date {
     position: absolute;
-    left: -2rem;
-    width: 3rem;
+    left: 0;
+    min-width: 3.5rem;
+    width: 3.5rem;
     text-align: center;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .entry-date .day {
@@ -2846,8 +2853,8 @@ button:active {
 .timeline-flex-layout > .left-sidebar {
     position: fixed !important;
     left: 0;
-    top: 0;
-    height: 100vh;
+    top: 80px;
+    height: calc(100vh - 80px);
     width: var(--sidebar-width);
     min-width: var(--sidebar-width);
     max-width: var(--sidebar-width);
@@ -2861,8 +2868,8 @@ button:active {
 .timeline-flex-layout > .right-sidebar {
     position: fixed !important;
     right: 0;
-    top: 0;
-    height: 100vh;
+    top: 80px;
+    height: calc(100vh - 80px);
     width: var(--sidebar-width);
     min-width: var(--sidebar-width);
     max-width: var(--sidebar-width);
@@ -2874,10 +2881,14 @@ button:active {
 }
 
 .timeline-flex-layout > .main-content {
+    /* Prevent main content from going under sidebars */
     margin-left: var(--sidebar-width);
     margin-right: var(--sidebar-width);
     width: calc(100vw - 2 * var(--sidebar-width));
-    max-width: 1200px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    /* Remove or override max-width to prevent clipping */
+    max-width: none;
     min-width: 0;
     padding: 2rem 2.5rem;
     background: #fff;
