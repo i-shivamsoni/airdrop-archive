@@ -150,12 +150,18 @@ description: Browse through our comprehensive collection of cryptocurrency proje
             <aside class="sidebar right-sidebar">
                 <!-- Rewarded Activity Main Categories -->
                 <section class="rewarded-activity-methods">
-                    <h2>Rewarded Activity</h2>
+                    <div class="activity-header">
+                        <h2>Rewarded Activity</h2>
+                    </div>
                     <div class="rewarded-activity-list">
                       {% assign activity_groups = 
                           "on-chain-participation,test-and-build-participation,community-and-loyalty,influence-and-content,alpha-community-participation" | split: "," %}
                       {% assign activity_labels = 
                           "On-chain Participation,Test & Build Participation,Community & Loyalty,Influence & Content,Alpha Community Participation" | split: "," %}
+                      {% assign activity_icons = 
+                          "fa-link,fa-code,fa-users,fa-star,fa-gem" | split: "," %}
+                      {% assign activity_colors = 
+                          "#4f46e5,#10b981,#f59e0b,#ef4444,#8b5cf6" | split: "," %}
                       {% assign activity_options = 
                           "retroactive|holder|nft|staking|fork|node,testnet|form|dev-work,loyalty|free|discord-role|quest,content|kaito-yapping,binance-alpha|mexc-alpha|bybit-alpha|okx-alpha" | split: "," %}
                       
@@ -165,6 +171,8 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                           {% for group in activity_groups %}
                             {% assign group_index = forloop.index0 %}
                             {% assign group_label = activity_labels[group_index] %}
+                            {% assign group_icon = activity_icons[group_index] %}
+                            {% assign group_color = activity_colors[group_index] %}
                             {% assign group_activities = activity_options[group_index] | split: "|" %}
                             {% assign count = 0 %}
                             {% for post in year.items %}
@@ -178,10 +186,20 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                               {% endif %}
                             {% endfor %}
                             {% assign percentage = count | times: 100.0 | divided_by: year.items.size %}
-                            <div class="rewarded-activity-category">
+                            <div class="rewarded-activity-category" style="--category-color: {{ group_color }}">
                                 <div class="category-header" data-category="{{ group }}">
-                                    <span class="activity-name">{{ group_label }}</span>
-                                    <span class="activity-value">{{ percentage | round }}%</span>
+                                    <div class="category-icon">
+                                        <i class="fas {{ group_icon }}"></i>
+                                    </div>
+                                    <div class="category-info">
+                                        <span class="activity-name">{{ group_label }}</span>
+                                        <div class="activity-progress">
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: {{ percentage }}%"></div>
+                                            </div>
+                                            <span class="activity-value">{{ percentage | round }}%</span>
+                                        </div>
+                                    </div>
                                     <button class="expand-category">
                                         <i class="fas fa-chevron-down"></i>
                                     </button>
@@ -197,7 +215,12 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                                         {% assign subpercentage = subcount | times: 100.0 | divided_by: year.items.size %}
                                         <div class="subcategory-row">
                                             <span class="subcategory-name">{{ subactivity | replace: "-", " " | capitalize }}</span>
-                                            <span class="subcategory-value">{{ subpercentage | round }}%</span>
+                                            <div class="subcategory-progress">
+                                                <div class="progress-bar small">
+                                                    <div class="progress-fill" style="width: {{ subpercentage }}%"></div>
+                                                </div>
+                                                <span class="subcategory-value">{{ subpercentage | round }}%</span>
+                                            </div>
                                         </div>
                                     {% endfor %}
                                 </div>
