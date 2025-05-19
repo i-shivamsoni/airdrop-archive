@@ -1066,3 +1066,8 @@ main {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--border-color);
 }
+
+/* Timeline page-specific main padding fix */
+.timeline-page main {
+    padding-top: var(--spacing-sm);
+}

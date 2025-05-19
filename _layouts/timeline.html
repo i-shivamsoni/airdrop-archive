@@ -16,11 +16,14 @@ description: Browse through our comprehensive collection of cryptocurrency proje
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/timeline.css' | relative_url }}">
 </head>
-<body>
+<body class="timeline-page">
     <main>
-        <section class="hero">
-            <p>{{ page.description }}</p>
-        </section>
+        <div class="container">
+            <section class="timeline-hero" style="background: var(--light-dark, #f7f7fa); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 2.5rem 2rem 2rem 2rem; margin-bottom: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center;">
+                <h1 style="font-size: 2.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">Timeline</h1>
+                <p style="font-size: 1.25rem; color: var(--dark-light); max-width: 700px; margin-bottom: 0;">Browse through our comprehensive collection of cryptocurrency projects and airdrops organized chronologically. Explore the evolution of airdrops and project launches year by year, month by month.</p>
+            </section>
+        </div>
         <div class="timeline-flex-layout">
             <aside class="sidebar left-sidebar">
                 <!-- Year Overview -->
