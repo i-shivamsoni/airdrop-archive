@@ -1644,8 +1644,9 @@ function initEcosystemFilters() {
     // Create more section
     const moreItem = document.createElement('div');
     moreItem.className = 'ecosystem-item more-item';
+    const baseUrl = window.siteBaseUrl || '';
     moreItem.innerHTML = `
-        <img src="/assets/images/ecosystem_icons/more.svg" alt="More">
+        <img src="${baseUrl}/assets/images/ecosystem_icons/more.svg" alt="More">
         <span>More</span>
     `;
     ecosystemContainer.appendChild(moreItem);
