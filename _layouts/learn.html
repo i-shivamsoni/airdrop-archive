@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Crypto Airdrop Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <style>
+        :root {
+            --pastel-blue: #A7C7E7;
+            --pastel-blue-light: #C5D9F1;
+            --pastel-blue-dark: #7BA4D9;
+            --pastel-blue-accent: #4B8CD9;
+            --pastel-blue-hover: #2B6CB0;
+            --pastel-blue-bg: #F0F7FF;
+            --pastel-blue-card: #FFFFFF;
+            --pastel-blue-border: #E1EEFF;
+            --pastel-blue-text: #2C5282;
+            --pastel-blue-text-light: #4A5568;
+        }
+
+        .learn-hero {
+            background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--pastel-blue-dark) 100%);
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(123, 164, 217, 0.2);
+        }
+
+        .learn-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .learn-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .learn-card {
+            background: var(--pastel-blue-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--pastel-blue-border);
+            box-shadow: 0 2px 8px rgba(123, 164, 217, 0.1);
+        }
+
+        .learn-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(123, 164, 217, 0.15);
+            border-color: var(--pastel-blue);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .category {
+            background: var(--pastel-blue);
+            color: var(--pastel-blue-text);
+            padding: 0.3rem 0.8rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .difficulty {
+            padding: 0.3rem 0.8rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .difficulty.beginner { 
+            background: #B5EAD7; 
+            color: #2C7A7B; 
+        }
+        .difficulty.intermediate { 
+            background: #FFDAC1; 
+            color: #C05621; 
+        }
+        .difficulty.advanced { 
+            background: #FFB7B2; 
+            color: #C53030; 
+        }
+
+        .card-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--pastel-blue-text);
+        }
+
+        .card-content p {
+            color: var(--pastel-blue-text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--pastel-blue-border);
+            padding-top: 1rem;
+        }
+
+        .read-time {
+            color: var(--pastel-blue-text-light);
+            font-size: 0.9rem;
+        }
+
+        .read-more {
+            color: var(--pastel-blue-accent);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--pastel-blue-hover);
+        }
+
+        .filter-section {
+            background: var(--pastel-blue-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--pastel-blue-border);
+            box-shadow: 0 2px 8px rgba(123, 164, 217, 0.1);
+        }
+
+        .filter-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--pastel-blue-text);
+        }
+
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            color: var(--pastel-blue-text);
+        }
+
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--pastel-blue);
+            border-radius: 4px;
+            display: inline-block;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .checkbox input:checked + .checkmark {
+            background: var(--pastel-blue);
+            border-color: var(--pastel-blue);
+        }
+
+        .checkbox input:checked + .checkmark:after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .featured-content {
+            background: var(--pastel-blue-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--pastel-blue-border);
+            box-shadow: 0 2px 8px rgba(123, 164, 217, 0.1);
+        }
+
+        .featured-content h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--pastel-blue-text);
+        }
+
+        .featured-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .featured-item {
+            padding: 1rem;
+            background: var(--pastel-blue-bg);
+            border-radius: 0.5rem;
+            border: 1px solid var(--pastel-blue-border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .featured-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(123, 164, 217, 0.15);
+            border-color: var(--pastel-blue);
+        }
+
+        .featured-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--pastel-blue-text);
+        }
+
+        .featured-item p {
+            font-size: 0.9rem;
+            color: var(--pastel-blue-text-light);
+        }
+
+        body {
+            background-color: var(--pastel-blue-bg);
+        }
+
+        .main-content {
+            background: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .learn-hero {
+                padding: 2rem 1rem;
+            }
+
+            .learn-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <script>
+        // Inject Jekyll data
+        window.siteData = {
+            posts: [
+                {% for post in site.posts %}
+                {
+                    title: "{{ post.title }}",
+                    date: "{{ post.date }}",
+                    description: "{{ post.description | strip_html | strip_newlines | escape }}",
+                    pagetype: "{{ post.pagetype }}",
+                    category: "{{ post.category }}",
+                    difficulty: "{{ post.difficulty }}",
+                    readTime: "{{ post.readTime }}",
+                    url: "{{ post.url }}"
+                }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ]
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
+                <span>Crypto Airdrop Archive</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">HOME</a></li>
+                    <li><a href="{{ '/learn' | relative_url }}" class="active">LEARN</a></li>
+                    <li><a href="{{ '/timeline' | relative_url }}">TIMELINE</a></li>
+                    <li><a href="{{ '/hall-of-fame' | relative_url }}">HALL OF FAME</a></li>
+                    <li><a href="{{ '/about' | relative_url }}">ABOUT</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="learn-hero">
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </section>
+
+            <div class="content-wrapper three-column">
+                <!-- Left Sidebar -->
+                <aside class="sidebar left-sidebar">
+                    <!-- Category Filter -->
+                    <section class="filter-section">
+                        <h2>Categories</h2>
+                        <div class="filter-options">
+                            <label class="checkbox">
+                                <input type="checkbox" data-category="basics">
+                                <span class="checkmark"></span>
+                                <span>Basics</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-category="advanced">
+                                <span class="checkmark"></span>
+                                <span>Advanced</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-category="security">
+                                <span class="checkmark"></span>
+                                <span>Security</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-category="strategies">
+                                <span class="checkmark"></span>
+                                <span>Strategies</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- Difficulty Filter -->
+                    <section class="filter-section">
+                        <h2>Difficulty</h2>
+                        <div class="filter-options">
+                            <label class="checkbox">
+                                <input type="checkbox" data-difficulty="beginner">
+                                <span class="checkmark"></span>
+                                <span>Beginner</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-difficulty="intermediate">
+                                <span class="checkmark"></span>
+                                <span>Intermediate</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" data-difficulty="advanced">
+                                <span class="checkmark"></span>
+                                <span>Advanced</span>
+                            </label>
+                        </div>
+                    </section>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <div class="cards-grid" id="learn-cards">
+                        <!-- Cards will be dynamically populated here -->
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <aside class="sidebar right-sidebar">
+                    <section class="featured-content">
+                        <h2>Featured Resources</h2>
+                        <div class="featured-list">
+                            <!-- Featured items will be dynamically populated -->
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const learnCards = document.getElementById('learn-cards');
+            const posts = window.siteData.posts.filter(post => post.pagetype === 'learn');
+            const featuredList = document.querySelector('.featured-list');
+
+            // Populate main cards
+            posts.forEach(post => {
+                const card = document.createElement('div');
+                card.className = 'card learn-card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <span class="category">${post.category}</span>
+                        <span class="difficulty ${post.difficulty.toLowerCase()}">${post.difficulty}</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>${post.title}</h3>
+                        <p>${post.description}</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="read-time"><i class="far fa-clock"></i> ${post.readTime}</span>
+                        <a href="${post.url}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                `;
+                learnCards.appendChild(card);
+            });
+
+            // Populate featured items (top 3 posts)
+            posts.slice(0, 3).forEach(post => {
+                const item = document.createElement('div');
+                item.className = 'featured-item';
+                item.innerHTML = `
+                    <h3>${post.title}</h3>
+                    <p>${post.description}</p>
+                `;
+                featuredList.appendChild(item);
+            });
+
+            // Filter functionality
+            const filterCheckboxes = document.querySelectorAll('.filter-options input[type="checkbox"]');
+            filterCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', filterCards);
+            });
+
+            function filterCards() {
+                const selectedCategories = Array.from(document.querySelectorAll('[data-category]:checked')).map(cb => cb.dataset.category);
+                const selectedDifficulties = Array.from(document.querySelectorAll('[data-difficulty]:checked')).map(cb => cb.dataset.difficulty);
+
+                const cards = document.querySelectorAll('.learn-card');
+                cards.forEach(card => {
+                    const category = card.querySelector('.category').textContent.toLowerCase();
+                    const difficulty = card.querySelector('.difficulty').textContent.toLowerCase();
+                    
+                    const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(category);
+                    const difficultyMatch = selectedDifficulties.length === 0 || selectedDifficulties.includes(difficulty);
+
+                    card.style.display = categoryMatch && difficultyMatch ? 'block' : 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

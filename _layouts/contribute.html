@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Crypto Airdrop Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/hall-of-fame.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
+                <span>Crypto Airdrop Archive</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">HOME</a></li>
+                    <li><a href="{{ '/learn' | relative_url }}">LEARN</a></li>
+                    <li><a href="{{ '/timeline' | relative_url }}">TIMELINE</a></li>
+                    <li><a href="{{ '/hall-of-fame' | relative_url }}">HALL OF FAME</a></li>
+                    <li><a href="{{ '/about' | relative_url }}">ABOUT</a></li>
+                    <li><a href="{{ '/contribute' | relative_url }}" class="active">CONTRIBUTE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </section>
+            <div class="main-content">
+                {{ content }}
+                <section class="nomination-section">
+                    <h2>Nominate an Airdrop for Hall of Fame</h2>
+                    <div class="nomination-intro">
+                        <p>Do you think an airdrop deserves to be in our Hall of Fame? Submit your nomination through our standardized process.</p>
+                    </div>
+                    <form class="nomination-form">
+                        <div class="form-group">
+                            <label for="project-name">Project Name</label>
+                            <input type="text" id="project-name" placeholder="e.g., Uniswap, dYdX, Optimism">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="airdrop-year">Year of Airdrop</label>
+                                <input type="number" id="airdrop-year" placeholder="e.g., 2023" min="2010" max="2025">
+                            </div>
+                            <div class="form-group">
+                                <label for="total-value">Estimated Total Value (USD)</label>
+                                <input type="text" id="total-value" placeholder="e.g., 500000000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipients">Approximate Number of Recipients</label>
+                            <input type="text" id="recipients" placeholder="e.g., 250000">
+                        </div>
+                        <div class="form-group">
+                            <label for="significance">Why is this airdrop significant?</label>
+                            <textarea id="significance" rows="4" placeholder="Describe what makes this airdrop historically significant or innovative..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email (optional)</label>
+                            <input type="email" id="email" placeholder="For follow-up questions (we won't share your email)">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Submit Nomination</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="blog-section form-section">
+                    <h2>Submit a Blog or Article</h2>
+                    <form class="blog-form">
+                        <div class="form-group">
+                            <label for="blog-title">Title</label>
+                            <input type="text" id="blog-title" placeholder="e.g., The Evolution of Airdrops">
+                        </div>
+                        <div class="form-group">
+                            <label for="blog-link">Link to the Article</label>
+                            <input type="url" id="blog-link" placeholder="e.g., https://medium.com/...">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Submit Article</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="project-addition-section form-section" style="margin-bottom: 2rem;">
+                    <h2>Request a Project Addition to the Airdrop Archive</h2>
+                    <form class="project-addition-form">
+                        <div class="form-group">
+                            <label for="project-add-name">Project Name</label>
+                            <input type="text" id="project-add-name" placeholder="e.g., NewToken">
+                        </div>
+                        <div class="form-group">
+                            <label for="coingecko-link">CoinGecko Link</label>
+                            <input type="url" id="coingecko-link" placeholder="e.g., https://www.coingecko.com/en/coins/newtoken">
+                        </div>
+                        <div class="form-group">
+                            <label for="coinmarketcap-link">CoinMarketCap Link</label>
+                            <input type="url" id="coinmarketcap-link" placeholder="e.g., https://coinmarketcap.com/currencies/newtoken/">
+                        </div>
+                        <div class="form-group">
+                            <label for="announcement-tweet">Announcement Tweet (or Thread)</label>
+                            <input type="url" id="announcement-tweet" placeholder="e.g., https://twitter.com/project/status/1234567890">
+                        </div>
+                        <div class="form-group">
+                            <label for="eligibility-source">Eligibility Criteria / Official Source</label>
+                            <input type="text" id="eligibility-source" placeholder="e.g., https://docs.project.com/airdrop-criteria">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Request Addition</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="/assets/js/hall-of-fame.js"></script>
+</body>
+</html> 
