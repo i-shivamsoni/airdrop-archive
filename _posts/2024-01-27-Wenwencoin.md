@@ -9,17 +9,10 @@ category: ["meme"]
 function: ["charity", "social"]
 status: ["alive"]
 pagetype: "project"
+website: "Not Known"
+ticker: "WEN"
+description: "A community coin debuting on Solana alongside a new NFT standard, WNS 0.0."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                    |
-| ------------------- | -------------------------------------------------------------------------- |
-| Project Name        | Wenwencoin (WEN)                                                           |
-| Project Website     | Not Known                                                                  |
-| Project Description | A community coin debuting on Solana alongside a new NFT standard, WNS 0.0. |
-| Project Ticker      | WEN                                                                        |
-
 ## Airdrop Details
 
 | Information              | Details                                      |

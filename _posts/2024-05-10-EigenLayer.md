@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "staking", "restaking"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.eigenfoundation.org"
+ticker: "EIGEN"
+description: "The Eigen Foundation is dedicated to accelerating the growth of the EigenLayer ecosystem, which enables staked ETH to be used as cryptoeconomic security for protocols beyond Ethereum, fostering open innovation."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                            |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Eigen Foundation                                                                                                                                                                                                   |
-| Project Website     | [https://www.eigenfoundation.org](https://www.eigenfoundation.org)                                                                                                                                                 |
-| Project Description | The Eigen Foundation is dedicated to accelerating the growth of the EigenLayer ecosystem, which enables staked ETH to be used as cryptoeconomic security for protocols beyond Ethereum, fostering open innovation. |
-| Project Ticker      | EIGEN                                                                                                                                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details                                                            |

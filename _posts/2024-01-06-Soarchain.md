@@ -9,17 +9,10 @@ category: ["infrastructure"]
 function: ["infrastructure", "performance", "staking", "depin", "scaling"]
 status: ["alive"]
 pagetype: "project"
+website: "https://soarchain.com"
+ticker: "SOAR"
+description: "A layer-1 mobility-based Decentralized Physical Infrastructure Network (DePIN) designed to connect mobility participants and leverage vehicle-generated data for real-world applications."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                   |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Soarchain                                                                                                                                                                                 |
-| Project Website     | [https://soarchain.com](https://soarchain.com)                                                                                                                                            |
-| Project Description | A layer-1 mobility-based Decentralized Physical Infrastructure Network (DePIN) designed to connect mobility participants and leverage vehicle-generated data for real-world applications. |
-| Project Ticker      | SOAR                                                                                                                                                                                      |
-
 ## Airdrop Details
 
 | Information              | Details                                       |

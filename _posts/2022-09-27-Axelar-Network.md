@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["infrastructure", "cross-chain"]
 status: ["alive"]
 pagetype: "project"
+website: "https://airdrop.axelar.network/"
+ticker: "AXL"
+description: "Axelar delivers secure interchain communication for Web3, allowing dApp users to interact with any asset or application on any chain with one click. It functions like Stripe for Web3."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                 |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Axelar Network                                                                                                                                                                          |
-| Project Website     | [Axelar Airdrop](https://airdrop.axelar.network/)                                                                                                                                       |
-| Project Description | Axelar delivers secure interchain communication for Web3, allowing dApp users to interact with any asset or application on any chain with one click. It functions like Stripe for Web3. |
-| Project Ticker      | AXL                                                                                                                                                                                     |
-
 ## Airdrop Details
 
 | Information              | Details   |

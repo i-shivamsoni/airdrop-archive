@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "venture-capital", "community"]
 status: ["alive"]
 pagetype: "project"
+website: "https://forefront.gitbook.io/forefront/token-distribution/community-airdrop"
+ticker: "FF"
+description: "A community-driven platform and marketplace for social tokens and Web3 communities."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------ |
-| Project Name        | Forefront                                                                                        |
-| Project Website     | [Forefront Gitbook](https://forefront.gitbook.io/forefront/token-distribution/community-airdrop) |
-| Project Description | A community-driven platform and marketplace for social tokens and Web3 communities.              |
-| Project Ticker      | FF                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                |

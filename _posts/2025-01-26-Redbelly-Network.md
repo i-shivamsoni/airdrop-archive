@@ -10,17 +10,10 @@ function: ["infrastructure", "finance", "social"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://redbelly.network"
+ticker: "RBNT"
+description: "Redbelly Network is a blockchain platform designed for real-world asset (RWA) tokenization, offering security, scalability, and compliance for financial applications."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Redbelly Network                                                                                                                                                       |
-| Project Website     | [Redbelly Network](https://redbelly.network)                                                                                                                           |
-| Project Description | Redbelly Network is a blockchain platform designed for real-world asset (RWA) tokenization, offering security, scalability, and compliance for financial applications. |
-| Project Ticker      | RBNT                                                                                                                                                                   |
-
 ## Airdrop Details
 
 | Information              | Details                                                    |

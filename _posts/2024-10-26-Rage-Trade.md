@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "trading"]
 status: ["alive"]
 pagetype: "project"
+website: "https://rage.trade"
+ticker: "RAGE"
+description: "A decentralized perpetual and yield trading platform built on Ethereum and Layer 2 scaling solutions."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                               |
-| ------------------- | ----------------------------------------------------------------------------------------------------- |
-| Project Name        | Rage Trade                                                                                            |
-| Project Website     | [Rage Trade](https://rage.trade)                                                                      |
-| Project Description | A decentralized perpetual and yield trading platform built on Ethereum and Layer 2 scaling solutions. |
-| Project Ticker      | RAGE                                                                                                  |
-
 ## Airdrop Details
 
 | Information              | Details                                 |

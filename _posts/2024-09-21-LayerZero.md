@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["infrastructure", "cross-chain"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.layerzero.foundation/"
+ticker: "ZRO"
+description: "LayerZero is an omnichain interoperability protocol that enables censorship-resistant messaging and permissionless development through immutable smart contracts."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                           |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | LayerZero                                                                                                                                                         |
-| Project Website     | [LayerZero](https://www.layerzero.foundation/)                                                                                                                    |
-| Project Description | LayerZero is an omnichain interoperability protocol that enables censorship-resistant messaging and permissionless development through immutable smart contracts. |
-| Project Ticker      | ZRO                                                                                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                                                                                                              |

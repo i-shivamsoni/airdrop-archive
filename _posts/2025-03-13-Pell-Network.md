@@ -9,17 +9,10 @@ category: ["defi"]
 function: ["staking"]
 status: ["alive"]
 pagetype: "project"
+website: "https://pell.network/"
+ticker: "PELL"
+description: "Pell Network is an Omnichain Decentralized Validated Service (DVS) Network driven by BTC restaking, aiming to extend BTCFi into the cryptoeconomic security domain and fully unlock Bitcoin’s security potential."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                           |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Pell Network                                                                                                                                                                                                      |
-| Project Website     | [https://pell.network/](https://pell.network/)                                                                                                                                                                    |
-| Project Description | Pell Network is an Omnichain Decentralized Validated Service (DVS) Network driven by BTC restaking, aiming to extend BTCFi into the cryptoeconomic security domain and fully unlock Bitcoin’s security potential. |
-| Project Ticker      | PELL                                                                                                                                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details                               |

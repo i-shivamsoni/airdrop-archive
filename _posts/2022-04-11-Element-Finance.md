@@ -9,17 +9,10 @@ category: [rwa,defi]
 function: ["defi", "rwa", "yield"]
 status: ["dead"]
 pagetype: "project"
+website: "https://element.fi"
+ticker: "ELFI"
+description: "A decentralized protocol that enables users to split digital assets into principal and yield components, allowing for fixed and variable yield markets."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Element Protocol                                                                                                                                        |
-| Project Website     | [https://element.fi](https://element.fi)                                                                                                                |
-| Project Description | A decentralized protocol that enables users to split digital assets into principal and yield components, allowing for fixed and variable yield markets. |
-| Project Ticker      | ELFI                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                 |

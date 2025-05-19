@@ -9,17 +9,10 @@ category: [data,infrastructure]
 function: ["infrastructure", "analytics", "data"]
 status: ["alive"]
 pagetype: "project"
+website: "https://bubblemaps.io"
+ticker: "BMT"
+description: "Bubblemaps is the first supply auditing tool for DeFi tokens and NFTs, utilizing unique and colorful bubbles to simplify on-chain data analysis."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                              |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Bubblemaps                                                                                                                                                           |
-| Project Website     | [https://bubblemaps.io](https://bubblemaps.io)                                                                                                                       |
-| Project Description | Bubblemaps is the first supply auditing tool for DeFi tokens and NFTs, utilizing unique and colorful bubbles to simplify on-chain data analysis.|
-| Project Ticker      | BMT                                                                                                                                                                  |
-
 ## Airdrop Details
 
 | Information              | Details                                                                                         |

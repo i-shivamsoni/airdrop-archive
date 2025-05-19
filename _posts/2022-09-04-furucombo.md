@@ -9,17 +9,10 @@ category: ["defi"]
 function: ["defi", "automation", "strategy"]
 status: ["alive"]
 pagetype: "project"
+website: "https://furucombo.app"
+ticker: "COMBO"
+description: "A multi-chain DeFi aggregator designed to simplify, optimize, and automate DeFi trading. Furucombo allows users to craft multi-step DeFi strategies through a user-friendly platform."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                               |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Furucombo                                                                                                                                                                             |
-| Project Website     | [https://furucombo.app](https://furucombo.app)                                                                                                                                        |
-| Project Description | A multi-chain DeFi aggregator designed to simplify, optimize, and automate DeFi trading. Furucombo allows users to craft multi-step DeFi strategies through a user-friendly platform. |
-| Project Ticker      | COMBO                                                                                                                                                                                 |
-
 ## Airdrop Details
 
 | Information              | Details                                          |

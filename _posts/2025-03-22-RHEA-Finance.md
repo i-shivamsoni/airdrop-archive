@@ -9,17 +9,10 @@ category: [stablecoin,defi]
 function: ["algorithmic", "defi", "stablecoin"]
 status: ["alive"]
 pagetype: "project"
+website: "https://rhea.finance"
+ticker: "RHEA"
+description: "A decentralized finance platform with a unique reputation-based reward system."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                        |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Project Name        | RHEA Finance                                                                   |
-| Project Website     | [https://rhea.finance](https://rhea.finance)                                   |
-| Project Description | A decentralized finance platform with a unique reputation-based reward system. |
-| Project Ticker      | RHEA                                                                           |
-
 ## Airdrop Details
 
 | Information              | Details                  |

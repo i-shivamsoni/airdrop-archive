@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "options"]
 status: ["alive"]
 pagetype: "project"
+website: "https://ribbon.finance"
+ticker: "RBN"
+description: "A protocol that creates structured products for DeFi, combining options, futures, and fixed income to improve a portfolio's risk-return profile."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Ribbon Finance                                                                                                                                   |
-| Project Website     | [Ribbon Finance](https://ribbon.finance)                                                                                                         |
-| Project Description | A protocol that creates structured products for DeFi, combining options, futures, and fixed income to improve a portfolio's risk-return profile. |
-| Project Ticker      | RBN                                                                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details        |

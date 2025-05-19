@@ -10,17 +10,10 @@ function: ["mining"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://minepi.com/"
+ticker: "PI"
+description: "A decentralized cryptocurrency network focused on mobile mining and peer-to-peer transactions."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                        |
-| ------------------- | ---------------------------------------------------------------------------------------------- |
-| Project Name        | Pi Network                                                                                     |
-| Project Website     | [Pi Network Official Site](https://minepi.com/)                                                |
-| Project Description | A decentralized cryptocurrency network focused on mobile mining and peer-to-peer transactions. |
-| Project Ticker      | PI                                                                                             |
-
 ## Airdrop Details
 
 | Information              | Details                                   |

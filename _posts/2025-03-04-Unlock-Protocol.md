@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["infrastructure", "access", "control"]
 status: ["alive"]
 pagetype: "project"
+website: "https://unlock-protocol.com"
+ticker: "$UP"
+description: "A decentralized protocol for memberships, subscriptions, and ticketing onchain, enabling creators and developers to monetize access to their communities."
 ---
-
-## Basic Information
-
-| Information             | Details                                                                                                                                                   |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Project Name**        | Unlock Protocol                                                                                                                                           |
-| **Project Website**     | [Unlock Protocol](https://unlock-protocol.com)                                                                                                            |
-| **Project Description** | A decentralized protocol for memberships, subscriptions, and ticketing onchain, enabling creators and developers to monetize access to their communities. |
-| **Project Ticker**      | $UP                                                                                                                                                       |
-
 ## Airdrop Details
 
 | Information                  | Details                |

@@ -10,17 +10,10 @@ function: ["scaling", "ethereum"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-2"]
+website: "https://alignedfoundation.org"
+ticker: "ALIGN"
+description: "A foundation dedicated to supporting and advancing projects within the Ethereum and Zero Knowledge (ZK) ecosystems."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Aligned Foundation                                                                                                  |
-| Project Website     | [https://alignedfoundation.org](https://alignedfoundation.org)                                                      |
-| Project Description | A foundation dedicated to supporting and advancing projects within the Ethereum and Zero Knowledge (ZK) ecosystems. |
-| Project Ticker      | ALIGN                                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                                        |

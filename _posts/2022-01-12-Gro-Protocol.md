@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "diversification", "yield"]
 status: ["dead"]
 pagetype: "project"
+website: "https://gro.xyz/"
+ticker: "GRO"
+description: "A decentralized protocol focused on liquidity provision and community-driven token distribution."
 ---
-
-### Basic Information
-
-| Information         | Details                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------ |
-| Project Name        | Gro DAO                                                                                          |
-| Project Website     | https://gro.xyz/                                                                                 |
-| Project Description | A decentralized protocol focused on liquidity provision and community-driven token distribution. |
-| Project Ticker      | GRO                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details                            |

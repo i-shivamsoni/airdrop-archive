@@ -10,24 +10,10 @@ function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://dfinity.org"
+ticker: "ICP"
+description: "A decentralized cloud computing platform designed to run applications on a public blockchain with high scalability and security."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                          |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | DFINITY                                                                                                                          |
-| Project Website     | [DFINITY Website](https://dfinity.org)                                                                                           |
-| Project Description | A decentralized cloud computing platform designed to run applications on a public blockchain with high scalability and security. |
-| Project Ticker      | ICP                                                                                                                              |
-
-| Information              | Details                                       |
-| ------------------------ | --------------------------------------------- |
-| Airdrop Type             | loyalty                                       |
-| Total Airdrop Amount     | 35,000,000 CHF worth of ICP tokens            |
-| Number of Eligible Users | Tens of thousands (exact count not specified) |
-| Number of Claimants      | **Over 50,000**                               |
-
 ## Timeline
 
 | Event               | Date                                                 |

@@ -9,17 +9,10 @@ category: [nft]
 function: ["marketplace", "nft"]
 status: ["alive"]
 pagetype: "project"
+website: "https://exchange.art"
+ticker: "ART"
+description: "Exchange Art is a decentralized platform for artists and collectors, enabling the buying, selling, and governance of digital art through $ART tokens."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                               |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Exchange Art                                                                                                                                          |
-| Project Website     | [Exchange Art](https://exchange.art)                                                                                                                  |
-| Project Description | Exchange Art is a decentralized platform for artists and collectors, enabling the buying, selling, and governance of digital art through $ART tokens. |
-| Project Ticker      | ART                                                                                                                                                   |
-
 ## Airdrop Details
 
 | Information              | Details                               |

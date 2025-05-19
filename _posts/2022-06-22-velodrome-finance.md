@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://velodrome.finance"
+ticker: "VELO"
+description: "The liquidity base-layer of the Optimism ecosystem, designed to optimize liquidity incentives and governance through the ve(3,3) model."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                 |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Velodrome Finance                                                                                                                       |
-| Project Website     | [Velodrome Finance](https://velodrome.finance)                                                                                          |
-| Project Description | The liquidity base-layer of the Optimism ecosystem, designed to optimize liquidity incentives and governance through the ve(3,3) model. |
-| Project Ticker      | VELO                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                                                           |

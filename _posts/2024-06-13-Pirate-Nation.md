@@ -9,17 +9,10 @@ category: [gaming]
 function: ["gaming", "nft"]
 status: ["alive"]
 pagetype: "project"
+website: "https://piratenation.game"
+ticker: "PIRATE"
+description: "Pirate Nation is an on-chain strategy game where players can own and upgrade NFTs, participate in battles, and earn rewards."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                      |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Pirate Nation                                                                                                                |
-| Project Website     | [Pirate Nation](https://piratenation.game)                                                                                   |
-| Project Description | Pirate Nation is an on-chain strategy game where players can own and upgrade NFTs, participate in battles, and earn rewards. |
-| Project Ticker      | PIRATE                                                                                                                       |
-
 ## Airdrop Details
 
 | Information              | Details                             |

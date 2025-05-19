@@ -9,17 +9,10 @@ category: [nft,defi]
 function: ["marketplace", "nft"]
 status: ["alive"]
 pagetype: "project"
+website: "https://looksrare.org"
+ticker: "LOOKS"
+description: "A decentralized NFT marketplace that rewards users for trading and staking."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                     |
-| ------------------- | --------------------------------------------------------------------------- |
-| Project Name        | LooksRare                                                                   |
-| Project Website     | [LooksRare](https://looksrare.org)                                          |
-| Project Description | A decentralized NFT marketplace that rewards users for trading and staking. |
-| Project Ticker      | LOOKS                                                                       |
-
 ## Airdrop Details
 
 | Information              | Details                                 |

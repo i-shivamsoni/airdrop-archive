@@ -9,17 +9,10 @@ category: [social]
 function: ["communication", "social"]
 status: ["alive"]
 pagetype: "project"
+website: "https://ethermail.io"
+ticker: "EMT"
+description: "A blockchain-based email platform designed to provide secure, anonymous, and user-controlled email communication. It bridges the gap between Web2 and Web3, rewarding users for engagement with consensual marketing."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                               |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | EtherMail                                                                                                                                                                                                             |
-| Project Website     | [https://ethermail.io](https://ethermail.io)                                                                                                                                                                          |
-| Project Description | A blockchain-based email platform designed to provide secure, anonymous, and user-controlled email communication. It bridges the gap between Web2 and Web3, rewarding users for engagement with consensual marketing. |
-| Project Ticker      | EMT                                                                                                                                                                                                                   |
-
 ## Airdrop Details
 
 | Information              | Details     |

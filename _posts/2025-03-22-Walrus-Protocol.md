@@ -9,17 +9,10 @@ category: ["defi"]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.walrus.xyz/"
+ticker: "WAL"
+description: "A decentralized storage network built on the Sui blockchain, aiming to provide secure, efficient, and decentralized data storage solutions."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                     |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Walrus Protocol                                                                                                                             |
-| Project Website     | [https://www.walrus.xyz/](https://www.walrus.xyz/)                                                                                          |
-| Project Description | A decentralized storage network built on the Sui blockchain, aiming to provide secure, efficient, and decentralized data storage solutions. |
-| Project Ticker      | WAL                                                                                                                                         |
-
 ## Airdrop Details
 
 | Information              | Details                                      |

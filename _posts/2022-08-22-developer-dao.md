@@ -9,17 +9,10 @@ category: [social]
 function: ["dao", "community", "social"]
 status: ["alive"]
 pagetype: "project"
+website: "https://developerdao.notion.site/The-CODE-Governance-Token-3c1e14dbc6bd461fa07978bf37d04fd9"
+ticker: "CODE"
+description: "A decentralized community focused on helping developers embrace web3 and blockchain technology."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Developer DAO                                                                                                       |
-| Project Website     | [Developer DAO Notion](https://developerdao.notion.site/The-CODE-Governance-Token-3c1e14dbc6bd461fa07978bf37d04fd9) |
-| Project Description | A decentralized community focused on helping developers embrace web3 and blockchain technology.                     |
-| Project Ticker      | CODE                                                                                                                |
-
 ## Airdrop Details
 
 | Information              | Details                |

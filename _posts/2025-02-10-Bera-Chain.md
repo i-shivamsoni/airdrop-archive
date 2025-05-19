@@ -10,17 +10,10 @@ function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://berachain.com/"
+ticker: "BERA"
+description: ""
 ---
-
-## Basic Information
-
-| Information         | Details                                     |
-| ------------------- | ------------------------------------------- |
-| Project Name        | BeraChain                                   |
-| Project Website     | [BeraChain Website](https://berachain.com/) |
-| Project Description |                                             |
-| Project Ticker      | BERA                                        |
-
 ## Airdrop Details
 
 | Information              | Details                     |

@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "protocol", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.avalonfinance.xyz/"
+ticker: "AVL"
+description: "Avalon Labs is a blockchain-based platform focused on decentralized finance (DeFi) solutions."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                       |
-| ------------------- | --------------------------------------------------------------------------------------------- |
-| Project Name        | Avalon Labs                                                                                   |
-| Project Website     | https://www.avalonfinance.xyz/                                                                |
-| Project Description | Avalon Labs is a blockchain-based platform focused on decentralized finance (DeFi) solutions. |
-| Project Ticker      | AVL                                                                                           |
-
 ## Airdrop Details
 
 | Information              | Details                   |

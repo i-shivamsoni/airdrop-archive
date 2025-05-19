@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["staking", "infrastructure", "randomness"]
 status: ["dead"]
 pagetype: "project"
+website: "https://nois.network"
+ticker: "NOIS"
+description: "A decentralized protocol providing reliable randomness for blockchain applications."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                             |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| Project Name        | Nois                                                                                |
-| Project Website     | [https://nois.network](https://nois.network)                                        |
-| Project Description | A decentralized protocol providing reliable randomness for blockchain applications. |
-| Project Ticker      | NOIS                                                                                |
-
 ## Airdrop Details
 
 | Information              | Details                                                 |

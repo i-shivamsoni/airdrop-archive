@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["infrastructure", "cross-chain"]
 status: ["alive"]
 pagetype: "project"
+website: "https://mirror.xyz/holographxyz.eth"
+ticker: "HLG"
+description: "Holograph App provides interfaces to create, deploy, mint, and bridge omnichain NFTs, powered by Holograph Protocol."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                              |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Holograph                                                                                                            |
-| Project Website     | [Holograph Official Website](https://mirror.xyz/holographxyz.eth)                                                    |
-| Project Description | Holograph App provides interfaces to create, deploy, mint, and bridge omnichain NFTs, powered by Holograph Protocol. |
-| Project Ticker      | HLG                                                                                                                  |
-
 ## Airdrop Details
 
 | Information              | Details                                  |

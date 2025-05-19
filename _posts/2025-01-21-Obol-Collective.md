@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://obol.org"
+ticker: "OBOL"
+description: "A community dedicated to scaling Ethereum by enhancing the security, resiliency, and decentralization of the consensus layer through the development and deployment of distributed validators."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                        |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Obol Collective                                                                                                                                                                                |
-| Project Website     | [https://obol.org](https://obol.org)                                                                                                                                                           |
-| Project Description | A community dedicated to scaling Ethereum by enhancing the security, resiliency, and decentralization of the consensus layer through the development and deployment of distributed validators. |
-| Project Ticker      | OBOL                                                                                                                                                                                           |
-
 ## Airdrop Details
 
 | Information              | Details                             |

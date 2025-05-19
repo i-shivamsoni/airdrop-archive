@@ -9,17 +9,10 @@ category: [defi]
 function: ["identity", "naming"]
 status: ["alive"]
 pagetype: "project"
+website: "https://ens.domains"
+ticker: "ENS"
+description: "ENS is a decentralized domain name system on Ethereum that maps human-readable names to Ethereum addresses and other resources."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                         |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Ethereum Name Service (ENS)                                                                                                     |
-| Project Website     | [https://ens.domains](https://ens.domains)                                                                                      |
-| Project Description | ENS is a decentralized domain name system on Ethereum that maps human-readable names to Ethereum addresses and other resources. |
-| Project Ticker      | ENS                                                                                                                             |
-
 ## Airdrop Details
 
 | Information              | Details                                     |

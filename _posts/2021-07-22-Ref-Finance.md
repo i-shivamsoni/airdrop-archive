@@ -9,17 +9,10 @@ category: [stablecoin,defi]
 function: ["algorithmic", "defi", "stablecoin"]
 status: ["alive"]
 pagetype: "project"
+website: "https://ref.finance"
+ticker: "REF"
+description: "A decentralized finance (DeFi) platform built on NEAR Protocol, offering liquidity provision, swaps, and yield farming."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                 |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Rhea Finance (Ref Finance)                                                                                              |
-| Project Website     | [Ref Finance](https://ref.finance)                                                                                      |
-| Project Description | A decentralized finance (DeFi) platform built on NEAR Protocol, offering liquidity provision, swaps, and yield farming. |
-| Project Ticker      | REF                                                                                                                     |
-
 ## Airdrop Details
 
 | Information              | Details                         |

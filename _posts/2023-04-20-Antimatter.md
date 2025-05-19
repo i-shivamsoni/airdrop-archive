@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "derivatives", "options"]
 status: ["alive"]
 pagetype: "project"
+website: "https://antimatter.finance"
+ticker: "MATTER"
+description: "A hub for decentralized on-chain financial products, including DeFi derivatives and financial NFTs. Antimatter B2 is a low-gas BNB sidechain that facilitates Antimatter DApps."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                         |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Antimatter                                                                                                                                                                      |
-| Project Website     | [Antimatter Finance](https://antimatter.finance)                                                                                                                                |
-| Project Description | A hub for decentralized on-chain financial products, including DeFi derivatives and financial NFTs. Antimatter B2 is a low-gas BNB sidechain that facilitates Antimatter DApps. |
-| Project Ticker      | MATTER                                                                                                                                                                          |
-
 ## Airdrop Details
 
 | Information              | Details                               |

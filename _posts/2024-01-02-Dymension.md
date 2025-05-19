@@ -11,17 +11,10 @@ status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
 blockchain-type: ["rollup"]
+website: "https://dymension.xyz/"
+ticker: "DYM"
+description: "A modular blockchain protocol designed to enhance scalability and interoperability by enabling the deployment of RollApps—application-specific rollups—on its network."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Dymension                                                                                                                                                              |
-| Project Website     | [https://dymension.xyz/](https://dymension.xyz/)                                                                                                                       |
-| Project Description | A modular blockchain protocol designed to enhance scalability and interoperability by enabling the deployment of RollApps—application-specific rollups—on its network. |
-| Project Ticker      | DYM                                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                                    |

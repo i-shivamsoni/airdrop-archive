@@ -9,17 +9,10 @@ category: [defi]
 function: ["synthetics", "defi", "cross-chain"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.superform.xyz/"
+ticker: "PIGGY"
+description: "A DeFi yield marketplace optimizing on-chain wealth by providing users access to diverse yield opportunities across multiple blockchains."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                   |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Superform                                                                                                                                 |
-| Project Website     | [https://www.superform.xyz/](https://www.superform.xyz/)                                                                                  |
-| Project Description | A DeFi yield marketplace optimizing on-chain wealth by providing users access to diverse yield opportunities across multiple blockchains. |
-| Project Ticker      | PIGGY                                                                                                                                     |
-
 ## Airdrop Details
 
 | Information              | Details                             |

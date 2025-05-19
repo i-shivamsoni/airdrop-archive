@@ -9,17 +9,10 @@ category: ["infrastructure"]
 function: ["oracle", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.pyth.network"
+ticker: "PYTH"
+description: "A cross-chain oracle network providing real-time price feeds for DeFi and Web3 applications."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                      |
-| ------------------- | -------------------------------------------------------------------------------------------- |
-| Project Name        | Pyth Network                                                                                 |
-| Project Website     | [https://www.pyth.network](https://www.pyth.network)                                         |
-| Project Description | A cross-chain oracle network providing real-time price feeds for DeFi and Web3 applications. |
-| Project Ticker      | PYTH                                                                                         |
-
 ## Airdrop Details
 
 | Information              | Details                 |

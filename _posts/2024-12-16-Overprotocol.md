@@ -10,17 +10,10 @@ function: ["interoperability", "privacy", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://overprotocol.io"
+ticker: "OVER"
+description: "OverProtocol is a Layer 1 blockchain with lightweight nodes, allowing individuals to run validators on personal computers. It aims to create a decentralized, community-driven network."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                 |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | OverProtocol                                                                                                                                                                            |
-| Project Website     | [OverProtocol Website](https://overprotocol.io)                                                                                                                                         |
-| Project Description | OverProtocol is a Layer 1 blockchain with lightweight nodes, allowing individuals to run validators on personal computers. It aims to create a decentralized, community-driven network. |
-| Project Ticker      | OVER                                                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                                                                      |

@@ -9,17 +9,10 @@ category: [social,defi]
 function: ["dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://pontem.network"
+ticker: "LSD"
+description: "Pontem Network is an Aptos Blockchain Product Studio building Move-native financial infrastructure for billions of users."
 ---
-
-## Basic Information
-
-| Information             | Details                                                                                                                   |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **Project Name**        | Pontem Network                                                                                                            |
-| **Project Website**     | [https://pontem.network](https://pontem.network)                                                                          |
-| **Project Description** | Pontem Network is an Aptos Blockchain Product Studio building Move-native financial infrastructure for billions of users. |
-| **Project Ticker**      | LSD                                                                                                                       |
-
 ## Airdrop Details
 
 | Information                  | Details                                                 |

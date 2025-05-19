@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "dex"]
 status: ["dead"]
 pagetype: "project"
+website: "https://zigzag.exchange"
+ticker: "ZZ"
+description: "A decentralized order book exchange utilizing zkRollups for fast and low-cost trading."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| Project Name        | ZigZag Exchange                                                                        |
-| Project Website     | [ZigZag Exchange](https://zigzag.exchange)                                             |
-| Project Description | A decentralized order book exchange utilizing zkRollups for fast and low-cost trading. |
-| Project Ticker      | ZZ                                                                                     |
-
 ## Airdrop Details
 
 | Information              | Details                             |

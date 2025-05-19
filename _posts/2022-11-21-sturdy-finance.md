@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "risk-management", "lending"]
 status: ["alive"]
 pagetype: "project"
+website: "https://sturdy.finance"
+ticker: "STRDY"
+description: "A lending protocol that enables borrowers to farm with up to 10x leverage on projects like Convex and Aura, while allowing lenders to earn yield without the associated risks and costs."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                  |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Sturdy                                                                                                                                                                                   |
-| Project Website     | [Sturdy Finance](https://sturdy.finance)                                                                                                                                                 |
-| Project Description | A lending protocol that enables borrowers to farm with up to 10x leverage on projects like Convex and Aura, while allowing lenders to earn yield without the associated risks and costs. |
-| Project Ticker      | STRDY                                                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                                |

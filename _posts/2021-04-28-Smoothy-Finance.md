@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "aggregation", "yield"]
 status: ["alive"]
 pagetype: "project"
+website: "https://smoothy.finance"
+ticker: "SMTY"
+description: "A novel stablecoin swapping protocol supporting 20+ stablecoins in a single pool with low-cost, low-slippage swapping, and high liquidity provider (LP) rewards."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                          |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Smoothy Finance                                                                                                                                                  |
-| Project Website     | [Smoothy Finance](https://smoothy.finance)                                                                                                                       |
-| Project Description | A novel stablecoin swapping protocol supporting 20+ stablecoins in a single pool with low-cost, low-slippage swapping, and high liquidity provider (LP) rewards. |
-| Project Ticker      | SMTY                                                                                                                                                             |
-
 ## Airdrop Details
 
 | Information              | Details                                                                      |

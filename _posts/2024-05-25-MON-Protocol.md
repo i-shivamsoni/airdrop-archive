@@ -9,17 +9,10 @@ category: [gaming]
 function: ["gaming"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.monprotocol.ai"
+ticker: "MON"
+description: "A social and gaming questing platform rewarding participants based on engagement, referrals, and gaming/social impact."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | MON Protocol                                                                                                           |
-| Project Website     | [MON Protocol](https://www.monprotocol.ai)                                                                             |
-| Project Description | A social and gaming questing platform rewarding participants based on engagement, referrals, and gaming/social impact. |
-| Project Ticker      | MON                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details        |

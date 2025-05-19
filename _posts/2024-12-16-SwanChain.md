@@ -9,17 +9,10 @@ category: [rwa,infrastructure]
 function: ["infrastructure", "real-assets", "tokenization"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.swanchain.io"
+ticker: "SWAN"
+description: "A full toolset AI blockchain infrastructure accelerating AI adoption by merging Web3 with AI, providing comprehensive solutions across storage, computing, bandwidth, and payments."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                             |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Swan Chain                                                                                                                                                                          |
-| Project Website     | [https://www.swanchain.io](https://www.swanchain.io)                                                                                                                                |
-| Project Description | A full toolset AI blockchain infrastructure accelerating AI adoption by merging Web3 with AI, providing comprehensive solutions across storage, computing, bandwidth, and payments. |
-| Project Ticker      | SWAN                                                                                                                                                                                |
-
 ## Airdrop Details
 
 | Information              | Details                   |

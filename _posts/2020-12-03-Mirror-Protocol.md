@@ -9,17 +9,10 @@ category: [rwa,defi]
 function: ["assets", "synthetics", "defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://mirror.finance/"
+ticker: "MIR"
+description: "A decentralized synthetic assets protocol built on the Terra blockchain, allowing users to trade tokenized versions of real-world assets."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                   |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Mirror Protocol                                                                                                                           |
-| Project Website     | [Mirror Protocol](https://mirror.finance/)                                                                                                |
-| Project Description | A decentralized synthetic assets protocol built on the Terra blockchain, allowing users to trade tokenized versions of real-world assets. |
-| Project Ticker      | MIR                                                                                                                                       |
-
 ## Airdrop Details
 
 | Information              | Details                |

@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "restaking", "yield"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.puffer.fi/"
+ticker: "PUFFER"
+description: "Puffer Finance is a decentralized Ethereum infrastructure protocol focused on liquid restaking (LRT) and preconfirmation services, including Puffer UniFi and UniFi AVS."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Puffer Finance                                                                                                                                                           |
-| Project Website     | [Puffer Finance](https://www.puffer.fi/)                                                                                                                                 |
-| Project Description | Puffer Finance is a decentralized Ethereum infrastructure protocol focused on liquid restaking (LRT) and preconfirmation services, including Puffer UniFi and UniFi AVS. |
-| Project Ticker      | PUFFER                                                                                                                                                                   |
-
 ## Airdrop Details
 
 | Information              | Details                                         |

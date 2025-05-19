@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "futures", "options"]
 status: ["alive"]
 pagetype: "project"
+website: "https://gammaswap.com/"
+ticker: "GS"
+description: "GammaSwap is a decentralized protocol that enables users to borrow liquidity from any Automated Market Maker (AMM) pool, allowing traders to speculate on volatility directionally or through straddles on any asset."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                               |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | GammaSwap                                                                                                                                                                                                             |
-| Project Website     | [https://gammaswap.com/](https://gammaswap.com/)                                                                                                                                                                      |
-| Project Description | GammaSwap is a decentralized protocol that enables users to borrow liquidity from any Automated Market Maker (AMM) pool, allowing traders to speculate on volatility directionally or through straddles on any asset. |
-| Project Ticker      | GS                                                                                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                                   |

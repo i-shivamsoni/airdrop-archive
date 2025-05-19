@@ -9,18 +9,10 @@ category: [infrastructure]
 function: ["oracle", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://redstone.finance"
+ticker: "RED"
+description: "A modular blockchain oracle providing secure and scalable data feeds"
 ---
-
-## Basic Information
-
-| Information         | Details                                                              |
-| ------------------- | -------------------------------------------------------------------- |
-| Project Name        | RedStone                                                             |
-| Project Website     | https://redstone.finance                                             |
-| Project Description | A modular blockchain oracle providing secure and scalable data feeds |
-|                     | for DeFi and blockchain applications.                                |
-| Project Ticker      | RED                                                                  |
-
 ## Airdrop Details
 
 | Information              | Details                                                                             |

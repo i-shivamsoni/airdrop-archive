@@ -9,17 +9,10 @@ category: [infrastructure,defi]
 function: ["payment-streaming", "defi", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://streamflow.foundation"
+ticker: "STREAM"
+description: "A decentralized protocol focused on digital asset management, including token streaming, vesting, and incentive alignment."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                    |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Streamflow Foundation                                                                                                      |
-| Project Website     | [https://streamflow.foundation](https://streamflow.foundation)                                                             |
-| Project Description | A decentralized protocol focused on digital asset management, including token streaming, vesting, and incentive alignment. |
-| Project Ticker      | STREAM                                                                                                                     |
-
 ## Airdrop Details
 
 | Information              | Details                                          |

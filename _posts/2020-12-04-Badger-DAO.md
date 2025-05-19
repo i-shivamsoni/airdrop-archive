@@ -9,17 +9,10 @@ category: [defi]
 function: ["dao", "defi", "bitcoin"]
 status: ["alive"]
 pagetype: "project"
+website: "https://app.badger.com/"
+ticker: "BADGER"
+description: "A decentralized collective of builders supporting community-driven growth for Bitcoin across DeFi."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------------------- |
-| Project Name        | BadgerDAO                                                                                          |
-| Project Website     | [BadgerDAO Website](https://app.badger.com/)                                                       |
-| Project Description | A decentralized collective of builders supporting community-driven growth for Bitcoin across DeFi. |
-| Project Ticker      | BADGER                                                                                             |
-
 ## Airdrop Details
 
 | Information              | Details        |

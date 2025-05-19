@@ -9,17 +9,10 @@ category: [defi]
 function: ["tokens", "defi", "index"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.indexcoop.com"
+ticker: "INDEX"
+description: "A decentralized autonomous organization (DAO) focused on launching and maintaining crypto index products to facilitate access to crypto markets."
 ---
-
-### Basic Information
-
-| Information         | Details                                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Index Cooperative                                                                                                                                |
-| Project Website     | [Index Coop Website](https://www.indexcoop.com)                                                                                                  |
-| Project Description | A decentralized autonomous organization (DAO) focused on launching and maintaining crypto index products to facilitate access to crypto markets. |
-| Project Ticker      | INDEX                                                                                                                                            |
-
 ## Airdrop Details
 
 | Information              | Details                                   |

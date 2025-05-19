@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "token-distribution", "auctions"]
 status: ["alive"]
 pagetype: "project"
+website: "https://bouncebit.io"
+ticker: "BB"
+description: "BounceBit is building a BTC restaking infrastructure that provides a foundational layer for various restaking products, secured by regulated custody. The BounceBit chain operates as a standalone Layer 1 network with a dual-token PoS mechanism, leveraging native Bitcoin's security with full EVM compatibility."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                                                                                                               |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | BounceBit                                                                                                                                                                                                                                                                                                             |
-| Project Website     | [https://bouncebit.io](https://bouncebit.io)                                                                                                                                                                                                                                                                          |
-| Project Description | BounceBit is building a BTC restaking infrastructure that provides a foundational layer for various restaking products, secured by regulated custody. The BounceBit chain operates as a standalone Layer 1 network with a dual-token PoS mechanism, leveraging native Bitcoin's security with full EVM compatibility. |
-| Project Ticker      | BB                                                                                                                                                                                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                                                                |

@@ -10,17 +10,10 @@ function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://www.story.foundation"
+ticker: "IP"
+description: "Story Protocol is a decentralized intellectual property network that transforms IP into a programmable asset class for AI and Web3 applications."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Story Protocol                                                                                                                                   |
-| Project Website     | [Story Protocol](https://www.story.foundation)                                                                                                   |
-| Project Description | Story Protocol is a decentralized intellectual property network that transforms IP into a programmable asset class for AI and Web3 applications. |
-| Project Ticker      | IP                                                                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details   |

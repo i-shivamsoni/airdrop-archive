@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://virtuswap.io"
+ticker: "VRSW"
+description: "VirtuSwap is a decentralized exchange (DEX) designed to improve trading efficiency, reduce costs, and increase yields for liquidity providers through advanced financial engineering and AI-based governance."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                       |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | VirtuSwap                                                                                                                                                                                                     |
-| Project Website     | [VirtuSwap Website](https://virtuswap.io)                                                                                                                                                                     |
-| Project Description | VirtuSwap is a decentralized exchange (DEX) designed to improve trading efficiency, reduce costs, and increase yields for liquidity providers through advanced financial engineering and AI-based governance. |
-| Project Ticker      | VRSW                                                                                                                                                                                                          |
-
 ## Airdrop Details
 
 | Information              | Details                |

@@ -9,17 +9,10 @@ category: [stablecoin,defi]
 function: ["defi", "stablecoin", "yield"]
 status: ["alive"]
 pagetype: "project"
+website: "https://prismafinance.com/"
+ticker: "PRISMA"
+description: "Prisma Finance is a decentralized borrowing protocol that allows users to mint a stablecoin, mkUSD, fully collateralized by liquid staking tokens. It aims to enhance the utility of Ethereum liquid staking tokens across DeFi platforms."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                                    |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Prisma Finance                                                                                                                                                                                                                             |
-| Project Website     | [https://prismafinance.com/](https://prismafinance.com/)                                                                                                                                                                                   |
-| Project Description | Prisma Finance is a decentralized borrowing protocol that allows users to mint a stablecoin, mkUSD, fully collateralized by liquid staking tokens. It aims to enhance the utility of Ethereum liquid staking tokens across DeFi platforms. |
-| Project Ticker      | PRISMA                                                                                                                                                                                                                                     |
-
 ## Airdrop Details
 
 | Information              | Details                                      |

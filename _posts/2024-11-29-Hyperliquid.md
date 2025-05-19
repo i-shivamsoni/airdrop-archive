@@ -10,17 +10,10 @@ function: ["perpetuals", "defi"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://app.hyperliquid.xyz/trade"
+ticker: "HYPE"
+description: "A decentralized trading platform offering high-performance perpetual futures trading and innovative DeFi solutions."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Hyperliquid                                                                                                         |
-| Project Website     | [Hyperliquid](https://app.hyperliquid.xyz/trade)                                                                    |
-| Project Description | A decentralized trading platform offering high-performance perpetual futures trading and innovative DeFi solutions. |
-| Project Ticker      | HYPE                                                                                                                |
-
 ## Airdrop Details
 
 | Information              | Details     |

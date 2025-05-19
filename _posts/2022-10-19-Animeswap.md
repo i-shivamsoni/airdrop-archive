@@ -9,17 +9,10 @@ category: ["defi"]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://animeswap.org"
+ticker: "ANI"
+description: "A decentralized exchange on the Aptos blockchain that facilitates liquidity provision, staking, farming, and governance."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | AnimeSwap                                                                                                                |
-| Project Website     | [AnimeSwap](https://animeswap.org)                                                                                       |
-| Project Description | A decentralized exchange on the Aptos blockchain that facilitates liquidity provision, staking, farming, and governance. |
-| Project Ticker      | ANI                                                                                                                      |
-
 ## Airdrop Details
 
 | Information              | Details                                             |

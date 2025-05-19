@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://spartadex.io/"
+ticker: "SPARTA"
+description: "SpartaDEX is a gamified decentralized exchange (DEX) operating on the Arbitrum network. It uniquely combines gaming elements with DeFi protocols, offering users advanced monetization opportunities and an engaging experience."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                          |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | SpartaDEX                                                                                                                                                                                                                        |
-| Project Website     | [https://spartadex.io/](https://spartadex.io/)                                                                                                                                                                                   |
-| Project Description | SpartaDEX is a gamified decentralized exchange (DEX) operating on the Arbitrum network. It uniquely combines gaming elements with DeFi protocols, offering users advanced monetization opportunities and an engaging experience. |
-| Project Ticker      | SPARTA                                                                                                                                                                                                                           |
-
 ## Airdrop Details
 
 | Information              | Details                                                          |

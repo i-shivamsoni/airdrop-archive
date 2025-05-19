@@ -9,17 +9,10 @@ category: [nft]
 function: ["marketplace", "art", "nft"]
 status: ["alive"]
 pagetype: "project"
+website: "https://pencilsprotocol.io"
+ticker: "DAPP"
+description: "A leading DeFi protocol in the Scroll ecosystem, offering farming, vaults, auctions, and yield opportunities powered by ZK technology."
 ---
-
-## Basic Information
-
-| Information             | Details                                                                                                                                |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **Project Name**        | Pencils Protocol                                                                                                                       |
-| **Project Website**     | [Pencils Protocol](https://pencilsprotocol.io)                                                                                         |
-| **Project Description** | A leading DeFi protocol in the Scroll ecosystem, offering farming, vaults, auctions, and yield opportunities powered by ZK technology. |
-| **Project Ticker**      | DAPP                                                                                                                                   |
-
 ## Airdrop Details
 
 | Information                  | Details                             |

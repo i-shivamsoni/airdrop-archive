@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://holdstation.com"
+ticker: "HOLD"
+description: "A Web3 smart contract wallet focused on future trading, self-custodianship, and user privacy."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                       |
-| ------------------- | --------------------------------------------------------------------------------------------- |
-| Project Name        | Holdstation                                                                                   |
-| Project Website     | [https://holdstation.com](https://holdstation.com)                                            |
-| Project Description | A Web3 smart contract wallet focused on future trading, self-custodianship, and user privacy. |
-| Project Ticker      | HOLD                                                                                          |
-
 ## Airdrop Details
 
 | Information              | Details             |

@@ -9,17 +9,10 @@ category: [stablecoin,defi]
 function: ["defi", "exchange", "stablecoin"]
 status: ["alive"]
 pagetype: "project"
+website: "https://saddle.finance"
+ticker: "SDL"
+description: "A decentralized automated market maker (AMM) on the Ethereum blockchain, optimized for trading pegged value crypto assets with minimal slippage. Saddle enables fast, low-cost, and low-slippage swaps for traders and high-yield pools for LPs."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Saddle Finance                                                                                                                                                                                                                                   |
-| Project Website     | [Saddle Finance](https://saddle.finance)                                                                                                                                                                                                         |
-| Project Description | A decentralized automated market maker (AMM) on the Ethereum blockchain, optimized for trading pegged value crypto assets with minimal slippage. Saddle enables fast, low-cost, and low-slippage swaps for traders and high-yield pools for LPs. |
-| Project Ticker      | SDL                                                                                                                                                                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details                               |

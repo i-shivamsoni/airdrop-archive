@@ -9,17 +9,10 @@ category: ["defi"]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://gyro.finance"
+ticker: "GYFI"
+description: "A decentralized protocol focused on providing a stable and resilient digital currency."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| Project Name        | Gyroscope Protocol                                                                     |
-| Project Website     | [https://gyro.finance](https://gyro.finance)                                           |
-| Project Description | A decentralized protocol focused on providing a stable and resilient digital currency. |
-| Project Ticker      | GYFI                                                                                   |
-
 ## Airdrop Details
 
 | Information              | Details                                                                   |

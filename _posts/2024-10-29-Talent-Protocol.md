@@ -9,17 +9,10 @@ category: [social]
 function: ["professional", "reputation", "social"]
 status: ["alive"]
 pagetype: "project"
+website: "https://talentprotocol.com"
+ticker: "$TALENT"
+description: "A decentralized protocol designed to help crypto builders gain recognition and rewards based on verifiable reputation data."
 ---
-
-## Basic Information
-
-| Information             | Details                                                                                                                     |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Project Name**        | Talent Protocol                                                                                                             |
-| **Project Website**     | [Talent Protocol](https://talentprotocol.com)                                                                               |
-| **Project Description** | A decentralized protocol designed to help crypto builders gain recognition and rewards based on verifiable reputation data. |
-| **Project Ticker**      | $TALENT                                                                                                                     |
-
 ## Airdrop Details
 
 | Information                  | Details                   |

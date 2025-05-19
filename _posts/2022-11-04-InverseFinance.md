@@ -9,17 +9,10 @@ category: [defi]
 function: ["synthetics", "defi", "lending"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.inverse.finance"
+ticker: "DBR"
+description: "A decentralized finance (DeFi) platform offering lending and borrowing solutions, including the DOLA stablecoin and DBR borrowing rights."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                   |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Inverse Finance                                                                                                                           |
-| Project Website     | [Inverse Finance](https://www.inverse.finance)                                                                                            |
-| Project Description | A decentralized finance (DeFi) platform offering lending and borrowing solutions, including the DOLA stablecoin and DBR borrowing rights. |
-| Project Ticker      | DBR                                                                                                                                       |
-
 ## Airdrop Details
 
 | Information              | Details                                                   |

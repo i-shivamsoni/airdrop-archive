@@ -9,17 +9,10 @@ category: [privacy,infrastructure]
 function: ["ethereum", "privacy", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://tornadocash.eth.link/"
+ticker: "TORN"
+description: "Tornado Cash is an open-source, non-custodial, decentralized cryptocurrency tumbler that enhances transaction privacy by mixing cryptocurrency funds."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                               |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Tornado Cash                                                                                                                                          |
-| Project Website     | [Tornado Cash](https://tornadocash.eth.link/)                                                                                                         |
-| Project Description | Tornado Cash is an open-source, non-custodial, decentralized cryptocurrency tumbler that enhances transaction privacy by mixing cryptocurrency funds. |
-| Project Ticker      | TORN                                                                                                                                                  |
-
 ## Airdrop Details
 
 | Information              | Details            |

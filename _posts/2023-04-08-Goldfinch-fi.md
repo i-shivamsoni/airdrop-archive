@@ -9,17 +9,10 @@ category: [defi]
 function: ["business", "defi", "lending"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.goldfinch.finance/"
+ticker: "GFI"
+description: "A decentralized credit protocol aiming to expand financial inclusion by enabling loans without collateral."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                    |
-| ------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Project Name        | Goldfinch Protocol                                                                                         |
-| Project Website     | [Goldfinch Finance](https://www.goldfinch.finance/)                                                        |
-| Project Description | A decentralized credit protocol aiming to expand financial inclusion by enabling loans without collateral. |
-| Project Ticker      | GFI                                                                                                        |
-
 ## Airdrop Details
 
 | Information              | Details                          |

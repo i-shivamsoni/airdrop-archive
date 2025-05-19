@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "optimizer", "yield"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.convexfinance.com"
+ticker: "CVX"
+description: "A DeFi platform that enhances staking rewards for Curve Finance users, allowing liquidity providers and CRV stakers to earn additional CVX tokens."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Convex Finance                                                                                                                                     |
-| Project Website     | [https://www.convexfinance.com](https://www.convexfinance.com)                                                                                     |
-| Project Description | A DeFi platform that enhances staking rewards for Curve Finance users, allowing liquidity providers and CRV stakers to earn additional CVX tokens. |
-| Project Ticker      | CVX                                                                                                                                                |
-
 ## Airdrop Details
 
 | Information              | Details                                                         |

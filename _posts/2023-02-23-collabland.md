@@ -9,17 +9,10 @@ category: ["infrastructure"]
 function: ["infrastructure", "community"]
 status: ["alive"]
 pagetype: "project"
+website: "https://wagmi.collab.land/"
+ticker: "COLLAB"
+description: "A community-driven platform that unites groups around common purposes, fostering collaboration through tokenized governance."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                      |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Collab.Land                                                                                                                  |
-| Project Website     | [Collab.Land](https://wagmi.collab.land/)                                                                                    |
-| Project Description | A community-driven platform that unites groups around common purposes, fostering collaboration through tokenized governance. |
-| Project Ticker      | COLLAB                                                                                                                       |
-
 ## Airdrop Details
 
 | Information              | Details                                         |

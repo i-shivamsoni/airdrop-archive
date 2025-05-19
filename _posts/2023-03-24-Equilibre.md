@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://equilibrefinance.com/"
+ticker: "VARA"
+description: "A decentralized finance (DeFi) platform built on the Kava network, leveraging ve(3,3) AMMs and concentrated liquidity models."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                       |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Equilibrefinance                                                                                                              |
-| Project Website     | [Equilibrefinance](https://equilibrefinance.com/)                                                                             |
-| Project Description | A decentralized finance (DeFi) platform built on the Kava network, leveraging ve(3,3) AMMs and concentrated liquidity models. |
-| Project Ticker      | VARA                                                                                                                          |
-
 ## Airdrop Details
 
 | Information              | Details                      |

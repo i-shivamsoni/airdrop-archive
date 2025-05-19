@@ -9,17 +9,10 @@ category: [defi]
 function: ["yield-farming", "defi", "liquidity"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.aerodrome.finance/ Known"
+ticker: "AERO"
+description: "Aerodrome Finance is set to launch on Base with approximately 20 partners, positioning itself as the ecosystem's premier liquidity engine and hub. Built on the advanced Velodrome v2 technology stack, Aerodrome aims to provide features such as concentrated liquidity, automated voting, and a built-in veNFT Marketplace."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                                                                                                                        |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Aerodrome Finance                                                                                                                                                                                                                                                                                                              |
-| Project Website     | https://www.aerodrome.finance/ Known                                                                                                                                                                                                                                                                                           |
-| Project Description | Aerodrome Finance is set to launch on Base with approximately 20 partners, positioning itself as the ecosystem's premier liquidity engine and hub. Built on the advanced Velodrome v2 technology stack, Aerodrome aims to provide features such as concentrated liquidity, automated voting, and a built-in veNFT Marketplace. |
-| Project Ticker      | AERO                                                                                                                                                                                                                                                                                                                           |
-
 ## Airdrop Details
 
 | Information              | Details                                                                                                                                                     |

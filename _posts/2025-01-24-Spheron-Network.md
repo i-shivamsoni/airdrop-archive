@@ -9,17 +9,10 @@ category: ["ai"]
 function: ["ai"]
 status: ["alive"]
 pagetype: "project"
+website: "https://spheron.network"
+ticker: "SPON"
+description: "A decentralized programmable compute network designed to power autonomous AI agents."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------ |
-| Project Name        | Spheron Network                                                                      |
-| Project Website     | [Spheron Network](https://spheron.network)                                           |
-| Project Description | A decentralized programmable compute network designed to power autonomous AI agents. |
-| Project Ticker      | SPON                                                                                 |
-
 ## Airdrop Details
 
 | Information              | Details     |

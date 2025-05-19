@@ -9,17 +9,10 @@ category: [nft]
 function: ["nft", "platform"]
 status: ["alive"]
 pagetype: "project"
+website: "https://starrynift.com"
+ticker: "SNIFT"
+description: "StarryNift is a platform that integrates NFTs, gaming, and the metaverse to provide immersive Web3 experiences."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                         |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Project Name        | StarryNift                                                                                                      |
-| Project Website     | [StarryNift Official Website](https://starrynift.com)                                                           |
-| Project Description | StarryNift is a platform that integrates NFTs, gaming, and the metaverse to provide immersive Web3 experiences. |
-| Project Ticker      | SNIFT                                                                                                           |
-
 ## Airdrop Details
 
 | Information              | Details                                 |

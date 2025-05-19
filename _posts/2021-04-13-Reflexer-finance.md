@@ -9,17 +9,10 @@ category: [stablecoin,defi]
 function: ["algorithmic", "defi", "stablecoin"]
 status: ["alive"]
 pagetype: "project"
+website: "Not Known"
+ticker: "FLX"
+description: "A governance-minimized protocol designed to allow the market to govern itself with minimal intervention."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                  |
-| ------------------- | -------------------------------------------------------------------------------------------------------- |
-| Project Name        | Reflexer Ungovernance Token                                                                              |
-| Project Website     | Not Known                                                                                                |
-| Project Description | A governance-minimized protocol designed to allow the market to govern itself with minimal intervention. |
-| Project Ticker      | FLX                                                                                                      |
-
 ## Airdrop Details
 
 | Information              | Details     |

@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["tron", "infrastructure", "file-sharing"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.bittorrent.com"
+ticker: "BTT"
+description: "BitTorrent is a decentralized file-sharing protocol that enables efficient distribution of data using peer-to-peer technology. It leverages blockchain technology to incentivize users with BTT tokens for participating in the network."
 ---
-
-## Basic Information
-
-| Information             | Details                                                                                                                                                                                                                                  |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Project Name**        | BitTorrent (BTT)                                                                                                                                                                                                                         |
-| **Project Website**     | [BitTorrent Website](https://www.bittorrent.com)                                                                                                                                                                                         |
-| **Project Description** | BitTorrent is a decentralized file-sharing protocol that enables efficient distribution of data using peer-to-peer technology. It leverages blockchain technology to incentivize users with BTT tokens for participating in the network. |
-| **Project Ticker**      | BTT                                                                                                                                                                                                                                      |
-
 ## Airdrop Details
 
 | Information                  | Details                                  |

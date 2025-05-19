@@ -9,17 +9,10 @@ category: [gaming,infrastructure]
 function: ["gaming", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://gameswift.io"
+ticker: "GSWIFT"
+description: "GameSwift is a comprehensive ecosystem designed to facilitate and promote Web3 gaming, offering a modular blockchain optimized for gaming applications and a platform for game developers and players."
 ---
-
-## Basic Information
-
-| Information             | Details                                                                                                                                                                                                |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Project Name**        | GameSwift                                                                                                                                                                                              |
-| **Project Website**     | [https://gameswift.io](https://gameswift.io)                                                                                                                                                           |
-| **Project Description** | GameSwift is a comprehensive ecosystem designed to facilitate and promote Web3 gaming, offering a modular blockchain optimized for gaming applications and a platform for game developers and players. |
-| **Project Ticker**      | GSWIFT                                                                                                                                                                                                 |
-
 ## Airdrop Details
 
 | Information                  | Details                       |

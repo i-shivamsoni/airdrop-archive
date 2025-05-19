@@ -10,17 +10,10 @@ function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://xion.burnt.com"
+ticker: "XION"
+description: "XION is the first walletless Layer 1 blockchain focused on making Web3 accessible to everyone. It facilitates network usage fees, governance, proof-of-stake security, liquidity, and serves as a medium of exchange."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                               |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | XION                                                                                                                                                                                                                  |
-| Project Website     | [XION Official Website](https://xion.burnt.com)                                                                                                                                                                       |
-| Project Description | XION is the first walletless Layer 1 blockchain focused on making Web3 accessible to everyone. It facilitates network usage fees, governance, proof-of-stake security, liquidity, and serves as a medium of exchange. |
-| Project Ticker      | XION                                                                                                                                                                                                                  |
-
 ## Airdrop Details
 
 | Information              | Details                                                |

@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "aggregator", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.odos.xyz/"
+ticker: "$ODOS"
+description: "A DeFi protocol optimizing token swaps and trades with advanced routing and aggregation mechanisms."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                             |
-| ------------------- | --------------------------------------------------------------------------------------------------- |
-| Project Name        | Odos Protocol                                                                                       |
-| Project Website     | [Odos](https://www.odos.xyz/)                                                                       |
-| Project Description | A DeFi protocol optimizing token swaps and trades with advanced routing and aggregation mechanisms. |
-| Project Ticker      | $ODOS                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details         |

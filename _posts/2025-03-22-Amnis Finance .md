@@ -9,17 +9,10 @@ category: ["defi"]
 function: ["staking"]
 status: ["alive"]
 pagetype: "project"
+website: "https://amnis.finance/"
+ticker: "AMI"
+description: "The top liquid staking protocol on Aptos, empowering APT holders to maximize returns while maintaining liquidity."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                           |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Amnis Finance                                                                                                     |
-| Project Website     | [https://amnis.finance/](https://amnis.finance/)                                                                  |
-| Project Description | The top liquid staking protocol on Aptos, empowering APT holders to maximize returns while maintaining liquidity. |
-| Project Ticker      | AMI                                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                                    |

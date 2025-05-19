@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["visualization", "infrastructure", "analytics"]
 status: ["alive"]
 pagetype: "project"
+website: "https://spectral.finance"
+ticker: "SPEC"
+description: "Spectral is a machine intelligence network enabling users to build on-chain AI agents and engage in an on-chain agent economy. It offers tools like Spectral Syntax and Nova, integrated via Inferchain, ensuring transparency and decentralization."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                                              |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Spectral Labs                                                                                                                                                                                                                                        |
-| Project Website     | [Spectral Labs](https://spectral.finance)                                                                                                                                                                                                            |
-| Project Description | Spectral is a machine intelligence network enabling users to build on-chain AI agents and engage in an on-chain agent economy. It offers tools like Spectral Syntax and Nova, integrated via Inferchain, ensuring transparency and decentralization. |
-| Project Ticker      | SPEC                                                                                                                                                                                                                                                 |
-
 ## Airdrop Details
 
 | Information              | Details                             |

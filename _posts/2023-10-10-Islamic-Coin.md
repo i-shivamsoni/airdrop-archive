@@ -10,17 +10,10 @@ function: ["defi", "sharia-compliant"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-2"]
+website: "https://islamiccoin.net"
+ticker: "ISLM"
+description: "Islamic Coin is a native currency of HAQQ, a community-run network dedicated to empowering an ethics-first, Shariah-compliant financial ecosystem."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Islamic Coin                                                                                                                                       |
-| Project Website     | [Islamic Coin](https://islamiccoin.net)                                                                                                            |
-| Project Description | Islamic Coin is a native currency of HAQQ, a community-run network dedicated to empowering an ethics-first, Shariah-compliant financial ecosystem. |
-| Project Ticker      | ISLM                                                                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                        |

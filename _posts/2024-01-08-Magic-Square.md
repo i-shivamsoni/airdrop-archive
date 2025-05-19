@@ -9,17 +9,10 @@ category: [gaming]
 function: ["gaming", "puzzle", "blockchain"]
 status: ["alive"]
 pagetype: "project"
+website: "https://magic.store"
+ticker: "SQR"
+description: "A Web3 app store that simplifies crypto adoption by providing a unified platform for decentralized applications."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                          |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Magic Square                                                                                                     |
-| Project Website     | [Magic Square](https://magic.store)                                                                              |
-| Project Description | A Web3 app store that simplifies crypto adoption by providing a unified platform for decentralized applications. |
-| Project Ticker      | SQR                                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details              |

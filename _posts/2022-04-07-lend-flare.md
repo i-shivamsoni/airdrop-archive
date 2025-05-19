@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "lending", "yield"]
 status: ["alive"]
 pagetype: "project"
+website: "https://lendflare.finance/"
+ticker: "LFT"
+description: "A decentralized lending platform aiming to improve capital efficiency by leveraging Curve LP tokens as collateral."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                            |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Lend Flare                                                                                                         |
-| Project Website     | [Lend Flare](https://lendflare.finance/)                                                                           |
-| Project Description | A decentralized lending platform aiming to improve capital efficiency by leveraging Curve LP tokens as collateral. |
-| Project Ticker      | LFT                                                                                                                |
-
 ## Airdrop Details
 
 | Information              | Details                                        |

@@ -9,17 +9,10 @@ category: [privacy,defi,infrastructure]
 function: ["privacy", "infrastructure", "defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://nektar.network"
+ticker: "NET"
+description: "A decentralized protocol designed to connect Networks, Operators, and Delegators in a community-driven platform for decentralized infrastructure."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                           |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Nektar Network                                                                                                                                    |
-| Project Website     | [Nektar Network](https://nektar.network)                                                                                                          |
-| Project Description | A decentralized protocol designed to connect Networks, Operators, and Delegators in a community-driven platform for decentralized infrastructure. |
-| Project Ticker      | NET                                                                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                                        |

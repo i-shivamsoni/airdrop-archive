@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "trading", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://dex.zeta.markets"
+ticker: "$ZEX"
+description: "A decentralized options trading platform built on Solana, offering traders a high-performance DeFi derivatives experience."
 ---
-
-### Basic Information
-
-| Information         | Details                                                                                                                    |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Zeta Markets                                                                                                               |
-| Project Website     | [Zeta Markets](https://dex.zeta.markets)                                                                                   |
-| Project Description | A decentralized options trading platform built on Solana, offering traders a high-performance DeFi derivatives experience. |
-| Project Ticker      | $ZEX                                                                                                                       |
-
 ## Airdrop Details
 
 | Information              | Details                                     |

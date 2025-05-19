@@ -10,17 +10,10 @@ function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"
 blockchain-type: ["zk"]
+website: "https://polyhedra.network"
+ticker: "$ZKJ"
+description: "Polyhedra Network is building a Web3 infrastructure focusing on interoperability, scalability, and privacy using advanced zero-knowledge proof (ZKP) technology. Their flagship invention, zkBridge, transforms blockchain interoperability by enabling secure, fast, and trustless cross-chain transactions."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                                                                                                       |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Polyhedra Network                                                                                                                                                                                                                                                                                             |
-| Project Website     | [https://polyhedra.network](https://polyhedra.network)                                                                                                                                                                                                                                                        |
-| Project Description | Polyhedra Network is building a Web3 infrastructure focusing on interoperability, scalability, and privacy using advanced zero-knowledge proof (ZKP) technology. Their flagship invention, zkBridge, transforms blockchain interoperability by enabling secure, fast, and trustless cross-chain transactions. |
-| Project Ticker      | $ZKJ                                                                                                                                                                                                                                                                                                          |
-
 ## Airdrop Details
 
 | Information              | Details               |

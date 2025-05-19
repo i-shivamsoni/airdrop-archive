@@ -9,17 +9,10 @@ category: [infrastructure,defi]
 function: ["defi", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://shellprotocol.io"
+ticker: "SHELL"
+description: "A decentralized finance protocol designed for trading, lending, and NFT sales, with governance through the Shell DAO."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                               |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Shell Protocol                                                                                                        |
-| Project Website     | [Shell Protocol](https://shellprotocol.io)                                                                            |
-| Project Description | A decentralized finance protocol designed for trading, lending, and NFT sales, with governance through the Shell DAO. |
-| Project Ticker      | SHELL                                                                                                                 |
-
 ## Airdrop Details
 
 | Information              | Details                                     |

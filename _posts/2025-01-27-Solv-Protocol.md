@@ -9,17 +9,10 @@ category: ["defi"]
 function: ["defi", "protocol", "governance", "btcfi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://solv.finance"
+ticker: "SOLV"
+description: "Leading Bitcoin staking platform facilitating on-chain BTC reserves and DeFi integration."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                   |
-| ------------------- | ----------------------------------------------------------------------------------------- |
-| Project Name        | Solv Protocol                                                                             |
-| Project Website     | [Solv Protocol](https://solv.finance)                                                     |
-| Project Description | Leading Bitcoin staking platform facilitating on-chain BTC reserves and DeFi integration. |
-| Project Ticker      | SOLV                                                                                      |
-
 ## Airdrop Details
 
 | Information              | Details                    |

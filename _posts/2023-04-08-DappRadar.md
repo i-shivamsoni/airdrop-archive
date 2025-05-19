@@ -9,17 +9,10 @@ category: [data,infrastructure]
 function: ["infrastructure", "analytics", "dapps"]
 status: ["alive"]
 pagetype: "project"
+website: "https://dappradar.com/"
+ticker: "RADAR"
+description: "A leading dapp discovery platform that provides analytics and tracking for decentralized applications across multiple blockchains."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                            |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | DappRadar                                                                                                                          |
-| Project Website     | [DappRadar](https://dappradar.com/)                                                                                                |
-| Project Description | A leading dapp discovery platform that provides analytics and tracking for decentralized applications across multiple blockchains. |
-| Project Ticker      | RADAR                                                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details                                         |

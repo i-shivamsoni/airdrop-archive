@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "staking"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.yieldnest.finance"
+ticker: "YND"
+description: "YieldNest is a decentralized platform focused on user empowerment, decentralization, accessibility, transparency, and community-led governance. It offers advanced yield strategies and cross-chain expansions to ensure active community participation."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                                                  |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | YieldNest                                                                                                                                                                                                                                                |
-| Project Website     | [https://www.yieldnest.finance](https://www.yieldnest.finance)                                                                                                                                                                                           |
-| Project Description | YieldNest is a decentralized platform focused on user empowerment, decentralization, accessibility, transparency, and community-led governance. It offers advanced yield strategies and cross-chain expansions to ensure active community participation. |
-| Project Ticker      | YND                                                                                                                                                                                                                                                      |
-
 ## Airdrop Details
 
 | Information              | Details                |

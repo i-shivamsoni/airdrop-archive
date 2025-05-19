@@ -9,17 +9,10 @@ category: [gaming]
 function: ["gaming"]
 status: ["alive"]
 pagetype: "project"
+website: "https://nyanheroes.com"
+ticker: "$NYAN"
+description: "A team-based hero shooter featuring cats piloting giant mechs, utilizing unique abilities and strategic combat."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                         |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Nyan Heroes                                                                                                     |
-| Project Website     | [https://nyanheroes.com](https://nyanheroes.com)                                                                |
-| Project Description | A team-based hero shooter featuring cats piloting giant mechs, utilizing unique abilities and strategic combat. |
-| Project Ticker      | $NYAN                                                                                                           |
-
 ## Airdrop Details
 
 | Information              | Details                                         |

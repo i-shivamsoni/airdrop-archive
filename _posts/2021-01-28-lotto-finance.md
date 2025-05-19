@@ -9,17 +9,10 @@ category: [defi]
 function: ["gambling", "defi", "lottery"]
 status: ["alive"]
 pagetype: "project"
+website: "https://lotto.finance"
+ticker: "LOTTO"
+description: "A decentralized lottery token that automatically enters holders into a daily lottery through a unique rebase mechanism. The goal is to create a 100% decentralized lottery on Ethereum."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                 |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Lotto                                                                                                                                                                                   |
-| Project Website     | [Lotto Finance](https://lotto.finance)                                                                                                                                                  |
-| Project Description | A decentralized lottery token that automatically enters holders into a daily lottery through a unique rebase mechanism. The goal is to create a 100% decentralized lottery on Ethereum. |
-| Project Ticker      | LOTTO                                                                                                                                                                                   |
-
 ## Airdrop Details
 
 | Information              | Details     |

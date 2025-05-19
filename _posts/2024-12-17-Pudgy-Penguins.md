@@ -9,17 +9,10 @@ category: [meme,nft]
 function: ["nft", "collection", "meme"]
 status: ["alive"]
 pagetype: "project"
+website: "https://pudgypenguins.com/"
+ticker: "PENGU"
+description: "A popular NFT collection and ecosystem focused on Web3 and community-driven engagement, featuring digital collectibles, physical toys, and cross-chain initiatives."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Pudgy Penguins                                                                                                                                                      |
-| Project Website     | [Pudgy Penguins](https://pudgypenguins.com/)                                                                                                                        |
-| Project Description | A popular NFT collection and ecosystem focused on Web3 and community-driven engagement, featuring digital collectibles, physical toys, and cross-chain initiatives. |
-| Project Ticker      | PENGU                                                                                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                                                              |

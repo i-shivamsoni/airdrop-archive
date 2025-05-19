@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "aggregator", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://jupuary.jup.ag"
+ticker: "JUP"
+description: "A decentralized autonomous organization focused on enhancing the Jupiter ecosystem through community engagement and innovative trading solutions."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                           |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Jupiter DAO                                                                                                                                       |
-| Project Website     | [Jupiter Airdrop Checker](https://jupuary.jup.ag)                                                                                                 |
-| Project Description | A decentralized autonomous organization focused on enhancing the Jupiter ecosystem through community engagement and innovative trading solutions. |
-| Project Ticker      | JUP                                                                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details     |

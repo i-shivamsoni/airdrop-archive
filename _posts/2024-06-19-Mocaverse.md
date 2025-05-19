@@ -9,17 +9,10 @@ category: [gaming,social]
 function: ["gaming", "blockchain", "metaverse"]
 status: ["alive"]
 pagetype: "project"
+website: "https://mocaverse.io"
+ticker: "MOCA"
+description: "Mocaverse is the upcoming membership NFT collection for the Animoca Brands ecosystem."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                               |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| Project Name        | Mocaverse                                                                             |
-| Project Website     | [https://mocaverse.io](https://mocaverse.io)                                          |
-| Project Description | Mocaverse is the upcoming membership NFT collection for the Animoca Brands ecosystem. |
-| Project Ticker      | MOCA                                                                                  |
-
 ## Airdrop Details
 
 | Information              | Details     |

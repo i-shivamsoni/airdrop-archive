@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://bitoro.network"
+ticker: "$BTORO"
+description: "A decentralized trading and DeFi ecosystem with a focus on community-driven incentives, trading rewards, and governance."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Bitoro Network                                                                                                           |
-| Project Website     | [bitoro.network](https://bitoro.network)                                                                                 |
-| Project Description | A decentralized trading and DeFi ecosystem with a focus on community-driven incentives, trading rewards, and governance. |
-| Project Ticker      | $BTORO                                                                                                                   |
-
 ## Airdrop Details
 
 | Information              | Details                                       |

@@ -9,17 +9,10 @@ category: [data,social,AI]
 function: ["ai", "analytics", "social"]
 status: ["alive"]
 pagetype: "project"
+website: "https://sosovalue.com"
+ticker: "SOSO"
+description: "A cryptocurrency data aggregator providing real-time data, market trends, and investment research."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------------------- |
-| Project Name        | SoSoValue                                                                                          |
-| Project Website     | [https://sosovalue.com](https://sosovalue.com)                                                     |
-| Project Description | A cryptocurrency data aggregator providing real-time data, market trends, and investment research. |
-| Project Ticker      | SOSO                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                |

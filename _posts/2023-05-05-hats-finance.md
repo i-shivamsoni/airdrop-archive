@@ -9,17 +9,10 @@ category: ["infrastructure"]
 function: ["dao", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://hats.finance"
+ticker: "HATS"
+description: "A decentralized protocol focused on security and bug bounty vaults to incentivize ethical hacking and secure Web3 infrastructure."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Hats Finance                                                                                                                      |
-| Project Website     | [Hats Finance](https://hats.finance)                                                                                              |
-| Project Description | A decentralized protocol focused on security and bug bounty vaults to incentivize ethical hacking and secure Web3 infrastructure. |
-| Project Ticker      | HATS                                                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details                                                                       |

@@ -9,17 +9,10 @@ category: ["utilities"]
 function: ["identity"]
 status: ["alive"]
 pagetype: "project"
+website: "http://airdrop.solana.id"
+ticker: "SOLID"
+description: "A decentralized identity system built on Solana that rewards users based on their on-chain activity."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                              |
-| ------------------- | ---------------------------------------------------------------------------------------------------- |
-| Project Name        | Solana ID                                                                                            |
-| Project Website     | [airdrop.solana.id](http://airdrop.solana.id)                                                        |
-| Project Description | A decentralized identity system built on Solana that rewards users based on their on-chain activity. |
-| Project Ticker      | SOLID                                                                                                |
-
 ## Airdrop Details
 
 | Information              | Details     |

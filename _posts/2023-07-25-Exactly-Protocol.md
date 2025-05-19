@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "lending"]
 status: ["alive"]
 pagetype: "project"
+website: "https://exact.ly/"
+ticker: "EXA"
+description: "A decentralized credit market protocol built on Optimism (OP Mainnet) that allows users to lend and borrow assets efficiently."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                        |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Exactly Protocol                                                                                                               |
-| Project Website     | [Exactly Protocol](https://exact.ly/)                                                                                          |
-| Project Description | A decentralized credit market protocol built on Optimism (OP Mainnet) that allows users to lend and borrow assets efficiently. |
-| Project Ticker      | EXA                                                                                                                            |
-
 ## Airdrop Details
 
 | Information              | Details                          |

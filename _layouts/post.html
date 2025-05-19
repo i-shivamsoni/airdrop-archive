@@ -63,7 +63,16 @@
           {% if page.blockchain-type %}
             <span title="Blockchain Type"><i class="fas fa-project-diagram" style="margin-right: 0.5em;"></i>{% for type in page.blockchain-type %}{{ type }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
           {% endif %}
+          {% if page.ticker %}
+            <span class="ticker-badge" title="Ticker"><i class="fas fa-coins"></i>{{ page.ticker }}</span>
+          {% endif %}
+          {% if page.website %}
+            <span class="website-link" title="Website"><a href="{{ page.website }}" target="_blank" rel="noopener"><i class="fas fa-link"></i>Website</a></span>
+          {% endif %}
         </div>
+        {% if page.description %}
+          <p style="font-size: 1.15rem; color: var(--dark-light); margin-top: 0.5rem; max-width: 700px;">{{ page.description }}</p>
+        {% endif %}
       </section>
       <div class="post-layout">
         <aside class="post-sidebar" id="post-sidebar" style="display:none">

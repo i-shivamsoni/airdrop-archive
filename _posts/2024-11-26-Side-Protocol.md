@@ -9,17 +9,10 @@ category: [nft,defi,infrastructure]
 function: ["defi", "infrastructure", "nft", "tokenization"]
 status: ["alive"]
 pagetype: "project"
+website: "https://side.one"
+ticker: "SIDE"
+description: "A fully Bitcoin-compatible Layer 1 blockchain built on CometBFT and the Cosmos SDK."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                             |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| Project Name        | Side Protocol                                                                       |
-| Project Website     | [Side Protocol](https://side.one)                                                   |
-| Project Description | A fully Bitcoin-compatible Layer 1 blockchain built on CometBFT and the Cosmos SDK. |
-| Project Ticker      | SIDE                                                                                |
-
 ## Airdrop Details
 
 | Information              | Details                                                                                |

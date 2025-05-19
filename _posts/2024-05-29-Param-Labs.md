@@ -9,17 +9,10 @@ category: [gaming]
 function: ["gaming", "interoperability", "blockchain"]
 status: ["alive"]
 pagetype: "project"
+website: "https://paramgaming.com"
+ticker: "$PARAM"
+description: "Param Labs is pioneering the next generation of gaming through united creativity and technological advancement."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                         |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Param Labs                                                                                                      |
-| Project Website     | [https://paramgaming.com](https://paramgaming.com)                                                              |
-| Project Description | Param Labs is pioneering the next generation of gaming through united creativity and technological advancement. |
-| Project Ticker      | $PARAM                                                                                                          |
-
 ## Airdrop Details
 
 | Information              | Details                   |

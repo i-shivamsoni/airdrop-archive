@@ -9,17 +9,10 @@ category: ["defi"]
 function: ["lottery", "defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://pooltogether.com"
+ticker: "POOL"
+description: "A decentralized and permissionless no-loss prize savings protocol where users can deposit funds and have a chance to win prizes."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                          |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | PoolTogether                                                                                                                     |
-| Project Website     | [https://pooltogether.com](https://pooltogether.com)                                                                             |
-| Project Description | A decentralized and permissionless no-loss prize savings protocol where users can deposit funds and have a chance to win prizes. |
-| Project Ticker      | POOL                                                                                                                             |
-
 ## Airdrop Details
 
 | Information              | Details                                                                                                                                              |

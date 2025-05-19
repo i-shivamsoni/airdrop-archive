@@ -9,16 +9,10 @@ category: [defi]
 function: ["defi", "trading"]
 status: ["alive"]
 pagetype: "project"
+website: "https://vela.exchange"
+ticker: "VELA"
+description: "A decentralized perpetual trading platform offering advanced features for crypto traders."
 ---
-
-## Basic Information
-| Information         | Details |
-|---------------------|---------|
-| Project Name       | Vela Exchange |
-| Project Website    | [Vela Exchange](https://vela.exchange) |
-| Project Description | A decentralized perpetual trading platform offering advanced features for crypto traders. |
-| Project Ticker     | VELA |
-
 ## Airdrop Details
 | Information             | Details |
 |-------------------------|---------|

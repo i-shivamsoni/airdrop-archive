@@ -10,17 +10,10 @@ function: ["blockchain"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-0"]
+website: "https://avax.network"
+ticker: "AVAX"
+description: "The Avalanche Foundation is a non-profit entity that fosters the advancement and growth of the Avalanche platform for the world."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                          |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Avalanche Foundation                                                                                                             |
-| Project Website     | [https://avax.network](https://avax.network)                                                                                     |
-| Project Description | The Avalanche Foundation is a non-profit entity that fosters the advancement and growth of the Avalanche platform for the world. |
-| Project Ticker      | AVAX                                                                                                                             |
-
 ## Airdrop Details
 
 | Information              | Details                                      |

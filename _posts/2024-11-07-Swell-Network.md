@@ -9,17 +9,10 @@ category: [scaling,defi]
 function: ["ethereum", "defi", "staking"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.swellnetwork.io"
+ticker: "SWELL"
+description: "Swell is a leading L2 restaking protocol offering native liquid staking and restaking for Ethereum and Bitcoin. It enables governance and infrastructure security via restaking protocols like EigenLayer and Symbiotic."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Swell Network                                                                                                                                                                                                            |
-| Project Website     | [Swell Network](https://www.swellnetwork.io)                                                                                                                                                                             |
-| Project Description | Swell is a leading L2 restaking protocol offering native liquid staking and restaking for Ethereum and Bitcoin. It enables governance and infrastructure security via restaking protocols like EigenLayer and Symbiotic. |
-| Project Ticker      | SWELL                                                                                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                                                                   |

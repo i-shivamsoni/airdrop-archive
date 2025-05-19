@@ -9,17 +9,10 @@ category: [privacy,infrastructure]
 function: ["development", "privacy", "infrastructure"]
 status: ["alive"]
 pagetype: "project"
+website: "https://mystiko.network"
+ticker: "Not Known"
+description: "Mystiko is a privacy-focused blockchain infrastructure that enables private transactions and scalable decentralized applications."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Mystiko Network                                                                                                                   |
-| Project Website     | [Mystiko Network](https://mystiko.network)                                                                                        |
-| Project Description | Mystiko is a privacy-focused blockchain infrastructure that enables private transactions and scalable decentralized applications. |
-| Project Ticker      | Not Known                                                                                                                         |
-
 ## Airdrop Details
 
 | Information              | Details     |

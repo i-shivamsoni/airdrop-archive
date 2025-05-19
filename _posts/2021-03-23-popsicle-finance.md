@@ -9,17 +9,10 @@ category: [defi]
 function: ["multi-strategy", "defi", "yield"]
 status: ["alive"]
 pagetype: "project"
+website: "https://popsicle.finance"
+ticker: "ICE"
+description: "A decentralized finance (DeFi) platform focused on cross-chain yield optimization and liquidity management."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                     |
-| ------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Project Name        | Popsicle Finance / WAGMI                                                                                    |
-| Project Website     | [Popsicle Finance](https://popsicle.finance)                                                                |
-| Project Description | A decentralized finance (DeFi) platform focused on cross-chain yield optimization and liquidity management. |
-| Project Ticker      | ICE                                                                                                         |
-
 ## Airdrop Details
 
 | Information              | Details                                                                                                                                |

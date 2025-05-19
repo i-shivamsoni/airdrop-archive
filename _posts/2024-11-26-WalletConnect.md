@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["infrastructure", "wallet", "protocol"]
 status: ["alive"]
 pagetype: "project"
+website: "https://walletconnect.com"
+ticker: "WCT"
+description: "A decentralized communication protocol that connects wallets and dApps across multiple blockchain networks."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                     |
-| ------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Project Name        | WalletConnect Token (WCT)                                                                                   |
-| Project Website     | [WalletConnect](https://walletconnect.com)                                                                  |
-| Project Description | A decentralized communication protocol that connects wallets and dApps across multiple blockchain networks. |
-| Project Ticker      | WCT                                                                                                         |
-
 ## Airdrop Details
 
 | Information              | Details        |

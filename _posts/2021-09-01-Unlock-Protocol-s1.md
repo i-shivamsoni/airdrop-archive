@@ -9,17 +9,10 @@ category: [infrastructure,defi]
 function: ["infrastructure", "access", "control"]
 status: ["alive"]
 pagetype: "project"
+website: "https://unlock-protocol.com"
+ticker: "UDT"
+description: "A decentralized protocol for memberships and access control, enabling users to create and manage locks on Ethereum and other supported networks."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Unlock Protocol                                                                                                                                  |
-| Project Website     | [Unlock Protocol](https://unlock-protocol.com)                                                                                                   |
-| Project Description | A decentralized protocol for memberships and access control, enabling users to create and manage locks on Ethereum and other supported networks. |
-| Project Ticker      | UDT                                                                                                                                              |
-
 ## Airdrop Details
 
 | Information              | Details                |

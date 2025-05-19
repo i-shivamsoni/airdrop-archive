@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "protocol", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://superfluid.org"
+ticker: "SUP"
+description: "Superfluid is a protocol enabling real-time financial transactions, allowing money to be streamed continuously over time."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                   |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Superfluid                                                                                                                |
-| Project Website     | [Superfluid](https://superfluid.org)                                                                                      |
-| Project Description | Superfluid is a protocol enabling real-time financial transactions, allowing money to be streamed continuously over time. |
-| Project Ticker      | SUP                                                                                                                       |
-
 ## Airdrop Details
 
 | Information              | Details                         |

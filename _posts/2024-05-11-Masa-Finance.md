@@ -9,17 +9,10 @@ category: ["utilities"]
 function: ["ai", "identity", "protocol"]
 status: ["alive"]
 pagetype: "project"
+website: "https://masa.finance"
+ticker: "MASA"
+description: "A decentralized identity and data platform focused on Web3 credit scoring and on-chain reputation."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------------------- |
-| Project Name        | Masa Finance                                                                                       |
-| Project Website     | [https://masa.finance](https://masa.finance)                                                       |
-| Project Description | A decentralized identity and data platform focused on Web3 credit scoring and on-chain reputation. |
-| Project Ticker      | MASA                                                                                               |
-
 ## Airdrop Details
 
 | Information              | Details                                                         |

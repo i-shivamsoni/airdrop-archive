@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "dex"]
 status: ["alive"]
 pagetype: "project"
+website: "https://definitive.fi"
+ticker: "EDGE"
+description: "A multichain trading platform providing advanced order types across major chains with a noncustodial, gasless, and MEV-resistant experience."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                      |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Definitive                                                                                                                                   |
-| Project Website     | [https://definitive.fi](https://definitive.fi)                                                                                               |
-| Project Description | A multichain trading platform providing advanced order types across major chains with a noncustodial, gasless, and MEV-resistant experience. |
-| Project Ticker      | EDGE                                                                                                                                         |
-
 ## Airdrop Details
 
 | Information              | Details                                                                       |

@@ -9,17 +9,10 @@ category: [infrastructure,defi]
 function: ["liquidity", "infrastructure", "cross-chain"]
 status: ["alive"]
 pagetype: "project"
+website: "https://across.to/"
+ticker: "ACX"
+description: "Across is the fastest, cheapest, and most secure cross-chain bridge for Ethereum, Arbitrum, Optimism, Polygon, and other Layer 1 and Layer 2 networks."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Name        | Across Protocol                                                                                                                                        |
-| Project Website     | [AcrossProtocol Website](https://across.to/)                                                                                                           |
-| Project Description | Across is the fastest, cheapest, and most secure cross-chain bridge for Ethereum, Arbitrum, Optimism, Polygon, and other Layer 1 and Layer 2 networks. |
-| Project Ticker      | ACX                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details     |

@@ -9,17 +9,10 @@ category: ["infrastructure"]
 function: ["transfer", "infrastructure", "cross-chain"]
 status: ["alive"]
 pagetype: "project"
+website: "https://app.hop.exchange/"
+ticker: "HOP"
+description: "A protocol for sending tokens across rollups and their shared layer-1 network in a quick and trustless manner."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                        |
-| ------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Hop Protocol                                                                                                   |
-| Project Website     | [Hop Exchange](https://app.hop.exchange/)                                                                      |
-| Project Description | A protocol for sending tokens across rollups and their shared layer-1 network in a quick and trustless manner. |
-| Project Ticker      | HOP                                                                                                            |
-
 ## Airdrop Details
 
 | Information              | Details                             |

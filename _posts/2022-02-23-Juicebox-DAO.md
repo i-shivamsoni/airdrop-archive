@@ -9,17 +9,10 @@ category: [defi]
 function: ["fundraising", "dao", "defi"]
 status: ["alive"]
 pagetype: "project"
+website: "https://juicebox.money/"
+ticker: "JBX"
+description: "Juicebox is a protocol for community funding and DAO management, enabling projects to raise funds in a transparent and decentralized manner."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                      |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Juicebox DAO                                                                                                                                 |
-| Project Website     | [https://juicebox.money/](https://juicebox.money/)                                                                                           |
-| Project Description | Juicebox is a protocol for community funding and DAO management, enabling projects to raise funds in a transparent and decentralized manner. |
-| Project Ticker      | JBX                                                                                                                                          |
-
 ## Airdrop Details
 
 | Information              | Details                |

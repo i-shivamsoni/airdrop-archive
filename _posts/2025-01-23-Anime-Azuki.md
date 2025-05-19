@@ -10,17 +10,10 @@ function: ["community", "nft", "social"]
 status: ["alive"]
 pagetype: "project"
 blockchain-type: ["arbitrum-orbit"]
+website: "https://www.anime.xyz/"
+ticker: "ANIME"
+description: "ANIME coin is the gas token for Animechain, an L3 blockchain using Arbitrum Orbit to enable gasless transactions. Backed by Azuki"
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | ANIME Coin                                                                                                                        |
-| Project Website     | [Anime.xyz](https://www.anime.xyz/)                                                                                               |
-| Project Description | ANIME coin is the gas token for Animechain, an L3 blockchain using Arbitrum Orbit to enable gasless transactions. Backed by Azuki |
-| Project Ticker      | ANIME                                                                                                                             |
-
 ## Airdrop Details
 
 | Information              | Details                                       |

@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "dex", "staking"]
 status: ["alive"]
 pagetype: "project"
+website: "https://diffusion.fi"
+ticker: "DIFF"
+description: "A decentralized automated market maker (AMM) built on the Evmos blockchain, aiming to bring Uniswap-like functionality to the Cosmos ecosystem."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                         |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Diffusion Finance                                                                                                                               |
-| Project Website     | [Diffusion Finance](https://diffusion.fi)                                                                                                       |
-| Project Description | A decentralized automated market maker (AMM) built on the Evmos blockchain, aiming to bring Uniswap-like functionality to the Cosmos ecosystem. |
-| Project Ticker      | DIFF                                                                                                                                            |
-
 ## Airdrop Details
 
 | Information              | Details                |

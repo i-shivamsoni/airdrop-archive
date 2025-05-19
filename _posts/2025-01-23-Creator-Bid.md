@@ -9,17 +9,10 @@ category: [ai,social]
 function: ["ai", "social"]
 status: ["alive"]
 pagetype: "project"
+website: "https://creator.bid/"
+ticker: "BID"
+description: "A decentralized platform that enables users to earn and engage with creators through CreatorPoints and token-based memberships."
 ---
-
-## Basic Information
-
-| Information             | Details                                                                                                                         |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **Project Name**        | CreatorBid                                                                                                                      |
-| **Project Website**     | [CreatorBid](https://creator.bid/)                                                                                              |
-| **Project Description** | A decentralized platform that enables users to earn and engage with creators through CreatorPoints and token-based memberships. |
-| **Project Ticker**      | BID                                                                                                                             |
-
 ## Airdrop Details
 
 | Information                  | Details                             |

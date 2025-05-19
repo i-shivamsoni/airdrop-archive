@@ -9,17 +9,10 @@ category: [stablecoin,defi]
 function: ["defi", "stablecoin", "rebase"]
 status: ["alive"]
 pagetype: "project"
+website: "https://www.ampleforth.org/"
+ticker: "AMPL (Ampleforth) / FORTH (Governance Token)"
+description: "Ampleforth is a rebasing cryptocurrency designed to be a financial building block for DeFi and traditional finance. It functions independently of traditional banks and lenders of last resort."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                         |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Ampleforth                                                                                                                                                                                      |
-| Project Website     | [Ampleforth](https://www.ampleforth.org/)                                                                                                                                                       |
-| Project Description | Ampleforth is a rebasing cryptocurrency designed to be a financial building block for DeFi and traditional finance. It functions independently of traditional banks and lenders of last resort. |
-| Project Ticker      | AMPL (Ampleforth) / FORTH (Governance Token)                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details                              |

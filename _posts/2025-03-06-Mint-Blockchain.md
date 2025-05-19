@@ -10,17 +10,10 @@ function: ["scaling", "ethereum"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-2"]
+website: "https://www.mintchain.io"
+ticker: "MINT"
+description: "Not Known"
 ---
-
-## Basic Information
-
-| Information         | Details                                     |
-| ------------------- | ------------------------------------------- |
-| Project Name        | Mint Blockchain                             |
-| Project Website     | [Mint Blockchain](https://www.mintchain.io) |
-| Project Description | Not Known                                   |
-| Project Ticker      | MINT                                        |
-
 ## Airdrop Details
 
 | Information              | Details                 |

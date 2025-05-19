@@ -9,17 +9,10 @@ category: [infrastructure]
 function: ["identity", "infrastructure", "finance"]
 status: ["alive"]
 pagetype: "project"
+website: "https://worldcoin.org"
+ticker: "WLD"
+description: "A decentralized protocol aiming to provide a universal digital identity (World ID) and a global currency (WLD) to promote financial inclusion and verify human uniqueness."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                    |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Worldcoin                                                                                                                                                                  |
-| Project Website     | [https://worldcoin.org](https://worldcoin.org)                                                                                                                             |
-| Project Description | A decentralized protocol aiming to provide a universal digital identity (World ID) and a global currency (WLD) to promote financial inclusion and verify human uniqueness. |
-| Project Ticker      | WLD                                                                                                                                                                        |
-
 ## Airdrop Details
 
 | Information              | Details     |

@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "aggregation", "yield"]
 status: ["alive"]
 pagetype: "project"
+website: "https://listadao.org"
+ticker: "LISTA"
+description: "Lista DAO is a decentralized autonomous organization focusing on creating a comprehensive DeFi ecosystem."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                   |
-| ------------------- | --------------------------------------------------------------------------------------------------------- |
-| Project Name        | Lista DAO                                                                                                 |
-| Project Website     | [https://listadao.org](https://listadao.org)                                                              |
-| Project Description | Lista DAO is a decentralized autonomous organization focusing on creating a comprehensive DeFi ecosystem. |
-| Project Ticker      | LISTA                                                                                                     |
-
 ## Airdrop Details
 
 | Information              | Details                                        |

@@ -10,17 +10,10 @@ function: ["infrastructure"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-1"]
+website: "https://www.zetachain.com"
+ticker: "ZETA"
+description: "ZetaChain is an omnichain blockchain that enables interoperability across multiple blockchains, allowing developers to build truly interoperable dApps."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | ZetaChain                                                                                                                                               |
-| Project Website     | [ZetaChain](https://www.zetachain.com)                                                                                                                  |
-| Project Description | ZetaChain is an omnichain blockchain that enables interoperability across multiple blockchains, allowing developers to build truly interoperable dApps. |
-| Project Ticker      | ZETA                                                                                                                                                    |
-
 ## Airdrop Details
 
 | Information              | Details            |

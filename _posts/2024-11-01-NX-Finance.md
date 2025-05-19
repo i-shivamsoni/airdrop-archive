@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi"]
 status: ["alive"]
 pagetype: "project"
+website: "Not Known"
+ticker: "NX"
+description: "A yield layer on Solana offering leveraged strategies for enhanced returns."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                     |
-| ------------------- | --------------------------------------------------------------------------- |
-| Project Name        | NX Finance                                                                  |
-| Project Website     | Not Known                                                                   |
-| Project Description | A yield layer on Solana offering leveraged strategies for enhanced returns. |
-| Project Ticker      | NX                                                                          |
-
 ## Airdrop Details
 
 | Information              | Details     |

@@ -10,17 +10,10 @@ function: ["social"]
 status: ["alive"]
 pagetype: "project"
 blockchain-stack: ["layer-2"]
+website: "https://cyber.co"
+ticker: "CYBER"
+description: "A decentralized web3 social network that enables users to own their digital identities, content, connections, and interactions."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                         |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | CyberConnect                                                                                                                    |
-| Project Website     | [CyberConnect](https://cyber.co)                                                                                                |
-| Project Description | A decentralized web3 social network that enables users to own their digital identities, content, connections, and interactions. |
-| Project Ticker      | CYBER                                                                                                                           |
-
 ## Airdrop Details
 
 | Information              | Details                                |

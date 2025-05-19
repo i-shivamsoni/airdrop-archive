@@ -9,17 +9,10 @@ category: [gaming]
 function: ["gaming"]
 status: ["alive"]
 pagetype: "project"
+website: "https://immortalrising2.com"
+ticker: "IMT"
+description: "A blockchain-based idle RPG where players earn and trade assets through play-to-earn (P2E) mechanics, built on the Immutable zkEVM blockchain."
 ---
-
-## Basic Information
-
-| Information         | Details                                                                                                                                        |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | Immortal Rising 2                                                                                                                              |
-| Project Website     | [Immortal Rising 2](https://immortalrising2.com)                                                                                               |
-| Project Description | A blockchain-based idle RPG where players earn and trade assets through play-to-earn (P2E) mechanics, built on the Immutable zkEVM blockchain. |
-| Project Ticker      | IMT                                                                                                                                            |
-
 ## Airdrop Details
 
 | Information              | Details                              |

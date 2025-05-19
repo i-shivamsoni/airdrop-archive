@@ -9,17 +9,10 @@ category: [defi]
 function: ["defi", "options"]
 status: ["alive"]
 pagetype: "project"
+website: "https://thetanuts.finance"
+ticker: "NUTS"
+description: "A decentralized on-chain options protocol offering structured yield vaults and innovative financial instruments for DeFi users."
 ---
-
-## Basic Information
-
-| Information             | Details                                                                                                                         |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **Project Name**        | Thetanuts Finance                                                                                                               |
-| **Project Website**     | [Thetanuts Finance](https://thetanuts.finance)                                                                                  |
-| **Project Description** | A decentralized on-chain options protocol offering structured yield vaults and innovative financial instruments for DeFi users. |
-| **Project Ticker**      | NUTS                                                                                                                            |
-
 ## Airdrop Details
 
 | Information                  | Details                                                                      |
