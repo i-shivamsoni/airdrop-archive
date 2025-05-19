@@ -1,8 +1,10 @@
 // Error handling for Ethereum provider injection
 window.addEventListener('error', function(event) {
     // Check if the error is related to Ethereum provider injection
-    if (event.message.includes('Cannot redefine property: ethereum') || 
-        event.message.includes('Cannot set property ethereum')) {
+    if (event && event.message && (
+        event.message.includes('Cannot redefine property: ethereum') || 
+        event.message.includes('Cannot set property ethereum')
+    )) {
         // Prevent the error from being logged to console
         event.preventDefault();
         return true;
@@ -1721,7 +1723,7 @@ function createEcosystemItem(ecosystem, iconName) {
     item.className = 'ecosystem-item';
     item.dataset.ecosystem = ecosystem;
     
-    const iconPath = `/assets/images/ecosystem_icons/${iconName}`;
+    const iconPath = `${window.siteBaseUrl}/assets/images/ecosystem_icons/${iconName}`;
     const displayName = ecosystem === 'not-known' 
         ? 'Not Known'
         : ecosystem
@@ -1730,7 +1732,7 @@ function createEcosystemItem(ecosystem, iconName) {
             .join(' ');
     
     item.innerHTML = `
-        <img src="${iconPath}" alt="${displayName}" onerror="this.src='/assets/images/ecosystem_icons/not-known.svg'">
+        <img src="${iconPath}" alt="${displayName}" onerror="this.src='${window.siteBaseUrl}/assets/images/ecosystem_icons/not-known.svg'">
         <span>${displayName}</span>
     `;
     
