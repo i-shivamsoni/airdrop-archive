@@ -1723,7 +1723,8 @@ function createEcosystemItem(ecosystem, iconName) {
     item.className = 'ecosystem-item';
     item.dataset.ecosystem = ecosystem;
     
-    const iconPath = `${window.siteBaseUrl}/assets/images/ecosystem_icons/${iconName}`;
+    const baseUrl = window.siteBaseUrl || '';
+    const iconPath = `${baseUrl}/assets/images/ecosystem_icons/${iconName}`;
     const displayName = ecosystem === 'not-known' 
         ? 'Not Known'
         : ecosystem
@@ -1732,7 +1733,7 @@ function createEcosystemItem(ecosystem, iconName) {
             .join(' ');
     
     item.innerHTML = `
-        <img src="${iconPath}" alt="${displayName}" onerror="this.src='${window.siteBaseUrl}/assets/images/ecosystem_icons/not-known.svg'">
+        <img src="${iconPath}" alt="${displayName}" onerror="this.src='${baseUrl}/assets/images/ecosystem_icons/not-known.svg'">
         <span>${displayName}</span>
     `;
     

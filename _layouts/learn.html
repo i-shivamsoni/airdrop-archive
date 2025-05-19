@@ -10,25 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/learn.css">
+    <link rel="stylesheet" href="{{ site.baseurl | default: '' }}/assets/css/learn.css">
     <script>
+        // Initialize site data with empty array if not defined
+        window.siteData = window.siteData || { posts: [] };
+        window.siteBaseUrl = "{{ site.baseurl | default: '' }}";
+        
         // Inject Jekyll data
-        window.siteData = {
-            posts: [
-                {% for post in site.posts %}
-                {
-                    title: "{{ post.title }}",
-                    date: "{{ post.date }}",
-                    description: "{{ post.description | strip_html | strip_newlines | escape }}",
-                    pagetype: "{{ post.pagetype }}",
-                    category: "{{ post.category }}",
-                    difficulty: "{{ post.difficulty }}",
-                    readTime: "{{ post.readTime }}",
-                    url: "{{ post.url }}"
-                }{% unless forloop.last %},{% endunless %}
-                {% endfor %}
-            ]
-        };
+        window.siteData.posts = [
+            {% for post in site.posts %}
+            {
+                title: "{{ post.title }}",
+                date: "{{ post.date }}",
+                description: "{{ post.description | strip_html | strip_newlines | escape }}",
+                pagetype: "{{ post.pagetype }}",
+                category: "{{ post.category }}",
+                difficulty: "{{ post.difficulty }}",
+                readTime: "{{ post.readTime }}",
+                url: "{{ post.url }}"
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ];
     </script>
 </head>
 <body>
@@ -139,6 +141,6 @@
         </div>
     </main>
 
-    <script src="{{ site.baseurl }}/assets/js/learn.js"></script>
+    <script src="{{ site.baseurl | default: '' }}/assets/js/learn.js"></script>
 </body>
 </html> 
