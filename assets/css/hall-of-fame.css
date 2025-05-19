@@ -817,7 +817,6 @@ tr:nth-child(3) .rank-badge {
 .nomination-form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
 }
 
 .form-row {
@@ -830,6 +829,7 @@ tr:nth-child(3) .rank-badge {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
 }
 
 .form-group label {
