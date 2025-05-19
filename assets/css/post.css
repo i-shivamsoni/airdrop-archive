@@ -1,0 +1,71 @@
+/* Post Page Styles for Crypto Airdrop Archive */
+
+.post-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.post-sidebar {
+  min-width: 220px;
+  max-width: 260px;
+  background: var(--light-dark, #f7f7fa);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+.post-sidebar h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.post-toc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.post-toc li {
+  margin-bottom: 0.5rem;
+}
+.post-toc a {
+  color: var(--primary, #6366f1);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.post-toc a:hover {
+  color: var(--accent, #4338ca);
+  text-decoration: underline;
+}
+.ticker-badge {
+  background: var(--primary);
+  color: var(--light);
+  border-radius: 0.5em;
+  padding: 0.25em 0.75em;
+  font-weight: 600;
+  font-size: 0.95em;
+  letter-spacing: 0.03em;
+  margin-left: 0.5em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.website-link a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+  margin-left: 0.5em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.website-link a:hover {
+  color: var(--primary-dark);
+}
+@media (max-width: 900px) {
+  .post-layout { flex-direction: column; }
+  .post-sidebar { position: static; width: 100%; max-width: 100%; margin-bottom: 1.5rem; }
+} 

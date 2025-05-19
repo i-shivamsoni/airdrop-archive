@@ -5,54 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    .post-layout {
-      display: flex;
-      gap: 2rem;
-      align-items: flex-start;
-    }
-    .post-sidebar {
-      min-width: 220px;
-      max-width: 260px;
-      background: var(--light-dark, #f7f7fa);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      padding: 1.5rem 1rem;
-      position: sticky;
-      top: 100px;
-      height: fit-content;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-    }
-    .post-sidebar h2 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-    .post-toc {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .post-toc li {
-      margin-bottom: 0.5rem;
-    }
-    .post-toc a {
-      color: var(--primary, #6366f1);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .post-toc a:hover {
-      color: var(--accent, #4338ca);
-      text-decoration: underline;
-    }
-    @media (max-width: 900px) {
-      .post-layout { flex-direction: column; }
-      .post-sidebar { position: static; width: 100%; max-width: 100%; margin-bottom: 1.5rem; }
-    }
-  </style>
 </head>
 <body>
   <header>
