@@ -10,43 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <style>
-        :root {
-            --pastel-blue: #A7C7E7;
-            --pastel-blue-light: #C5D9F1;
-            --pastel-blue-dark: #7BA4D9;
-            --pastel-blue-accent: #4B8CD9;
-            --pastel-blue-hover: #2B6CB0;
-            --pastel-blue-bg: #F0F7FF;
-            --pastel-blue-card: #FFFFFF;
-            --pastel-blue-border: #E1EEFF;
-            --pastel-blue-text: #2C5282;
-            --pastel-blue-text-light: #4A5568;
-        }
-
-        .learn-hero {
-            background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--pastel-blue-dark) 100%);
-            padding: 4rem 0;
-            margin-bottom: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            color: white;
-            box-shadow: 0 4px 15px rgba(123, 164, 217, 0.2);
-        }
-
-        .learn-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .learn-hero p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .learn-card {
             background: var(--pastel-blue-card);
             border-radius: 1rem;
@@ -138,18 +101,18 @@
         }
 
         .filter-section {
-            background: var(--pastel-blue-card);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--pastel-blue-border);
-            box-shadow: 0 2px 8px rgba(123, 164, 217, 0.1);
+            background: var(--light);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            border: 1px solid var(--light-dark);
+            box-shadow: var(--shadow-md);
         }
 
         .filter-section h2 {
             font-size: 1.2rem;
             margin-bottom: 1rem;
-            color: var(--pastel-blue-text);
+            color: var(--primary);
         }
 
         .filter-options {
@@ -163,22 +126,23 @@
             align-items: center;
             gap: 0.8rem;
             cursor: pointer;
-            color: var(--pastel-blue-text);
+            color: var(--dark-light);
         }
 
         .checkmark {
             width: 20px;
             height: 20px;
-            border: 2px solid var(--pastel-blue);
+            border: 2px solid var(--primary);
             border-radius: 4px;
             display: inline-block;
             position: relative;
             transition: all 0.3s ease;
+            background: var(--light);
         }
 
         .checkbox input:checked + .checkmark {
-            background: var(--pastel-blue);
-            border-color: var(--pastel-blue);
+            background: var(--primary);
+            border-color: var(--primary);
         }
 
         .checkbox input:checked + .checkmark:after {
@@ -312,7 +276,7 @@
 
     <main>
         <div class="container">
-            <section class="learn-hero">
+            <section class="hero">
                 <h1>{{ page.title }}</h1>
                 <p>{{ page.description }}</p>
             </section>
