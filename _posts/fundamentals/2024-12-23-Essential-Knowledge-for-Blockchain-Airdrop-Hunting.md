@@ -7,6 +7,7 @@ tags: [basics, introduction] # Tag names should always be lowercase
 pagetype: "learn"
 pageorder: "03"
 pin: true
+permalink: /learn/:title/
 ---
 
 Heard about people getting "free crypto" from airdrops but have no idea where to begin? You're not alone! This two-part guide will equip you with everything you need to know to start your airdrop hunting journey. In Part 1, we'll cover the essential knowledge you need before starting.

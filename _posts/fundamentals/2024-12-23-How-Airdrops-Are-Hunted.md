@@ -7,6 +7,7 @@ tags: [basics, introduction] # Tag names should always be lowercase
 pagetype: "learn"
 pageorder: "05"
 pin: true
+permalink: /learn/:title/
 ---
 
 # The Complete Guide to Cryptocurrency Airdrop Hunting

@@ -7,6 +7,7 @@ tags: [basics, introduction] # Tag names should always be lowercase
 pagetype: "learn"
 pageorder: "02"
 pin: true
+permalink: /learn/:title/
 ---
 
 ## Airdrop Glossary: Terms Every Crypto Enthusiast Should Know

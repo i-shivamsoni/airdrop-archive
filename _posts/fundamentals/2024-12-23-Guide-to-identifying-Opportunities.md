@@ -7,6 +7,7 @@ tags: [basics, introduction] # Tag names should always be lowercase
 pagetype: "learn"
 pageorder: "06"
 pin: true
+permalink: /learn/:title/
 ---
 
 ## Key Criteria: Identifying Airdrop Factors

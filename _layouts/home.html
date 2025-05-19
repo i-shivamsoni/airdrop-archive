@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <script>
         // Inject Jekyll data
+        // Each post now includes a 'url' property for linking to its individual page
         window.siteData = {
             posts: [
                 {% for post in site.posts %}
                 {
                     title: "{{ post.title }}",
+                    url: "{{ post.url }}",
                     date: "{{ post.date }}",
                     timeframe: {{ post.timeframe | jsonify }},
                     ecosystem: {{ post.ecosystem | jsonify }},

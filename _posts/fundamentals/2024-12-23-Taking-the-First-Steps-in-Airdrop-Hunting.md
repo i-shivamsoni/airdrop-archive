@@ -7,6 +7,7 @@ tags: [basics, introduction] # Tag names should always be lowercase
 pagetype: "learn"
 pageorder: "04"
 pin: true
+permalink: /learn/:title/
 ---
 
 Welcome to Part 2 of our guide on blockchain airdrop hunting! Now that you understand the essential concepts from Part 1, let's dive into the practical steps to start your journey.

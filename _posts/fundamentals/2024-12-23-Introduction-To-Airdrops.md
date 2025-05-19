@@ -7,6 +7,7 @@ tags: [basics, introduction] # Tag names should always be lowercase
 pagetype: "learn"
 pageorder: "01"
 pin: true
+permalink: /learn/:title/
 ---
 
 # The Ultimate Guide to Airdrop Hunting: From Basics to Advanced Strategies
