@@ -30,23 +30,32 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                 <section class="year-overview">
                     <h2>Year Overview</h2>
                     <div class="year-stats">
-                        <div class="stat-card">
-                            <div class="stat-value">{{ site.posts | size }}</div>
-                            <div class="stat-label">Projects in {{ current_year }}</div>
-                        </div>
-                        <div class="stat-chart">
-                            {% assign monthly_stats = site.posts | group_by_exp: "post", "post.date | date: '%B'" %}
-                            {% for month in monthly_stats %}
-                            {% assign percentage = month.items | size | times: 100.0 | divided_by: site.posts.size %}
-                            <div class="chart-bar">
-                                <div class="bar-label">{{ month.name }}</div>
-                                <div class="bar-container">
-                                    <div class="bar-fill" style="width: {{ percentage }}%"></div>
+                        {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+                        {% for year in years %}
+                            <div class="year-stats-content" data-year="{{ year.name }}" {% unless forloop.first %}style="display: none;"{% endunless %}>
+                                <div class="stat-card">
+                                    <div class="stat-value">{{ year.items | size }}</div>
+                                    <div class="stat-label">Projects in {{ year.name }}</div>
                                 </div>
-                                <div class="bar-value">{{ month.items | size }}</div>
+                                <div class="stat-chart">
+                                    {% assign month_order = "December,November,October,September,August,July,June,May,April,March,February,January" | split: "," %}
+                                    {% assign monthly_stats = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                                    {% for month_name in month_order %}
+                                        {% assign month_data = monthly_stats | where: "name", month_name | first %}
+                                        {% if month_data and month_data.items.size > 0 %}
+                                            {% assign percentage = month_data.items | size | times: 100.0 | divided_by: year.items.size %}
+                                            <div class="chart-bar">
+                                                <div class="bar-label">{{ month_name }}</div>
+                                                <div class="bar-container">
+                                                    <div class="bar-fill" style="width: {{ percentage }}%"></div>
+                                                </div>
+                                                <div class="bar-value">{{ month_data.items | size }}</div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
                             </div>
-                            {% endfor %}
-                        </div>
+                        {% endfor %}
                     </div>
                 </section>
             </aside>

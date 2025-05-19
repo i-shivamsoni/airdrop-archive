@@ -27,39 +27,97 @@ let projects = [];
 
 // Timeline Interactivity
 
+// Function to update year overview
+function updateYearOverview(year) {
+    const yearPosts = projects.filter(post => {
+        const postYear = new Date(post.date).getFullYear();
+        return postYear === parseInt(year);
+    });
+
+    // Update project count
+    const yearCount = document.querySelector('.year-count');
+    const currentYearSpan = document.querySelector('.current-year');
+    if (yearCount) yearCount.textContent = yearPosts.length;
+    if (currentYearSpan) currentYearSpan.textContent = year;
+
+    // Get monthly stats
+    const monthlyStats = {};
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+                       'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    yearPosts.forEach(post => {
+        const month = new Date(post.date).getMonth();
+        const monthName = monthNames[month];
+        monthlyStats[monthName] = (monthlyStats[monthName] || 0) + 1;
+    });
+
+    // Sort months in reverse chronological order
+    const sortedMonths = monthNames.reverse().filter(month => monthlyStats[month] > 0);
+
+    // Update chart
+    const statChart = document.querySelector('.stat-chart');
+    if (statChart) {
+        statChart.innerHTML = sortedMonths.map(month => {
+            const count = monthlyStats[month];
+            const percentage = (count / yearPosts.length) * 100;
+            return `
+                <div class="chart-bar">
+                    <div class="bar-label">${month}</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: ${percentage}%"></div>
+                    </div>
+                    <div class="bar-value">${count}</div>
+                </div>
+            `;
+        }).join('');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Year tab switching
     const yearTabs = document.querySelectorAll('.year-tab');
     const yearTimelines = document.querySelectorAll('.year-timeline');
     const yearActivityData = document.querySelectorAll('.year-activity-data');
+    const yearStatsContent = document.querySelectorAll('.year-stats-content');
+
+    function switchYear(selectedYear) {
+        // Update year tabs
+        yearTabs.forEach(t => {
+            if (t.getAttribute('data-year') === selectedYear) {
+                t.classList.add('active');
+            } else {
+                t.classList.remove('active');
+            }
+        });
+        
+        // Update timeline views
+        yearTimelines.forEach(yt => {
+            yt.style.display = yt.getAttribute('data-year') === selectedYear ? '' : 'none';
+        });
+
+        // Update rewarded activity data
+        yearActivityData.forEach(data => {
+            data.style.display = data.getAttribute('data-year') === selectedYear ? '' : 'none';
+        });
+
+        // Update year overview content
+        yearStatsContent.forEach(content => {
+            content.style.display = content.getAttribute('data-year') === selectedYear ? '' : 'none';
+        });
+    }
 
     yearTabs.forEach(tab => {
         tab.addEventListener('click', function() {
             const selectedYear = tab.getAttribute('data-year');
-            
-            // Update year tabs
-            yearTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            
-            // Update timeline views
-            yearTimelines.forEach(yt => {
-                if (yt.getAttribute('data-year') === selectedYear) {
-                    yt.style.display = '';
-                } else {
-                    yt.style.display = 'none';
-                }
-            });
-
-            // Update rewarded activity data
-            yearActivityData.forEach(data => {
-                if (data.getAttribute('data-year') === selectedYear) {
-                    data.style.display = '';
-                } else {
-                    data.style.display = 'none';
-                }
-            });
+            switchYear(selectedYear);
         });
     });
+
+    // Initialize with the first year
+    const firstYear = yearTabs[0]?.getAttribute('data-year');
+    if (firstYear) {
+        switchYear(firstYear);
+    }
 
     // Expand/collapse months
     function toggleMonthSection(btn, expandText, collapseText) {
