@@ -1,21 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "BUCKET Protocol"
-date: 2025-01-07
-categories: [ "defi","solana","sui"]
-tags: [retroactive, all, 2k25]
+date: "2025-01-07"
+timeframe: ["2025"]
+ecosystem: ["solana"]
+rewardedActivity: ["retroactive"]
+category: ["defi"]
+function: [ "defi"]
+status: ["alive"]
 pagetype: "project"
----
-
-## Basic Information
-
-| Information         | Details                                                                                                                                                                                                    |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Name        | BUCKET Protocol                                                                                                                                                                                            |
-| Project Website     | [BUCKET Protocol](https://tge.bucketprotocol.io/)                                                                                                                                                          |
-| Project Description | A next-generation Liquidity Layer on the Sui Network, allowing users to mint $BUCK stablecoin by locking assets as collateral, while unlocking opportunities for yield generation and leveraged liquidity. |
-| Project Ticker      | $BUT                                                                                                                                                                                                       |
-
+website: "https://bucketprotocol.io/"
+ticker: " $BUT "
+description: "A next-generation Liquidity Layer on the Sui Network, allowing users to mint $BUCK stablecoin by locking assets as collateral, while unlocking opportunities for yield generation and leveraged liquidity."
+---      
+                                                                                                                                                                                               |
 ## Airdrop Details
 
 | Information              | Details                                |

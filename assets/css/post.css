@@ -68,4 +68,105 @@
 @media (max-width: 900px) {
   .post-layout { flex-direction: column; }
   .post-sidebar { position: static; width: 100%; max-width: 100%; margin-bottom: 1.5rem; }
+}
+
+/* Enhanced Post Hero Section Styles */
+.enhanced-hero {
+  background: linear-gradient(120deg, var(--light-dark) 60%, #f7f7fa 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.post-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.enhanced-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  font-size: 1.05rem;
+  color: var(--dark-light);
+  border-radius: var(--radius-md);
+  background: rgba(99,102,241,0.03);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+}
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: relative;
+  padding-right: 1.25em;
+}
+.meta-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0.3em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1.5em;
+  background: var(--light-dark);
+  opacity: 0.25;
+}
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.25em;
+  font-size: 1.1em;
+}
+.status-alive { color: #10b981; }
+.status-dead { color: #ef4444; }
+.status-other { color: #3b82f6; }
+.post-description {
+  font-size: 1.18rem;
+  color: var(--dark-light);
+  margin-top: 0.5rem;
+  max-width: 700px;
+  background: rgba(99,102,241,0.04);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(99,102,241,0.04);
+}
+.website-link a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+  margin-left: 0.5em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: color 0.2s;
+}
+.website-link a:hover {
+  color: var(--accent);
+}
+
+.post-content-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2.25rem 2rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .post-content-card {
+    padding: 1.25rem 0.75rem;
+  }
 } 
