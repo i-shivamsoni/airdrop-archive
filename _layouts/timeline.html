@@ -63,86 +63,86 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                     {% assign month_order = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
                     {% for year in years %}
                       <div class="year-timeline" data-year="{{ year.name }}"{% unless forloop.first %} style="display:none;"{% endunless %}>
-                        <div class="timeline-header">
+                    <div class="timeline-header">
                           <h2>{{ year.name }}</h2>
-                          <div class="view-options">
+                        <div class="view-options">
                             <button class="view-option active" data-view="timeline">
-                              <i class="fas fa-stream"></i>
-                              <span>Timeline</span>
+                                <i class="fas fa-stream"></i>
+                                <span>Timeline</span>
                             </button>
                             <button class="view-option" data-view="grid">
-                              <i class="fas fa-th-large"></i>
-                              <span>Grid</span>
+                                <i class="fas fa-th-large"></i>
+                                <span>Grid</span>
                             </button>
                             <button class="view-option" data-view="list">
-                              <i class="fas fa-list"></i>
-                              <span>List</span>
+                                <i class="fas fa-list"></i>
+                                <span>List</span>
                             </button>
-                          </div>
                         </div>
-                        <div class="timeline-content">
+                    </div>
+                    <div class="timeline-content">
                           {% assign months = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
                           {% assign sorted_months = "" | split: "" %}
                           {% for m in month_order reversed %}
-                            {% for month in months %}
+                        {% for month in months %}
                               {% if month.name == m %}
                                 {% assign sorted_months = sorted_months | push: month %}
                               {% endif %}
                             {% endfor %}
                           {% endfor %}
                           {% for month in sorted_months %}
-                            <div class="month-section {% unless forloop.first %}collapsed{% endunless %}">
-                              <div class="month-header">
+                        <div class="month-section {% unless forloop.first %}collapsed{% endunless %}">
+                            <div class="month-header">
                                 <h3>{{ month.name }} {{ year.name }}</h3>
                                 <span class="project-count">{{ month.items | size }} projects</span>
-                              </div>
-                              {% if forloop.first %}
-                              <div class="timeline-entries">
+                            </div>
+                            {% if forloop.first %}
+                            <div class="timeline-entries">
                                 {% for post in month.items %}
                                 <div class="timeline-entry">
-                                  <div class="entry-date">
-                                    <span class="day">{{ post.date | date: "%d" }}</span>
-                                    <span class="month">{{ post.date | date: "%b" }}</span>
-                                  </div>
-                                  <div class="entry-connector">
-                                    <div class="connector-line"></div>
-                                    <div class="connector-dot"></div>
-                                  </div>
-                                  <div class="entry-card">
-                                    <div class="card-content">
-                                      <h4>{{ post.title }}</h4>
-                                      <div class="card-tags">
-                                        {% for tag in post.tags %}
-                                        <span class="tag">{{ tag }}</span>
-                                        {% endfor %}
-                                      </div>
+                                    <div class="entry-date">
+                                        <span class="day">{{ post.date | date: "%d" }}</span>
+                                        <span class="month">{{ post.date | date: "%b" }}</span>
                                     </div>
-                                    <a href="{{ post.url | relative_url }}" class="card-link">
-                                      <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                  </div>
+                                    <div class="entry-connector">
+                                        <div class="connector-line"></div>
+                                        <div class="connector-dot"></div>
+                                    </div>
+                                    <div class="entry-card">
+                                        <div class="card-content">
+                                            <h4>{{ post.title }}</h4>
+                                            <div class="card-tags">
+                                                {% for tag in post.tags %}
+                                                <span class="tag">{{ tag }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <a href="{{ post.url | relative_url }}" class="card-link">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                    </div>
                                 </div>
                                 {% endfor %}
-                              </div>
-                              <div class="month-footer">
+                            </div>
+                            <div class="month-footer">
                                 <button class="load-more">
-                                  <span>Load More</span>
-                                  <i class="fas fa-chevron-down"></i>
+                                    <span>Load More</span>
+                                    <i class="fas fa-chevron-down"></i>
                                 </button>
-                              </div>
-                              {% else %}
-                              <div class="month-footer">
+                            </div>
+                            {% else %}
+                            <div class="month-footer">
                                 <button class="expand-month">
-                                  <span>Expand</span>
-                                  <i class="fas fa-chevron-down"></i>
+                                    <span>Expand</span>
+                                    <i class="fas fa-chevron-down"></i>
                                 </button>
-                              </div>
-                              {% endif %}
+                            </div>
+                            {% endif %}
                             </div>
                           {% endfor %}
                         </div>
-                      </div>
-                    {% endfor %}
+                        </div>
+                        {% endfor %}
                     </div>
                 </section>
             </div>

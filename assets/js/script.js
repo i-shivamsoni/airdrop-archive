@@ -277,9 +277,15 @@ function formatDate(dateString) {
 }
 
 function createProjectCard(project) {
+    // Wrap the card in a clickable <a> tag using the post.url property
+    const link = document.createElement('a');
+    link.href = project.url;
+    link.className = 'project-card-link';
+    link.style.textDecoration = 'none';
+    link.style.color = 'inherit';
+
     const card = document.createElement('div');
     card.className = 'project-card';
-    
     card.innerHTML = `
         <div class="card-header">
             <h3>${project.title}</h3>
@@ -298,8 +304,8 @@ function createProjectCard(project) {
             ${project.blockchain_type ? project.blockchain_type.map(t => `<span class="tag blockchain-type">${t}</span>`).join('') : ''}
         </div>
     `;
-    
-    return card;
+    link.appendChild(card);
+    return link;
 }
 
 function updateTimelineCounts(projects) {

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .post-layout {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .post-sidebar {
+      min-width: 220px;
+      max-width: 260px;
+      background: var(--light-dark, #f7f7fa);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem 1rem;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+    .post-sidebar h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .post-toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .post-toc li {
+      margin-bottom: 0.5rem;
+    }
+    .post-toc a {
+      color: var(--primary, #6366f1);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .post-toc a:hover {
+      color: var(--accent, #4338ca);
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .post-layout { flex-direction: column; }
+      .post-sidebar { position: static; width: 100%; max-width: 100%; margin-bottom: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
+        <span>Crypto Airdrop Archive</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>HOME</a></li>
+          <li><a href="{{ '/learn' | relative_url }}" {% if page.url contains '/learn' %}class="active"{% endif %}>LEARN</a></li>
+          <li><a href="{{ '/timeline' | relative_url }}" {% if page.url contains '/timeline' %}class="active"{% endif %}>TIMELINE</a></li>
+          <li><a href="{{ '/hall-of-fame' | relative_url }}" {% if page.url contains '/hall-of-fame' %}class="active"{% endif %}>HALL OF FAME</a></li>
+          <li><a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="post-hero" style="background: var(--light-dark, #f7f7fa); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 2.5rem 2rem 2rem 2rem; margin-bottom: 2.5rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem;">
+        <h1 style="font-size: 2.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">{{ page.title }}</h1>
+        <div class="post-meta-row" style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; font-size: 1rem; color: var(--dark-light);">
+          {% if page.date %}
+            <span title="Date"><i class="far fa-calendar-alt" style="margin-right: 0.5em;"></i>{{ page.date | date: "%b %d, %Y" }}</span>
+          {% endif %}
+          {% if page.category %}
+            <span title="Category"><i class="fas fa-layer-group" style="margin-right: 0.5em;"></i>{% for cat in page.category %}{{ cat }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+          {% endif %}
+          {% if page.status %}
+            <span title="Status"><span style="color: {% if page.status contains 'alive' %}#10b981{% elsif page.status contains 'dead' %}#ef4444{% else %}#3b82f6{% endif %};"><i class="fas fa-circle" style="margin-right: 0.5em;"></i></span>{% for s in page.status %}{{ s | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+          {% endif %}
+          {% if page.ecosystem %}
+            <span title="Ecosystem"><i class="fas fa-globe" style="margin-right: 0.5em;"></i>{% for eco in page.ecosystem %}{{ eco }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+          {% endif %}
+          {% if page.function %}
+            <span title="Function"><i class="fas fa-bolt" style="margin-right: 0.5em;"></i>{% for func in page.function %}{{ func }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+          {% endif %}
+          {% if page.blockchain-stack %}
+            <span title="Blockchain Stack"><i class="fas fa-cubes" style="margin-right: 0.5em;"></i>{% for stack in page.blockchain-stack %}{{ stack }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+          {% endif %}
+          {% if page.blockchain-type %}
+            <span title="Blockchain Type"><i class="fas fa-project-diagram" style="margin-right: 0.5em;"></i>{% for type in page.blockchain-type %}{{ type }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+          {% endif %}
+        </div>
+      </section>
+      <div class="post-layout">
+        <aside class="post-sidebar" id="post-sidebar" style="display:none">
+          <h2>Contents</h2>
+          <ul class="post-toc" id="post-toc"></ul>
+        </aside>
+        <div class="post-content" id="post-content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    // Generate Table of Contents from h2/h3 in post-content
+    document.addEventListener('DOMContentLoaded', function() {
+      const content = document.getElementById('post-content');
+      const toc = document.getElementById('post-toc');
+      const sidebar = document.getElementById('post-sidebar');
+      if (!content || !toc) return;
+      const headings = content.querySelectorAll('h2, h3');
+      if (headings.length < 2) return; // Only show if 2+ headings
+      sidebar.style.display = '';
+      headings.forEach(function(heading, i) {
+        if (!heading.id) {
+          heading.id = 'section-' + i;
+        }
+        const li = document.createElement('li');
+        li.style.marginLeft = heading.tagName === 'H3' ? '1.25em' : '0';
+        const a = document.createElement('a');
+        a.href = '#' + heading.id;
+        a.textContent = heading.textContent;
+        li.appendChild(a);
+        toc.appendChild(li);
+      });
+    });
+    // Responsive table fix: add data-labels to td from th
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.post-content table').forEach(function(table) {
+        const ths = Array.from(table.querySelectorAll('thead th'));
+        if (ths.length === 0) return;
+        table.querySelectorAll('tbody tr').forEach(function(row) {
+          row.querySelectorAll('td').forEach(function(td, i) {
+            if (ths[i]) td.setAttribute('data-label', ths[i].textContent.trim());
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html> 
