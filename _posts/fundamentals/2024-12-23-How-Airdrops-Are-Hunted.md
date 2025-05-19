@@ -8,6 +8,10 @@ pagetype: "learn"
 pageorder: "05"
 pin: true
 permalink: /learn/:title/
+description: "A detailed guide on the strategies and techniques used in airdrop hunting, including platform usage, liquidity provision, testnet participation, and community engagement."
+category: "Airdrop-Basics"
+difficulty: "Intermediate"
+readTime: "5 min read"
 ---
 
 # The Complete Guide to Cryptocurrency Airdrop Hunting

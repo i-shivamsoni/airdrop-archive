@@ -8,6 +8,10 @@ pagetype: "learn"
 pageorder: "03"
 pin: true
 permalink: /learn/:title/
+description: "A comprehensive guide covering essential knowledge and concepts needed to start your journey in blockchain airdrop hunting, from understanding different blockchain layers to wallet security."
+category: "Airdrop-Basics"
+difficulty: "Beginner"
+readTime: "5 min read"
 ---
 
 Heard about people getting "free crypto" from airdrops but have no idea where to begin? You're not alone! This two-part guide will equip you with everything you need to know to start your airdrop hunting journey. In Part 1, we'll cover the essential knowledge you need before starting.

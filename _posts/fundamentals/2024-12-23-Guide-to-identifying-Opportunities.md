@@ -8,6 +8,10 @@ pagetype: "learn"
 pageorder: "06"
 pin: true
 permalink: /learn/:title/
+description: "Learn how to identify and evaluate potential airdrop opportunities, including key criteria, research tools, and strategic recommendations for successful airdrop hunting."
+category: "Airdrop-Basics"
+difficulty: "Intermediate"
+readTime: "5 min read"
 ---
 
 ## Key Criteria: Identifying Airdrop Factors

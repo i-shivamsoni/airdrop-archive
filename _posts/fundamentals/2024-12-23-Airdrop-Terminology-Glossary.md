@@ -8,6 +8,10 @@ pagetype: "learn"
 pageorder: "02"
 pin: true
 permalink: /learn/:title/
+description: "A comprehensive glossary of essential terms and concepts in the world of cryptocurrency airdrops, helping both newcomers and experienced users understand the terminology."
+category: "Airdrop-Basics"
+difficulty: "Beginner"
+readTime: "5 min read"
 ---
 
 ## Airdrop Glossary: Terms Every Crypto Enthusiast Should Know
@@ -28,7 +32,7 @@ Alpha refers to early or insider information about upcoming airdrops or token la
 
 ### Blockchain Snapshot
 
-A snapshot captures the state of a blockchain at a specific block height. It’s commonly used to determine airdrop eligibility based on wallet holdings at that moment.
+A snapshot captures the state of a blockchain at a specific block height. It's commonly used to determine airdrop eligibility based on wallet holdings at that moment.
 
 ### Bounty
 
@@ -40,7 +44,7 @@ This is the limited timeframe during which eligible users can claim their airdro
 
 ### Community Airdrop
 
-These airdrops specifically target active community members—think Discord contributors, governance participants, or content creators who support the project’s growth.
+These airdrops specifically target active community members—think Discord contributors, governance participants, or content creators who support the project's growth.
 
 ### Dust Attack
 
@@ -64,7 +68,7 @@ A fair launch aims to give everyone equal opportunity to acquire tokens, often u
 
 ### Fork
 
-When a blockchain splits into two separate chains, it's called a fork. Projects sometimes airdrop new tokens to holders of the original chain’s tokens.
+When a blockchain splits into two separate chains, it's called a fork. Projects sometimes airdrop new tokens to holders of the original chain's tokens.
 
 ### Gas Fees
 
@@ -80,15 +84,15 @@ These airdrops go to users holding a specific token or NFT at the time of a snap
 
 ### HODL
 
-A popular term meaning to “hold on for dear life.” Many projects reward long-term holders with airdrops.
+A popular term meaning to "hold on for dear life." Many projects reward long-term holders with airdrops.
 
 ### Liquidity Provider
 
-Users who supply assets to decentralized exchanges or DeFi protocols are known as liquidity providers. They’re often rewarded with airdrops for their contributions.
+Users who supply assets to decentralized exchanges or DeFi protocols are known as liquidity providers. They're often rewarded with airdrops for their contributions.
 
 ### Lockdrop
 
-In a lockdrop, users lock their tokens for a set period and receive new tokens in return. It’s a way to show commitment to a project and earn airdrops.
+In a lockdrop, users lock their tokens for a set period and receive new tokens in return. It's a way to show commitment to a project and earn airdrops.
 
 ### Retroactive Airdrop
 

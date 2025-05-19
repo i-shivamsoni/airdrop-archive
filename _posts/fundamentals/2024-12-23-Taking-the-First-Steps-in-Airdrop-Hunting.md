@@ -8,6 +8,10 @@ pagetype: "learn"
 pageorder: "04"
 pin: true
 permalink: /learn/:title/
+description: "A practical guide to getting started with airdrop hunting, including wallet setup, blockchain selection, and your first interactions with protocols."
+category: "Airdrop-Basics"
+difficulty: "Beginner"
+readTime: "5 min read"
 ---
 
 Welcome to Part 2 of our guide on blockchain airdrop hunting! Now that you understand the essential concepts from Part 1, let's dive into the practical steps to start your journey.

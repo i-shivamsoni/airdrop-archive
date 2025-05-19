@@ -8,6 +8,10 @@ pagetype: "learn"
 pageorder: "01"
 pin: true
 permalink: /learn/:title/
+description: "A comprehensive introduction to cryptocurrency airdrops, covering their purpose, types, earning potential, and how to find and claim them."
+category: "Airdrop-Basics"
+difficulty: "Beginner"
+readTime: "5 min read"
 ---
 
 # The Ultimate Guide to Airdrop Hunting: From Basics to Advanced Strategies
