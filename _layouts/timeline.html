@@ -158,25 +158,51 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                           "On-chain Participation,Test & Build Participation,Community & Loyalty,Influence & Content,Alpha Community Participation" | split: "," %}
                       {% assign activity_options = 
                           "retroactive|holder|nft|staking|fork|node,testnet|form|dev-work,loyalty|free|discord-role|quest,content|kaito-yapping,binance-alpha|mexc-alpha|bybit-alpha|okx-alpha" | split: "," %}
-                      {% for group in activity_groups %}
-                        {% assign group_index = forloop.index0 %}
-                        {% assign group_label = activity_labels[group_index] %}
-                        {% assign group_activities = activity_options[group_index] | split: "|" %}
-                        {% assign count = 0 %}
-                        {% for post in site.posts %}
-                          {% if post.rewardedActivity %}
-                            {% for activity in post.rewardedActivity %}
-                              {% if group_activities contains activity %}
-                                {% assign count = count | plus: 1 %}
-                                {% break %}
+                      
+                      {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+                      {% for year in years %}
+                        <div class="year-activity-data" data-year="{{ year.name }}" {% unless forloop.first %}style="display: none;"{% endunless %}>
+                          {% for group in activity_groups %}
+                            {% assign group_index = forloop.index0 %}
+                            {% assign group_label = activity_labels[group_index] %}
+                            {% assign group_activities = activity_options[group_index] | split: "|" %}
+                            {% assign count = 0 %}
+                            {% for post in year.items %}
+                              {% if post.rewardedActivity %}
+                                {% for activity in post.rewardedActivity %}
+                                  {% if group_activities contains activity %}
+                                    {% assign count = count | plus: 1 %}
+                                    {% break %}
+                                  {% endif %}
+                                {% endfor %}
                               {% endif %}
                             {% endfor %}
-                          {% endif %}
-                        {% endfor %}
-                        {% assign percentage = count | times: 100.0 | divided_by: site.posts.size %}
-                        <div class="rewarded-activity-row">
-                          <span class="activity-name">{{ group_label }}</span>
-                          <span class="activity-value">{{ percentage | round }}%</span>
+                            {% assign percentage = count | times: 100.0 | divided_by: year.items.size %}
+                            <div class="rewarded-activity-category">
+                                <div class="category-header" data-category="{{ group }}">
+                                    <span class="activity-name">{{ group_label }}</span>
+                                    <span class="activity-value">{{ percentage | round }}%</span>
+                                    <button class="expand-category">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="subcategories" style="display: none;">
+                                    {% for subactivity in group_activities %}
+                                        {% assign subcount = 0 %}
+                                        {% for post in year.items %}
+                                            {% if post.rewardedActivity and post.rewardedActivity contains subactivity %}
+                                                {% assign subcount = subcount | plus: 1 %}
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% assign subpercentage = subcount | times: 100.0 | divided_by: year.items.size %}
+                                        <div class="subcategory-row">
+                                            <span class="subcategory-name">{{ subactivity | replace: "-", " " | capitalize }}</span>
+                                            <span class="subcategory-value">{{ subpercentage | round }}%</span>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                          {% endfor %}
                         </div>
                       {% endfor %}
                     </div>

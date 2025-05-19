@@ -31,16 +31,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Year tab switching
     const yearTabs = document.querySelectorAll('.year-tab');
     const yearTimelines = document.querySelectorAll('.year-timeline');
+    const yearActivityData = document.querySelectorAll('.year-activity-data');
+
     yearTabs.forEach(tab => {
         tab.addEventListener('click', function() {
+            const selectedYear = tab.getAttribute('data-year');
+            
+            // Update year tabs
             yearTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            const year = tab.getAttribute('data-year');
+            
+            // Update timeline views
             yearTimelines.forEach(yt => {
-                if (yt.getAttribute('data-year') === year) {
+                if (yt.getAttribute('data-year') === selectedYear) {
                     yt.style.display = '';
                 } else {
                     yt.style.display = 'none';
+                }
+            });
+
+            // Update rewarded activity data
+            yearActivityData.forEach(data => {
+                if (data.getAttribute('data-year') === selectedYear) {
+                    data.style.display = '';
+                } else {
+                    data.style.display = 'none';
                 }
             });
         });
@@ -97,6 +112,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.classList.add('active');
                 // Only timeline view is implemented; grid/list can be added as needed
             });
+        });
+    });
+
+    // Rewarded Activity Category Expansion
+    document.querySelectorAll('.category-header').forEach(header => {
+        header.addEventListener('click', function() {
+            const category = this.closest('.rewarded-activity-category');
+            const subcategories = category.querySelector('.subcategories');
+            const expandButton = this.querySelector('.expand-category');
+            
+            // Toggle subcategories visibility
+            if (subcategories.style.display === 'none') {
+                subcategories.style.display = 'block';
+                expandButton.classList.add('expanded');
+            } else {
+                subcategories.style.display = 'none';
+                expandButton.classList.remove('expanded');
+            }
         });
     });
 });
