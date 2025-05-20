@@ -4,18 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}Crypto Airdrop Archive</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ '/assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/default.css' | relative_url }}">
+    {% if page.url contains '/about' %}
+    <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+    {% endif %}
     {% if page.custom_css %}
         {% for stylesheet in page.custom_css %}
         <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
         {% endfor %}
     {% endif %}
+    <style>
+        .screen-size-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .screen-size-message.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .screen-size-message h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .screen-size-message p {
+            font-size: 18px;
+            color: #ccc;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .screen-size-message i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #6366f1;
+        }
+    </style>
 </head>
 <body>
+    <!-- Screen Size Message -->
+    <div class="screen-size-message" id="screenSizeMessage">
+        <i class="fas fa-desktop"></i>
+        <h2>Desktop Experience Required</h2>
+        <p>This website is optimized for desktop screens (1400x900 or larger). Please access it from a computer for the best experience.</p>
+    </div>
+
     <header>
         <div class="container">
             <div class="logo">
@@ -40,7 +98,6 @@
                     <button><i class="fas fa-search"></i></button>
                 </div>
             </div>
-           
         </div>
     </header>
 
@@ -49,12 +106,37 @@
             {{ content }}
         </div>
     </main>
+    
+    <!-- Load search bar functionality first -->
+    <script src="{{ '/assets/js/search-bar.js' | relative_url }}"></script>
+    <!-- Then load other scripts -->
+    <script src="{{ '/assets/js/default.js' | relative_url }}"></script>
 
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
     {% if page.custom_js %}
         {% for js_file in page.custom_js %}
         <script src="{{ js_file | relative_url }}"></script>
         {% endfor %}
     {% endif %}
+
+    <script>
+        // Check screen size on load and resize
+        function checkScreenSize() {
+            const message = document.getElementById('screenSizeMessage');
+            const minWidth = 1400;
+            const minHeight = 900;
+            
+            if (window.innerWidth < minWidth || window.innerHeight < minHeight) {
+                message.classList.add('active');
+            } else {
+                message.classList.remove('active');
+            }
+        }
+
+        // Check on page load
+        window.addEventListener('load', checkScreenSize);
+        
+        // Check on window resize
+        window.addEventListener('resize', checkScreenSize);
+    </script>
 </body>
 </html> 

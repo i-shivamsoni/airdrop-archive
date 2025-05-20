@@ -1,41 +1,21 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  
+  
   <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
-        <span>Crypto Airdrop Archive</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>HOME</a></li>
-          <li><a href="{{ '/learn' | relative_url }}" {% if page.url contains '/learn' %}class="active"{% endif %}>LEARN</a></li>
-          <li><a href="{{ '/timeline' | relative_url }}" {% if page.url contains '/timeline' %}class="active"{% endif %}>TIMELINE</a></li>
-          <li><a href="{{ '/hall-of-fame' | relative_url }}" {% if page.url contains '/hall-of-fame' %}class="active"{% endif %}>HALL OF FAME</a></li>
-          <li><a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>ABOUT</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-          <i class="fas fa-moon"></i>
-        </button>
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <button><i class="fas fa-search"></i></button>
-        </div>
-      </div>
-    </div>
-  </header>
+
   <main>
     <div class="container">
       <!-- Hero Section -->
@@ -110,14 +90,46 @@
         toc.appendChild(li);
       });
     });
-    // Responsive table fix: add data-labels to td from th
+
+    // Enhanced table handling
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.post-content table').forEach(function(table) {
-        const ths = Array.from(table.querySelectorAll('thead th'));
-        if (ths.length === 0) return;
+        // Add table wrapper for better mobile handling
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-wrapper';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+
+        // Process table headers and cells
+        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+        
+        // Add data-labels to cells
         table.querySelectorAll('tbody tr').forEach(function(row) {
-          row.querySelectorAll('td').forEach(function(td, i) {
-            if (ths[i]) td.setAttribute('data-label', ths[i].textContent.trim());
+          const cells = row.querySelectorAll('td');
+          cells.forEach(function(cell, index) {
+            if (headers[index]) {
+              cell.setAttribute('data-label', headers[index]);
+            }
+          });
+        });
+
+        // Add responsive classes
+        if (table.offsetWidth > table.parentElement.offsetWidth) {
+          table.classList.add('table-responsive');
+        }
+
+        // Add zebra striping
+        table.querySelectorAll('tbody tr:nth-child(even)').forEach(function(row) {
+          row.classList.add('even');
+        });
+
+        // Add hover effect
+        table.querySelectorAll('tbody tr').forEach(function(row) {
+          row.addEventListener('mouseenter', function() {
+            this.classList.add('hover');
+          });
+          row.addEventListener('mouseleave', function() {
+            this.classList.remove('hover');
           });
         });
       });

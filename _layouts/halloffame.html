@@ -1,42 +1,35 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - Airdrop Criteria Archive</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ '/assets/images/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ '/assets/images/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ '/assets/images/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ '/assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/hall-of-fame.css' | relative_url }}">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
-                <span>Crypto Airdrop Archive</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>HOME</a></li>
-                    <li><a href="{{ '/learn' | relative_url }}" {% if page.url contains '/learn' %}class="active"{% endif %}>LEARN</a></li>
-                    <li><a href="{{ '/timeline' | relative_url }}" {% if page.url contains '/timeline' %}class="active"{% endif %}>TIMELINE</a></li>
-                    <li><a href="{{ '/hall-of-fame' | relative_url }}" {% if page.url contains '/hall-of-fame' %}class="active"{% endif %}>HALL OF FAME</a></li>
-                    <li><a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>ABOUT</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-        </div>
-    </header>
+
     <main>
         <div class="container">
             <section class="hero">
@@ -100,7 +93,9 @@
                                 <tbody>
                                     {% for airdrop in page.airdrops %}
                                     <tr>
-                                        <td class="rank-col"><div class="rank-badge">{{ airdrop.rank }}</div></td>
+                                        <td class="rank-col">
+                                            <div class="rank-badge">{{ airdrop.rank }}</div>
+                                        </td>
                                         <td class="project-col">
                                             <div class="project-info">
                                                 <!-- Placeholder for icon: <img src="project-icons/{{ airdrop.project | slugify }}.svg" alt="{{ airdrop.project }}" class="project-icon"> -->
@@ -235,7 +230,8 @@
                             {% assign sorted_airdrops = page.airdrops | sort: "value" | reverse %}
                             {% for airdrop in sorted_airdrops limit:5 %}
                             <div class="legend-item">
-                                <div class="legend-color" style="background-color: {{ site.data.hof_colors[forloop.index0] }};"></div>
+                                <div class="legend-color"
+                                    style="background-color: {{ site.data.hof_colors[forloop.index0] }};"></div>
                                 <div class="legend-label">{{ airdrop.project }}</div>
                                 <div class="legend-value">{{ airdrop.value_display }}</div>
                             </div>
@@ -250,7 +246,8 @@
                         </div>
                         <div class="chart-note">
                             <i class="fas fa-info-circle"></i>
-                            <p>{% assign max = page.airdrops | sort: 'recipients' | last %}{{ max.project }} had the largest number of recipients with {{ max.recipients }} addresses receiving tokens.</p>
+                            <p>{% assign max = page.airdrops | sort: 'recipients' | last %}{{ max.project }} had the
+                                largest number of recipients with {{ max.recipients }} addresses receiving tokens.</p>
                         </div>
                     </section>
                     <!-- Distribution Methods -->
@@ -265,7 +262,8 @@
                                     <h3>Retroactive</h3>
                                     <p>Rewarding past users of a protocol</p>
                                     <div class="method-projects">
-                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains 'Retroactive' %}<span>{{ airdrop.project }}</span>{% endif %}{% endfor %}
+                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
+                                        'Retroactive' %}<span>{{ airdrop.project }}</span>{% endif %}{% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -277,7 +275,9 @@
                                     <h3>Tiered</h3>
                                     <p>Different amounts based on activity levels</p>
                                     <div class="method-projects">
-                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains 'tier' or airdrop.key_innovation contains 'Tier' %}<span>{{ airdrop.project }}</span>{% endif %}{% endfor %}
+                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains 'tier'
+                                        or airdrop.key_innovation contains 'Tier' %}<span>{{ airdrop.project }}</span>{%
+                                        endif %}{% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -289,7 +289,9 @@
                                     <h3>Testnet Participation</h3>
                                     <p>Rewarding early testers</p>
                                     <div class="method-projects">
-                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains 'testnet' or airdrop.key_innovation contains 'Testnet' %}<span>{{ airdrop.project }}</span>{% endif %}{% endfor %}
+                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
+                                        'testnet' or airdrop.key_innovation contains 'Testnet' %}<span>{{
+                                            airdrop.project }}</span>{% endif %}{% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +303,9 @@
                                     <h3>Community-based</h3>
                                     <p>Broad distribution to community members</p>
                                     <div class="method-projects">
-                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains 'community' or airdrop.key_innovation contains 'Community' %}<span>{{ airdrop.project }}</span>{% endif %}{% endfor %}
+                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
+                                        'community' or airdrop.key_innovation contains 'Community' %}<span>{{
+                                            airdrop.project }}</span>{% endif %}{% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -319,7 +323,8 @@
                                 <i class="fas fa-history"></i>
                             </div>
                             <h3>Historical Impact</h3>
-                            <p>How the airdrop influenced subsequent token distribution models and set precedents in the industry.</p>
+                            <p>How the airdrop influenced subsequent token distribution models and set precedents in the
+                                industry.</p>
                         </div>
                         <div class="criteria-card">
                             <div class="criteria-icon">
@@ -340,7 +345,8 @@
                                 <i class="fas fa-lightbulb"></i>
                             </div>
                             <h3>Innovation</h3>
-                            <p>Novel approaches to eligibility criteria, distribution mechanisms, or governance implementation.</p>
+                            <p>Novel approaches to eligibility criteria, distribution mechanisms, or governance
+                                implementation.</p>
                         </div>
                         <div class="criteria-card">
                             <div class="criteria-icon">
@@ -352,16 +358,18 @@
                     </div>
                     <div class="methodology-note">
                         <i class="fas fa-info-circle"></i>
-                        <p>This ranking is periodically updated to reflect new information and changing perspectives on historical significance.</p>
+                        <p>This ranking is periodically updated to reflect new information and changing perspectives on
+                            historical significance.</p>
                     </div>
                 </div>
             </section>
         </div>
     </main>
     <script>
-      window.airdrops = {{ page.airdrops | jsonify }};
+        window.airdrops = {{ page.airdrops | jsonify }};
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ '/assets/js/hall-of-fame.js' | relative_url }}"></script>
 </body>
-</html> 
+
+</html>
