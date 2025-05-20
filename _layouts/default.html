@@ -19,6 +19,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/default.css' | relative_url }}">
+    {% if page.url contains '/about' %}
+    <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+    {% endif %}
     {% if page.custom_css %}
         {% for stylesheet in page.custom_css %}
         <link rel="stylesheet" href="{{ stylesheet | relative_url }}">

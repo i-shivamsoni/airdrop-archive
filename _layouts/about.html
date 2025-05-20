@@ -1,22 +1,24 @@
 ---
 layout: default
+title: About Us
+description: Learn about our mission to create the most comprehensive cryptocurrency airdrop archive
 ---
 
-<div class="about-hero" style="background: linear-gradient(135deg, #6a85f1, #7f53ac); padding: 3rem 2rem; border-radius: 18px; margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; box-shadow: 0 6px 24px rgba(80, 80, 160, 0.10);">
-    <div class="about-hero-content" style="flex: 1; color: #fff;">
-        <h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: 700; color: #fff;">{{ page.title }}</h1>
-        <p class="subtitle" style="font-size: 1.3rem; color: #e0e7ff; margin-bottom: 2.5rem;">{{ page.subtitle }}</p>
-        <div class="hero-stats" style="display: flex; gap: 2rem; margin-top: 1rem;">
+<div class="about-hero">
+    <div class="about-hero-content">
+        <h1>{{ page.title }}</h1>
+        <p class="subtitle">{{ page.subtitle }}</p>
+        <div class="hero-stats">
             {% for stat in page.stats %}
-            <div class="stat-item" style="background: rgba(255,255,255,0.12); border-radius: 12px; padding: 1.2rem 2.2rem; text-align: center; min-width: 120px; box-shadow: 0 2px 8px rgba(80,80,160,0.08);">
-                <div class="stat-value" style="font-size: 2rem; font-weight: bold; color: #fff;">{{ stat.value }}</div>
-                <div class="stat-label" style="font-size: 1rem; color: #e0e7ff; margin-top: 0.3rem;">{{ stat.label }}</div>
+            <div class="stat-item">
+                <div class="stat-value">{{ stat.value }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
             </div>
             {% endfor %}
         </div>
     </div>
-    <div class="about-hero-image" style="flex: 1; display: flex; align-items: center; justify-content: center;">
-        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt }}" style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.12); background: rgba(255,255,255,0.04); padding: 1.5rem;">
+    <div class="about-hero-image">
+        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt }}">
     </div>
 </div>
 
@@ -30,13 +32,13 @@ layout: default
             </div>
             <div class="section-content">
                 {{ content }}
-                <div class="mission-vision" style="display: flex; gap: 2rem; margin-top: 2rem;">
-                    <div class="mission-card" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1;">
+                <div class="mission-vision">
+                    <div class="mission-card">
                         <div class="card-icon"><i class="fas fa-compass"></i></div>
                         <h3>Our Mission</h3>
                         <p>{{ page.mission }}</p>
                     </div>
-                    <div class="vision-card" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1;">
+                    <div class="vision-card">
                         <div class="card-icon"><i class="fas fa-eye"></i></div>
                         <h3>Our Vision</h3>
                         <p>{{ page.vision }}</p>
@@ -53,29 +55,29 @@ layout: default
             </div>
             <div class="section-content">
                 <p>Cryptocurrency airdrops have become an important mechanism for token distribution, community building, and project bootstrapping. However, information about airdrops is often scattered across various sources, making it difficult to find comprehensive and accurate data about distribution criteria, eligibility requirements, and historical context.</p>
-                <div class="problem-solution" style="display: flex; gap: 2rem; margin-top: 2rem;">
-                    <div class="problem-card" style="border-left: 4px solid red; padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1;">
+                <div class="problem-solution">
+                    <div class="problem-card">
                         <h3>The Problem</h3>
-                        <ul style="list-style-type: none; padding-left: 0;">
+                        <ul>
                             {% for item in page.problem %}
-                            <li><span style="color: red;">•</span> {{ item }}</li>
+                            <li>{{ item }}</li>
                             {% endfor %}
                         </ul>
                     </div>
-                    <div class="solution-card" style="border-left: 4px solid green; padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1;">
+                    <div class="solution-card">
                         <h3>Our Solution</h3>
-                        <ul style="list-style-type: none; padding-left: 0;">
+                        <ul>
                             {% for item in page.solution %}
-                            <li><span style="color: green;">•</span> {{ item }}</li>
+                            <li>{{ item }}</li>
                             {% endfor %}
                         </ul>
                     </div>
                 </div>
                 <div class="goals-container">
                     <h3>This archive aims to solve that problem by:</h3>
-                    <div class="goals-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
+                    <div class="goals-grid">
                         {% for goal in page.goals %}
-                        <div class="goal-item" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div class="goal-item">
                             <div class="goal-icon"><i class="{{ goal.icon }}"></i></div>
                             <p>{{ goal.text }}</p>
                         </div>
@@ -86,8 +88,7 @@ layout: default
         </div>
 
         <!-- Methodology -->
-        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
-        <div class="about-section">
+        <div class="about-section methodology-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-clipboard-check"></i></div>
                 <h2>Our Methodology</h2>
@@ -104,14 +105,12 @@ layout: default
                         </div>
                     </div>
                     {% endfor %}
-                </div>
             </div>
         </div>
         </div>
 
         <!-- Data Sources -->
-        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
-        <div class="about-section">
+        <div class="about-section sources-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-database"></i></div>
                 <h2>Our Data Sources</h2>
@@ -129,20 +128,19 @@ layout: default
                 {% if page.sources_disclaimer %}
                 {{ page.sources_disclaimer | markdownify }}
                 {% endif %}
-            </div>
         </div>
         </div>
 
         <!-- Team -->
-        <div class="about-section">
+        <div class="about-section team-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-users"></i></div>
                 <h2>Our Team</h2>
             </div>
             <div class="section-content">
-                <div class="team-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
+                <div class="team-grid">
                     {% for member in page.team %}
-                    <div class="team-member" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="team-member">
                         <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
                         <h3>{{ member.name }}</h3>
                         <p class="role">{{ member.role }}</p>
@@ -164,8 +162,7 @@ layout: default
         </div>
 
         <!-- Timeline -->
-        <div style="background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(80,80,160,0.08); padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
-        <div class="about-section">
+        <div class="about-section timeline-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-history"></i></div>
                 <h2>Our Journey</h2>
@@ -181,25 +178,30 @@ layout: default
                         </div>
                     </div>
                     {% endfor %}
-                </div>
             </div>
         </div>
         </div>
 
         <!-- Testimonials -->
-        <div class="about-section">
+        <div class="about-section testimonials-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-quote-right"></i></div>
                 <h2>What Our Community Says</h2>
             </div>
             <div class="section-content">
-                <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
+                <div class="testimonials-grid">
                     {% for testimonial in page.testimonials %}
-                    <div class="testimonial-card" style="padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="testimonial-card">
                         <div class="testimonial-content">
                             <p>{{ testimonial.content }}</p>
                         </div>
-                        <div class="testimonial-author" style="margin-top: 1rem; font-weight: bold; color: #6a85f1;">- {{ testimonial.author }}</div>
+                        <div class="testimonial-author">
+                            <img src="{{ testimonial.author.image | relative_url }}" alt="{{ testimonial.author.name }}">
+                            <div class="author-info">
+                                <h4>{{ testimonial.author.name }}</h4>
+                                <p>{{ testimonial.author.role }}</p>
+                            </div>
+                        </div>
                     </div>
                     {% endfor %}
                 </div>
@@ -207,59 +209,154 @@ layout: default
         </div>
 
         <!-- FAQ Section -->
-        <div class="about-section">
+        <div class="about-section faq-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-question-circle"></i></div>
                 <h2>Frequently Asked Questions</h2>
             </div>
             <div class="section-content">
+                <p class="faq-intro">Find answers to common questions about our platform and services.</p>
                 <div class="faq-list">
                     <div class="faq-item">
+                        <div class="faq-question">
                         <h3>What is Crypto Airdrop Archive?</h3>
-                        <p>Crypto Airdrop Archive is a comprehensive collection of cryptocurrency projects and airdrops, organized chronologically for easy browsing and research.</p>
+                            <div class="toggle-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Crypto Airdrop Archive is a comprehensive collection of cryptocurrency projects and airdrops, organized chronologically for easy browsing and research. We provide detailed information about each project, including eligibility criteria, distribution details, and historical context.</p>
+                        </div>
                     </div>
+
                     <div class="faq-item">
+                        <div class="faq-question">
                         <h3>How do I participate in an airdrop?</h3>
-                        <p>Each project has its own requirements. Click on a project to see details and participation instructions.</p>
+                            <div class="toggle-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Each project has its own requirements for participation. Click on a project to see detailed instructions, eligibility criteria, and participation steps. We regularly update our listings to ensure you have the most current information.</p>
+                        </div>
                     </div>
+
                     <div class="faq-item">
+                        <div class="faq-question">
                         <h3>How is the data verified?</h3>
-                        <p>We cross-reference information from multiple sources, including official documentation, community reports, and on-chain data.</p>
+                            <div class="toggle-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We cross-reference information from multiple reliable sources, including official project documentation, community reports, and on-chain data. Our team verifies each listing to ensure accuracy and completeness of information.</p>
+                        </div>
                     </div>
+
                     <div class="faq-item">
+                        <div class="faq-question">
                         <h3>Can I suggest a project or correction?</h3>
-                        <p>Yes! Please use the contact information below to reach out with suggestions or corrections.</p>
+                            <div class="toggle-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We welcome community contributions. You can suggest new projects or corrections through our contact form, email, or GitHub repository. All suggestions are reviewed by our team to maintain the quality of our archive.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Contact Section -->
-        <div class="about-section">
+        <div class="about-section contact-section">
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-envelope"></i></div>
                 <h2>Contact Us</h2>
             </div>
             <div class="section-content">
-                <p>Have a question, suggestion, or want to get in touch? Reach out to us:</p>
-                <ul class="contact-list">
-                    <li>
-                        <a href="mailto:contact@airdroparchive.com">
-                            <i class="fas fa-envelope"></i> contact@airdroparchive.com
+                <p class="contact-intro">Have a question, suggestion, or want to get in touch? We're here to help! Choose your preferred method of contact below.</p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="contact-title">Email Us</h3>
+                            <p class="contact-value">contact@airdroparchive.com</p>
+                            <p class="contact-description">Get in touch with our team directly</p>
+                        </div>
+                        <a href="mailto:contact@airdroparchive.com" class="contact-link">
+                            Send Email <i class="fas fa-arrow-right"></i>
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/airdrparchive" target="_blank">
-                            <i class="fab fa-twitter"></i> @airdrparchive
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="contact-title">Twitter</h3>
+                            <p class="contact-value">@airdrparchive</p>
+                            <p class="contact-description">Follow us for updates and announcements</p>
+                        </div>
+                        <a href="https://twitter.com/airdrparchive" target="_blank" class="contact-link">
+                            Follow Us <i class="fas fa-arrow-right"></i>
                         </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/airdrparchive" target="_blank">
-                            <i class="fab fa-github"></i> airdrparchive
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="contact-title">GitHub</h3>
+                            <p class="contact-value">airdrparchive</p>
+                            <p class="contact-description">Contribute to our open-source project</p>
+                        </div>
+                        <a href="https://github.com/airdrparchive" target="_blank" class="contact-link">
+                            View Repository <i class="fas fa-arrow-right"></i>
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.about-section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // FAQ Toggle functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+});
+</script>
