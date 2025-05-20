@@ -90,14 +90,46 @@ layout: default
         toc.appendChild(li);
       });
     });
-    // Responsive table fix: add data-labels to td from th
+
+    // Enhanced table handling
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.post-content table').forEach(function(table) {
-        const ths = Array.from(table.querySelectorAll('thead th'));
-        if (ths.length === 0) return;
+        // Add table wrapper for better mobile handling
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-wrapper';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+
+        // Process table headers and cells
+        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+        
+        // Add data-labels to cells
         table.querySelectorAll('tbody tr').forEach(function(row) {
-          row.querySelectorAll('td').forEach(function(td, i) {
-            if (ths[i]) td.setAttribute('data-label', ths[i].textContent.trim());
+          const cells = row.querySelectorAll('td');
+          cells.forEach(function(cell, index) {
+            if (headers[index]) {
+              cell.setAttribute('data-label', headers[index]);
+            }
+          });
+        });
+
+        // Add responsive classes
+        if (table.offsetWidth > table.parentElement.offsetWidth) {
+          table.classList.add('table-responsive');
+        }
+
+        // Add zebra striping
+        table.querySelectorAll('tbody tr:nth-child(even)').forEach(function(row) {
+          row.classList.add('even');
+        });
+
+        // Add hover effect
+        table.querySelectorAll('tbody tr').forEach(function(row) {
+          row.addEventListener('mouseenter', function() {
+            this.classList.add('hover');
+          });
+          row.addEventListener('mouseleave', function() {
+            this.classList.remove('hover');
           });
         });
       });
