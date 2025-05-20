@@ -1,0 +1,35 @@
+---
+layout: null
+---
+{
+  "projects": [
+    {% for post in site.posts %}
+      {% unless post.path contains 'fundamentals' %}
+      {
+        "title": {{ post.title | jsonify }},
+        "url": "{{ post.url | relative_url }}",
+        "description": {{ post.description | default: post.excerpt | strip_html | strip_newlines | jsonify }},
+        "date": "{{ post.date | date: '%Y-%m-%d' }}",
+        "tags": {{ post.tags | jsonify }},
+        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "type": "project"
+      }{% unless forloop.last %},{% endunless %}
+      {% endunless %}
+    {% endfor %}
+  ],
+  "learn": [
+    {% for post in site.posts %}
+      {% if post.path contains 'fundamentals' %}
+      {
+        "title": {{ post.title | jsonify }},
+        "url": "{{ post.url | relative_url }}",
+        "description": {{ post.description | default: post.excerpt | strip_html | strip_newlines | jsonify }},
+        "date": "{{ post.date | date: '%Y-%m-%d' }}",
+        "tags": {{ post.tags | jsonify }},
+        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "type": "learn"
+      }{% unless forloop.last %},{% endunless %}
+      {% endif %}
+    {% endfor %}
+  ]
+} 

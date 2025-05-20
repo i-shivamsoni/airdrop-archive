@@ -20,28 +20,43 @@ document.addEventListener('DOMContentLoaded', function () {
             isDark ? 'fa-sun' : 'fa-moon'
         );
     });
-});
-// Search functionality in the header
-const searchInput = document.querySelector('.search-bar input');
-const searchButton = document.querySelector('.search-bar button');
 
-searchButton.addEventListener('click', function () {
-    const searchTerm = searchInput.value.trim();
-    if (searchTerm) {
-        // Implement search functionality
-        console.log('Searching for:', searchTerm);
-    }
-});
+    // Search functionality
+    const searchInput = document.querySelector('.search-bar input');
+    const searchButton = document.querySelector('.search-bar button');
 
-searchInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        const searchTerm = searchInput.value.trim();
-        if (searchTerm) {
-            // Implement search functionality
-            console.log('Searching for:', searchTerm);
+    console.log('Search elements found:', { searchInput, searchButton });
+
+    function handleSearch() {
+        const query = searchInput.value.trim();
+        console.log('Search initiated with query:', query);
+        
+        if (query) {
+            const searchUrl = `/search/?q=${encodeURIComponent(query)}`;
+            console.log('Redirecting to:', searchUrl);
+            window.location.href = searchUrl;
+        } else {
+            console.log('Empty search query, no action taken');
         }
     }
+
+    if (searchButton && searchInput) {
+        console.log('Adding search event listeners');
+        searchButton.addEventListener('click', () => {
+            console.log('Search button clicked');
+            handleSearch();
+        });
+        searchInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                console.log('Enter key pressed in search input');
+                handleSearch();
+            }
+        });
+    } else {
+        console.warn('Search elements not found:', { searchInput, searchButton });
+    }
 });
+
 // Mobile menu functionality
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const nav = document.querySelector('nav');
@@ -77,11 +92,12 @@ window.addEventListener('error', function (event) {
 // Data handling for Jekyll
 function getProjects() {
     // Jekyll will inject this data
-    const allPosts = window.siteData.posts || [];
+    const allPosts = window.siteData?.posts || [];
     
     // Filter only projects
     const projects = allPosts.filter(post => post.pagetype === "project");
     
+    console.log('Retrieved projects:', projects);
     return projects;
 }
 
