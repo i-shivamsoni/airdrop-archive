@@ -4,7 +4,7 @@ title: "Story Protocol"
 date: "2025-02-13"
 timeframe: ["2025"]
 ecosystem: ["not-known"]
-rewardedActivity: ["testnet"]
+rewardedActivity: ["testnet", "kaito-yapping"]
 category: ["infrastructure"]
 function: ["infrastructure"]
 status: ["alive"]
