@@ -36,7 +36,7 @@ description: >-
   Track historical airdrops, learn about distribution mechanisms, and stay informed
   about upcoming token distributions.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://airdroparchive.com/" # the base hostname & protocol for your site, e.g. http://example.com
  # the base hostname & protocol for your site
 twitter_username: airdrparchive
 github_username: airdrparchive
