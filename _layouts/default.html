@@ -62,6 +62,10 @@
             {{ content }}
         </div>
     </main>
+    
+    <!-- Load search bar functionality first -->
+    <script src="{{ '/assets/js/search-bar.js' | relative_url }}"></script>
+    <!-- Then load other scripts -->
     <script src="{{ '/assets/js/default.js' | relative_url }}"></script>
 
     {% if page.custom_js %}
