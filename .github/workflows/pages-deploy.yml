@@ -45,14 +45,36 @@ jobs:
           ruby-version: 3.3   # reads from a '.ruby-version' or '.tools-version' file if 'ruby-version' is omitted
           bundler-cache: true
 
+      - name: Debug Environment
+        run: |
+          echo "Current environment variables:"
+          echo "JEKYLL_ENV: ${{ vars.JEKYLL_ENV || 'production' }}"
+          echo "JEKYLL_URL: ${{ vars.JEKYLL_URL || 'https://airdroparchive.com' }}"
+          echo "JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || '' }}"
+
       - name: Build site
-        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
+        run: |
+          echo "Starting Jekyll build..."
+          bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}" --trace
         env:
           JEKYLL_ENV: "production"
-          JEKYLL_URL: ${{ vars.JEKYLL_URL || 'https://airdroparchive.com' }}
-          JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || '""' }}
+          JEKYLL_URL: ${{ vars.JEKYLL_URL || "https://airdroparchive.com" }}
+          JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || "" }}
+        continue-on-error: true
+
+      - name: Check build output
+        if: failure()
+        run: |
+          echo "Build failed. Checking for common issues..."
+          echo "Contents of _layouts directory:"
+          ls -la _layouts/
+          echo "Contents of learn.html:"
+          cat _layouts/learn.html
+          echo "Jekyll configuration:"
+          cat _config.yml
 
       - name: Upload site artifact
+        if: success()
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
