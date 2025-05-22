@@ -121,15 +121,17 @@
     <script>
         // Check screen size on load and resize
         function checkScreenSize() {
+            {% if site.overlay.enabled %}
             const message = document.getElementById('screenSizeMessage');
-            const minWidth = 1400;
-            const minHeight = 900;
+            const minWidth = {{ site.overlay.min_width | default: 1400 }};
+            const minHeight = {{ site.overlay.min_height | default: 900 }};
             
             if (window.innerWidth < minWidth || window.innerHeight < minHeight) {
                 message.classList.add('active');
             } else {
                 message.classList.remove('active');
             }
+            {% endif %}
         }
 
         // Check on page load
