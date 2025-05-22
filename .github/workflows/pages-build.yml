@@ -69,8 +69,8 @@ jobs:
         run: |
           echo "Creating production configuration override..."
           cat > _config_production.yml << EOF
-          url: ${{ vars.JEKYLL_URL || "https://airdroparchive.com" }}
-          baseurl: ${{ vars.JEKYLL_BASEURL || "" }}
+          url: ${{ vars.JEKYLL_URL || 'https://airdroparchive.com' }}
+          baseurl: ${{ vars.JEKYLL_BASEURL || '' }}
           environment: production
           EOF
           echo "Production config contents:"
@@ -84,8 +84,8 @@ jobs:
           bundle exec jekyll build --verbose --config _config.yml,_config_production.yml
         env:
           JEKYLL_ENV: "production"
-          JEKYLL_URL: ${{ vars.JEKYLL_URL || "https://airdroparchive.com" }}
-          JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || "" }}
+          JEKYLL_URL: ${{ vars.JEKYLL_URL || 'https://airdroparchive.com' }}
+          JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || '' }}
           
       - name: Check build output
         if: failure()
