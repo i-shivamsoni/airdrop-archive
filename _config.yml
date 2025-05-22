@@ -28,7 +28,7 @@ description: >-
   about upcoming token distributions.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://airdroparchive.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
