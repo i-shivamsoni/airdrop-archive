@@ -27,9 +27,8 @@ description: >-
   Track historical airdrops, learn about distribution mechanisms, and stay informed
   about upcoming token distributions.
 
-# URL settings from environment variables
-baseurl: {{ site.environment.JEKYLL_BASEURL | default: "" }}
-url: {{ site.environment.JEKYLL_URL | default: "https://airdroparchive.com" }}
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://airdroparchive.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
