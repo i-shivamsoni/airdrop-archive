@@ -2,8 +2,6 @@ name: "Build Only"
 on:
   push:
     branches:
-      - main
-      - master
       - localdev
     paths-ignore:
       - .gitignore
