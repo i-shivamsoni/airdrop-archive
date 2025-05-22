@@ -8,9 +8,14 @@ on:
       - .gitignore
       - README.md
       - LICENSE
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -25,23 +30,21 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           # submodules: true
-   
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3   # reads from a '.ruby-version' or '.tools-version' file if 'ruby-version' is omitted
+          ruby-version: 3.3
           bundler-cache: true
 
       - name: Install Dependencies
@@ -50,35 +53,60 @@ jobs:
           bundle install
 
       - name: Debug Environment
+        if: ${{ inputs.debug == true || runner.debug == '1' }}
         run: |
           echo "Current environment variables:"
           echo "JEKYLL_ENV: ${{ vars.JEKYLL_ENV || 'production' }}"
           echo "JEKYLL_URL: ${{ vars.JEKYLL_URL || 'https://airdroparchive.com' }}"
           echo "JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || '' }}"
+          echo "Ruby version: $(ruby --version)"
+          echo "Bundler version: $(bundle --version)"
+          echo "Jekyll version: $(bundle exec jekyll --version)"
+          echo "Current directory contents:"
+          ls -la
 
       - name: Build site
         run: |
           echo "Starting Jekyll build..."
-          bundle exec jekyll build --trace
+          bundle exec jekyll build --verbose
         env:
           JEKYLL_ENV: "production"
           JEKYLL_URL: ${{ vars.JEKYLL_URL || "https://airdroparchive.com" }}
           JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || "" }}
-        continue-on-error: true
 
       - name: Check build output
         if: failure()
         run: |
           echo "Build failed. Checking for common issues..."
-          echo "Contents of _layouts directory:"
-          ls -la _layouts/
-          echo "Contents of learn.html:"
-          cat _layouts/learn.html
-          echo "Jekyll configuration:"
-          cat _config.yml
+          if [ -d "_layouts" ]; then
+            echo "Contents of _layouts directory:"
+            ls -la _layouts/
+          else
+            echo "_layouts directory not found"
+          fi
+
+          if [ -f "_layouts/learn.html" ]; then
+            echo "Contents of learn.html:"
+            cat _layouts/learn.html
+          else
+            echo "learn.html not found in _layouts"
+          fi
+
+          if [ -f "_config.yml" ]; then
+            echo "Jekyll configuration:"
+            cat _config.yml
+          else
+            echo "_config.yml not found"
+          fi
+
+          echo "Checking for Gemfile:"
+          if [ -f "Gemfile" ]; then
+            cat Gemfile
+          else
+            echo "Gemfile not found"
+          fi
 
       - name: Upload site artifact
-        if: success()
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
@@ -89,6 +117,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    if: success()
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
