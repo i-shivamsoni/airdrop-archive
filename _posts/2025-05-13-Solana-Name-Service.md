@@ -15,50 +15,56 @@ description: "Solana Name Service (SNS) is a decentralized naming system for Sol
 ---
 
 ## Airdrop Details
-| Information | Details |
-|-------------|---------|
-| Rewarded Activity | Historical .sol domain activity and ecosystem participation |
-| Total Airdrop Amount | 630 million $SNS (claimed) |
-| Number of Eligible Users | Not specified |
-| Number of Claimants | 27,000+ wallets |
-| Average Allocation | Not specified |
+
+| Information              | Details                                                     |
+| ------------------------ | ----------------------------------------------------------- |
+| Rewarded Activity        | Historical .sol domain activity and ecosystem participation |
+| Total Airdrop Amount     | 630 million $SNS (claimed)                                  |
+| Number of Eligible Users | Not specified                                               |
+| Number of Claimants      | 27,000+ wallets                                             |
+| Average Allocation       | Not specified                                               |
 
 ## Timeline
-| Event | Date |
-|-------|------|
-| Snapshot Date | April 30, 2025 (23:59:59 UTC) |
-| Claiming Started | May 13, 2025 (15:00 UTC) |
-| Claiming Ends | August 11, 2025 (15:00 UTC) |
-| TGE | May 13, 2025 |
+
+| Event            | Date                          |
+| ---------------- | ----------------------------- |
+| Snapshot Date    | April 30, 2025 (23:59:59 UTC) |
+| Claiming Started | May 13, 2025 (15:00 UTC)      |
+| Claiming Ends    | August 11, 2025 (15:00 UTC)   |
+| TGE              | May 13, 2025                  |
 
 ## Token Distribution
-| Tier/Category | Amount |
-|---------------|--------|
-| Maximum Allocation | Not specified |
-| Median Allocation | Not specified |
-| Minimum Allocation | Not specified |
+
+| Tier/Category      | Amount                               |
+| ------------------ | ------------------------------------ |
+| Maximum Allocation | Not specified                        |
+| Median Allocation  | Not specified                        |
+| Minimum Allocation | Not specified                        |
 | Special Categories | 9, 99, 999, 10k, 100k domain holders |
 
 ## [Eligibility Criteria](https://docs.sns.id/collection/tokenomics/sns-token#usdsns-genesis-airdrop)
+
 Eligibility based on snapshot taken at 23:59:59 UTC on April 30, 2025:
 
-1. Domain Holders:
-   - Held a .sol domain name
-   - Set a primary .sol domain
-   - Special categories: 9, 99, 999, 10k, 100k domain holders
-   - Top 50 buyers by volume
+### Domain Holders
+- Held a .sol domain name
+- Set a primary .sol domain
+- Special categories: 9, 99, 999, 10k, 100k domain holders
+- Top 50 buyers by volume
 
-2. Community Members:
-   - Solana communities (including monkedao.sol and pyth.sol subdomain holders)
-   - $FIDA token holders
-   - Active SNS ambassadors
+### Community Members
+- Solana communities (including monkedao.sol and pyth.sol subdomain holders)
+- $FIDA token holders
+- Active SNS ambassadors
 
-Note: Some domains may not resolve properly if:
+### Note: Domain Resolution Issues
+Some domains may not resolve properly if:
 - Listed for sale and in escrow
 - Managed by sub-registrar and in escrow
 - Recently linked to new unverified wallet
 
 ## Important Links
+
 - Official Website: [SNS.id](https://www.sns.id/)
 - Documentation: [SNS Docs](https://docs.sns.id/)
 - Airdrop Portal: [airdrop.sns.id](https://airdrop.sns.id/)
@@ -68,6 +74,7 @@ Note: Some domains may not resolve properly if:
 - Social Media: [Twitter](https://x.com/sns)
 
 ## Additional Information
+
 - Over 27,000 wallets have claimed more than 630 million $SNS tokens
 - The airdrop is part of the TGE (Token Generation Event) and LFG campaign
 - Claim period is 90 days from launch
