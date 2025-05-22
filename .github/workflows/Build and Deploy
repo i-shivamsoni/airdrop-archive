@@ -36,22 +36,22 @@ jobs:
         with:
           fetch-depth: 0
           # submodules: true
-   
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-        
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3
           bundler-cache: true
-          
+
       - name: Install Dependencies
         run: |
           bundle config set --local path 'vendor/bundle'
           bundle install
-          
+
       - name: Debug Environment
         if: ${{ inputs.debug == true || runner.debug == '1' }}
         run: |
@@ -64,7 +64,7 @@ jobs:
           echo "Jekyll version: $(bundle exec jekyll --version)"
           echo "Current directory contents:"
           ls -la
-          
+
       - name: Build site
         run: |
           echo "Starting Jekyll build..."
@@ -73,7 +73,7 @@ jobs:
           JEKYLL_ENV: "production"
           JEKYLL_URL: ${{ vars.JEKYLL_URL || "https://airdroparchive.com" }}
           JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || "" }}
-          
+
       - name: Check build output
         if: failure()
         run: |
@@ -84,33 +84,33 @@ jobs:
           else
             echo "_layouts directory not found"
           fi
-          
+
           if [ -f "_layouts/learn.html" ]; then
             echo "Contents of learn.html:"
             cat _layouts/learn.html
           else
             echo "learn.html not found in _layouts"
           fi
-          
+
           if [ -f "_config.yml" ]; then
             echo "Jekyll configuration:"
             cat _config.yml
           else
             echo "_config.yml not found"
           fi
-          
+
           echo "Checking for Gemfile:"
           if [ -f "Gemfile" ]; then
             cat Gemfile
           else
             echo "Gemfile not found"
           fi
-          
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
-          
+
   deploy:
     environment:
       name: github-pages

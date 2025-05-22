@@ -1,0 +1,37 @@
+name: "Build Only"
+on:
+  push:
+    branches:
+      - localdev
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          # submodules: true
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3   # reads from a '.ruby-version' or '.tools-version' file if 'ruby-version' is omitted
+          bundler-cache: true
+      
+      - name: Build site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: "production"
+          JEKYLL_URL: ${{ vars.JEKYLL_URL || 'https://airdroparchive.com' }}
+          JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || '' }}
