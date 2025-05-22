@@ -52,7 +52,7 @@ _Note: Tokens are locked (non-transferable NFT) until the completion of the firs
 - Eligibility Check and Claim Portal: [claim.obol.org](https://claim.obol.org)
 - Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/obol)
 - Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/obol)
-
+- [Announcement](https://x.com/Obol_Collective/status/1920070181902225409)
 ## Additional Information
 
 - **Governance Participation**: Recipients are encouraged to delegate their tokens or become delegates themselves to actively participate in the governance of the Obol Collective.

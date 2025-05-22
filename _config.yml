@@ -18,16 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: jekyllrb
-github_username:  jekyll
-
+# Site settings
 title: Crypto Airdrop Archive
 email: contact@airdroparchive.com
 description: >- 
@@ -35,11 +26,10 @@ description: >-
   making this information accessible to everyone in the blockchain community.
   Track historical airdrops, learn about distribution mechanisms, and stay informed
   about upcoming token distributions.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://airdroparchive.com" # the base hostname & protocol for your site, e.g. http://example.com
- # the base hostname & protocol for your site
-twitter_username: airdrparchive
-github_username: airdrparchive
+
+# Environment variables with defaults
+url: {{ site.environment.JEKYLL_URL | default: "http://127.0.0.1:4000" }}
+baseurl: {{ site.environment.JEKYLL_BASEURL | default: "" }}
 
 # Build settings
 theme: minima
@@ -66,3 +56,7 @@ permalink: /projects/:title/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Common settings
+twitter_username: airdrparchive
+github_username: airdrparchive
