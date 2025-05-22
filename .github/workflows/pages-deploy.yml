@@ -60,7 +60,6 @@ jobs:
           JEKYLL_ENV: "production"
           JEKYLL_URL: ${{ vars.JEKYLL_URL || "https://airdroparchive.com" }}
           JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || "" }}
-        continue-on-error: true
 
       - name: Check build output
         if: failure()
@@ -72,6 +71,7 @@ jobs:
           cat _layouts/learn.html
           echo "Jekyll configuration:"
           cat _config.yml
+
 
       - name: Upload site artifact
         if: success()
