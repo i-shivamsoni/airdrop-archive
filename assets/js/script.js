@@ -1649,7 +1649,7 @@ function initEcosystemFilters() {
         { id: 'optimism', icon: 'optimism.svg' },
         { id: 'cosmos', icon: 'cosmos.svg' },
         { id: 'sui', icon: 'sui.svg' },
-        { id: 'hyperEVM', icon: 'hyperliquid.svg' },
+        { id: 'hyperEVM', icon: 'hyperevm.svg' },
         { id: 'ton', icon: 'ton.svg' },
         { id: 'base', icon: 'base.svg' }
     ];
