@@ -45,37 +45,39 @@ description: "Privasea AI is a privacy-focused AI platform that rewards long-ter
 
 ## [Eligibility Criteria](https://airdrop.privasea.ai)
 
-- **ImHuman App Users**
-  - Must be verified by Proof of Humanity
-  - Must possess at least 400 stars
-  - Base allocation: 110 PRAI tokens per user
-  - Surplus adjusted based on star count
-  - Total eligible: 657,641 wallets
+Eligibility for the Privasea AI airdrop was based on the following requirements:
 
-- **DeepSea Testnet Node Operators**
-  - Must have completed at least one phase
-  - Total eligible: 38,574 wallets
+### ImHuman App Users
+- Must be verified by Proof of Humanity
+- Must possess at least 400 stars
+- Base allocation: 110 PRAI tokens per user
+- Surplus adjusted based on star count
+- Total eligible: 657,641 wallets
 
-- **Galxe Questers**
-  - Must have more than 100 points at snapshot
-  - Total eligible: 20,239 wallets
+### DeepSea Testnet Node Operators
+- Must have completed at least one phase
+- Total eligible: 38,574 wallets
 
-- **Early Supporters**
-  - Total eligible: 4,283 wallets
+### Galxe Questers
+- Must have more than 100 points at snapshot
+- Total eligible: 20,239 wallets
 
-- **WorkHeart USB Node Owners**
-  - Total eligible: 5,000 wallets
+### Early Supporters
+- Total eligible: 4,283 wallets
 
-- **Quest Participants**
-  - OKX Wallet, Gate Web3 & Intract partnered quests
-  - Total eligible: ~35,000 wallets
+### WorkHeart USB Node Owners
+- Total eligible: 5,000 wallets
+
+### Quest Participants
+- OKX Wallet, Gate Web3 & Intract partnered quests
+- Total eligible: ~35,000 wallets
 
 ## Important Links
 
-- Official Website: [Privasea AI](https://www.privasea.ai/)
-- Price Tracking (CG): [CoinGecko](https://www.coingecko.com/en/coins/privasea-ai)
-- Social Media: [Twitter](https://x.com/Privaseafdn)
-- Eligibility Portal: [Airdrop Portal](https://airdrop.privasea.ai)
+- **Official Website**: [Privasea AI](https://www.privasea.ai/)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/privasea-ai)
+- **Social Media**: [Twitter](https://x.com/Privaseafdn)
+- **Eligibility Portal**: [Airdrop Portal](https://airdrop.privasea.ai)
 
 ## Additional Information
 

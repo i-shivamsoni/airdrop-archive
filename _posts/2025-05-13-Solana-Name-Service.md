@@ -44,18 +44,18 @@ description: "Solana Name Service (SNS) is a decentralized naming system for Sol
 
 ## [Eligibility Criteria](https://docs.sns.id/collection/tokenomics/sns-token#usdsns-genesis-airdrop)
 
-Eligibility based on snapshot taken at 23:59:59 UTC on April 30, 2025:
+Eligibility for the Solana Name Service airdrop was based on the following requirements:
 
-1. Domain Holders:
-   - Held a .sol domain name
-   - Set a primary .sol domain
-   - Special categories: 9, 99, 999, 10k, 100k domain holders
-   - Top 50 buyers by volume
+### Domain Holders
+- Held a .sol domain name
+- Set a primary .sol domain
+- Special categories: 9, 99, 999, 10k, 100k domain holders
+- Top 50 buyers by volume
 
-2. Community Members:
-   - Solana communities (including monkedao.sol and pyth.sol subdomain holders)
-   - $FIDA token holders
-   - Active SNS ambassadors
+### Community Members
+- Solana communities (including monkedao.sol and pyth.sol subdomain holders)
+- $FIDA token holders
+- Active SNS ambassadors
 
 Note: Some domains may not resolve properly if:
 - Listed for sale and in escrow
@@ -64,13 +64,13 @@ Note: Some domains may not resolve properly if:
 
 ## Important Links
 
-- Official Website: [SNS.id](https://www.sns.id/)
-- Documentation: [SNS Docs](https://docs.sns.id/)
-- Airdrop Portal: [airdrop.sns.id](https://airdrop.sns.id/)
-- Blog Post: [TGE Announcement](https://www.sns.id/blog/sns-tge-lfg-campaign)
-- Price Tracking (CMC): [CoinMarketCap](https://coinmarketcap.com/currencies/sns/)
-- Price Tracking (CG): [CoinGecko](https://www.coingecko.com/en/coins/solana-name-service-2)
-- Social Media: [Twitter](https://x.com/sns)
+- **Official Website**: [SNS.id](https://www.sns.id/)
+- **Documentation**: [SNS Docs](https://docs.sns.id/)
+- **Airdrop Portal**: [airdrop.sns.id](https://airdrop.sns.id/)
+- **Blog Post**: [TGE Announcement](https://www.sns.id/blog/sns-tge-lfg-campaign)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/sns/)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/solana-name-service-2)
+- **Social Media**: [Twitter](https://x.com/sns)
 
 ## Additional Information
 

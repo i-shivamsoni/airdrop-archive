@@ -38,18 +38,21 @@ description: "A decentralized finance platform with a unique reputation-based re
 | Median/Average | Not Known |
 | Minimum        | Not Known |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://x.com/rhea_finance/status/1897682652582596670)
 
-- **Point System Ranking**: Every transaction on RHEA earns points.
-- **No Initial Restrictions**: There are no rules or restrictions until the system goes live.
-- **Reputation Yield**: oRHEA tokens grow based on user activity—the more you engage, the more you earn.
-- **Conversion & Continuity**: oRHEA tokens will later be converted into RHEA and xRHEA, with continued rewards after the Token Generation Event (TGE).
+Eligibility for the RHEA Finance airdrop was based on the following requirements:
+
+- **Point System Ranking:** Every transaction on RHEA earns points.
+- **No Initial Restrictions:** There are no rules or restrictions until the system goes live.
+- **Reputation Yield:** oRHEA tokens grow based on user activity—the more you engage, the more you earn.
+- **Conversion & Continuity:** oRHEA tokens will later be converted into RHEA and xRHEA, with continued rewards after the Token Generation Event (TGE).
 
 ## Important Links
 
-- Official Announcement: [Twitter Announcement](https://x.com/rhea_finance/status/1897682652582596670)
-- Project Website: [RHEA Finance](https://rhea.finance)
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/rhea) | [CoinGecko](https://www.coingecko.com/en/coins/rhea)
+- **Official Announcement**: [Twitter Announcement](https://x.com/rhea_finance/status/1897682652582596670)
+- **Project Website**: [RHEA Finance](https://rhea.finance)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/rhea)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/rhea)
 
 ## Additional Information
 

@@ -38,27 +38,34 @@ description: "A full toolset AI blockchain infrastructure accelerating AI adopti
 | Median/Average | Not Known |
 | Minimum        | Not Known |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://swanchain.medium.com/swan-chain-mission-engage-and-earn-swan-airdrop-8a91d96f9ec7)
 
-Participants can earn Swan Points, which determine their SWAN token allocation during the Token Generation Event (TGE), by:
+Eligibility for the SwanChain airdrop was based on the following requirements:
 
-- Completing daily tasks released on the platform.
-- Playing the "Daily Combo" minigame.
-- Inviting friends, earning 10% of the total points their referrals accumulate.
+### Daily Tasks
+- Complete daily tasks released on the platform.
+- Tasks are updated regularly and contribute to Swan Points accumulation.
+
+### Daily Combo Minigame
+- Participate in the "Daily Combo" minigame.
+- Successfully complete combinations to earn additional Swan Points.
+
+### Referral Program
+- Invite friends to participate in the SwanChain ecosystem.
+- Earn 10% of the total points accumulated by your referrals.
+- Referred friends receive a 20% point boost on their earned points.
 
 ## Important Links
 
-- Official Announcement: [Swan Chain Mission: Engage and Earn $SWAN Airdrop](https://swanchain.medium.com/swan-chain-mission-engage-and-earn-swan-airdrop-8a91d96f9ec7)
-- Participation Platform: [Swan Chain Mission](https://mission.swanchain.io/)
-- Official Website: [Swan Chain](https://www.swanchain.io)
-- Twitter: [Swan Chain Twitter](https://twitter.com/swan_chain)
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/swan-chain/)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/swan-chain/)
+- **Official Announcement**: [Swan Chain Mission: Engage and Earn $SWAN Airdrop](https://swanchain.medium.com/swan-chain-mission-engage-and-earn-swan-airdrop-8a91d96f9ec7)
+- **Participation Platform**: [Swan Chain Mission](https://mission.swanchain.io/)
+- **Official Website**: [Swan Chain](https://www.swanchain.io)
+- **Social Media**: [Swan Chain Twitter](https://twitter.com/swan_chain)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/swan-chain/)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/swan-chain/)
 
 ## Additional Information
 
 - **Tokenomics**: 10% of the total SWAN supply is reserved for computing providers over the years. The annual airdrop rate cannot exceed 10% of the current circulating supply.
-
 - **Referral Program**: Participants earn 10% of the total points their referrals accumulate, and referred friends receive a 20% point boost.
-
 - **Terms and Conditions**: Swan Chain reserves the right to modify the point system and tasks without prior notice and can disqualify accounts exhibiting suspicious activity.

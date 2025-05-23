@@ -38,16 +38,22 @@ description: "A decentralized lottery token that automatically enters holders in
 | Median/Average | Not Known                               |
 | Minimum        | 400 LOTTO                               |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://medium.com/lottofinance/lotto-the-first-ever-lottery-token-goes-live-this-week-via-airdrop-to-defi-users-c6ac14dee9bf)
 
-Users must have met one of the following criteria at the snapshot on January 18, 2021:
+Eligibility for the Lotto Finance (LOTTO) airdrop was based on the following requirements:
 
-- **Registrants of the airdrop** via Telegram and 4chan.
-- **Upfiring (UFR) holders:** Users holding more than 1 UFR token can claim **2000 LOTTO** per address.
-- **PoolTogether users:**
-  - Anyone who ever bought a PoolTogether DAI, UNI, or USDC ticket can claim **400 LOTTO**.
-  - Any address that has interacted with the PoolTogether V2 contract can claim **400 LOTTO**.
-- **Top DeFi Token Holders:** Users who held one of the following tokens in a wallet they control at the time of the snapshot can claim **400 LOTTO per address**:
+### Registrants
+- Users who registered for the airdrop via Telegram and 4chan.
+
+### Upfiring (UFR) Holders
+- Users holding more than 1 UFR token could claim 2000 LOTTO per address.
+
+### PoolTogether Users
+- Anyone who ever bought a PoolTogether DAI, UNI, or USDC ticket could claim 400 LOTTO.
+- Any address that interacted with the PoolTogether V2 contract could claim 400 LOTTO.
+
+### Top DeFi Token Holders
+- Users who held one of the following tokens in a wallet they control at the time of the snapshot could claim 400 LOTTO per address:
   - 0x (ZRX) (Top 100,000 holders)
   - 1inch (1INCH)
   - Aave (AAVE)
@@ -101,11 +107,10 @@ Users must have met one of the following criteria at the snapshot on January 18,
 
 ## Important Links
 
-- **Claim Portal:** [Lotto Finance Claim](https://lotto.finance/claim)
-- **Official Announcement:** [Medium Post](https://medium.com/lottofinance/lotto-the-first-ever-lottery-token-goes-live-this-week-via-airdrop-to-defi-users-c6ac14dee9bf)
-- **Price Tracking:** [CoinMarketCap](https://coinmarketcap.com/currencies/lotto) |
-  [CoinGecko](https://www.coingecko.com/en/coins/lotto)
-- **Social Media:**
+- **Claim Portal**: [Lotto Finance Claim](https://lotto.finance/claim)
+- **Official Announcement**: [Medium Post](https://medium.com/lottofinance/lotto-the-first-ever-lottery-token-goes-live-this-week-via-airdrop-to-defi-users-c6ac14dee9bf)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/lotto) | [CoinGecko](https://www.coingecko.com/en/coins/lotto)
+- **Social Media**:
   - [Twitter](https://twitter.com/LottoFinance)
   - [Telegram](https://t.me/LottoFinance)
   - [Facebook](https://www.facebook.com/lottofinance)
@@ -113,6 +118,6 @@ Users must have met one of the following criteria at the snapshot on January 18,
 
 ## Additional Information
 
-- The **first lottery rebase** was scheduled for **February 1, 2021, at 2 PM EST**.
-- The **lottery system automatically deducts 1 token from each holder daily** and pools them together to award one random winner.
-- The **airdrop claim portal will remain open indefinitely**, allowing users to claim at any time.
+- The first lottery rebase was scheduled for February 1, 2021, at 2 PM EST.
+- The lottery system automatically deducts 1 token from each holder daily and pools them together to award one random winner.
+- The airdrop claim portal will remain open indefinitely, allowing users to claim at any time.

@@ -38,25 +38,31 @@ description: "GammaSwap is a decentralized protocol that enables users to borrow
 | Median/Average | Approximately 42,000 GS tokens across all eligible wallets |
 | Minimum        | 3,000 GS tokens                                            |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://gammaswap.com/blog/gammaswap-airdrop)
 
-To qualify for the $GS airdrop, users must have a non-zero value in lending points, borrow points, or referral points. Points were distributed as follows:
+Eligibility for the GammaSwap ($GS) airdrop was based on the following requirements:
 
+### Points System
+- Users must have a non-zero value in lending points, borrow points, or referral points.
 - Initial point airdrop given to Alpha Mainnet and Testnet users with multipliers (2x and 1.5x, respectively).
 - Perpetual options traders earned 2 points for each $1 notional traded.
 - Liquidity Providers (LPs) earned 1 point for each $1 in liquidity provided.
 - Points were updated daily at random times.
 
+### Distribution Curve
+- A curve was implemented in the distribution to prevent top wallets from receiving a disproportionate share. Initially, the top 5 wallets would have received 25% of the airdrop; after applying the curve, they will receive approximately 10%.
+
+### Additional Airdrop
+- An additional 3,200,000 GS tokens (0.2% of the total supply) are allocated for pufETH holders as part of an airdrop, with an average of 22 GS tokens per wallet.
+
 ## Important Links
 
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/gammaswap)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/gammaswap)
-- Official Announcement: [GammaSwap Blog Post](https://gammaswap.com/blog/gammaswap-airdrop)
-- Airdrop Details: [GammaSwap Airdrop Page](https://app.gammaswap.com/airdrop)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/gammaswap)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/gammaswap)
+- **Official Announcement**: [GammaSwap Blog Post](https://gammaswap.com/blog/gammaswap-airdrop)
+- **Airdrop Details**: [GammaSwap Airdrop Page](https://app.gammaswap.com/airdrop)
 
 ## Additional Information
 
 - The $GS airdrop allocation was increased from 32,000,000 tokens (2%) to 48,000,000 tokens (3%) in response to community feedback.
 - There is no vesting period; however, tokens will be distributed in weekly epochs over an 8-week period from September 9, 2024, to November 4, 2024. Users can claim their $GS tokens weekly or in full at the end of the distribution period.
-- A curve was implemented in the distribution to prevent top wallets from receiving a disproportionate share. Initially, the top 5 wallets would have received 25% of the airdrop; after applying the curve, they will receive approximately 10%.
-- An additional 3,200,000 GS tokens (0.2% of the total supply) are allocated for pufETH holders as part of an airdrop, with an average of 22 GS tokens per wallet. citeturn0search0

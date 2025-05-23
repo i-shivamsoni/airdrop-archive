@@ -56,7 +56,10 @@ description: "LoopedHYPE ($LOOP) is a yield-generating DeFi protocol on HyperEVM
 
 ## [Eligibility Criteria](https://loopedhype.com/airdrop-registration)
 
-- Phase-1: Snapshot taken on March 8, 2025
+Eligibility for the LoopedHYPE airdrop was based on the following requirements:
+
+### Phase-1 Requirements
+- Snapshot taken on March 8, 2025
 - Eligible users: LHYPE holders and participants in liquid looping strategies before the snapshot
 - stLOOP (staked LOOP) amount determines Looping Mode and points multiplier
 - Users can stake LOOP at any time before each phase's closing to earn a multiplier for the following drop
@@ -66,10 +69,10 @@ description: "LoopedHYPE ($LOOP) is a yield-generating DeFi protocol on HyperEVM
 
 ## Important Links
 
-- Official Website: [loopingcollective.org](https://loopingcollective.org)
-- Documentation: [Docs](https://docs.loopingcollective.org)
-- Airdrop Registration: [Airdrop Registration](https://loopedhype.com/airdrop-registration)
-- Twitter: [@Looped_HYPE](https://x.com/Looped_HYPE)
+- **Official Website**: [loopingcollective.org](https://loopingcollective.org)
+- **Documentation**: [Docs](https://docs.loopingcollective.org)
+- **Airdrop Registration**: [Airdrop Registration](https://loopedhype.com/airdrop-registration)
+- **Social Media**: [Twitter](https://x.com/Looped_HYPE)
 
 ## Additional Information
 

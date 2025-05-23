@@ -40,14 +40,25 @@ description: "VirtuSwap is a decentralized exchange (DEX) designed to improve tr
 
 ## [Eligibility Criteria](https://medium.com/@virtuswap/virtuswap-initium-airdrop-3d89a8cdd40f)
 
-- Users must have made trades or liquidity provider (LP) deposits between May 1, 2022, and May 1, 2023.
-- Both Polygon and Ethereum network transactions are eligible.
+Eligibility for the VirtuSwap (VRSW) airdrop was based on the following requirements:
+
+### Trading Activity
+- Users must have made trades between May 1, 2022, and May 1, 2023.
 - Only indirect trades involving qualified tokens are eligible.
-- Only LP deposits of qualified tokens in qualified pools are eligible.
 - Trades must be over $100 in volume to qualify (reward: 100 VRSW per trade, up to 10 trades).
+
+### Liquidity Provider (LP) Activity
+- Users must have made LP deposits between May 1, 2022, and May 1, 2023.
+- Only LP deposits of qualified tokens in qualified pools are eligible.
 - LP deposits must be over $500 in value to qualify (reward: 300 VRSW per deposit, up to 10 deposits).
+
+### Network Eligibility
+- Both Polygon and Ethereum network transactions are eligible.
+
+### Reward Limits & Reductions
 - Maximum airdrop per wallet: 4,000 VRSW.
 - Rewards decrease by 20% for every 2,000,000 VRSW distributed.
+- The airdrop is first-come, first-served until the cap is reached.
 
 ## Important Links
 
@@ -59,5 +70,4 @@ description: "VirtuSwap is a decentralized exchange (DEX) designed to improve tr
 ## Additional Information
 
 - The airdrop rewards decrease incrementally based on the total number of distributed tokens.
-- Trading volume is calculated using VirtuSwap’s internal price calculations, which may differ from official market prices.
-- The airdrop is first-come, first-served until the cap is reached.
+- Trading volume is calculated using VirtuSwap's internal price calculations, which may differ from official market prices.

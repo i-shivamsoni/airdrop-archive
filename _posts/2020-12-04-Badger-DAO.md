@@ -38,8 +38,9 @@ Token distribution information not available
 
 ## [Eligibility Criteria](https://badgerdao.medium.com/how-to-claim-your-badger-airdrop-bcab0bd3dc25)
 
-Users who met any of the following conditions were eligible for the airdrop:
+Eligibility for the Badger DAO (BADGER) airdrop was based on the following requirements:
 
+### Eligible User Groups
 - Participated in SUSHI Governance
 - Supplied/Borrowed wBTC on Compound
 - MetaCartel DAO Members
@@ -56,9 +57,9 @@ Users who met any of the following conditions were eligible for the airdrop:
 
 ## Important Links
 
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/badger-dao)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/badger-dao)
-- Eligibility Criteria: [Medium Blog Post](https://badgerdao.medium.com/how-to-claim-your-badger-airdrop-bcab0bd3dc25)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/badger-dao)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/badger-dao)
+- **Eligibility Criteria**: [Medium Blog Post](https://badgerdao.medium.com/how-to-claim-your-badger-airdrop-bcab0bd3dc25)
 
 ## Additional Information
 

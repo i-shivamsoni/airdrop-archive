@@ -38,28 +38,29 @@ description: "A decentralized synthetic assets protocol built on the Terra block
 | Median/Average | Not Known |
 | Minimum        | Not Known |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://medium.com/mirror-protocol/an-introduction-to-mir-token-farming-on-mirror-protocol-21e5c7c0f986)
 
-- UNI Holders: Wallets must have held at least **100 UNI tokens** on **November 23, 2020, at 00:00 UTC**.
-- LUNA Stakers: Wallets must have had **staked LUNA** on **November 23, 2020, at 03:36 UTC**.
-- Tokens were distributed **pro-rata** among eligible addresses.
+Eligibility for the Mirror Protocol (MIR) airdrop was based on the following requirements:
+
+### UNI Holders
+- Wallets must have held at least 100 UNI tokens on November 23, 2020, at 00:00 UTC.
+
+### LUNA Stakers
+- Wallets must have had staked LUNA on November 23, 2020, at 03:36 UTC.
+
+- Tokens were distributed pro-rata among eligible addresses.
 
 ## Important Links
 
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/mirror-protocol/)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/mirror-protocol)
-- Official Announcement: [Mirror Protocol Medium](https://medium.com/mirror-protocol/an-introduction-to-mir-token-farming-on-mirror-protocol-21e5c7c0f986)
-- Documentation: [Mirror Docs](https://docs.mirror.finance/)
-- Terraswap: [Terraswap](https://app.terraswap.io/)
-- Station Wallet: [Station Wallet](https://terra.money/)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/mirror-protocol/)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/mirror-protocol)
+- **Official Announcement**: [Mirror Protocol Medium](https://medium.com/mirror-protocol/an-introduction-to-mir-token-farming-on-mirror-protocol-21e5c7c0f986)
+- **Documentation**: [Mirror Docs](https://docs.mirror.finance/)
+- **Terraswap**: [Terraswap](https://app.terraswap.io/)
+- **Station Wallet**: [Station Wallet](https://terra.money/)
 
 ## Additional Information
 
 - MIR is used for governance within Mirror Protocol, enabling token holders to propose and vote on changes.
 - No admin keys or privileged access; governance is entirely decentralized.
-- Tokens can be earned via:
-  - **Providing liquidity** for MIR/UST pairs on Terraswap or Uniswap.
-  - **Staking LUNA** to earn MIR rewards.
-  - **Providing liquidity** for mAsset/UST pairs on decentralized exchanges.
-- The total MIR supply follows an inflationary schedule, increasing annually until Year 4.
-- MIR staking and liquidity provision rewards vary in risk and reward potential, with MIR/UST pairs yielding the highest but carrying impermanent loss risk.
+- Tokens can be earned via providing liquidity for MIR/UST pairs or staking LUNA to earn MIR rewards.

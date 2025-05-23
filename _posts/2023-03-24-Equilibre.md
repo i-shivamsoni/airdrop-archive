@@ -40,26 +40,26 @@ description: "A decentralized finance (DeFi) platform built on the Kava network,
 
 ## [Eligibility Criteria](https://raw.githubusercontent.com/equilibre-finance/wallets-data/main/airdrop.txt)
 
-To qualify for the Equilibrefinance airdrop, users likely had to complete the following testnet activities during the testnet period (February 16–23, 2023):
+Eligibility for the Equilibre airdrop was based on the following requirements:
 
-- **Wallet Setup**: Add the Kava EVM Testnet RPC network to a wallet (e.g., MetaMask).
-- **Obtaining Test Tokens**: Claim test $KAVA and $USDC tokens from the faucet (limited to twice per day).
-- **Engaging with the Testnet App**:
-  - Swap tokens to demonstrate DEX functionality.
-  - Provide liquidity to pools.
-  - Vest tokens as part of the Lock & GovEarn cycle.
-  - Vote on governance proposals to encourage community participation.
-
-Airdrop eligibility was verified post-mainnet launch, with a provided link for claim verification.
+### Testnet Participation (February 16–23, 2023)
+- Add the Kava EVM Testnet RPC network to a wallet (e.g., MetaMask).
+- Claim test $KAVA and $USDC tokens from the faucet (limited to twice per day).
+- Engage with the testnet app by:
+  - Swapping tokens to demonstrate DEX functionality.
+  - Providing liquidity to pools.
+  - Vesting tokens as part of the Lock & GovEarn cycle.
+  - Voting on governance proposals to encourage community participation.
+- Airdrop eligibility was verified post-mainnet launch via the published eligibility list.
 
 ## Important Links
 
-- [Official Website](https://equilibrefinance.com/)
-- [Airdrop Eligibility List](https://raw.githubusercontent.com/equilibre-finance/wallets-data/main/airdrop.txt)
+- **Official Website**: [Equilibre Finance](https://equilibrefinance.com/)
+- **Airdrop Eligibility List**: [Eligibility List](https://raw.githubusercontent.com/equilibre-finance/wallets-data/main/airdrop.txt)
 
 ## Additional Information
 
-- The airdrop was valued at **$16,000** at launch (400,000 $VARA tokens).
-- The Kava network’s **EVM compatibility** enabled Solidity developers to interact with Equilibrefinance.
-- Exact distribution weighting based on activity (swapping, liquidity, voting, etc.) was **not explicitly stated**.
-- The mainnet launch and final distribution timeline were **to be announced**.
+- The airdrop was valued at $16,000 at launch (400,000 $VARA tokens).
+- The Kava network's EVM compatibility enabled Solidity developers to interact with Equilibrefinance.
+- Exact distribution weighting based on activity (swapping, liquidity, voting, etc.) was not explicitly stated.
+- The mainnet launch and final distribution timeline were to be announced.

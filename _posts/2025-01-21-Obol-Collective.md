@@ -38,21 +38,29 @@ description: "A community dedicated to scaling Ethereum by enhancing the securit
 | Median/Average | Not Known |
 | Minimum        | Not Known |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://blog.obol.org/airdrop/)
 
-- **Obol Core Community**: Members who have contributed to the development and support of the Obol ecosystem.
-- **Obol Contributions Holders**: Individuals who have participated in staking and earned Obol Contributions.
-- **Solo Stakers and Rocketpool Node Operators**: Independent stakers and operators within the Rocketpool network.
+Eligibility for the Obol Collective airdrop was based on the following requirements:
+
+### Obol Core Community
+- Members who have contributed to the development and support of the Obol ecosystem.
+
+### Obol Contributions Holders
+- Individuals who have participated in staking and earned Obol Contributions.
+
+### Solo Stakers and Rocketpool Node Operators
+- Independent stakers and operators within the Rocketpool network.
 
 _Note: Tokens are locked (non-transferable NFT) until the completion of the first retroactive funding round, subject to a governance vote._
 
 ## Important Links
 
-- Official Announcement: [Announcing the OBOL Token and Decentralized Operator Ecosystem](https://blog.obol.org/airdrop/)
-- Eligibility Check and Claim Portal: [claim.obol.org](https://claim.obol.org)
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/obol)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/obol)
-- [Announcement](https://x.com/Obol_Collective/status/1920070181902225409)
+- **Official Announcement**: [Announcing the OBOL Token and Decentralized Operator Ecosystem](https://blog.obol.org/airdrop/)
+- **Eligibility Check and Claim Portal**: [claim.obol.org](https://claim.obol.org)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/obol)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/obol)
+- **Social Media**: [Announcement](https://x.com/Obol_Collective/status/1920070181902225409)
+
 ## Additional Information
 
 - **Governance Participation**: Recipients are encouraged to delegate their tokens or become delegates themselves to actively participate in the governance of the Obol Collective.

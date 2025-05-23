@@ -50,31 +50,31 @@ description: "Huma Finance is a decentralized PayFi protocol that has facilitate
 
 ## [Eligibility Criteria](https://x.com/humafinance/status/1925439234955255912)
 
-1. **Liquidity Providers:**
+Eligibility for the Huma Finance airdrop was based on the following requirements:
 
-   - Provided liquidity to designated pools (Huma Institutional and Huma 2.0) before snapshot
-   - Total Feathers outstanding at snapshot: 2,682,116,734
-   - 65% of airdrop allocation
+### Liquidity Providers
+- Provided liquidity to designated pools (Huma Institutional and Huma 2.0) before snapshot
+- Total Feathers outstanding at snapshot: 2,682,116,734
+- 65% of airdrop allocation
 
-2. **Ecosystem Partners:**
+### Ecosystem Partners
+- Active PayFi ecosystem partners contributing to PayFi yield opportunities
+- 25% of airdrop allocation
+- 6-month vesting schedule
 
-   - Active PayFi ecosystem partners contributing to PayFi yield opportunities
-   - 25% of airdrop allocation
-   - 6-month vesting schedule
-
-3. **Community Engagement:**
-   - Content creators
-   - Active participants in social campaigns (Discord, Galxe, Kaito)
-   - Community contributions to protocol development and security
-   - 10% of airdrop allocation
-   - Fully unlocked at TGE
+### Community Engagement
+- Content creators
+- Active participants in social campaigns (Discord, Galxe, Kaito)
+- Community contributions to protocol development and security
+- 10% of airdrop allocation
+- Fully unlocked at TGE
 
 ## Important Links
 
-- Documentation: [Huma Finance](https://huma.finance/)
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/huma-finance/)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/huma-finance)
-- Twitter: [@humafinance](https://x.com/humafinance)
+- **Documentation**: [Huma Finance](https://huma.finance/)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/huma-finance/)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/huma-finance)
+- **Twitter**: [@humafinance](https://x.com/humafinance)
 
 ## Additional Information
 
