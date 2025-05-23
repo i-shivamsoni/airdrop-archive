@@ -39,45 +39,40 @@ description: "OverProtocol is a Layer 1 blockchain with lightweight nodes, allow
 | Median/Average | Not Known                                                   |
 | Minimum        | 500 OVER per NFT (if total NFT supply of 20,000 is reached) |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://medium.com/overprotocol/overprotocol-who-is-eligible-for-airdrop-2-63a754909e50)
 
-### [Eligibility Criteria](https://medium.com/overprotocol/overprotocol-who-is-eligible-for-airdrop-2-63a754909e50)
+Eligibility for the OverProtocol airdrop was based on the following requirements:
 
-Eligibility is based on three primary categories:
+### OverWallet Users
+- Must pass Sybil Detection.
+- Airdrop amount depends on OverWallet points, Friend Cards, and testnet activities.
+- Sybil Detection is available until May 31, 2024, at 2:59 PM UTC.
 
-1. **OverWallet Users:**
+### OverNode Testnet Participants
+- Users must have participated in Open Beta Testnet Season 1 & 2.
+- No Sybil detection required.
+- No additional tasks needed.
+- [Season 1 Details](https://web.archive.org/web/20240525195312/https://medium.com/overprotocol/overprotocol-who-is-eligible-for-the-airdrop-1dfaa5d3460c)
+- [Season 2 Details](https://web.archive.org/web/20240817231852/https://medium.com/overprotocol/overprotocol-who-is-eligible-for-airdrop-2-63a754909e50)
 
-   - Must pass Sybil Detection.
-   - Airdrop amount depends on OverWallet points, Friend Cards, and testnet activities.
-   - Sybil Detection is available until May 31, 2024, at 2:59 PM UTC.
+### Nethers NFT Holders
+- Must own a Nethers NFT and transfer it to OverProtocol's chain.
+- Airdrop varies based on total NFT sales:
+  - If 20,000 NFTs are sold: 500 OVER per NFT.
+  - If fewer NFTs are sold: 10 million OVER tokens divided by total NFTs sold.
+- The exact transfer schedule will be announced soon.
 
-2. **OverNode Testnet Participants:**
-
-   - Users must have participated in Open Beta Testnet Season 1 & 2.
-   - No Sybil detection required.
-   - No additional tasks needed.
-   - [Season 1 Details](https://web.archive.org/web/20240525195312/https://medium.com/overprotocol/overprotocol-who-is-eligible-for-the-airdrop-1dfaa5d3460c)
-   - [Season 2 Details](https://web.archive.org/web/20240817231852/https://medium.com/overprotocol/overprotocol-who-is-eligible-for-airdrop-2-63a754909e50)
-
-3. **Nethers NFT Holders:**
-
-   - Must own a Nethers NFT and transfer it to OverProtocol’s chain.
-   - Airdrop varies based on total NFT sales:
-     - If 20,000 NFTs are sold: 500 OVER per NFT.
-     - If fewer NFTs are sold: 10 million OVER tokens divided by total NFTs sold.
-   - The exact transfer schedule will be announced soon.
-
-4. **Additional Airdrop Campaigns:**
-   - **OKX Cryptopedia Mission:** Participants receive airdrops in their OKX Wallets.
-   - **HashKey Global Sybil Detection Mission:** Participants in this mission receive airdrops.
-   - **LightFull Nodes:** Participants in Open Beta Testnet Season 1 & 2 receive airdrops (no Sybil detection required).
+### Additional Airdrop Campaigns
+- **OKX Cryptopedia Mission:** Participants receive airdrops in their OKX Wallets.
+- **HashKey Global Sybil Detection Mission:** Participants in this mission receive airdrops.
+- **LightFull Nodes:** Participants in Open Beta Testnet Season 1 & 2 receive airdrops (no Sybil detection required).
 
 ## Important Links
 
-- [Price Tracking: CoinMarketCap](https://coinmarketcap.com/currencies/overprotocol)
-- [Price Tracking: CoinGecko](https://www.coingecko.com/en/coins/overprotocol)
-- [Archived Season 1 Details](https://web.archive.org/web/20240525195312/https://medium.com/overprotocol/overprotocol-who-is-eligible-for-the-airdrop-1dfaa5d3460c)
-- [Archived Season 2 Details](https://web.archive.org/web/20240817231852/https://medium.com/overprotocol/overprotocol-who-is-eligible-for-airdrop-2-63a754909e50)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/overprotocol)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/overprotocol)
+- **Archived Season 1 Details**: [Season 1](https://web.archive.org/web/20240525195312/https://medium.com/overprotocol/overprotocol-who-is-eligible-for-the-airdrop-1dfaa5d3460c)
+- **Archived Season 2 Details**: [Season 2](https://web.archive.org/web/20240817231852/https://medium.com/overprotocol/overprotocol-who-is-eligible-for-airdrop-2-63a754909e50)
 
 ## Additional Information
 

@@ -41,27 +41,32 @@ description: "Story Protocol is a decentralized intellectual property network th
 
 ## [Eligibility Criteria](https://x.com/StoryProtocol/status/1889952908697018688)
 
-Exact airdrop criteria were not explicitly detailed in a single official list across all sources, the following points are inferred from announcements, posts on X, and related web content.
+Eligibility for the Story Protocol airdrop was based on the following requirements:
 
-- **Odyssey Badge Holders**: Users who participated in the Odyssey testnet and minted badges from ecosystem partners (e.g., Odyssey Commemorative Badge, project-specific NFTs like Nerzo, Morkie).
-- **Chronicles NFT Holders**: Holders of "Onchain Chronicles" NFTs, though eligibility may require Odyssey badges or additional criteria.
-- **Community Roles**: Specific Discord/community roles like "OG roles" and "Genesis IP Creators" are eligible.
-- **Kaito Genesis NFT Holders**: Ownership of a Kaito Genesis NFT qualifies users.
-- **High-Quality Story Yappers**: Active Twitter/X promoters filtered by Kaito AI for engagement quality.
-- **Validators**: Testnet or staking validators are included.
-- **Passport Score Requirement**: A Gitcoin Passport score of 20+ may be required for anti-sybil verification.
+### Odyssey Participants
+- **Odyssey Badge Holders**: Users who participated in the Odyssey testnet and minted badges from ecosystem partners (e.g., Odyssey Commemorative Badge, project-specific NFTs like Nerzo, Morkie)
+- **Chronicles NFT Holders**: Holders of "Onchain Chronicles" NFTs, though eligibility may require Odyssey badges or additional criteria
+
+### Community Members
+- **Community Roles**: Specific Discord/community roles like "OG roles" and "Genesis IP Creators" are eligible
+- **Kaito Genesis NFT Holders**: Ownership of a Kaito Genesis NFT qualifies users
+- **High-Quality Story Yappers**: Active Twitter/X promoters filtered by Kaito AI for engagement quality
+
+### Technical Contributors
+- **Validators**: Testnet or staking validators are included
+- **Passport Score Requirement**: A Gitcoin Passport score of 20+ may be required for anti-sybil verification
 
 ## Important Links
 
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/story)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/story)
-- Eligibility Criteria: [Twitter Announcement](https://x.com/StoryProtocol/status/1889952908697018688)
-- Official Announcement: [Introducing IP](https://www.story.foundation/blog/introducing-ip)
+- **Official Website**: [Story Protocol](https://www.story.foundation)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/story)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/story)
+- **Official Announcement**: [Introducing IP](https://www.story.foundation/blog/introducing-ip)
 
 ## Additional Information
 
-- **$IP Token Utility**: Used for staking, transaction fees, and governance.
-- **Initial Supply**: 1 billion $IP, with 25% unlocked at launch.
+- **$IP Token Utility**: Used for staking, transaction fees, and governance
+- **Initial Supply**: 1 billion $IP, with 25% unlocked at launch
 - **Token Allocation**:
   - 38.4% – Ecosystem + Community
   - 10% – Initial Incentives
@@ -69,5 +74,5 @@ Exact airdrop criteria were not explicitly detailed in a single official list ac
   - 21.6% – Early Backers
   - 20% – Core Contributors
 - **Staking Mechanism**:
-  - **Singularity Period** (42 days post-genesis, starting January 19, 2025) allows staking without rewards.
-  - **Big Bang Event** marks the end of this period, after which staking rewards are fairly distributed.
+  - **Singularity Period** (42 days post-genesis, starting January 19, 2025) allows staking without rewards
+  - **Big Bang Event** marks the end of this period, after which staking rewards are fairly distributed

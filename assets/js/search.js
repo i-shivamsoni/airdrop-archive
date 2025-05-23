@@ -269,13 +269,11 @@ function displayResults(results) {
     const resultsHTML = results.map(result => {
         const doc = findDocument(result.ref);
         if (!doc) return '';
-        
         // Use type to determine content type and icon
         const resultType = doc.type === 'project' ? 'Project' : 'Guide';
         const resultIcon = doc.type === 'project' ? 'fa-rocket' : 'fa-book';
-        
         return `
-            <div class="search-result">
+            <div class="search-result" tabindex="0" role="button" data-url="${result.ref}">
                 <div class="result-header">
                     <div class="result-type-icon">
                         <i class="fas ${resultIcon}"></i>
@@ -299,6 +297,23 @@ function displayResults(results) {
     }).join('');
     
     container.innerHTML = resultsHTML;
+
+    // Make entire card clickable
+    document.querySelectorAll('.search-result').forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Prevent double navigation if clicking the title link
+            if (e.target.tagName.toLowerCase() === 'a') return;
+            const url = card.getAttribute('data-url');
+            if (url) window.location.href = url;
+        });
+        card.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const url = card.getAttribute('data-url');
+                if (url) window.location.href = url;
+            }
+        });
+        card.style.cursor = 'pointer';
+    });
 }
 
 // Format date

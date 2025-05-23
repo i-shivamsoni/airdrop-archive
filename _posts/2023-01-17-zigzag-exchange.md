@@ -39,23 +39,50 @@ description: "A decentralized order book exchange utilizing zkRollups for fast a
 | Median/Average | Not Known |
 | Minimum        | 300       |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://web.archive.org/web/20230304041149/https://docs.zigzag.exchange/zigzag-exchange/airdrops#eligibility-lists)
 
-ZigZag Exchange distributed airdrops based on several criteria:
+Eligibility for the ZigZag Exchange airdrop was based on the following requirements:
 
-- **Trader Airdrop**: Based on trading activity, sybil accounts were excluded.
-- **Gitcoin Donator Airdrop**: 2 ZZ per $1 USD donated, with a $3 minimum donation (7600 addresses, 717,332 ZZ).
-- **Atlendis LP Airdrop**: 500 ZZ per depositor with a $5 minimum deposit (2100 addresses, 1,115,000 ZZ).
-- **IDO Participant Airdrop**: 3 ZZ for every ZZ purchased (1 ZZ minimum) (5500 addresses, 814,739 ZZ).
-- **Market Maker (MM) Bot Airdrop**: Based on the number of trades, with a snapshot taken on January 17, 2023 (1700 addresses, 1,715,878 ZZ).
-- **Discord Member Airdrop**: Based on "Member" role (253 addresses, 200,000 ZZ).
-- **POAP Holder Airdrop**: 300 ZZ per POAP holder (34 addresses, 10,000 ZZ).
+### Trader Airdrop
+- Based on trading activity on ZigZag Exchange.
+- Sybil accounts were excluded from eligibility.
+
+### Gitcoin Donator Airdrop
+- 2 ZZ per $1 USD donated to Gitcoin, with a $3 minimum donation.
+- 7,600 addresses received a total of 717,332 ZZ.
+
+### Atlendis LP Airdrop
+- 500 ZZ per depositor with a $5 minimum deposit on Atlendis.
+- 2,100 addresses received a total of 1,115,000 ZZ.
+
+### IDO Participant Airdrop
+- 3 ZZ for every ZZ purchased in the IDO (1 ZZ minimum).
+- 5,500 addresses received a total of 814,739 ZZ.
+
+### Market Maker (MM) Bot Airdrop
+- Based on the number of trades executed by market maker bots.
+- Snapshot taken on January 17, 2023 (06:00 UTC).
+- 1,700 addresses received a total of 1,715,878 ZZ.
+
+### Discord Member Airdrop
+- Based on holding the "Member" role in the ZigZag Discord.
+- 253 addresses received a total of 200,000 ZZ.
+
+### POAP Holder Airdrop
+- 300 ZZ per POAP holder.
+- 34 addresses received a total of 10,000 ZZ.
+
+### General Notes
+- All airdrops were directly distributed on zkSync Lite, with an option to bridge back to Ethereum mainnet.
+- There was no vesting period; tokens were distributed immediately.
+- A total of 7 airdrop distributions occurred.
+- The largest allocation (29.6M ZZ) was based on base criteria, early adopter bonus, and loyalty bonus.
 
 ## Important Links
 
-- [Airdrop Documentation (Web Archive)](https://web.archive.org/web/20230304041149/https://docs.zigzag.exchange/zigzag-exchange/airdrops#eligibility-lists)
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/zigzag/)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/zigzag)
+- **Airdrop Documentation (Web Archive)**: [Eligibility Lists & Details](https://web.archive.org/web/20230304041149/https://docs.zigzag.exchange/zigzag-exchange/airdrops#eligibility-lists)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/zigzag/)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/zigzag)
 
 ## Additional Information
 

@@ -39,27 +39,27 @@ description: "Bitcoin Cash (BCH) is a decentralized cryptocurrency that originat
 | Median/Average | Not Known                                       |
 | Minimum        | No minimum, as long as BTC was held at the fork |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://bitcoincash.org)
 
-Exact airdrop criteria were not explicitly detailed in a single official list across all sources, the following points are inferred from announcements, posts on X, and related web content.
+Eligibility for the Bitcoin Cash (BCH) airdrop was based on the following requirements:
 
-To receive Bitcoin Cash (BCH) from the fork, users needed to meet the following conditions:
+### Bitcoin Holders
+- Must have held Bitcoin (BTC) at the time of the fork (August 1, 2017, Block 478,558).
+- 1:1 distribution: For every 1 BTC held, the user received 1 BCH.
 
-- **Ownership of Bitcoin (BTC)**: Users had to hold BTC at the time of the fork (August 1, 2017, Block 478,558).
-- **Wallet or Exchange Support**:
-  - Users who held BTC in a **private wallet** needed control of their private keys to access the corresponding BCH.
-  - Users who had BTC on **exchanges** were dependent on whether the exchange supported the fork and credited their accounts with BCH.
-- **1:1 Distribution**: For every 1 BTC held at the time of the fork, the user received 1 BCH.
+### Wallet or Exchange Support
+- Users with BTC in a private wallet needed control of their private keys to access BCH.
+- Users with BTC on exchanges depended on whether the exchange supported the fork and credited BCH.
 
 ## Important Links
 
-- Official Website: [https://bitcoincash.org](https://bitcoincash.org)
-- Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/bitcoin-cash/)
-- Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/bitcoin-cash)
-- Exchange Support Announcements: Varies by exchange (e.g., Coinbase, Kraken, Bitfinex)
+- **Official Website**: [bitcoincash.org](https://bitcoincash.org)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/bitcoin-cash/)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/bitcoin-cash)
+- **Exchange Support Announcements**: Varies by exchange (e.g., Coinbase, Kraken, Bitfinex)
 
 ## Additional Information
 
-- Bitcoin Cash was created to improve Bitcoin’s scalability by increasing block size, allowing faster and cheaper transactions.
+- Bitcoin Cash was created to improve Bitcoin's scalability by increasing block size.
 - BCH continues to be actively traded and supported by multiple exchanges.
 - No official new BCH airdrop is ongoing as of March 14, 2025; any subsequent airdrops involving BCH are project-specific.

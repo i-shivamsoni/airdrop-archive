@@ -38,22 +38,21 @@ description: "YieldNest is a decentralized platform focused on user empowerment,
 | Median/Average | Not Known |
 | Minimum        | Not Known |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://medium.com/@yieldnest/official-yieldnest-airdrop-everything-you-need-to-know-fbe0f8f04c60)
 
-**Seeds Program**
+Eligibility for the YieldNest airdrop was based on the following requirements:
 
-Users who have earned Seeds through YieldNest’s Loyalty Program qualify for the airdrop. Seeds can be accumulated by restaking assets in YieldNest products or participating in DeFi integrations. The relevant periods are:
+### Seeds Program
+- Users who earned Seeds through YieldNest's Loyalty Program qualified for the airdrop.
+- Seeds could be accumulated by restaking assets in YieldNest products or participating in DeFi integrations.
+- **Season OG (Epoch 1+2):** Ended August 20, 2024. Users who restaked assets or participated in integrations during this period earned Seeds.
+- **Season 1:** August 20 — October 22, 2024. Continued accumulation of Seeds through restaking and integrations.
+- **Season 2:** Started October 22, 2024, and ends at the snapshot date. Ongoing accumulation of Seeds.
+- Participants could check their total accumulated Seeds via the [Seeds page](https://app.yieldnest.finance).
+- Seeds were the primary metric for airdrop allocation, with more Seeds resulting in a larger share of the airdrop.
 
-- **Season OG (Epoch 1+2):** Ended August 20, 2024
-- **Season 1:** August 20 — October 22, 2024
-- **Season 2:** Started October 22, 2024, and ends at the snapshot date.
-
-Participants can check their total accumulated Seeds via the [Seeds page](https://app.yieldnest.finance).
-
-**Partner Communities**
-
-Eligibility also extends to holders of specific governance tokens or NFTs from partner projects. The requirements are as follows:
-
+### Partner Communities
+Eligibility also extended to holders of specific governance tokens or NFTs from partner projects. The requirements were as follows:
 - **Llama NFT Holders:** Must hold a minimum of 0.1 ynETH or ynETHx.
 - **StakeDAO:** Holders of StakeDAO NFTs (depending on scarcity) or veSDT. Bonus allocation for veSDT voters on the ynETHx/WETH pool.
 - **Curve:** veCRV voters on the ynETHx/WETH pool or the Curve Lend markets: ynETH/crvUSD & ynETHx/crvUSD.
@@ -65,18 +64,17 @@ Eligibility also extends to holders of specific governance tokens or NFTs from p
 - **Nest AI:** Holders of a minimum of 10,000 NEST tokens.
 - **PrimeStaked (via Origin Protocol):** Eligibility based on XP holders snapshot.
 - **Kernel:** Users who restaked a minimum of $250 via Kernel.
+- Each partner community had its own eligibility snapshot and allocation rules, and some included bonus multipliers for specific actions or holdings.
 
 ## Important Links
 
-- Official Announcement: [Official YieldNest Airdrop — Everything You Need to Know](https://medium.com/@yieldnest/official-yieldnest-airdrop-everything-you-need-to-know-fbe0f8f04c60)
-- Official Website: [https://www.yieldnest.finance](https://www.yieldnest.finance)
-- Seeds Page: [https://app.yieldnest.finance](https://app.yieldnest.finance)
-- Official Twitter: [https://twitter.com/yieldnest](https://twitter.com/yieldnest)
+- **Official Announcement**: [Official YieldNest Airdrop — Everything You Need to Know](https://medium.com/@yieldnest/official-yieldnest-airdrop-everything-you-need-to-know-fbe0f8f04c60)
+- **Official Website**: [YieldNest](https://www.yieldnest.finance)
+- **Seeds Page**: [Seeds](https://app.yieldnest.finance)
+- **Social Media**: [Twitter](https://twitter.com/yieldnest)
 
 ## Additional Information
 
-- **Claiming Process:** Once the airdrop is live, users will need to connect their wallets to the official YieldNest app and visit the airdrop claim page. The official link will be announced via YieldNest's official Twitter once the Token Generation Event (TGE) is live. Users are advised to ensure they are on the correct YieldNest domain ([https://www.yieldnest.finance](https://www.yieldnest.finance)) and to avoid any sites claiming to offer early claims, as they are not safe.
-
-- **Post-Airdrop Participation:** After the airdrop, YND token holders can participate in governance by staking YND for veYND, voting on incentive allocations and governance proposals, and earning additional rewards. There is also an option to delegate voting power via StakeDAO for a more hands-off approach.
-
-- **Security Reminder:** YieldNest will never ask users to send funds to claim tokens. Users should always double-check what they are signing and ignore direct messages pretending to be official claim links.
+- Once the airdrop is live, users will need to connect their wallets to the official YieldNest app and visit the airdrop claim page. The official link will be announced via YieldNest's official Twitter once the Token Generation Event (TGE) is live. Users are advised to ensure they are on the correct YieldNest domain ([https://www.yieldnest.finance](https://www.yieldnest.finance)) and to avoid any sites claiming to offer early claims, as they are not safe.
+- After the airdrop, YND token holders can participate in governance by staking YND for veYND, voting on incentive allocations and governance proposals, and earning additional rewards. There is also an option to delegate voting power via StakeDAO for a more hands-off approach.
+- Security reminder: YieldNest will never ask users to send funds to claim tokens. Users should always double-check what they are signing and ignore direct messages pretending to be official claim links.

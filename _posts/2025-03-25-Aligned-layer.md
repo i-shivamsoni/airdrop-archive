@@ -41,63 +41,42 @@ description: "A foundation dedicated to supporting and advancing projects within
 | Median/Average | Not Known |
 | Minimum        | Not Known |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://blog.alignedlayer.com/rewarding-the-loyal-ones-with-a-tsunami-of-align-tokens/)
 
-The Aligned Foundation's **Genesis Drop** consists of five distinct waves, each with specific eligibility criteria:
+Eligibility for the Aligned Foundation Genesis Drop was based on the following requirements:
 
-### **Wave 1: Developer & Researcher Recognition**
-
-- Dedicated to developers, engineers, and researchers who have contributed to **ZK, Ethereum, and the broader crypto ecosystem**.
+### Wave 1: Developer & Researcher Recognition
+- Dedicated to developers, engineers, and researchers who have contributed to ZK, Ethereum, and the broader crypto ecosystem.
+- Recipients were selected based on their contributions to open-source projects, research, and technical advancements in the space.
 - Official announcement: [Tweet](https://x.com/AlignedFndn/status/1865284878272492027)
 
-### **Wave 2: Community Supporters**
-
-- Aimed at **early community members** who have supported Aligned from the beginning.
+### Wave 2: Community Supporters
+- Early community members who supported Aligned from the beginning.
+- Selection was based on active participation, engagement, and support in Aligned's community channels.
 - Official announcement: [Tweet](https://x.com/alignedlayer/status/1867025781676769642)
 
-### **Wave 3: Galxe Quest Participants**
-
-- Targeted at users who participated in **Aligned’s Galxe quests**.
+### Wave 3: Galxe Quest Participants
+- Users who participated in Aligned's Galxe quests.
+- Participation in specific quests and campaigns on the Galxe platform was required.
 - Official announcement: [Tweet](https://x.com/alignedlayer/status/1868019346385347013)
 
-### **Wave 4: Industry Contributors**
-
-- Supports individuals and projects that **actively contribute to Ethereum’s development** and raise industry standards.
-- Allocations include:
-  - **Protocol Guild**: 1.5%
-  - **L2BEAT**: 0.2%
-  - **ZachXBT**: 0.2%
-  - **Zero Knowledge Podcast**: 0.2%
+### Wave 4: Industry Contributors
+- Individuals and projects that actively contribute to Ethereum's development and raise industry standards.
+- Allocations included:
+  - Protocol Guild: 1.5%
+  - L2BEAT: 0.2%
+  - ZachXBT: 0.2%
+  - Zero Knowledge Podcast: 0.2%
 - Official announcements: [Tweet](https://x.com/alignedlayer/status/1868480361824760301), [Tweet](https://x.com/alignedlayer/status/1871284879394267136)
 
-### **Wave 5: Long-Term Ecosystem Holders**
-
-This wave rewards **loyal addresses** across multiple ecosystems.
-
-#### **Eligibility Criteria:**
-
-- **Eligible Tokens**: Holders of the following tokens qualify:
-  - **Starknet (STRK)**
-  - **Mina Protocol (MINA)**
-  - **ZKSync (ZK)**
-  - **Polygon (POL)**
-  - **Scroll (SCR)**
-  - **Taiko (TAIKO)**
-  - **EigenLayer (EIGEN)**
-- **Holding Requirement**:
-  - Users must have held these tokens at their **all-time low prices**.
-  - A **minimum holding threshold of $50 USD worth of tokens** at the all-time low price is required.
-  - Example: If a token’s all-time low was **$0.10**, the user needed at least **500 tokens** in their wallet at that time.
-- **Wallet Compatibility**:
-  - Eligible wallets must be on **Ethereum, Mina, StarkNet, and Polygon**.
-  - Tokens **must not have been staked** or used in **liquidity pools**.
-- **Registration Deadline**:
-  - Eligible addresses **must have registered their wallets by December 23, 2024** via [genesis.alignedfoundation.org](https://genesis.alignedfoundation.org).
-- **Anti-Sybil Measures**:
-
-  - Uses all-time low price snapshots (which occurred at different times for each token) to prevent manipulation.
-  - No scoring metrics favor airdrop farming—this strictly rewards **long-term holders**.
-
+### Wave 5: Long-Term Ecosystem Holders
+- Rewards loyal addresses across multiple ecosystems.
+- **Eligible Tokens:** Holders of Starknet (STRK), Mina Protocol (MINA), ZKSync (ZK), Polygon (POL), Scroll (SCR), Taiko (TAIKO), EigenLayer (EIGEN).
+- **Holding Requirement:** Users must have held these tokens at their all-time low prices, with a minimum holding threshold of $50 USD worth of tokens at the all-time low price.
+  - Example: If a token's all-time low was $0.10, the user needed at least 500 tokens in their wallet at that time.
+- **Wallet Compatibility:** Eligible wallets must be on Ethereum, Mina, StarkNet, and Polygon. Tokens must not have been staked or used in liquidity pools.
+- **Registration Deadline:** Eligible addresses must have registered their wallets by December 23, 2024 via [genesis.alignedfoundation.org](https://genesis.alignedfoundation.org).
+- **Anti-Sybil Measures:** All-time low price snapshots (which occurred at different times for each token) were used to prevent manipulation. No scoring metrics favor airdrop farming—this strictly rewards long-term holders.
 - Official announcement: [Tweet](https://x.com/alignedlayer/status/1868959198689501363)
 
 ## Important Links
@@ -110,13 +89,12 @@ This wave rewards **loyal addresses** across multiple ecosystems.
 - **Wave 4 Announcement:** [Tweet](https://x.com/alignedlayer/status/1868480361824760301)
 - **Wave 4 (Zero Knowledge Podcast inclusion):** [Tweet](https://x.com/alignedlayer/status/1871284879394267136)
 - **Wave 5 Announcement:** [Tweet](https://x.com/alignedlayer/status/1868959198689501363)
-- **Price Tracking:**
-  - [CoinMarketCap](https://coinmarketcap.com/currencies/aligned)
-  - [CoinGecko](https://www.coingecko.com/en/coins/aligned)
+- **Price Tracking:** [CoinMarketCap](https://coinmarketcap.com/currencies/aligned)
+- **Price Tracking:** [CoinGecko](https://www.coingecko.com/en/coins/aligned)
 
 ## Additional Information
 
-- **Distribution Timing**: Tokens will be distributed **during the Token Generation Event (TGE)**, with the exact date yet to be announced.
-- **Claiming Method**: Claims will be available **through Ethereum wallets**.
-- **Total Supply**: **10 billion ALIGN tokens**, of which **26% is allocated for this airdrop**.
-- **Purpose**: This airdrop rewards long-term **ZK and Ethereum ecosystem supporters**, particularly those who held tokens **during market downturns**.
+- Tokens will be distributed during the Token Generation Event (TGE), with the exact date yet to be announced.
+- Claims will be available through Ethereum wallets.
+- Total supply: 10 billion ALIGN tokens, of which 26% is allocated for this airdrop.
+- This airdrop rewards long-term ZK and Ethereum ecosystem supporters, particularly those who held tokens during market downturns.

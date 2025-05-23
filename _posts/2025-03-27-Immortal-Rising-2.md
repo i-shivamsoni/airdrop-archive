@@ -40,43 +40,39 @@ description: "A blockchain-based idle RPG where players earn and trade assets th
 
 ## [Eligibility Criteria](https://airdrop.immortalrising2.com)
 
-To qualify for the $IMT airdrop, users had to accumulate ORB points and participate in Immortal Rising 2 activities:
+Eligibility for the Immortal Rising 2 airdrop was based on the following requirements:
 
-- **ORB Point Accumulation:**
+### ORB Point Accumulation
+- Earned through daily check-ins, in-game missions, social tasks (e.g., X posts, Discord events), and referrals
+- ORB impact directly affects airdrop allocation
 
-  - Earned through daily check-ins, in-game missions, social tasks (e.g., X posts, Discord events), and referrals.
-  - ORB impact directly affects airdrop allocation.
+### Participation in P2A Launchpool Seasons
+- Engagement in Seasons 1, 2, and 3
+- Season 2 (ended Jan 9, 2025) split a 50M $IMT pool between ORB Impact and Soulbound Token (SBT) tracks
 
-- **Participation in P2A Launchpool Seasons:**
+### Immutable Passport Integration
+- Players must link their Immutable Passport to their in-game profile and Immortal Vault account
 
-  - Engagement in Seasons 1, 2, and 3.
-  - Season 2 (ended Jan 9, 2025) split a 50M $IMT pool between ORB Impact and Soulbound Token (SBT) tracks.
+### Pre-Registration and Early Participation
+- Users who pre-registered before Sept 19, 2024, or joined the Closed Beta Test (CBT) had bonus eligibility
 
-- **Immutable Passport Integration:**
-
-  - Players must link their Immutable Passport to their in-game profile and Immortal Vault account.
-
-- **Pre-Registration and Early Participation:**
-
-  - Users who pre-registered before Sept 19, 2024, or joined the Closed Beta Test (CBT) had bonus eligibility.
-
-- **Community Engagement:**
-  - Participation in events like Skill Showdown or Guild Promotions on Discord helped earn ORB/SBTs.
+### Community Engagement
+- Participation in events like Skill Showdown or Guild Promotions on Discord helped earn ORB/SBTs
 
 ## Important Links
 
-- **Airdrop Details & Claiming:** [Immortal Rising 2 Airdrop](https://airdrop.immortalrising2.com)
-- **Official Announcement:** [IMT Airdrop Guide](http://news.immortalrising2.com/news/imtairdrop)
-- **Price Tracking:** [CoinMarketCap](https://coinmarketcap.com/currencies/immortal-rising-2)
-- **Price Tracking:** [CoinGecko](https://www.coingecko.com/en/coins/immortal-rising-2)
+- **Official Website**: [Immortal Rising 2](https://immortalrising2.com)
+- **Airdrop Portal**: [Immortal Rising 2 Airdrop](https://airdrop.immortalrising2.com)
+- **Official Announcement**: [IMT Airdrop Guide](http://news.immortalrising2.com/news/imtairdrop)
+- **Price Tracking**: [CoinMarketCap](https://coinmarketcap.com/currencies/immortal-rising-2)
+- **Price Tracking**: [CoinGecko](https://www.coingecko.com/en/coins/immortal-rising-2)
 
 ## Additional Information
 
-- **Claim Options:**
+- **Claim Options**:
+  - **Bitget Deposit**: 50% of allocation was sent to Bitget accounts (KYC required, expired March 25, 2025)
+  - **On-Chain Claim**: Full allocation available via registration from March 27 to April 25, 2025 (final deadline August 26, 2025)
 
-  - **Bitget Deposit:** 50% of allocation was sent to Bitget accounts (KYC required, expired March 25, 2025).
-  - **On-Chain Claim:** Full allocation available via registration from March 27 to April 25, 2025 (final deadline August 26, 2025).
+- **No Cost to Participate**: However, users must comply with local crypto regulations
 
-- **No Cost to Participate:** However, users must comply with local crypto regulations.
-
-- **Security Reminder:** Only use official sources like [immortalrising2.com](https://immortalrising2.com) to avoid scams.
+- **Security Reminder**: Only use official sources like [immortalrising2.com](https://immortalrising2.com) to avoid scams
