@@ -286,28 +286,68 @@ function createProjectCard(project) {
     link.style.textDecoration = 'none';
     link.style.color = 'inherit';
 
+    // Truncate description to 3 lines
+    const description = project.description || 'No description available';
+    const truncatedDescription = description.length > 150 ? description.substring(0, 150) + '...' : description;
+
+    // Get ecosystem and function tags
+    const ecosystemTags = project.ecosystem ? project.ecosystem
+        .filter(e => e.toLowerCase() !== 'not-known')
+        .slice(0, 1)
+        .map(e => ({
+            type: 'ecosystem',
+            value: e
+        })) : [];
+    
+    const functionTags = project.function ? project.function.slice(0, 2).map(f => ({
+        type: 'function',
+        value: f
+    })) : [];
+
+    // Combine tags and limit to fit in one line
+    const allTags = [...ecosystemTags, ...functionTags];
+
     const card = document.createElement('div');
     card.className = 'project-card';
     card.innerHTML = `
         <div class="card-header">
-            <h3>${project.title}</h3>
+            <div class="header-left">
+                <h3>${project.title}</h3>
+                <div class="card-date">${formatHumanReadableDate(project.date)}</div>
+            </div>
             <div class="status ${project.status[0].toLowerCase()}">${project.status[0]}</div>
         </div>
         <div class="card-body">
-            <p>${project.description || 'No description available'}</p>
-        </div>
-        <div class="card-meta">
-            <div class="date">${formatDate(project.date)}</div>
+            <p>${truncatedDescription}</p>
         </div>
         <div class="card-tags">
-            ${project.function.map(f => `<span class="tag function">${f}</span>`).join('')}
-            ${project.rewardedActivity.map(d => `<span class="tag distribution">${d}</span>`).join('')}
-            ${project.blockchain_stack ? project.blockchain_stack.map(s => `<span class="tag blockchain-stack">${s}</span>`).join('') : ''}
-            ${project.blockchain_type ? project.blockchain_type.map(t => `<span class="tag blockchain-type">${t}</span>`).join('') : ''}
+            ${allTags.map(tag => `
+                <span class="tag ${tag.type}">
+                    ${tag.type === 'ecosystem' ? 
+                        `<img src="${window.siteBaseUrl || ''}/assets/images/ecosystem_icons/${tag.value.toLowerCase()}.svg" alt="${tag.value}" onerror="this.src='${window.siteBaseUrl || ''}/assets/images/ecosystem_icons/not-known.svg'">` 
+                        : ''}
+                    ${tag.value}
+                </span>
+            `).join('')}
         </div>
     `;
     link.appendChild(card);
     return link;
+}
+
+// Add a new function to format dates in a human-readable way
+function formatHumanReadableDate(dateString) {
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) {
+        return dateString;
+    }
+    
+    const options = { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric'
+    };
+    return date.toLocaleDateString('en-US', options);
 }
 
 function updateTimelineCounts(projects) {

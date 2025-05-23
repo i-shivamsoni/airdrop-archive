@@ -46,19 +46,18 @@ description: "Solana Name Service (SNS) is a decentralized naming system for Sol
 
 Eligibility based on snapshot taken at 23:59:59 UTC on April 30, 2025:
 
-### Domain Holders
-- Held a .sol domain name
-- Set a primary .sol domain
-- Special categories: 9, 99, 999, 10k, 100k domain holders
-- Top 50 buyers by volume
+1. Domain Holders:
+   - Held a .sol domain name
+   - Set a primary .sol domain
+   - Special categories: 9, 99, 999, 10k, 100k domain holders
+   - Top 50 buyers by volume
 
-### Community Members
-- Solana communities (including monkedao.sol and pyth.sol subdomain holders)
-- $FIDA token holders
-- Active SNS ambassadors
+2. Community Members:
+   - Solana communities (including monkedao.sol and pyth.sol subdomain holders)
+   - $FIDA token holders
+   - Active SNS ambassadors
 
-### Note: Domain Resolution Issues
-Some domains may not resolve properly if:
+Note: Some domains may not resolve properly if:
 - Listed for sale and in escrow
 - Managed by sub-registrar and in escrow
 - Recently linked to new unverified wallet

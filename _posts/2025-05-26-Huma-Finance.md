@@ -50,22 +50,24 @@ description: "Huma Finance is a decentralized PayFi protocol that has facilitate
 
 ## [Eligibility Criteria](https://x.com/humafinance/status/1925439234955255912)
 
-### Liquidity Providers
-- Provided liquidity to designated pools (Huma Institutional and Huma 2.0) before snapshot
-- Total Feathers outstanding at snapshot: 2,682,116,734
-- 65% of airdrop allocation
+1. **Liquidity Providers:**
 
-### Ecosystem Partners
-- Active PayFi ecosystem partners contributing to PayFi yield opportunities
-- 25% of airdrop allocation
-- 6-month vesting schedule
+   - Provided liquidity to designated pools (Huma Institutional and Huma 2.0) before snapshot
+   - Total Feathers outstanding at snapshot: 2,682,116,734
+   - 65% of airdrop allocation
 
-### Community Engagement
-- Content creators
-- Active participants in social campaigns (Discord, Galxe, Kaito)
-- Community contributions to protocol development and security
-- 10% of airdrop allocation
-- Fully unlocked at TGE
+2. **Ecosystem Partners:**
+
+   - Active PayFi ecosystem partners contributing to PayFi yield opportunities
+   - 25% of airdrop allocation
+   - 6-month vesting schedule
+
+3. **Community Engagement:**
+   - Content creators
+   - Active participants in social campaigns (Discord, Galxe, Kaito)
+   - Community contributions to protocol development and security
+   - 10% of airdrop allocation
+   - Fully unlocked at TGE
 
 ## Important Links
 

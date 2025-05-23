@@ -32,7 +32,7 @@ description: "LoopedHYPE ($LOOP) is a yield-generating DeFi protocol on HyperEVM
 | Claiming Started   | May 22, 2025 (Phase-1)                   |
 | Claiming Ends      | Not specified                            |
 | TGE                | May 22, 2025                             |
-| Other Milestones   | TVL milestones for future airdrop phases |
+| [Other Milestones] | TVL milestones for future airdrop phases |
 
 ## Token Distribution
 
@@ -41,37 +41,32 @@ description: "LoopedHYPE ($LOOP) is a yield-generating DeFi protocol on HyperEVM
 | Maximum Allocation                   | Not specified |
 | Median Allocation                    | Not specified |
 | Minimum Allocation                   | Not specified |
-| Custom Tiers: stLOOP Looping Modes   | See below     |
+| [Custom Tiers: stLOOP Looping Modes] |               |
 
 | stLOOP Amount | Looping Mode   | Points Multiplier |
-| ------------- | -------------- | ----------------- |
-| 10,000,000   | Ouroboros      | 3x                |
-| 5,000,000    | Hyper Drive    | 2.5x              |
-| 1,000,000    | Turbo Loop     | 2x                |
-| 500,000      | Recursive Rush | 1.75x             |
-| 100,000      | Flux Loop      | 1.5x              |
-| 50,000       | Cycle Loop     | 1.25x             |
-| 5,000        | Starter Loop   | 1.1x              |
-| 0 - 5,000    | Normie Loop    | No Multiplier     |
+| ------------: | -------------- | ----------------- |
+|    10,000,000 | Ouroboros      | 3x                |
+|     5,000,000 | Hyper Drive    | 2.5x              |
+|     1,000,000 | Turbo Loop     | 2x                |
+|       500,000 | Recursive Rush | 1.75x             |
+|       100,000 | Flux Loop      | 1.5x              |
+|        50,000 | Cycle Loop     | 1.25x             |
+|         5,000 | Starter Loop   | 1.1x              |
+|     0 - 5,000 | Normie Loop    | No Multiplier     |
 
 ## [Eligibility Criteria](https://loopedhype.com/airdrop-registration)
 
-### Phase-1 Snapshot
-- Snapshot taken on March 8, 2025
+- Phase-1: Snapshot taken on March 8, 2025
 - Eligible users: LHYPE holders and participants in liquid looping strategies before the snapshot
-
-### stLOOP Requirements
 - stLOOP (staked LOOP) amount determines Looping Mode and points multiplier
 - Users can stake LOOP at any time before each phase's closing to earn a multiplier for the following drop
 - Missed Phase-1? Buy and stake LOOP before Phase-2 closes to earn the next multiplier
-
-### Additional Points
 - LP positions in stLOOP/LOOP and LOOP/LHYPE pools also earn points
 - Late claim possible for missed registration (allocation at a later date if eligible)
 
 ## Important Links
 
-- Official Website: [Looping Collective](https://loopingcollective.org)
+- Official Website: [loopingcollective.org](https://loopingcollective.org)
 - Documentation: [Docs](https://docs.loopingcollective.org)
 - Airdrop Registration: [Airdrop Registration](https://loopedhype.com/airdrop-registration)
 - Twitter: [@Looped_HYPE](https://x.com/Looped_HYPE)

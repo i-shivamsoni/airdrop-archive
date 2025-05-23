@@ -45,30 +45,30 @@ description: "Privasea AI is a privacy-focused AI platform that rewards long-ter
 
 ## [Eligibility Criteria](https://airdrop.privasea.ai)
 
-### ImHuman App Users
-- Must be verified by Proof of Humanity
-- Must possess at least 400 stars
-- Base allocation: 110 PRAI tokens per user
-- Surplus adjusted based on star count
-- Total eligible: 657,641 wallets
+- **ImHuman App Users**
+  - Must be verified by Proof of Humanity
+  - Must possess at least 400 stars
+  - Base allocation: 110 PRAI tokens per user
+  - Surplus adjusted based on star count
+  - Total eligible: 657,641 wallets
 
-### DeepSea Testnet Node Operators
-- Must have completed at least one phase
-- Total eligible: 38,574 wallets
+- **DeepSea Testnet Node Operators**
+  - Must have completed at least one phase
+  - Total eligible: 38,574 wallets
 
-### Galxe Questers
-- Must have more than 100 points at snapshot
-- Total eligible: 20,239 wallets
+- **Galxe Questers**
+  - Must have more than 100 points at snapshot
+  - Total eligible: 20,239 wallets
 
-### Early Supporters
-- Total eligible: 4,283 wallets
+- **Early Supporters**
+  - Total eligible: 4,283 wallets
 
-### WorkHeart USB Node Owners
-- Total eligible: 5,000 wallets
+- **WorkHeart USB Node Owners**
+  - Total eligible: 5,000 wallets
 
-### Quest Participants
-- OKX Wallet, Gate Web3 & Intract partnered quests
-- Total eligible: ~35,000 wallets
+- **Quest Participants**
+  - OKX Wallet, Gate Web3 & Intract partnered quests
+  - Total eligible: ~35,000 wallets
 
 ## Important Links
 
