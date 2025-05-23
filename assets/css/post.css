@@ -324,4 +324,22 @@ main {
     .post-title {
         font-size: 1.3rem;
     }
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Adjust this value based on your header height */
+}
+
+/* Add highlight animation for headings */
+@keyframes heading-highlight {
+    0% { background-color: transparent; }
+    50% { background-color: var(--highlight); }
+    100% { background-color: transparent; }
+}
+
+.post-content h2:target,
+.post-content h3:target {
+    animation: heading-highlight 1.5s ease-out;
+    padding-top: 0.2rem;
 } 

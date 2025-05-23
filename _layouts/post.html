@@ -105,6 +105,30 @@ layout: default
         const a = document.createElement('a');
         a.href = '#' + heading.id;
         a.textContent = heading.textContent;
+        
+        // Add click handler for smooth scroll
+        a.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            // Remove highlight from any previously highlighted heading
+            document.querySelectorAll('.post-content h2, .post-content h3').forEach(h => {
+              h.classList.remove('highlighted');
+            });
+            
+            // Scroll to the target
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            
+            // Add highlight class
+            targetElement.classList.add('highlighted');
+            
+            // Update URL without page reload
+            history.pushState(null, null, '#' + targetId);
+          }
+        });
+        
         li.appendChild(a);
         toc.appendChild(li);
       });
