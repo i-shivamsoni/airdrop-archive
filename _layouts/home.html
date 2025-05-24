@@ -2,565 +2,561 @@
 layout: default
 ---
 
-<body>
+<main>
+    <div class="container">
+        <section class="hero">
+            <h1>Discover Cryptocurrency Projects</h1>
+            <p>Explore and filter through hundreds of crypto projects with our intuitive categorization system</p>
+        </section>
 
+        <div class="content-wrapper three-column">
+            <!-- Left Sidebar -->
+            <aside class="sidebar left-sidebar">
+                <!-- Timeframe Filter -->
+                <section class="filter-section">
+                    <h2>Timeframe</h2>
+                    <div class="filter-options">
+                        <label class="checkbox">
+                            <input type="checkbox" data-year="before2020">
+                            <span class="checkmark"></span>
+                            <span>Before 2020</span>
+                            <span class="count">15</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-year="2020">
+                            <span class="checkmark"></span>
+                            <span>2020</span>
+                            <span class="count">20</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-year="2021">
+                            <span class="checkmark"></span>
+                            <span>2021</span>
+                            <span class="count">27</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-year="2022">
+                            <span class="checkmark"></span>
+                            <span>2022</span>
+                            <span class="count">30</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-year="2023">
+                            <span class="checkmark"></span>
+                            <span>2023</span>
+                            <span class="count">45</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-year="2024">
+                            <span class="checkmark"></span>
+                            <span>2024</span>
+                            <span class="count">127</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-year="2025">
+                            <span class="checkmark"></span>
+                            <span>2025</span>
+                            <span class="count">58</span>
+                        </label>
+                    </div>
+                </section>
 
-    <main>
-        <div class="container">
-            <section class="hero">
-                <h1>Discover Cryptocurrency Projects</h1>
-                <p>Explore and filter through hundreds of crypto projects with our intuitive categorization system</p>
-            </section>
+                <!-- Status Filter -->
+                <section class="filter-section">
+                    <h2>Status</h2>
+                    <div class="status-toggles">
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="slider alive"></span>
+                            <span>Alive</span>
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="slider dead"></span>
+                            <span>Dead</span>
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="slider upcoming"></span>
+                            <span>Upcoming</span>
+                        </label>
+                    </div>
+                </section>
 
-            <div class="content-wrapper three-column">
-                <!-- Left Sidebar -->
-                <aside class="sidebar left-sidebar">
-                    <!-- Timeframe Filter -->
-                    <section class="filter-section">
-                        <h2>Timeframe</h2>
-                        <div class="filter-options">
-                            <label class="checkbox">
-                                <input type="checkbox" data-year="before2020">
-                                <span class="checkmark"></span>
-                                <span>Before 2020</span>
-                                <span class="count">15</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-year="2020">
-                                <span class="checkmark"></span>
-                                <span>2020</span>
-                                <span class="count">20</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-year="2021">
-                                <span class="checkmark"></span>
-                                <span>2021</span>
-                                <span class="count">27</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-year="2022">
-                                <span class="checkmark"></span>
-                                <span>2022</span>
-                                <span class="count">30</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-year="2023">
-                                <span class="checkmark"></span>
-                                <span>2023</span>
-                                <span class="count">45</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-year="2024">
-                                <span class="checkmark"></span>
-                                <span>2024</span>
-                                <span class="count">127</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-year="2025">
-                                <span class="checkmark"></span>
-                                <span>2025</span>
-                                <span class="count">58</span>
-                            </label>
-                        </div>
-                    </section>
-
-                    <!-- Status Filter -->
-                    <section class="filter-section">
-                        <h2>Status</h2>
-                        <div class="status-toggles">
-                            <label class="toggle">
-                                <input type="checkbox">
-                                <span class="slider alive"></span>
-                                <span>Alive</span>
-                            </label>
-                            <label class="toggle">
-                                <input type="checkbox">
-                                <span class="slider dead"></span>
-                                <span>Dead</span>
-                            </label>
-                            <label class="toggle">
-                                <input type="checkbox">
-                                <span class="slider upcoming"></span>
-                                <span>Upcoming</span>
-                            </label>
-                        </div>
-                    </section>
-
-                    <!-- Function Filter -->
-                    <section class="filter-section categories-filter">
-                        <h2>Categories</h2>
-                        <div class="categories-container">
-                            <div class="category-group">
-                                <button class="category-header" data-group="core">
-                                    <span>Core</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="category-items" id="core-items">
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="defi">
-                                        <span class="checkmark"></span>
-                                        <span>DeFi</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="nft">
-                                        <span class="checkmark"></span>
-                                        <span>NFT</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="gaming">
-                                        <span class="checkmark"></span>
-                                        <span>Gaming</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="social">
-                                        <span class="checkmark"></span>
-                                        <span>Social</span>
-                                    </label>
-                                </div>
+                <!-- Function Filter -->
+                <section class="filter-section categories-filter">
+                    <h2>Categories</h2>
+                    <div class="categories-container">
+                        <div class="category-group">
+                            <button class="category-header" data-group="core">
+                                <span>Core</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="category-items" id="core-items">
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="defi">
+                                    <span class="checkmark"></span>
+                                    <span>DeFi</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="nft">
+                                    <span class="checkmark"></span>
+                                    <span>NFT</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="gaming">
+                                    <span class="checkmark"></span>
+                                    <span>Gaming</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="social">
+                                    <span class="checkmark"></span>
+                                    <span>Social</span>
+                                </label>
                             </div>
-                            <div class="category-group">
-                                <button class="category-header" data-group="infrastructure">
+                        </div>
+                        <div class="category-group">
+                            <button class="category-header" data-group="infrastructure">
+                                <span>Infrastructure</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="category-items" id="infrastructure-items">
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="scaling">
+                                    <span class="checkmark"></span>
+                                    <span>Scaling</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="infrastructure">
+                                    <span class="checkmark"></span>
                                     <span>Infrastructure</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="category-items" id="infrastructure-items">
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="scaling">
-                                        <span class="checkmark"></span>
-                                        <span>Scaling</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="infrastructure">
-                                        <span class="checkmark"></span>
-                                        <span>Infrastructure</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="utilities">
-                                        <span class="checkmark"></span>
-                                        <span>Utilities</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="category-group">
-                                <button class="category-header" data-group="technology">
-                                    <span>Technology</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="category-items" id="technology-items">
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="ai">
-                                        <span class="checkmark"></span>
-                                        <span>AI</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="privacy">
-                                        <span class="checkmark"></span>
-                                        <span>Privacy</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="data">
-                                        <span class="checkmark"></span>
-                                        <span>Data</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="category-group">
-                                <button class="category-header" data-group="assets">
-                                    <span>Assets</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="category-items" id="assets-items">
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="stablecoin">
-                                        <span class="checkmark"></span>
-                                        <span>Stablecoin</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="rwa">
-                                        <span class="checkmark"></span>
-                                        <span>RWA</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="meme">
-                                        <span class="checkmark"></span>
-                                        <span>MEME</span>
-                                    </label>
-                                    <label class="category-item">
-                                        <input type="checkbox" data-category="other">
-                                        <span class="checkmark"></span>
-                                        <span>Other</span>
-                                    </label>
-                                </div>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="utilities">
+                                    <span class="checkmark"></span>
+                                    <span>Utilities</span>
+                                </label>
                             </div>
                         </div>
-                    </section>
-                </aside>
-
-                <!-- Main Content -->
-                <div class="main-content">
-                    <!-- Active Filters -->
-                    <section class="active-filters">
-                        <h2>Active Filters</h2>
-                        <div class="filter-tags">
-                            <button class="clear-all">Clear All</button>
-                        </div>
-                    </section>
-
-                    <!-- Projects Grid -->
-                    <section class="projects-grid">
-                        <h2>Projects <span class="project-count">(0)</span></h2>
-                        <div class="grid">
-                            <!-- Loading state -->
-                            <div class="project-card loading">
-                                <div class="card-header">
-                                    <h3>Loading...</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p>Loading project information...</p>
-                                </div>
+                        <div class="category-group">
+                            <button class="category-header" data-group="technology">
+                                <span>Technology</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="category-items" id="technology-items">
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="ai">
+                                    <span class="checkmark"></span>
+                                    <span>AI</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="privacy">
+                                    <span class="checkmark"></span>
+                                    <span>Privacy</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="data">
+                                    <span class="checkmark"></span>
+                                    <span>Data</span>
+                                </label>
                             </div>
                         </div>
-                        <!-- Empty state (hidden by default) -->
-                        <div class="empty-state" style="display: none;">
-                            <i class="fas fa-folder-open"></i>
-                            <h3>No Projects Found</h3>
-                            <p>Try adjusting your filters to see more results</p>
-                        </div>
-                        <!-- Error state (hidden by default) -->
-                        <div class="error-state" style="display: none;">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <h3>Error Loading Projects</h3>
-                            <p>Please try refreshing the page</p>
-                        </div>
-                        <div class="pagination">
-                            <button class="active">1</button>
-                            <button>2</button>
-                            <button>3</button>
-                            <span>...</span>
-                            <button>5</button>
-                            <button class="next"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- Right Sidebar -->
-                <aside class="sidebar right-sidebar">
-                    <!-- Ecosystem Filter -->
-                    <section class="filter-section ecosystem-filter">
-                        <h2>Ecosystem</h2>
-                        <div class="ecosystem-grid">
-                            <div class="ecosystem-item">
-                                <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/ethereum.svg" alt="Ethereum">
-                                <span>Ethereum</span>
-                            </div>
-                            <div class="ecosystem-item">
-                                <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/solana.svg" alt="Solana">
-                                <span>Solana</span>
-                            </div>
-                            <div class="ecosystem-item">
-                                <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/polkadot.svg" alt="Polkadot">
-                                <span>Polkadot</span>
-                            </div>
-                            <div class="ecosystem-item">
-                                <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/cosmos.svg" alt="Cosmos">
-                                <span>Cosmos</span>
-                            </div>
-                            <div class="ecosystem-item">
-                                <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/avalanche.svg" alt="Avalanche">
-                                <span>Avalanche</span>
-                            </div>
-                            <div class="ecosystem-item">
-                                <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/sui.svg" alt="Sui">
-                                <span>Sui</span>
-                            </div>
-                            <div class="ecosystem-item">
-                                <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/aptos.svg" alt="Aptos">
-                                <span>Aptos</span>
-                            </div>
-                            <div class="ecosystem-item">
-                                <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/more.svg" alt="More">
-                                <span>More</span>
+                        <div class="category-group">
+                            <button class="category-header" data-group="assets">
+                                <span>Assets</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="category-items" id="assets-items">
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="stablecoin">
+                                    <span class="checkmark"></span>
+                                    <span>Stablecoin</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="rwa">
+                                    <span class="checkmark"></span>
+                                    <span>RWA</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="meme">
+                                    <span class="checkmark"></span>
+                                    <span>MEME</span>
+                                </label>
+                                <label class="category-item">
+                                    <input type="checkbox" data-category="other">
+                                    <span class="checkmark"></span>
+                                    <span>Other</span>
+                                </label>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
+            </aside>
 
-                    <!-- Rewarded Activity Filter -->
-                    <section class="filter-section rewarded-activity-filter">
-                        <h2>Rewarded Activity</h2>
-                        <div class="activity-groups">
-                            <!-- On-chain Participation -->
-                            <div class="activity-group">
-                                <button class="activity-header" data-group="on-chain-participation">
-                                    <span>On-chain Participation</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="activity-items" id="on-chain-participation-items">
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="retroactive">
-                                        <span class="checkmark"></span>
-                                        <span>Retroactive</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="holder">
-                                        <span class="checkmark"></span>
-                                        <span>Holder</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="nft">
-                                        <span class="checkmark"></span>
-                                        <span>NFT</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="staking">
-                                        <span class="checkmark"></span>
-                                        <span>Staking</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="fork">
-                                        <span class="checkmark"></span>
-                                        <span>Fork</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="node">
-                                        <span class="checkmark"></span>
-                                        <span>Node</span>
-                                    </label>
-                                </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Active Filters -->
+                <section class="active-filters">
+                    <h2>Active Filters</h2>
+                    <div class="filter-tags">
+                        <button class="clear-all">Clear All</button>
+                    </div>
+                </section>
+
+                <!-- Projects Grid -->
+                <section class="projects-grid">
+                    <h2>Projects <span class="project-count">(0)</span></h2>
+                    <div class="grid">
+                        <!-- Loading state -->
+                        <div class="project-card loading">
+                            <div class="card-header">
+                                <h3>Loading...</h3>
                             </div>
-
-                            <!-- Test and Build Participation -->
-                            <div class="activity-group">
-                                <button class="activity-header" data-group="test-and-build-participation">
-                                    <span>Test and Build Participation</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="activity-items" id="test-and-build-participation-items">
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="testnet">
-                                        <span class="checkmark"></span>
-                                        <span>Testnet</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="form">
-                                        <span class="checkmark"></span>
-                                        <span>Form</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="dev-work">
-                                        <span class="checkmark"></span>
-                                        <span>Dev Work</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Community and Loyalty -->
-                            <div class="activity-group">
-                                <button class="activity-header" data-group="community-and-loyalty">
-                                    <span>Community and Loyalty</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="activity-items" id="community-and-loyalty-items">
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="loyalty">
-                                        <span class="checkmark"></span>
-                                        <span>Loyalty</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="free">
-                                        <span class="checkmark"></span>
-                                        <span>Free</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="discord-role">
-                                        <span class="checkmark"></span>
-                                        <span>Discord Role</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="quest">
-                                        <span class="checkmark"></span>
-                                        <span>Quest</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Influence and Content -->
-                            <div class="activity-group">
-                                <button class="activity-header" data-group="influence-and-content">
-                                    <span>Influence and Content</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="activity-items" id="influence-and-content-items">
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="content">
-                                        <span class="checkmark"></span>
-                                        <span>Content</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="kaito-yapping">
-                                        <span class="checkmark"></span>
-                                        <span>Kaito Yapping</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Alpha Community Participation -->
-                            <div class="activity-group">
-                                <button class="activity-header" data-group="alpha-community-participation">
-                                    <span>Alpha Community Participation</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="activity-items" id="alpha-community-participation-items">
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="binance-alpha">
-                                        <span class="checkmark"></span>
-                                        <span>Binance Alpha</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="mexc-alpha">
-                                        <span class="checkmark"></span>
-                                        <span>MEXC Alpha</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="bybit-alpha">
-                                        <span class="checkmark"></span>
-                                        <span>Bybit Alpha</span>
-                                    </label>
-                                    <label class="activity-item">
-                                        <input type="checkbox" data-activity="okx-alpha">
-                                        <span class="checkmark"></span>
-                                        <span>OKX Alpha</span>
-                                    </label>
-                                </div>
+                            <div class="card-body">
+                                <p>Loading project information...</p>
                             </div>
                         </div>
-                    </section>
-
-                    <!-- Advanced Filters (Collapsible) -->
-                    <section class="filter-section advanced-filters">
-                        <div class="section-header">
-                            <h2>Advanced Filters</h2>
-                        </div>
-                        <div class="collapsible-content">
-                            <!-- Blockchain Stack -->
-                            <div class="stack-filter">
-                                <h3>Blockchain Stack</h3>
-                                <div class="stack-visualization">
-                                    <div class="stack-layer" data-layer="layer-3">
-                                        <div class="layer-info">
-                                            <i class="fas fa-cube"></i>
-                                            <span>Layer 3</span>
-                                        </div>
-                                        <div class="layer-box" data-layer="layer-3">
-                                            <div class="layer-icon">
-                                                <i class="fas fa-cube"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="stack-layer" data-layer="layer-2">
-                                        <div class="layer-info">
-                                            <i class="fas fa-layer-group"></i>
-                                            <span>Layer 2</span>
-                                        </div>
-                                        <div class="layer-box" data-layer="layer-2">
-                                            <div class="layer-icon">
-                                                <i class="fas fa-layer-group"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="stack-layer" data-layer="layer-1">
-                                        <div class="layer-info">
-                                            <i class="fas fa-server"></i>
-                                            <span>Layer 1</span>
-                                        </div>
-                                        <div class="layer-box" data-layer="layer-1">
-                                            <div class="layer-icon">
-                                                <i class="fas fa-server"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="stack-layer" data-layer="layer-0">
-                                        <div class="layer-info">
-                                            <i class="fas fa-network-wired"></i>
-                                            <span>Layer 0</span>
-                                        </div>
-                                        <div class="layer-box" data-layer="layer-0">
-                                            <div class="layer-icon">
-                                                <i class="fas fa-network-wired"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Blockchain Type -->
-                            <div class="type-filter">
-                                <h3>Blockchain Type</h3>
-                                <div class="filter-options">
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                        <span>Rollup</span>
-                                        <i class="fas fa-info-circle tooltip" title="A scaling solution that executes transactions off-chain and posts transaction data on-chain"></i>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                        <span>Sidechain</span>
-                                        <i class="fas fa-info-circle tooltip" title="A separate blockchain that runs parallel to the main blockchain"></i>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                        <span>Plasma</span>
-                                        <i class="fas fa-info-circle tooltip" title="A framework for building scalable applications on Ethereum"></i>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                        <span>State Channel</span>
-                                        <i class="fas fa-info-circle tooltip" title="Allows participants to conduct transactions off-chain"></i>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </aside>
+                    </div>
+                    <!-- Empty state (hidden by default) -->
+                    <div class="empty-state" style="display: none;">
+                        <i class="fas fa-folder-open"></i>
+                        <h3>No Projects Found</h3>
+                        <p>Try adjusting your filters to see more results</p>
+                    </div>
+                    <!-- Error state (hidden by default) -->
+                    <div class="error-state" style="display: none;">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>Error Loading Projects</h3>
+                        <p>Please try refreshing the page</p>
+                    </div>
+                    <div class="pagination">
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <span>...</span>
+                        <button>5</button>
+                        <button class="next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </section>
             </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar right-sidebar">
+                <!-- Ecosystem Filter -->
+                <section class="filter-section ecosystem-filter">
+                    <h2>Ecosystem</h2>
+                    <div class="ecosystem-grid">
+                        <div class="ecosystem-item">
+                            <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/ethereum.svg" alt="Ethereum">
+                            <span>Ethereum</span>
+                        </div>
+                        <div class="ecosystem-item">
+                            <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/solana.svg" alt="Solana">
+                            <span>Solana</span>
+                        </div>
+                        <div class="ecosystem-item">
+                            <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/polkadot.svg" alt="Polkadot">
+                            <span>Polkadot</span>
+                        </div>
+                        <div class="ecosystem-item">
+                            <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/cosmos.svg" alt="Cosmos">
+                            <span>Cosmos</span>
+                        </div>
+                        <div class="ecosystem-item">
+                            <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/avalanche.svg" alt="Avalanche">
+                            <span>Avalanche</span>
+                        </div>
+                        <div class="ecosystem-item">
+                            <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/sui.svg" alt="Sui">
+                            <span>Sui</span>
+                        </div>
+                        <div class="ecosystem-item">
+                            <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/aptos.svg" alt="Aptos">
+                            <span>Aptos</span>
+                        </div>
+                        <div class="ecosystem-item">
+                            <img src="{{ site.baseurl | default: '' }}/assets/images/ecosystem_icons/more.svg" alt="More">
+                            <span>More</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rewarded Activity Filter -->
+                <section class="filter-section rewarded-activity-filter">
+                    <h2>Rewarded Activity</h2>
+                    <div class="activity-groups">
+                        <!-- On-chain Participation -->
+                        <div class="activity-group">
+                            <button class="activity-header" data-group="on-chain-participation">
+                                <span>On-chain Participation</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="activity-items" id="on-chain-participation-items">
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="retroactive">
+                                    <span class="checkmark"></span>
+                                    <span>Retroactive</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="holder">
+                                    <span class="checkmark"></span>
+                                    <span>Holder</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="nft">
+                                    <span class="checkmark"></span>
+                                    <span>NFT</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="staking">
+                                    <span class="checkmark"></span>
+                                    <span>Staking</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="fork">
+                                    <span class="checkmark"></span>
+                                    <span>Fork</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="node">
+                                    <span class="checkmark"></span>
+                                    <span>Node</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Test and Build Participation -->
+                        <div class="activity-group">
+                            <button class="activity-header" data-group="test-and-build-participation">
+                                <span>Test and Build Participation</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="activity-items" id="test-and-build-participation-items">
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="testnet">
+                                    <span class="checkmark"></span>
+                                    <span>Testnet</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="form">
+                                    <span class="checkmark"></span>
+                                    <span>Form</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="dev-work">
+                                    <span class="checkmark"></span>
+                                    <span>Dev Work</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Community and Loyalty -->
+                        <div class="activity-group">
+                            <button class="activity-header" data-group="community-and-loyalty">
+                                <span>Community and Loyalty</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="activity-items" id="community-and-loyalty-items">
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="loyalty">
+                                    <span class="checkmark"></span>
+                                    <span>Loyalty</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="free">
+                                    <span class="checkmark"></span>
+                                    <span>Free</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="discord-role">
+                                    <span class="checkmark"></span>
+                                    <span>Discord Role</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="quest">
+                                    <span class="checkmark"></span>
+                                    <span>Quest</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Influence and Content -->
+                        <div class="activity-group">
+                            <button class="activity-header" data-group="influence-and-content">
+                                <span>Influence and Content</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="activity-items" id="influence-and-content-items">
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="content">
+                                    <span class="checkmark"></span>
+                                    <span>Content</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="kaito-yapping">
+                                    <span class="checkmark"></span>
+                                    <span>Kaito Yapping</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Alpha Community Participation -->
+                        <div class="activity-group">
+                            <button class="activity-header" data-group="alpha-community-participation">
+                                <span>Alpha Community Participation</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="activity-items" id="alpha-community-participation-items">
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="binance-alpha">
+                                    <span class="checkmark"></span>
+                                    <span>Binance Alpha</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="mexc-alpha">
+                                    <span class="checkmark"></span>
+                                    <span>MEXC Alpha</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="bybit-alpha">
+                                    <span class="checkmark"></span>
+                                    <span>Bybit Alpha</span>
+                                </label>
+                                <label class="activity-item">
+                                    <input type="checkbox" data-activity="okx-alpha">
+                                    <span class="checkmark"></span>
+                                    <span>OKX Alpha</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Advanced Filters (Collapsible) -->
+                <section class="filter-section advanced-filters">
+                    <div class="section-header">
+                        <h2>Advanced Filters</h2>
+                    </div>
+                    <div class="collapsible-content">
+                        <!-- Blockchain Stack -->
+                        <div class="stack-filter">
+                            <h3>Blockchain Stack</h3>
+                            <div class="stack-visualization">
+                                <div class="stack-layer" data-layer="layer-3">
+                                    <div class="layer-info">
+                                        <i class="fas fa-cube"></i>
+                                        <span>Layer 3</span>
+                                    </div>
+                                    <div class="layer-box" data-layer="layer-3">
+                                        <div class="layer-icon">
+                                            <i class="fas fa-cube"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stack-layer" data-layer="layer-2">
+                                    <div class="layer-info">
+                                        <i class="fas fa-layer-group"></i>
+                                        <span>Layer 2</span>
+                                    </div>
+                                    <div class="layer-box" data-layer="layer-2">
+                                        <div class="layer-icon">
+                                            <i class="fas fa-layer-group"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stack-layer" data-layer="layer-1">
+                                    <div class="layer-info">
+                                        <i class="fas fa-server"></i>
+                                        <span>Layer 1</span>
+                                    </div>
+                                    <div class="layer-box" data-layer="layer-1">
+                                        <div class="layer-icon">
+                                            <i class="fas fa-server"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stack-layer" data-layer="layer-0">
+                                    <div class="layer-info">
+                                        <i class="fas fa-network-wired"></i>
+                                        <span>Layer 0</span>
+                                    </div>
+                                    <div class="layer-box" data-layer="layer-0">
+                                        <div class="layer-icon">
+                                            <i class="fas fa-network-wired"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blockchain Type -->
+                        <div class="type-filter">
+                            <h3>Blockchain Type</h3>
+                            <div class="filter-options">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>Rollup</span>
+                                    <i class="fas fa-info-circle tooltip" title="A scaling solution that executes transactions off-chain and posts transaction data on-chain"></i>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>Sidechain</span>
+                                    <i class="fas fa-info-circle tooltip" title="A separate blockchain that runs parallel to the main blockchain"></i>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>Plasma</span>
+                                    <i class="fas fa-info-circle tooltip" title="A framework for building scalable applications on Ethereum"></i>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>State Channel</span>
+                                    <i class="fas fa-info-circle tooltip" title="Allows participants to conduct transactions off-chain"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
         </div>
-    </main>
+    </div>
+</main>
 
-    <!-- Mobile Filter Toggle -->
-    <button class="mobile-filter-toggle" aria-label="Toggle filters">
-        <i class="fas fa-filter"></i>
-    </button>
+<!-- Mobile Filter Toggle -->
+<button class="mobile-filter-toggle" aria-label="Toggle filters">
+    <i class="fas fa-filter"></i>
+</button>
 
-    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
-    <script>
-        // Initialize site data with empty array if not defined
-        window.siteData = window.siteData || { posts: [] };
-        
-        // Inject Jekyll data
-        window.siteData.posts = [
-            {% for post in site.posts %}
-            {
-                title: "{{ post.title }}",
-                url: "{{ post.url }}",
-                date: "{{ post.date }}",
-                timeframe: {{ post.timeframe | jsonify }},
-                ecosystem: {{ post.ecosystem | jsonify }},
-                rewardedActivity: {{ post.rewardedActivity | jsonify }},
-                function: {{ post.function | jsonify }},
-                category: {{ post.category | jsonify }},
-                status: {{ post.status | jsonify }},
-                blockchain_stack: {{ post.blockchain-stack | jsonify }},
-                blockchain_type: {{ post.blockchain-type | jsonify }},
-                description: "{{ post.description | strip_html | strip_newlines | escape }}",
-                pagetype: "{{ post.pagetype }}"
-            }{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-        ];
+<script src="{{ site.baseurl }}/assets/js/script.js"></script>
+<script>
+    // Initialize site data with empty array if not defined
+    window.siteData = window.siteData || { posts: [] };
+    
+    // Inject Jekyll data
+    window.siteData.posts = [
+        {% for post in site.posts %}
+        {
+            title: "{{ post.title }}",
+            url: "{{ post.url }}",
+            date: "{{ post.date }}",
+            timeframe: {{ post.timeframe | jsonify }},
+            ecosystem: {{ post.ecosystem | jsonify }},
+            rewardedActivity: {{ post.rewardedActivity | jsonify }},
+            function: {{ post.function | jsonify }},
+            category: {{ post.category | jsonify }},
+            status: {{ post.status | jsonify }},
+            blockchain_stack: {{ post.blockchain-stack | jsonify }},
+            blockchain_type: {{ post.blockchain-type | jsonify }},
+            description: "{{ post.description | strip_html | strip_newlines | escape }}",
+            pagetype: "{{ post.pagetype }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ];
 
-        window.siteBaseUrl = "{{ site.baseurl }}";
-    </script>
-</body>
-</html>
+    window.siteBaseUrl = "{{ site.baseurl }}";
+</script>
+

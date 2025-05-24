@@ -2,6 +2,8 @@
 layout: halloffame
 title: Hall of Fame
 permalink: /hall-of-fame/
+custom_css:
+  - assets/css/hall-of-fame.css
 description: This page celebrates the most significant airdrops in cryptocurrency history, ranked by their impact, value, and historical significance. Explore the projects that have made the biggest splash in the crypto ecosystem through their innovative token distribution strategies.
 airdrops:
   - rank: 1
