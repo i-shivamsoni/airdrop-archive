@@ -1,55 +1,7 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Airdrop Archive - Modern UI Demo</title>
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicons/apple-touch-icon.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicons/favicon-32x32.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicons/favicon-16x16.png' | relative_url }}">
-    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-    <link rel="mask-icon" href="{{ '/assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-    <script>
-        // Initialize site data with empty array if not defined
-        window.siteData = window.siteData || { posts: [] };
-        
-        // Inject Jekyll data
-        window.siteData.posts = [
-            {% for post in site.posts %}
-            {
-                title: "{{ post.title }}",
-                url: "{{ post.url }}",
-                date: "{{ post.date }}",
-                timeframe: {{ post.timeframe | jsonify }},
-                ecosystem: {{ post.ecosystem | jsonify }},
-                rewardedActivity: {{ post.rewardedActivity | jsonify }},
-                function: {{ post.function | jsonify }},
-                category: {{ post.category | jsonify }},
-                status: {{ post.status | jsonify }},
-                blockchain_stack: {{ post.blockchain-stack | jsonify }},
-                blockchain_type: {{ post.blockchain-type | jsonify }},
-                description: "{{ post.description | strip_html | strip_newlines | escape }}",
-                pagetype: "{{ post.pagetype }}"
-            }{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-        ];
 
-        window.siteBaseUrl = "{{ site.baseurl }}";
-    </script>
-</head>
 <body>
 
 
@@ -583,5 +535,32 @@ layout: default
     </button>
 
     <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+    <script>
+        // Initialize site data with empty array if not defined
+        window.siteData = window.siteData || { posts: [] };
+        
+        // Inject Jekyll data
+        window.siteData.posts = [
+            {% for post in site.posts %}
+            {
+                title: "{{ post.title }}",
+                url: "{{ post.url }}",
+                date: "{{ post.date }}",
+                timeframe: {{ post.timeframe | jsonify }},
+                ecosystem: {{ post.ecosystem | jsonify }},
+                rewardedActivity: {{ post.rewardedActivity | jsonify }},
+                function: {{ post.function | jsonify }},
+                category: {{ post.category | jsonify }},
+                status: {{ post.status | jsonify }},
+                blockchain_stack: {{ post.blockchain-stack | jsonify }},
+                blockchain_type: {{ post.blockchain-type | jsonify }},
+                description: "{{ post.description | strip_html | strip_newlines | escape }}",
+                pagetype: "{{ post.pagetype }}"
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ];
+
+        window.siteBaseUrl = "{{ site.baseurl }}";
+    </script>
 </body>
 </html>
