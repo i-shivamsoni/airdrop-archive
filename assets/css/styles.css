@@ -1000,7 +1000,7 @@ main {
     align-items: center;
     cursor: pointer;
     position: relative;
-    padding-left: 30px;
+    padding-left: 8px;
     user-select: none;
 }
 
@@ -2310,7 +2310,7 @@ button:active {
 }
 
 .activity-group {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--light-dark);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -2318,7 +2318,7 @@ button:active {
 .activity-header {
     width: 100%;
     padding: 0.75rem 1rem;
-    background: var(--bg-secondary);
+    background: var(--light);
     border: none;
     display: flex;
     justify-content: space-between;
@@ -2328,16 +2328,16 @@ button:active {
 }
 
 .activity-header:hover {
-    background: var(--bg-hover);
+    background: var(--light-dark);
 }
 
 .activity-header.active {
-    background: var(--bg-hover);
+    background: var(--light-dark);
 }
 
 .activity-header span {
     font-weight: 500;
-    color: var(--text-primary);
+    color: var(--dark);
 }
 
 .activity-header i {
@@ -2352,7 +2352,7 @@ button:active {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background: var(--bg-primary);
+    background: var(--light);
 }
 
 .activity-items.active {
@@ -2366,18 +2366,11 @@ button:active {
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    position: relative;
 }
 
 .activity-item:hover {
-    background: var(--bg-hover);
-}
-
-.activity-item input[type="checkbox"] {
-    margin-right: 0.5rem;
-}
-
-.activity-item span:not(.checkmark) {
-    color: var(--text-primary);
+    background: var(--light-dark);
 }
 
 /* Checkbox Styles */
@@ -2394,26 +2387,27 @@ button:active {
     display: inline-block;
     height: 18px;
     width: 18px;
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    background-color: var(--light);
+    border: 2px solid var(--light-dark);
     border-radius: 4px;
     margin-right: 8px;
+    flex-shrink: 0;
 }
 
 .activity-item:hover input ~ .checkmark {
-    background-color: var(--bg-hover);
+    background-color: var(--light-dark);
 }
 
 .activity-item input:checked ~ .checkmark {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .activity-item .checkmark:after {
     content: "";
     position: absolute;
     display: none;
-    left: 6px;
+    left: 5px;
     top: 2px;
     width: 5px;
     height: 10px;
@@ -2424,6 +2418,50 @@ button:active {
 
 .activity-item input:checked ~ .checkmark:after {
     display: block;
+}
+
+.activity-item span:not(.checkmark) {
+    color: var(--dark);
+    margin-left: 8px;
+}
+
+/* Dark mode adjustments */
+.dark-mode .activity-group {
+    border-color: var(--dark-light);
+}
+
+.dark-mode .activity-header {
+    background: var(--dark);
+}
+
+.dark-mode .activity-header:hover,
+.dark-mode .activity-header.active {
+    background: var(--dark-light);
+}
+
+.dark-mode .activity-header span {
+    color: var(--light);
+}
+
+.dark-mode .activity-items {
+    background: var(--dark);
+}
+
+.dark-mode .activity-item:hover {
+    background: var(--dark-light);
+}
+
+.dark-mode .activity-item .checkmark {
+    background-color: var(--dark);
+    border-color: var(--dark-light);
+}
+
+.dark-mode .activity-item:hover input ~ .checkmark {
+    background-color: var(--dark-light);
+}
+
+.dark-mode .activity-item span:not(.checkmark) {
+    color: var(--light);
 }
 
 /* Mobile Responsiveness */
@@ -2496,4 +2534,45 @@ button:active {
     white-space: nowrap;
     content: attr(data-label);
   }
+}
+
+/* Home Page Specific Styles */
+.home-page {
+    min-height: 100vh;
+    padding-top: calc(80px + var(--spacing-xl));
+}
+
+.home-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Update existing container styles to be more specific */
+.content-wrapper.three-column {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr) 320px;
+    gap: 2rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+/* Responsive adjustments for home page */
+@media (max-width: 1400px) {
+    .home-container {
+        padding: 0 var(--spacing-lg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 0 var(--spacing-sm);
+    }
 }

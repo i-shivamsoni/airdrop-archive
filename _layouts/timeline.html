@@ -4,29 +4,16 @@ title: Timeline
 description: Browse through our comprehensive collection of cryptocurrency projects and airdrops organized chronologically
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Crypto Airdrop Archive - Modern UI</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/timeline.css' | relative_url }}">
-</head>
-<body class="timeline-page">
-    <main>
-        <div class="container">
-            <section class="timeline-hero" style="background: var(--light-dark, #f7f7fa); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 2.5rem 2rem 2rem 2rem; margin-bottom: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center;">
-                <h1 style="font-size: 2.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">Timeline</h1>
-                <p style="font-size: 1.25rem; color: var(--dark-light); max-width: 700px; margin-bottom: 0;">Browse through our comprehensive collection of cryptocurrency projects and airdrops organized chronologically. Explore the evolution of airdrops and project launches year by year, month by month.</p>
-            </section>
-        </div>
+<main class="timeline-page">
+    <div class="container">
+        <section class="timeline-hero">
+            <h1>Timeline</h1>
+            <p>Browse through our comprehensive collection of cryptocurrency projects and airdrops organized chronologically. Explore the evolution of airdrops and project launches year by year, month by month.</p>
+        </section>
+
         <div class="timeline-flex-layout">
+            <!-- Left Sidebar -->
             <aside class="sidebar left-sidebar">
-                <!-- Year Overview -->
                 <section class="year-overview">
                     <h2>Year Overview</h2>
                     <div class="year-stats">
@@ -43,12 +30,8 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                                     {% for month_name in month_order %}
                                         {% assign month_data = monthly_stats | where: "name", month_name | first %}
                                         {% if month_data and month_data.items.size > 0 %}
-                                            {% assign percentage = month_data.items | size | times: 100.0 | divided_by: year.items.size %}
-                                            <div class="chart-bar">
+                                            <div class="chart-bar" data-month="{{ month_name }}" data-year="{{ year.name }}">
                                                 <div class="bar-label">{{ month_name }}</div>
-                                                <div class="bar-container">
-                                                    <div class="bar-fill" style="width: {{ percentage }}%"></div>
-                                                </div>
                                                 <div class="bar-value">{{ month_data.items | size }}</div>
                                             </div>
                                         {% endif %}
@@ -59,8 +42,9 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                     </div>
                 </section>
             </aside>
+
+            <!-- Main Content -->
             <div class="main-content">
-                <!-- Year Navigation -->
                 <section class="year-navigation">
                     <div class="year-tabs">
                         {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
@@ -69,180 +53,176 @@ description: Browse through our comprehensive collection of cryptocurrency proje
                         {% endfor %}
                     </div>
                 </section>
-                <!-- Timeline View -->
+
                 <section class="timeline-view">
                     <div class="year-timeline-wrapper">
-                    {% assign month_order = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
-                    {% for year in years %}
-                      <div class="year-timeline" data-year="{{ year.name }}"{% unless forloop.first %} style="display:none;"{% endunless %}>
-                        <div class="timeline-header">
-                          <h2>{{ year.name }}</h2>
-                          <div class="view-options">
-                            <button class="view-option active" data-view="timeline">
-                                <i class="fas fa-stream"></i>
-                                <span>Timeline</span>
-                            </button>
-                            <button class="view-option" data-view="grid">
-                                <i class="fas fa-th-large"></i>
-                                <span>Grid</span>
-                            </button>
-                            <button class="view-option" data-view="list">
-                                <i class="fas fa-list"></i>
-                                <span>List</span>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="timeline-content">
-                          {% assign months = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
-                          {% assign sorted_months = "" | split: "" %}
-                          {% for m in month_order reversed %}
-                            {% for month in months %}
-                              {% if month.name == m %}
-                                {% assign sorted_months = sorted_months | push: month %}
-                              {% endif %}
-                            {% endfor %}
-                          {% endfor %}
-                          {% for month in sorted_months %}
-                            <div class="month-section {% unless forloop.first %}collapsed{% endunless %}">
-                              <div class="month-header">
-                                <h3>{{ month.name }} {{ year.name }}</h3>
-                                <span class="project-count">{{ month.items | size }} projects</span>
-                              </div>
-                              <div class="timeline-entries"{% unless forloop.first %} style="display:none;"{% endunless %}>
-                                {% for post in month.items %}
-                                  <div class="timeline-entry">
-                                    <div class="entry-date">
-                                      <span class="day">{{ post.date | date: "%d" }}</span>
-                                      <span class="month">{{ post.date | date: "%b" }}</span>
+                        {% assign month_order = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+                        {% for year in years %}
+                            <div class="year-timeline" data-year="{{ year.name }}"{% unless forloop.first %} style="display:none;"{% endunless %}>
+                                <div class="timeline-header">
+                                    <h2>{{ year.name }}</h2>
+                                    <div class="view-options">
+                                        <button class="view-option active" data-view="timeline">
+                                            <i class="fas fa-stream"></i>
+                                            <span>Timeline</span>
+                                        </button>
+                                        <button class="view-option" data-view="grid">
+                                            <i class="fas fa-th-large"></i>
+                                            <span>Grid</span>
+                                        </button>
+                                        <button class="view-option" data-view="list">
+                                            <i class="fas fa-list"></i>
+                                            <span>List</span>
+                                        </button>
                                     </div>
-                                    <div class="entry-connector">
-                                      <div class="connector-line"></div>
-                                      <div class="connector-dot"></div>
-                                    </div>
-                                    <div class="entry-card">
-                                      <div class="card-content">
-                                        <h4>{{ post.title }}</h4>
-                                        <div class="card-tags">
-                                          {% for tag in post.tags %}
-                                            <span class="tag">{{ tag }}</span>
-                                          {% endfor %}
-                                        </div>
-                                      </div>
-                                      <a href="{{ post.url | relative_url }}" class="card-link">
-                                        <i class="fas fa-arrow-right"></i>
-                                      </a>
-                                    </div>
-                                  </div>
-                                {% endfor %}
-                              </div>
-                              <div class="month-footer">
-                                {% if forloop.first %}
-                                  <button class="load-more">
-                                    <span>Load More</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                  </button>
-                                {% else %}
-                                  <button class="expand-month">
-                                    <span>Expand</span>
-                                    <i class="fas fa-chevron-down"></i>
-                                  </button>
-                                {% endif %}
-                              </div>
-                            </div>
-                          {% endfor %}
-                        </div>
-                      </div>
-                    {% endfor %}
-                    </div>
-                </section>
-            </div>
-            <aside class="sidebar right-sidebar">
-                <!-- Rewarded Activity Main Categories -->
-                <section class="rewarded-activity-methods">
-                    <div class="activity-header">
-                        <h2>Rewarded Activity</h2>
-                    </div>
-                    <div class="rewarded-activity-list">
-                      {% assign activity_groups = 
-                          "on-chain-participation,test-and-build-participation,community-and-loyalty,influence-and-content,alpha-community-participation" | split: "," %}
-                      {% assign activity_labels = 
-                          "On-chain Participation,Test & Build Participation,Community & Loyalty,Influence & Content,Alpha Community Participation" | split: "," %}
-                      {% assign activity_icons = 
-                          "fa-link,fa-code,fa-users,fa-star,fa-gem" | split: "," %}
-                      {% assign activity_colors = 
-                          "#4f46e5,#10b981,#f59e0b,#ef4444,#8b5cf6" | split: "," %}
-                      {% assign activity_options = 
-                          "retroactive|holder|nft|staking|fork|node,testnet|form|dev-work,loyalty|free|discord-role|quest,content|kaito-yapping,binance-alpha|mexc-alpha|bybit-alpha|okx-alpha" | split: "," %}
-                      
-                      {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
-                      {% for year in years %}
-                        <div class="year-activity-data" data-year="{{ year.name }}" {% unless forloop.first %}style="display: none;"{% endunless %}>
-                          {% for group in activity_groups %}
-                            {% assign group_index = forloop.index0 %}
-                            {% assign group_label = activity_labels[group_index] %}
-                            {% assign group_icon = activity_icons[group_index] %}
-                            {% assign group_color = activity_colors[group_index] %}
-                            {% assign group_activities = activity_options[group_index] | split: "|" %}
-                            {% assign count = 0 %}
-                            {% for post in year.items %}
-                              {% if post.rewardedActivity %}
-                                {% for activity in post.rewardedActivity %}
-                                  {% if group_activities contains activity %}
-                                    {% assign count = count | plus: 1 %}
-                                    {% break %}
-                                  {% endif %}
-                                {% endfor %}
-                              {% endif %}
-                            {% endfor %}
-                            {% assign percentage = count | times: 100.0 | divided_by: year.items.size %}
-                            <div class="rewarded-activity-category" style="--category-color: {{ group_color }}">
-                                <div class="category-header" data-category="{{ group }}">
-                                    <div class="category-icon">
-                                        <i class="fas {{ group_icon }}"></i>
-                                    </div>
-                                    <div class="category-info">
-                                        <span class="activity-name">{{ group_label }}</span>
-                                        <div class="activity-progress">
-                                            <div class="progress-bar">
-                                                <div class="progress-fill" style="width: {{ percentage }}%"></div>
-                                            </div>
-                                            <span class="activity-value">{{ percentage | round }}%</span>
-                                        </div>
-                                    </div>
-                                    <button class="expand-category">
-                                        <i class="fas fa-chevron-down"></i>
-                                    </button>
                                 </div>
-                                <div class="subcategories" style="display: none;">
-                                    {% for subactivity in group_activities %}
-                                        {% assign subcount = 0 %}
-                                        {% for post in year.items %}
-                                            {% if post.rewardedActivity and post.rewardedActivity contains subactivity %}
-                                                {% assign subcount = subcount | plus: 1 %}
+
+                                <div class="timeline-content">
+                                    {% assign months = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                                    {% assign sorted_months = "" | split: "" %}
+                                    {% for m in month_order reversed %}
+                                        {% for month in months %}
+                                            {% if month.name == m %}
+                                                {% assign sorted_months = sorted_months | push: month %}
                                             {% endif %}
                                         {% endfor %}
-                                        {% assign subpercentage = subcount | times: 100.0 | divided_by: year.items.size %}
-                                        <div class="subcategory-row">
-                                            <span class="subcategory-name">{{ subactivity | replace: "-", " " | capitalize }}</span>
-                                            <div class="subcategory-progress">
-                                                <div class="progress-bar small">
-                                                    <div class="progress-fill" style="width: {{ subpercentage }}%"></div>
-                                                </div>
-                                                <span class="subcategory-value">{{ subpercentage | round }}%</span>
+                                    {% endfor %}
+                                    
+                                    {% for month in sorted_months %}
+                                        <div class="month-section {% unless forloop.first %}collapsed{% endunless %}" id="month-{{ month.name | downcase }}-{{ year.name }}">
+                                            <div class="month-header">
+                                                <h3>{{ month.name }} {{ year.name }}</h3>
+                                                <span class="project-count">{{ month.items | size }} projects</span>
+                                            </div>
+                                            <div class="timeline-entries"{% unless forloop.first %} style="display:none;"{% endunless %}>
+                                                {% for post in month.items %}
+                                                    <div class="timeline-entry">
+                                                        <div class="entry-date">
+                                                            <span class="day">{{ post.date | date: "%d" }}</span>
+                                                            <span class="month">{{ post.date | date: "%b" }}</span>
+                                                        </div>
+                                                        <div class="entry-connector">
+                                                            <div class="connector-line"></div>
+                                                            <div class="connector-dot"></div>
+                                                        </div>
+                                                        <div class="entry-card">
+                                                            <div class="card-content">
+                                                                <h4>{{ post.title }}</h4>
+                                                                <div class="card-tags">
+                                                                    {% for tag in post.tags %}
+                                                                        <span class="tag">{{ tag }}</span>
+                                                                    {% endfor %}
+                                                                </div>
+                                                            </div>
+                                                            <a href="{{ post.url | relative_url }}" class="card-link">
+                                                                <i class="fas fa-arrow-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="month-footer">
+                                                {% if forloop.first %}
+                                                    <button class="load-more">
+                                                        <span>Load More</span>
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </button>
+                                                {% else %}
+                                                    <button class="expand-month">
+                                                        <span>Expand</span>
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </button>
+                                                {% endif %}
                                             </div>
                                         </div>
                                     {% endfor %}
                                 </div>
                             </div>
-                          {% endfor %}
-                        </div>
-                      {% endfor %}
+                        {% endfor %}
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar right-sidebar">
+                <section class="rewarded-activity-methods">
+                    <div class="activity-header">
+                        <h2>Rewarded Activity</h2>
+                    </div>
+                    <div class="rewarded-activity-list">
+                        {% assign activity_groups = "on-chain-participation,test-and-build-participation,community-and-loyalty,influence-and-content,alpha-community-participation" | split: "," %}
+                        {% assign activity_labels = "On-chain Participation,Test & Build Participation,Community & Loyalty,Influence & Content,Alpha Community Participation" | split: "," %}
+                        {% assign activity_icons = "fa-link,fa-code,fa-users,fa-star,fa-gem" | split: "," %}
+                        {% assign activity_colors = "#4f46e5,#10b981,#f59e0b,#ef4444,#8b5cf6" | split: "," %}
+                        {% assign activity_options = "retroactive|holder|nft|staking|fork|node,testnet|form|dev-work,loyalty|free|discord-role|quest,content|kaito-yapping,binance-alpha|mexc-alpha|bybit-alpha|okx-alpha" | split: "," %}
+                        
+                        {% for year in years %}
+                            <div class="year-activity-data" data-year="{{ year.name }}" {% unless forloop.first %}style="display: none;"{% endunless %}>
+                                {% for group in activity_groups %}
+                                    {% assign group_index = forloop.index0 %}
+                                    {% assign group_label = activity_labels[group_index] %}
+                                    {% assign group_icon = activity_icons[group_index] %}
+                                    {% assign group_color = activity_colors[group_index] %}
+                                    {% assign group_activities = activity_options[group_index] | split: "|" %}
+                                    {% assign count = 0 %}
+                                    {% for post in year.items %}
+                                        {% if post.rewardedActivity %}
+                                            {% for activity in post.rewardedActivity %}
+                                                {% if group_activities contains activity %}
+                                                    {% assign count = count | plus: 1 %}
+                                                    {% break %}
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% assign percentage = count | times: 100.0 | divided_by: year.items.size %}
+                                    <div class="rewarded-activity-category" style="--category-color: {{ group_color }}">
+                                        <div class="category-header" data-category="{{ group }}">
+                                            <div class="category-icon">
+                                                <i class="fas {{ group_icon }}"></i>
+                                            </div>
+                                            <div class="category-info">
+                                                <span class="activity-name">{{ group_label }}</span>
+                                                <div class="activity-progress">
+                                                    <div class="progress-bar">
+                                                        <div class="progress-fill" style="width: {{ percentage }}%"></div>
+                                                    </div>
+                                                    <span class="activity-value">{{ percentage | round }}%</span>
+                                                </div>
+                                            </div>
+                                            <button class="expand-category">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </button>
+                                        </div>
+                                        <div class="subcategories" style="display: none;">
+                                            {% for subactivity in group_activities %}
+                                                {% assign subcount = 0 %}
+                                                {% for post in year.items %}
+                                                    {% if post.rewardedActivity and post.rewardedActivity contains subactivity %}
+                                                        {% assign subcount = subcount | plus: 1 %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                                {% assign subpercentage = subcount | times: 100.0 | divided_by: year.items.size %}
+                                                <div class="subcategory-row">
+                                                    <span class="subcategory-name">{{ subactivity | replace: "-", " " | capitalize }}</span>
+                                                    <div class="subcategory-progress">
+                                                        <div class="progress-bar small">
+                                                            <div class="progress-fill" style="width: {{ subpercentage }}%"></div>
+                                                        </div>
+                                                        <span class="subcategory-value">{{ subpercentage | round }}%</span>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
                     </div>
                 </section>
             </aside>
         </div>
-    </main>
+    </div>
+</main>
 
-    <script src="{{ '/assets/js/timeline.js' | relative_url }}"></script>
-</body>
-</html>
+<script src="{{ '/assets/js/timeline.js' | relative_url }}"></script>

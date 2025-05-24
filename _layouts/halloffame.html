@@ -1,375 +1,345 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - Airdrop Criteria Archive</title>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="{{ '/assets/images/favicons/apple-touch-icon.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ '/assets/images/favicons/favicon-32x32.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ '/assets/images/favicons/favicon-16x16.png' | relative_url }}">
-    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-    <link rel="mask-icon" href="{{ '/assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/hall-of-fame.css' | relative_url }}">
-</head>
-
-<body>
-
-    <main>
-        <div class="container">
-            <section class="hero">
-                <h1>{{ page.title }}</h1>
-                <p>{{ page.description }}</p>
-            </section>
-            <div class="content-wrapper">
-                <div class="main-content">
-                    {{ content }}
-                    <!-- Sorting and Filtering -->
-                    <section class="sorting-section">
-                        <h2>Sorting Options</h2>
-                        <div class="sorting-options">
-                            <button class="sort-btn active" data-sort="significance">
-                                <i class="fas fa-star"></i>
-                                <span>Impact & Significance</span>
-                            </button>
-                            <button class="sort-btn" data-sort="value">
-                                <i class="fas fa-dollar-sign"></i>
-                                <span>Total Value</span>
-                            </button>
-                            <button class="sort-btn" data-sort="recipients">
-                                <i class="fas fa-users"></i>
-                                <span>Number of Recipients</span>
-                            </button>
-                            <button class="sort-btn" data-sort="year">
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>Year</span>
-                            </button>
-                        </div>
-                        <div class="view-options">
-                            <button class="view-btn active" data-view="table">
-                                <i class="fas fa-table"></i>
-                                <span>Table</span>
-                            </button>
-                            <button class="view-btn" data-view="cards">
-                                <i class="fas fa-th-large"></i>
-                                <span>Cards</span>
-                            </button>
-                            <button class="view-btn" data-view="list">
-                                <i class="fas fa-list"></i>
-                                <span>List</span>
-                            </button>
-                        </div>
-                    </section>
-                    <!-- Ranking Table View -->
-                    <section class="ranking-section table-view">
-                        <h2>Ranking Table</h2>
-                        <div class="table-container">
-                            <table class="ranking-table">
-                                <thead>
-                                    <tr>
-                                        <th class="rank-col">Rank <i class="fas fa-sort-down"></i></th>
-                                        <th class="project-col">Project</th>
-                                        <th class="value-col">Total Value (at distribution)</th>
-                                        <th class="recipients-col">Recipients</th>
-                                        <th class="year-col">Year</th>
-                                        <th class="significance-col">Significance</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {% for airdrop in page.airdrops %}
-                                    <tr>
-                                        <td class="rank-col">
-                                            <div class="rank-badge">{{ airdrop.rank }}</div>
-                                        </td>
-                                        <td class="project-col">
-                                            <div class="project-info">
-                                                <!-- Placeholder for icon: <img src="project-icons/{{ airdrop.project | slugify }}.svg" alt="{{ airdrop.project }}" class="project-icon"> -->
-                                                <div>
-                                                    <h4>{{ airdrop.project }}</h4>
-                                                    <!-- <span class="project-tag">...</span> -->
-                                                </div>
+<main>
+    <div class="container">
+        <section class="hero">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.description }}</p>
+        </section>
+        <div class="content-wrapper">
+            <div class="main-content">
+                {{ content }}
+                <!-- Sorting and Filtering -->
+                <section class="sorting-section">
+                    <h2>Sorting Options</h2>
+                    <div class="sorting-options">
+                        <button class="sort-btn active" data-sort="significance">
+                            <i class="fas fa-star"></i>
+                            <span>Impact & Significance</span>
+                        </button>
+                        <button class="sort-btn" data-sort="value">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Total Value</span>
+                        </button>
+                        <button class="sort-btn" data-sort="recipients">
+                            <i class="fas fa-users"></i>
+                            <span>Number of Recipients</span>
+                        </button>
+                        <button class="sort-btn" data-sort="year">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Year</span>
+                        </button>
+                    </div>
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="table">
+                            <i class="fas fa-table"></i>
+                            <span>Table</span>
+                        </button>
+                        <button class="view-btn" data-view="cards">
+                            <i class="fas fa-th-large"></i>
+                            <span>Cards</span>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                            <span>List</span>
+                        </button>
+                    </div>
+                </section>
+                <!-- Ranking Table View -->
+                <section class="ranking-section table-view">
+                    <h2>Ranking Table</h2>
+                    <div class="table-container">
+                        <table class="ranking-table">
+                            <thead>
+                                <tr>
+                                    <th class="rank-col">Rank <i class="fas fa-sort-down"></i></th>
+                                    <th class="project-col">Project</th>
+                                    <th class="value-col">Total Value (at distribution)</th>
+                                    <th class="recipients-col">Recipients</th>
+                                    <th class="year-col">Year</th>
+                                    <th class="significance-col">Significance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for airdrop in page.airdrops %}
+                                <tr>
+                                    <td class="rank-col">
+                                        <div class="rank-badge">{{ airdrop.rank }}</div>
+                                    </td>
+                                    <td class="project-col">
+                                        <div class="project-info">
+                                            <!-- Placeholder for icon: <img src="project-icons/{{ airdrop.project | slugify }}.svg" alt="{{ airdrop.project }}" class="project-icon"> -->
+                                            <div>
+                                                <h4>{{ airdrop.project }}</h4>
+                                                <!-- <span class="project-tag">...</span> -->
                                             </div>
-                                        </td>
-                                        <td class="value-col">
-                                            <div class="value-display">
-                                                <span class="value-amount">{{ airdrop.value_display }}</span>
-                                                <!-- <div class="value-bar" style="--percentage: ..."></div> -->
-                                            </div>
-                                        </td>
-                                        <td class="recipients-col">
-                                            <div class="recipients-display">
-                                                <span>{{ airdrop.recipients }}</span>
-                                                <!-- <div class="recipients-bar" style="--percentage: ..."></div> -->
-                                            </div>
-                                        </td>
-                                        <td class="year-col">{{ airdrop.year }}</td>
-                                        <td class="significance-col">{{ airdrop.significance }}</td>
-                                    </tr>
-                                    {% endfor %}
-                                </tbody>
-                            </table>
+                                        </div>
+                                    </td>
+                                    <td class="value-col">
+                                        <div class="value-display">
+                                            <span class="value-amount">{{ airdrop.value_display }}</span>
+                                            <!-- <div class="value-bar" style="--percentage: ..."></div> -->
+                                        </div>
+                                    </td>
+                                    <td class="recipients-col">
+                                        <div class="recipients-display">
+                                            <span>{{ airdrop.recipients }}</span>
+                                            <!-- <div class="recipients-bar" style="--percentage: ..."></div> -->
+                                        </div>
+                                    </td>
+                                    <td class="year-col">{{ airdrop.year }}</td>
+                                    <td class="significance-col">{{ airdrop.significance }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
+                <!-- Card View (Initially Hidden) -->
+                <section class="ranking-section card-view hidden">
+                    <h2>Top Airdrops</h2>
+                    <div class="card-grid">
+                        {% for airdrop in page.airdrops %}
+                        <div class="airdrop-card">
+                            <div class="card-header">
+                                <div class="rank-badge">{{ airdrop.rank }}</div>
+                                <div class="project-info">
+                                    <!-- Placeholder for icon: <img src="project-icons/{{ airdrop.project | slugify }}.svg" alt="{{ airdrop.project }}" class="project-icon"> -->
+                                    <h3>{{ airdrop.project }}</h3>
+                                </div>
+                                <div class="year-badge">{{ airdrop.year }}</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="stat-row">
+                                    <div class="stat-label">Total Value:</div>
+                                    <div class="stat-value">{{ airdrop.value_display }}</div>
+                                </div>
+                                <div class="stat-row">
+                                    <div class="stat-label">Recipients:</div>
+                                    <div class="stat-value">{{ airdrop.recipients }}</div>
+                                </div>
+                                <div class="significance">
+                                    <p>{{ airdrop.significance }}</p>
+                                </div>
+                                <div class="tags">
+                                    <!-- <span class="tag">...</span> -->
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="details-btn">View Details</button>
+                            </div>
                         </div>
-                        <div class="table-pagination">
-                            <button class="pagination-btn active">1</button>
-                            <button class="pagination-btn">2</button>
-                            <button class="pagination-btn next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                    </section>
-                    <!-- Card View (Initially Hidden) -->
-                    <section class="ranking-section card-view hidden">
-                        <h2>Top Airdrops</h2>
-                        <div class="card-grid">
-                            {% for airdrop in page.airdrops %}
-                            <div class="airdrop-card">
-                                <div class="card-header">
-                                    <div class="rank-badge">{{ airdrop.rank }}</div>
+                        {% endfor %}
+                    </div>
+                    <div class="card-pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
+                <!-- List View (Initially Hidden) -->
+                <section class="ranking-section list-view hidden">
+                    <h2>Airdrop Rankings</h2>
+                    <div class="list-container">
+                        {% for airdrop in page.airdrops %}
+                        <div class="airdrop-list-item">
+                            <div class="list-rank">
+                                <div class="rank-badge">{{ airdrop.rank }}</div>
+                            </div>
+                            <div class="list-content">
+                                <div class="list-header">
                                     <div class="project-info">
                                         <!-- Placeholder for icon: <img src="project-icons/{{ airdrop.project | slugify }}.svg" alt="{{ airdrop.project }}" class="project-icon"> -->
                                         <h3>{{ airdrop.project }}</h3>
                                     </div>
-                                    <div class="year-badge">{{ airdrop.year }}</div>
+                                    <div class="list-meta">
+                                        <span class="year-badge">{{ airdrop.year }}</span>
+                                        <span class="value-badge">{{ airdrop.value_display }}</span>
+                                        <span class="recipients-badge">{{ airdrop.recipients }}</span>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="stat-row">
-                                        <div class="stat-label">Total Value:</div>
-                                        <div class="stat-value">{{ airdrop.value_display }}</div>
-                                    </div>
-                                    <div class="stat-row">
-                                        <div class="stat-label">Recipients:</div>
-                                        <div class="stat-value">{{ airdrop.recipients }}</div>
-                                    </div>
-                                    <div class="significance">
-                                        <p>{{ airdrop.significance }}</p>
-                                    </div>
+                                <div class="list-body">
+                                    <p>{{ airdrop.significance }}</p>
+                                </div>
+                                <div class="list-footer">
                                     <div class="tags">
                                         <!-- <span class="tag">...</span> -->
                                     </div>
-                                </div>
-                                <div class="card-footer">
                                     <button class="details-btn">View Details</button>
                                 </div>
                             </div>
-                            {% endfor %}
                         </div>
-                        <div class="card-pagination">
-                            <button class="pagination-btn active">1</button>
-                            <button class="pagination-btn">2</button>
-                            <button class="pagination-btn next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                    </section>
-                    <!-- List View (Initially Hidden) -->
-                    <section class="ranking-section list-view hidden">
-                        <h2>Airdrop Rankings</h2>
-                        <div class="list-container">
-                            {% for airdrop in page.airdrops %}
-                            <div class="airdrop-list-item">
-                                <div class="list-rank">
-                                    <div class="rank-badge">{{ airdrop.rank }}</div>
-                                </div>
-                                <div class="list-content">
-                                    <div class="list-header">
-                                        <div class="project-info">
-                                            <!-- Placeholder for icon: <img src="project-icons/{{ airdrop.project | slugify }}.svg" alt="{{ airdrop.project }}" class="project-icon"> -->
-                                            <h3>{{ airdrop.project }}</h3>
-                                        </div>
-                                        <div class="list-meta">
-                                            <span class="year-badge">{{ airdrop.year }}</span>
-                                            <span class="value-badge">{{ airdrop.value_display }}</span>
-                                            <span class="recipients-badge">{{ airdrop.recipients }}</span>
-                                        </div>
-                                    </div>
-                                    <div class="list-body">
-                                        <p>{{ airdrop.significance }}</p>
-                                    </div>
-                                    <div class="list-footer">
-                                        <div class="tags">
-                                            <!-- <span class="tag">...</span> -->
-                                        </div>
-                                        <button class="details-btn">View Details</button>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                        <div class="list-pagination">
-                            <button class="pagination-btn active">1</button>
-                            <button class="pagination-btn">2</button>
-                            <button class="pagination-btn next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                    </section>
-                </div>
-                <aside class="sidebar">
-                    <!-- Value Distribution Chart -->
-                    <section class="sidebar-section">
-                        <h2>Value Distribution</h2>
-                        <div class="chart-container">
-                            <canvas id="valueChart"></canvas>
-                        </div>
-                        <div class="chart-legend">
-                            {% assign sorted_airdrops = page.airdrops | sort: "value" | reverse %}
-                            {% for airdrop in sorted_airdrops limit:5 %}
-                            <div class="legend-item">
-                                <div class="legend-color"
-                                    style="background-color: {{ site.data.hof_colors[forloop.index0] }};"></div>
-                                <div class="legend-label">{{ airdrop.project }}</div>
-                                <div class="legend-value">{{ airdrop.value_display }}</div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </section>
-                    <!-- Recipients Comparison -->
-                    <section class="sidebar-section">
-                        <h2>Recipients Comparison</h2>
-                        <div class="chart-container">
-                            <canvas id="recipientsChart"></canvas>
-                        </div>
-                        <div class="chart-note">
-                            <i class="fas fa-info-circle"></i>
-                            <p>{% assign max = page.airdrops | sort: 'recipients' | last %}{{ max.project }} had the
-                                largest number of recipients with {{ max.recipients }} addresses receiving tokens.</p>
-                        </div>
-                    </section>
-                    <!-- Distribution Methods -->
-                    <section class="sidebar-section">
-                        <h2>Distribution Methods</h2>
-                        <div class="distribution-methods">
-                            <div class="method-item">
-                                <div class="method-icon">
-                                    <i class="fas fa-history"></i>
-                                </div>
-                                <div class="method-content">
-                                    <h3>Retroactive</h3>
-                                    <p>Rewarding past users of a protocol</p>
-                                    <div class="method-projects">
-                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
-                                        'Retroactive' %}<span>{{ airdrop.project }}</span>{% endif %}{% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="method-item">
-                                <div class="method-icon">
-                                    <i class="fas fa-layer-group"></i>
-                                </div>
-                                <div class="method-content">
-                                    <h3>Tiered</h3>
-                                    <p>Different amounts based on activity levels</p>
-                                    <div class="method-projects">
-                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains 'tier'
-                                        or airdrop.key_innovation contains 'Tier' %}<span>{{ airdrop.project }}</span>{%
-                                        endif %}{% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="method-item">
-                                <div class="method-icon">
-                                    <i class="fas fa-code-branch"></i>
-                                </div>
-                                <div class="method-content">
-                                    <h3>Testnet Participation</h3>
-                                    <p>Rewarding early testers</p>
-                                    <div class="method-projects">
-                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
-                                        'testnet' or airdrop.key_innovation contains 'Testnet' %}<span>{{
-                                            airdrop.project }}</span>{% endif %}{% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="method-item">
-                                <div class="method-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="method-content">
-                                    <h3>Community-based</h3>
-                                    <p>Broad distribution to community members</p>
-                                    <div class="method-projects">
-                                        {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
-                                        'community' or airdrop.key_innovation contains 'Community' %}<span>{{
-                                            airdrop.project }}</span>{% endif %}{% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </aside>
+                        {% endfor %}
+                    </div>
+                    <div class="list-pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
             </div>
-            <section class="methodology-section">
-                <h2>Methodology</h2>
-                <div class="methodology-content">
-                    <p>Projects in the Hall of Fame were selected and ranked based on the following criteria:</p>
-                    <div class="criteria-grid">
-                        <div class="criteria-card">
-                            <div class="criteria-icon">
+            <aside class="sidebar">
+                <!-- Value Distribution Chart -->
+                <section class="sidebar-section">
+                    <h2>Value Distribution</h2>
+                    <div class="chart-container">
+                        <canvas id="valueChart"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        {% assign sorted_airdrops = page.airdrops | sort: "value" | reverse %}
+                        {% for airdrop in sorted_airdrops limit:5 %}
+                        <div class="legend-item">
+                            <div class="legend-color"
+                                style="background-color: {{ site.data.hof_colors[forloop.index0] }};"></div>
+                            <div class="legend-label">{{ airdrop.project }}</div>
+                            <div class="legend-value">{{ airdrop.value_display }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+                <!-- Recipients Comparison -->
+                <section class="sidebar-section">
+                    <h2>Recipients Comparison</h2>
+                    <div class="chart-container">
+                        <canvas id="recipientsChart"></canvas>
+                    </div>
+                    <div class="chart-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>{% assign max = page.airdrops | sort: 'recipients' | last %}{{ max.project }} had the
+                            largest number of recipients with {{ max.recipients }} addresses receiving tokens.</p>
+                    </div>
+                </section>
+                <!-- Distribution Methods -->
+                <section class="sidebar-section">
+                    <h2>Distribution Methods</h2>
+                    <div class="distribution-methods">
+                        <div class="method-item">
+                            <div class="method-icon">
                                 <i class="fas fa-history"></i>
                             </div>
-                            <h3>Historical Impact</h3>
-                            <p>How the airdrop influenced subsequent token distribution models and set precedents in the
-                                industry.</p>
-                        </div>
-                        <div class="criteria-card">
-                            <div class="criteria-icon">
-                                <i class="fas fa-dollar-sign"></i>
+                            <div class="method-content">
+                                <h3>Retroactive</h3>
+                                <p>Rewarding past users of a protocol</p>
+                                <div class="method-projects">
+                                    {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
+                                    'Retroactive' %}<span>{{ airdrop.project }}</span>{% endif %}{% endfor %}
+                                </div>
                             </div>
-                            <h3>Total Value</h3>
-                            <p>The approximate total value of tokens distributed at the time of the airdrop.</p>
                         </div>
-                        <div class="criteria-card">
-                            <div class="criteria-icon">
-                                <i class="fas fa-balance-scale"></i>
+                        <div class="method-item">
+                            <div class="method-icon">
+                                <i class="fas fa-layer-group"></i>
                             </div>
-                            <h3>Distribution Fairness</h3>
-                            <p>How equitably tokens were distributed among participants.</p>
+                            <div class="method-content">
+                                <h3>Tiered</h3>
+                                <p>Different amounts based on activity levels</p>
+                                <div class="method-projects">
+                                    {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains 'tier'
+                                    or airdrop.key_innovation contains 'Tier' %}<span>{{ airdrop.project }}</span>{%
+                                    endif %}{% endfor %}
+                                </div>
+                            </div>
                         </div>
-                        <div class="criteria-card">
-                            <div class="criteria-icon">
-                                <i class="fas fa-lightbulb"></i>
+                        <div class="method-item">
+                            <div class="method-icon">
+                                <i class="fas fa-code-branch"></i>
                             </div>
-                            <h3>Innovation</h3>
-                            <p>Novel approaches to eligibility criteria, distribution mechanisms, or governance
-                                implementation.</p>
+                            <div class="method-content">
+                                <h3>Testnet Participation</h3>
+                                <p>Rewarding early testers</p>
+                                <div class="method-projects">
+                                    {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
+                                    'testnet' or airdrop.key_innovation contains 'Testnet' %}<span>{{
+                                        airdrop.project }}</span>{% endif %}{% endfor %}
+                                </div>
+                            </div>
                         </div>
-                        <div class="criteria-card">
-                            <div class="criteria-icon">
-                                <i class="fas fa-chart-line"></i>
+                        <div class="method-item">
+                            <div class="method-icon">
+                                <i class="fas fa-users"></i>
                             </div>
-                            <h3>Long-term Success</h3>
-                            <p>The continued relevance and value of the project after the airdrop.</p>
+                            <div class="method-content">
+                                <h3>Community-based</h3>
+                                <p>Broad distribution to community members</p>
+                                <div class="method-projects">
+                                    {% for airdrop in page.airdrops %}{% if airdrop.key_innovation contains
+                                    'community' or airdrop.key_innovation contains 'Community' %}<span>{{
+                                        airdrop.project }}</span>{% endif %}{% endfor %}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="methodology-note">
-                        <i class="fas fa-info-circle"></i>
-                        <p>This ranking is periodically updated to reflect new information and changing perspectives on
-                            historical significance.</p>
+                </section>
+            </aside>
+        </div>
+        <section class="methodology-section">
+            <h2>Methodology</h2>
+            <div class="methodology-content">
+                <p>Projects in the Hall of Fame were selected and ranked based on the following criteria:</p>
+                <div class="criteria-grid">
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Historical Impact</h3>
+                        <p>How the airdrop influenced subsequent token distribution models and set precedents in the
+                            industry.</p>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Total Value</h3>
+                        <p>The approximate total value of tokens distributed at the time of the airdrop.</p>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Distribution Fairness</h3>
+                        <p>How equitably tokens were distributed among participants.</p>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>Novel approaches to eligibility criteria, distribution mechanisms, or governance
+                            implementation.</p>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Long-term Success</h3>
+                        <p>The continued relevance and value of the project after the airdrop.</p>
                     </div>
                 </div>
-            </section>
-        </div>
-    </main>
-    <script>
-        window.airdrops = {{ page.airdrops | jsonify }};
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ '/assets/js/hall-of-fame.js' | relative_url }}"></script>
-</body>
+                <div class="methodology-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>This ranking is periodically updated to reflect new information and changing perspectives on
+                        historical significance.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
 
-</html>
+<script>
+    window.airdrops = {{ page.airdrops | jsonify }};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ '/assets/js/hall-of-fame.js' | relative_url }}"></script>

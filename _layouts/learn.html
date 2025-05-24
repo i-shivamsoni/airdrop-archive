@@ -1,134 +1,119 @@
 ---
 layout: default
+title: Learn
+description: Learn about cryptocurrency airdrops, how they work, and how to participate in them
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <title>{{ page.title }} - Crypto Airdrop Archive</title>
-    
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/learn.css' | absolute_url }}">
-    <script>
-        // Initialize site data with empty array if not defined
-        window.siteData = window.siteData || { posts: [] };
-        window.siteBaseUrl = "{{ site.baseurl | default: '' }}";
-        
-        // Inject Jekyll data
-        window.siteData.posts = [
-            {% for post in site.posts %}
-            {
-                title: "{{ post.title }}",
-                date: "{{ post.date }}",
-                description: "{{ post.description | strip_html | strip_newlines | escape }}",
-                pagetype: "{{ post.pagetype }}",
-                category: "{{ post.category }}",
-                difficulty: "{{ post.difficulty }}",
-                readTime: "{{ post.readTime }}",
-                url: "{{ post.url }}"
-            }{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-        ];
-    </script>
-</head>
-<body>
 
-    <main>
+<main>
+    <div class="container">
         <div class="container">
             <section class="hero">
                 <h1>{{ page.title }}</h1>
                 <p>{{ page.description }}</p>
             </section>
 
-            <div class="content-wrapper three-column">
-                <!-- Left Sidebar -->
-                <aside class="sidebar left-sidebar">
-                    <!-- Category Filter -->
-                    <section class="filter-section">
-                        <h2><i class="fas fa-layer-group"></i> Categories</h2>
-                        <div class="filter-options">
-                            <label class="checkbox">
-                                <input type="checkbox" data-category="basics">
-                                <span class="checkmark"></span>
-                                <span>Basics</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-category="advanced">
-                                <span class="checkmark"></span>
-                                <span>Advanced</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-category="security">
-                                <span class="checkmark"></span>
-                                <span>Security</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-category="strategies">
-                                <span class="checkmark"></span>
-                                <span>Strategies</span>
-                            </label>
-                        </div>
-                    </section>
-
-                    <!-- Difficulty Filter -->
-                    <section class="filter-section">
-                        <h2><i class="fas fa-signal"></i> Difficulty</h2>
-                        <div class="filter-options">
-                            <label class="checkbox">
-                                <input type="checkbox" data-difficulty="beginner">
-                                <span class="checkmark"></span>
-                                <span>Beginner</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-difficulty="intermediate">
-                                <span class="checkmark"></span>
-                                <span>Intermediate</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" data-difficulty="advanced">
-                                <span class="checkmark"></span>
-                                <span>Advanced</span>
-                            </label>
-                        </div>
-                    </section>
-                </aside>
-
-                <!-- Main Content -->
-                <div class="main-content">
-                    <div class="cards-grid" id="learn-cards">
-                        <!-- Cards will be dynamically populated here -->
+        <div class="content-wrapper three-column">
+            <!-- Left Sidebar -->
+            <aside class="sidebar left-sidebar">
+                <!-- Category Filter -->
+                <section class="filter-section">
+                    <h2><i class="fas fa-layer-group"></i> Categories</h2>
+                    <div class="filter-options">
+                        <label class="checkbox">
+                            <input type="checkbox" data-category="basics">
+                            <span class="checkmark"></span>
+                            <span>Basics</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-category="advanced">
+                            <span class="checkmark"></span>
+                            <span>Advanced</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-category="security">
+                            <span class="checkmark"></span>
+                            <span>Security</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-category="strategies">
+                            <span class="checkmark"></span>
+                            <span>Strategies</span>
+                        </label>
                     </div>
+                </section>
+
+                <!-- Difficulty Filter -->
+                <section class="filter-section">
+                    <h2><i class="fas fa-signal"></i> Difficulty</h2>
+                    <div class="filter-options">
+                        <label class="checkbox">
+                            <input type="checkbox" data-difficulty="beginner">
+                            <span class="checkmark"></span>
+                            <span>Beginner</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-difficulty="intermediate">
+                            <span class="checkmark"></span>
+                            <span>Intermediate</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-difficulty="advanced">
+                            <span class="checkmark"></span>
+                            <span>Advanced</span>
+                        </label>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="cards-grid" id="learn-cards">
+                    <!-- Cards will be dynamically populated here -->
                 </div>
-
-                <!-- Right Sidebar -->
-                <aside class="sidebar right-sidebar">
-                    <section class="featured-content">
-                        <h2><i class="fas fa-star"></i> Featured Resources</h2>
-                        <div class="featured-list">
-                            <!-- Featured items will be dynamically populated -->
-                        </div>
-                    </section>
-                </aside>
             </div>
-        </div>
-    </main>
 
-    <script src="{{ '/assets/js/learn.js' | absolute_url }}"></script>
-    <script>
-        // Unregister any existing service workers
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                for(let registration of registrations) {
-                    registration.unregister();
-                }
-            });
-        }
-    </script>
-</body>
-</html> 
+            <!-- Right Sidebar -->
+            <aside class="sidebar right-sidebar">
+                <section class="featured-content">
+                    <h2><i class="fas fa-star"></i> Featured Resources</h2>
+                    <div class="featured-list">
+                        <!-- Featured items will be dynamically populated -->
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<script src="{{ '/assets/js/learn.js' | relative_url }}"></script>
+<script>
+    // Initialize site data
+    window.siteData = window.siteData || { posts: [] };
+    window.siteBaseUrl = "{{ site.baseurl | default: '' }}";
+
+    // Inject Jekyll data
+    window.siteData.posts = [
+        {% for post in site.posts %}
+        {
+            "title": "{{ post.title | escape }}",
+            "date": "{{ post.date }}",
+            "description": "{{ post.description | strip_html | strip_newlines | escape }}",
+            "pagetype": "{{ post.pagetype }}",
+            "category": "{{ post.category }}",
+            "difficulty": "{{ post.difficulty }}",
+            "readTime": "{{ post.readTime }}",
+            "url": "{{ post.url }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ];
+</script>
+<script>
+    // Unregister any existing service workers
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for (let registration of registrations) {
+                registration.unregister();
+            }
+        });
+    }
+</script>

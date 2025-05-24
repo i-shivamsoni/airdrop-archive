@@ -190,4 +190,69 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Handle month bar clicks in the sidebar
+    const chartBars = document.querySelectorAll('.chart-bar');
+    chartBars.forEach(bar => {
+        bar.addEventListener('click', function() {
+            const month = this.dataset.month;
+            const year = this.dataset.year;
+            const targetId = `month-${month.toLowerCase()}-${year}`;
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                // First ensure the correct year is active
+                const yearTab = document.querySelector(`.year-tab[data-year="${year}"]`);
+                if (yearTab && !yearTab.classList.contains('active')) {
+                    yearTab.click();
+                }
+
+                // Collapse all other month sections
+                const allMonthSections = document.querySelectorAll('.month-section');
+                allMonthSections.forEach(section => {
+                    if (section.id !== targetId && !section.classList.contains('collapsed')) {
+                        const expandButton = section.querySelector('.expand-month, .load-more');
+                        if (expandButton) {
+                            const span = expandButton.querySelector('span');
+                            const icon = expandButton.querySelector('i');
+                            if (span) span.textContent = 'Expand';
+                            if (icon) icon.className = 'fas fa-chevron-down';
+                            section.classList.add('collapsed');
+                            const entries = section.querySelector('.timeline-entries');
+                            if (entries) entries.style.display = 'none';
+                        }
+                    }
+                });
+
+                // Then scroll to the month section
+                setTimeout(() => {
+                    // Expand the target month section if it's collapsed
+                    if (targetSection.classList.contains('collapsed')) {
+                        const expandButton = targetSection.querySelector('.expand-month, .load-more');
+                        if (expandButton) {
+                            const span = expandButton.querySelector('span');
+                            const icon = expandButton.querySelector('i');
+                            if (span) span.textContent = 'Collapse';
+                            if (icon) icon.className = 'fas fa-chevron-up';
+                            targetSection.classList.remove('collapsed');
+                            const entries = targetSection.querySelector('.timeline-entries');
+                            if (entries) entries.style.display = '';
+                        }
+                    }
+
+                    // Scroll to the section with smooth animation
+                    targetSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Add a highlight effect
+                    targetSection.classList.add('highlight');
+                    setTimeout(() => {
+                        targetSection.classList.remove('highlight');
+                    }, 2000);
+                }, 100);
+            }
+        });
+    });
 });
