@@ -418,10 +418,13 @@ a:hover {
 
 /* Layout Styles */
 main {
-    padding: var(--spacing-xl) 0;
+    padding-top: calc(10px + var(--spacing-xl)); /* Increased padding to account for fixed header */
+    padding-bottom: var(--spacing-xl);
 }
 
 .hero {
+        margin-top: var(--spacing-xl); /* Increased margin top */
+
     text-align: center;
     margin-bottom: var(--spacing-xl);
 }

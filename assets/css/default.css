@@ -70,22 +70,28 @@ a {
 a:hover {
     color: var(--primary-dark);
 }
-header {
+.site-header {
     background-color: var(--light);
     box-shadow: var(--shadow-sm);
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     padding: var(--spacing-md) 0;
 }
 
-header .container {
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo {
+.header-logo {
     display: flex;
     align-items: center;
     font-weight: 700;
@@ -93,17 +99,17 @@ header .container {
     color: var(--primary);
 }
 
-.logo img {
+.header-logo img {
     height: 40px;
     margin-right: var(--spacing-sm);
 }
 
-nav ul {
+.header-nav ul {
     display: flex;
     gap: var(--spacing-lg);
 }
 
-nav a {
+.header-nav a {
     color: var(--dark-light);
     font-weight: 500;
     padding: var(--spacing-sm) var(--spacing-md);
@@ -112,7 +118,7 @@ nav a {
     position: relative;
 }
 
-nav a::after {
+.header-nav a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -124,15 +130,17 @@ nav a::after {
     transform: translateX(-50%);
 }
 
-nav a:hover::after,
-nav a.active::after {
+.header-nav a:hover::after,
+.header-nav a.active::after {
     width: 80%;
 }
 
-nav a:hover, nav a.active {
+.header-nav a:hover, 
+.header-nav a.active {
     color: var(--primary);
     background-color: rgba(99, 102, 241, 0.1);
 }
+
 .header-actions {
     display: flex;
     align-items: center;
@@ -195,7 +203,7 @@ nav a:hover, nav a.active {
     color: var(--primary);
 }
 main {
-    padding: var(--spacing-xl) 0;
+    padding-top: calc(80px + var(--spacing-xl));
 }
 
 main .container {
@@ -214,4 +222,10 @@ ul, ol {
 }
 li {
     list-style: none;
+}
+
+/* Dark mode adjustments */
+.dark-mode .site-header {
+    background-color: var(--dark);
+    border-bottom: 1px solid var(--dark-light);
 }

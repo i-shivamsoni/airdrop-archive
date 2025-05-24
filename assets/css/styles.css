@@ -2535,3 +2535,44 @@ button:active {
     content: attr(data-label);
   }
 }
+
+/* Home Page Specific Styles */
+.home-page {
+    min-height: 100vh;
+    padding-top: calc(80px + var(--spacing-xl));
+}
+
+.home-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Update existing container styles to be more specific */
+.content-wrapper.three-column {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr) 320px;
+    gap: 2rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+/* Responsive adjustments for home page */
+@media (max-width: 1400px) {
+    .home-container {
+        padding: 0 var(--spacing-lg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 0 var(--spacing-sm);
+    }
+}

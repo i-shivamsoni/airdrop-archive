@@ -269,11 +269,13 @@ nav a.active {
 
 /* Main Content */
 main {
-    padding: var(--spacing-xl) 0;
+    padding-top: calc(10px + var(--spacing-xl)); /* Increased padding to account for fixed header */
+    padding-bottom: var(--spacing-xl);
 }
 
 .hero {
     text-align: center;
+    margin-top: var(--spacing-xl); /* Increased margin top */
     margin-bottom: var(--spacing-xxl);
     background-color: rgba(99, 102, 241, 0.05);
     padding: var(--spacing-xl);
@@ -1171,6 +1173,15 @@ footer {
 
     .significance-col {
         display: none;
+    }
+
+    main {
+        padding-top: calc(70px + var(--spacing-lg)); /* Adjusted for mobile */
+    }
+    
+    .hero {
+        margin-top: var(--spacing-lg); /* Adjusted for mobile */
+        padding: var(--spacing-lg);
     }
 }
 

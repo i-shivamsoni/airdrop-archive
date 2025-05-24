@@ -41,7 +41,7 @@ body {
 }
 
 main {
-    padding-top: var(--spacing);
+    padding-top: calc(10px + var(--spacing)); /* Account for fixed header */
     padding-bottom: var(--spacing);
 }
 
@@ -52,6 +52,7 @@ main {
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
     padding: 2.5rem 2rem 2rem 2rem;
+    margin-top: var(--spacing); /* Add margin top */
     margin-bottom: var(--spacing);
     display: flex;
     flex-direction: row;
@@ -314,8 +315,11 @@ main {
         padding-left: var(--spacing-sm);
         padding-right: var(--spacing-sm);
     }
+    main {
+        padding-top: calc(70px + var(--spacing)); /* Slightly reduced for mobile */
+    }
     .enhanced-hero {
-        flex-direction: column;
+        margin-top: var(--spacing-sm); /* Reduced margin for mobile */
         padding: 1.5rem 0.7rem 1.2rem 0.7rem;
     }
     .post-content-card, .sidebar-content {
@@ -328,7 +332,7 @@ main {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Adjust this value based on your header height */
+    scroll-padding-top: 120px; /* Increased to account for fixed header */
 }
 
 /* Add highlight animation for headings */
