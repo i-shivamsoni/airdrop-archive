@@ -50,7 +50,7 @@ let currentFilteredProjects = [];
 let projects = [];
 
 function updateProjectCards(projects, page = 1) {
-    // Store the filtered projects globally
+    // Update the filtered projects globally
     currentFilteredProjects = projects;
     
     const grid = document.querySelector('.grid');
@@ -94,6 +94,8 @@ function updateProjectCards(projects, page = 1) {
 
 function updatePagination(totalPages, currentPage) {
     const pagination = document.querySelector('.pagination');
+    if (!pagination) return;
+    
     pagination.innerHTML = '';
 
     // Don't show pagination if there's only one page
@@ -168,32 +170,31 @@ function updatePagination(totalPages, currentPage) {
     
     const pageInput = document.createElement('input');
     pageInput.type = 'number';
-    pageInput.min = '1';
+    pageInput.className = 'page-input';
+    pageInput.min = 1;
     pageInput.max = totalPages;
     pageInput.value = currentPage;
-    pageInput.className = 'page-input';
     pageInput.placeholder = 'Page';
     
     const goButton = document.createElement('button');
-    goButton.textContent = 'Go';
     goButton.className = 'go-button';
+    goButton.textContent = 'Go';
     
-    const handlePageJump = () => {
-        const pageNum = parseInt(pageInput.value);
-        if (pageNum >= 1 && pageNum <= totalPages) {
-            updateProjectCards(currentFilteredProjects, pageNum);
-        } else {
-            pageInput.value = currentPage;
-        }
-    };
-    
-    pageInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            handlePageJump();
+    goButton.addEventListener('click', () => {
+        const page = parseInt(pageInput.value);
+        if (page >= 1 && page <= totalPages) {
+            updateProjectCards(currentFilteredProjects, page);
         }
     });
     
-    goButton.addEventListener('click', handlePageJump);
+    pageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const page = parseInt(pageInput.value);
+            if (page >= 1 && page <= totalPages) {
+                updateProjectCards(currentFilteredProjects, page);
+            }
+        }
+    });
     
     pageInputContainer.appendChild(pageInput);
     pageInputContainer.appendChild(goButton);
@@ -291,18 +292,22 @@ function createProjectCard(project) {
     const truncatedDescription = description.length > 150 ? description.substring(0, 150) + '...' : description;
 
     // Get ecosystem and function tags
-    const ecosystemTags = project.ecosystem ? project.ecosystem
-        .filter(e => e.toLowerCase() !== 'not-known')
-        .slice(0, 1)
-        .map(e => ({
-            type: 'ecosystem',
-            value: e
-        })) : [];
+    const ecosystemTags = project.ecosystem ? 
+        (Array.isArray(project.ecosystem) ? project.ecosystem : [project.ecosystem])
+            .filter(e => e && e.toLowerCase() !== 'not-known')
+            .slice(0, 1)
+            .map(e => ({
+                type: 'ecosystem',
+                value: e
+            })) : [];
     
-    const functionTags = project.function ? project.function.slice(0, 2).map(f => ({
-        type: 'function',
-        value: f
-    })) : [];
+    const functionTags = project.function ? 
+        (Array.isArray(project.function) ? project.function : [project.function])
+            .slice(0, 2)
+            .map(f => ({
+                type: 'function',
+                value: f
+            })) : [];
 
     // Combine tags and limit to fit in one line
     const allTags = [...ecosystemTags, ...functionTags];
@@ -1662,6 +1667,12 @@ function initEcosystemFilters() {
         { id: 'stellar', icon: 'stellar.svg' },
         { id: 'berachain', icon: 'berachain.svg' },
         { id: 'bnb', icon: 'bnb.svg' },
+        { id: 'arbitrum', icon: 'arbitrum.svg' },
+        { id: 'linea', icon: 'linea.svg' },
+        { id: 'bitcoin', icon: 'bitcoin.svg' },
+        { id: 'mode', icon: 'mode.svg' },
+        { id: 'icp', icon: 'icp.svg' },
+        { id: 'celestia', icon: 'celestia.svg' },
         { id: 'not-known', icon: 'not-known.svg' }
     ];
 

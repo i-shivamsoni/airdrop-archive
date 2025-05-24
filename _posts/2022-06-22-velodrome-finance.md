@@ -3,7 +3,7 @@ layout: "post"
 title: "Velodrome Finance"
 date: "2022-06-22 04:13 +0530"
 timeframe: ["2022"]
-ecosystem: ["optimism-ecosystem"]
+ecosystem: ["optimism"]
 rewardedActivity: ["retroactive"]
 category: [defi]
 function: ["defi", "dex"]
