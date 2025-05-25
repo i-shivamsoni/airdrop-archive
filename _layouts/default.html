@@ -80,6 +80,9 @@
                 <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
                 <span>Crypto Airdrop Archive</span>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav class="header-nav">
                 <ul>
                     <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>HOME</a></li>
@@ -95,7 +98,7 @@
                 </button>
                 <div class="search-bar">
                     <input type="text" placeholder="Search...">
-                    <button><i class="fas fa-search"></i></button>
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </div>
@@ -139,6 +142,46 @@
         
         // Check on window resize
         window.addEventListener('resize', checkScreenSize);
+
+        // Mobile menu toggle
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const headerNav = document.querySelector('.header-nav');
+        
+        hamburgerMenu.addEventListener('click', () => {
+            headerNav.classList.toggle('active');
+        });
+
+        // Mobile search bar toggle
+        const searchBar = document.querySelector('.search-bar');
+        const searchButton = searchBar.querySelector('button');
+        const searchInput = searchBar.querySelector('input');
+        
+        searchButton.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                searchBar.classList.toggle('expanded');
+                if (searchBar.classList.contains('expanded')) {
+                    searchInput.focus();
+                }
+            }
+        });
+
+        // Close search bar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1024 && 
+                !searchBar.contains(e.target) && 
+                searchBar.classList.contains('expanded')) {
+                searchBar.classList.remove('expanded');
+            }
+        });
+
+        // Handle search input
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                // Add your search functionality here
+                console.log('Searching for:', searchInput.value);
+            }
+        });
     </script>
 </body>
 </html> 

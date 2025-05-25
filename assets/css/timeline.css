@@ -305,7 +305,7 @@ main {
 .timeline-hero h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--dark);
     margin-bottom: 1rem;
 }
 

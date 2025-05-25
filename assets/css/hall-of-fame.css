@@ -97,6 +97,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+    position: relative;
 }
 
 h1,
@@ -273,14 +274,16 @@ main {
     padding-bottom: var(--spacing-xl);
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
-    margin-top: var(--spacing-xl); /* Increased margin top */
+    margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-xxl);
     background-color: rgba(99, 102, 241, 0.05);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-neumorphic);
+    width: 100%;
 }
 
 .hero p {
@@ -732,6 +735,7 @@ tr:nth-child(3) .rank-badge {
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
     box-shadow: var(--shadow-md);
+    width: 100%;
 }
 
 .methodology-content p {
@@ -1139,6 +1143,18 @@ footer {
     }
 }
 
+@media (max-width: 1031px) {
+    .hero,
+    .methodology-section {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        transform: none;
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-lg);
+    }
+}
+
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -1179,9 +1195,10 @@ footer {
         padding-top: calc(70px + var(--spacing-lg)); /* Adjusted for mobile */
     }
     
-    .hero {
-        margin-top: var(--spacing-lg); /* Adjusted for mobile */
-        padding: var(--spacing-lg);
+    .hero,
+    .methodology-section {
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
     }
 }
 
