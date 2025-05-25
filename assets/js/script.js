@@ -227,8 +227,7 @@ function getActiveFilters() {
         status: [],
         ecosystem: [],
         rewardedActivity: [],
-        blockchain_stack: [],
-        blockchain_type: []
+        blockchain_stack: []
     };
 
     // Get timeframe filters
@@ -258,11 +257,6 @@ function getActiveFilters() {
     // Get blockchain stack filters
     document.querySelectorAll('.stack-layer[data-selected="true"]').forEach(layer => {
         filters.blockchain_stack.push(layer.dataset.layer);
-    });
-
-    // Get blockchain type filters
-    document.querySelectorAll('.type-filter input[type="checkbox"]:checked').forEach(checkbox => {
-        filters.blockchain_type.push(checkbox.nextElementSibling.nextElementSibling.textContent);
     });
 
     return filters;
@@ -514,16 +508,6 @@ function filterProjects(projects, filters) {
             }
         }
 
-        // Blockchain type filter
-        if (filters.blockchain_type && filters.blockchain_type.length > 0) {
-            if (!project.blockchain_type || !Array.isArray(project.blockchain_type) || project.blockchain_type.length === 0) {
-                return false;
-            }
-            if (!project.blockchain_type.some(t => filters.blockchain_type.includes(t))) {
-                return false;
-            }
-        }
-
         return true;
     });
 }
@@ -581,11 +565,6 @@ function getBlockchainStackFilters() {
         .map(layer => layer.dataset.layer);
 }
 
-function getBlockchainTypeFilters() {
-    return Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]:checked'))
-        .map(cb => cb.nextElementSibling.nextElementSibling.textContent);
-}
-
 // Helper functions for restoring filter states
 function restoreTimeframeFilters(timeframes) {
     timeframes.forEach(year => {
@@ -636,18 +615,9 @@ function restoreBlockchainStackFilters(stacks) {
     });
 }
 
-function restoreBlockchainTypeFilters(types) {
-    types.forEach(type => {
-        const checkbox = Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]')).find(cb => 
-            cb.nextElementSibling.nextElementSibling.textContent === type
-        );
-        if (checkbox) checkbox.checked = true;
-    });
-}
-
 // Validation function
 function validateFilterState(state) {
-    const requiredKeys = ['timeframe', 'categories', 'status', 'ecosystem', 'rewardedActivity', 'blockchain_stack', 'blockchain_type'];
+    const requiredKeys = ['timeframe', 'categories', 'status', 'ecosystem', 'rewardedActivity', 'blockchain_stack'];
     return requiredKeys.every(key => Array.isArray(state[key]));
 }
 
@@ -672,8 +642,7 @@ function saveFilterStates() {
         status: getStatusFilters(),
         ecosystem: getEcosystemFilters(),
         rewardedActivity: getDistributionFilters(),
-        blockchain_stack: getBlockchainStackFilters(),
-        blockchain_type: getBlockchainTypeFilters()
+        blockchain_stack: getBlockchainStackFilters()
     };
     
     console.log('Saving filter states:', filterStates);
@@ -722,9 +691,6 @@ function restoreFilterStates() {
             
             console.log('Restoring blockchain stack filters:', filterStates.blockchain_stack);
             restoreBlockchainStackFilters(filterStates.blockchain_stack);
-            
-            console.log('Restoring blockchain type filters:', filterStates.blockchain_type);
-            restoreBlockchainTypeFilters(filterStates.blockchain_type);
             
             console.log('All filters restored successfully');
         } else {
@@ -814,15 +780,6 @@ function addFilterChangeListeners() {
             console.log('Blockchain stack filter clicked:', layer.dataset.layer);
             debouncedSaveFilterStates();
             updateStackSelection();
-        });
-    });
-
-    // Blockchain type filters
-    document.querySelectorAll('.type-filter input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            console.log('Blockchain type filter changed:', checkbox.nextElementSibling.nextElementSibling.textContent, checkbox.checked);
-            debouncedSaveFilterStates();
-            updateFilters();
         });
     });
 }
@@ -993,11 +950,6 @@ function updateActiveFilters(filters) {
             layer.dataset.selected = 'false';
         });
 
-        // Clear blockchain type filters
-        document.querySelectorAll('.type-filter input[type="checkbox"]').forEach(checkbox => {
-            checkbox.checked = false;
-        });
-
         // Reset all status checkboxes to checked
         document.querySelectorAll('.status-toggles input[type="checkbox"]').forEach(checkbox => {
             checkbox.checked = true;
@@ -1013,8 +965,7 @@ function updateActiveFilters(filters) {
             status: [],
             ecosystem: [],
             rewardedActivity: [],
-            blockchain_stack: [],
-            blockchain_type: []
+            blockchain_stack: []
         };
         updateFilters();
         updateActiveFilters(emptyFilters);
@@ -1098,19 +1049,6 @@ function updateActiveFilters(filters) {
         });
     }
 
-    // Add blockchain type filters
-    if (filters.blockchain_type && filters.blockchain_type.length > 0) {
-        filters.blockchain_type.forEach(type => {
-            const tag = document.createElement('div');
-            tag.className = 'filter-tag';
-            tag.innerHTML = `
-                <span>Type: ${type}</span>
-                <button><i class="fas fa-times"></i></button>
-            `;
-            filterTags.appendChild(tag);
-        });
-    }
-
     // Add event listeners to remove buttons
     filterTags.querySelectorAll('.filter-tag button').forEach(button => {
         button.addEventListener('click', function() {
@@ -1151,12 +1089,6 @@ function updateActiveFilters(filters) {
                 case 'stack':
                     const stackLayer = document.querySelector(`.stack-layer[data-layer="${filterValue}"]`);
                     if (stackLayer) stackLayer.dataset.selected = 'false';
-                    break;
-                case 'type':
-                    const typeCheckbox = Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]')).find(cb => 
-                        cb.nextElementSibling.nextElementSibling.textContent === filterValue
-                    );
-                    if (typeCheckbox) typeCheckbox.checked = false;
                     break;
             }
             
