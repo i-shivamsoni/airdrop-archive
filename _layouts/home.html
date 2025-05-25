@@ -532,6 +532,17 @@ layout: default
     <span class="filter-label">Filters</span>
 </button>
 
+<!-- Add meta viewport tag for proper mobile scaling -->
+<script>
+    // Add viewport meta tag if not present
+    if (!document.querySelector('meta[name="viewport"]')) {
+        const meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        document.head.appendChild(meta);
+    }
+</script>
+
 <script src="{{ site.baseurl }}/assets/js/script.js"></script>
 <script>
     // Initialize site data with empty array if not defined
