@@ -65,6 +65,9 @@
     padding: 0.75rem 1.25rem;
     backdrop-filter: blur(8px);
     transition: all 0.3s ease;
+    min-width: 300px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .search-bar:focus-within {
@@ -85,6 +88,8 @@
     padding: 0.5rem;
     font-size: 1.1rem;
     color: white;
+    min-width: 200px;
+    width: 100%;
 }
 
 .search-bar input::placeholder {
@@ -107,6 +112,8 @@
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .search-button:hover {
@@ -412,27 +419,12 @@ nav a:hover, nav a.active {
 
 @media (max-width: 768px) {
     .search-bar {
-        display: none;
+        min-width: unset;
+        width: 100%;
     }
     
-    .search-page {
-        padding-top: 72px;
-    }
-    
-    .search-header {
-        padding: 2rem 1rem;
-    }
-    
-    .search-header h1 {
-        font-size: 2.25rem;
-    }
-    
-    .search-description {
-        font-size: 1.1rem;
-    }
-    
-    .search-bar {
-        padding: 0.5rem 1rem;
+    .search-bar input {
+        min-width: unset;
     }
     
     .search-button span {

@@ -1864,3 +1864,159 @@ function initMobileFilterToggle() {
         }
     }
 }
+
+// Real-time search functionality
+function initSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const searchResults = document.getElementById('search-results-container');
+    const noResults = document.getElementById('no-results');
+    const searchLoading = document.getElementById('search-loading');
+    
+    if (!searchInput) return;
+
+    // Debounce function for search
+    const debouncedSearch = debounce((query) => {
+        performSearch(query);
+    }, 300);
+
+    // Real-time search on input
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+        if (query.length > 0) {
+            searchLoading.classList.remove('hidden');
+            debouncedSearch(query);
+        } else {
+            searchResults.innerHTML = '';
+            noResults.classList.add('hidden');
+            searchLoading.classList.add('hidden');
+        }
+    });
+
+    // Search button click handler
+    searchButton.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if (query.length > 0) {
+            searchLoading.classList.remove('hidden');
+            performSearch(query);
+        }
+    });
+
+    // Enter key handler
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const query = searchInput.value.trim();
+            if (query.length > 0) {
+                searchLoading.classList.remove('hidden');
+                performSearch(query);
+            }
+        }
+    });
+}
+
+function performSearch(query) {
+    const searchResults = document.getElementById('search-results-container');
+    const noResults = document.getElementById('no-results');
+    const searchLoading = document.getElementById('search-loading');
+    const resultsCount = document.getElementById('results-count');
+    const searchTime = document.getElementById('search-time');
+    
+    // Get all projects
+    const projects = getProjects();
+    
+    // Start timing
+    const startTime = performance.now();
+    
+    // Filter projects based on search query
+    const filteredProjects = projects.filter(project => {
+        const searchableText = [
+            project.title,
+            project.description,
+            project.tags?.join(' '),
+            project.ecosystem,
+            project.blockchain_stack?.join(' ')
+        ].filter(Boolean).join(' ').toLowerCase();
+        
+        return searchableText.includes(query.toLowerCase());
+    });
+    
+    // Calculate search time
+    const endTime = performance.now();
+    const searchDuration = ((endTime - startTime) / 1000).toFixed(2);
+    
+    // Update results count and search time
+    resultsCount.textContent = filteredProjects.length;
+    searchTime.textContent = `in ${searchDuration}s`;
+    
+    // Clear previous results
+    searchResults.innerHTML = '';
+    
+    // Show/hide no results message
+    if (filteredProjects.length === 0) {
+        noResults.classList.remove('hidden');
+    } else {
+        noResults.classList.add('hidden');
+        
+        // Display results
+        filteredProjects.forEach(project => {
+            const resultCard = createSearchResultCard(project);
+            searchResults.appendChild(resultCard);
+        });
+    }
+    
+    // Hide loading indicator
+    searchLoading.classList.add('hidden');
+}
+
+function createSearchResultCard(project) {
+    const card = document.createElement('div');
+    card.className = 'search-result';
+    
+    const title = document.createElement('h3');
+    const titleLink = document.createElement('a');
+    titleLink.href = project.url;
+    titleLink.textContent = project.title;
+    title.appendChild(titleLink);
+    
+    const meta = document.createElement('div');
+    meta.className = 'search-result-meta';
+    
+    const type = document.createElement('span');
+    type.className = 'result-type';
+    type.textContent = project.pagetype || 'Project';
+    
+    const date = document.createElement('span');
+    date.className = 'result-date';
+    date.textContent = formatDate(project.date);
+    
+    meta.appendChild(type);
+    meta.appendChild(date);
+    
+    const excerpt = document.createElement('p');
+    excerpt.className = 'search-result-excerpt';
+    excerpt.textContent = project.description;
+    
+    const tags = document.createElement('div');
+    tags.className = 'search-result-tags';
+    
+    if (project.tags) {
+        project.tags.forEach(tag => {
+            const tagSpan = document.createElement('span');
+            tagSpan.className = 'tag';
+            tagSpan.textContent = tag;
+            tags.appendChild(tagSpan);
+        });
+    }
+    
+    card.appendChild(title);
+    card.appendChild(meta);
+    card.appendChild(excerpt);
+    card.appendChild(tags);
+    
+    return card;
+}
+
+// Initialize search when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initSearch();
+});
