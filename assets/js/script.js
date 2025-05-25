@@ -947,6 +947,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Initializing ecosystem filters...');
         initEcosystemFilters();
 
+        // Initialize mobile filter toggle
+        initMobileFilterToggle();
+
     } catch (error) {
         console.error('Error during initialization:', error);
     }
@@ -1799,4 +1802,90 @@ function createEcosystemItem(ecosystem, iconName) {
     }
     
     return item;
+}
+
+// Mobile Filter Toggle State Management
+let filterState = {
+    leftSidebar: false,
+    rightSidebar: false
+};
+
+// Initialize mobile filter toggle
+function initMobileFilterToggle() {
+    const toggleButton = document.querySelector('.mobile-filter-toggle');
+    const leftSidebar = document.querySelector('.left-sidebar');
+    const rightSidebar = document.querySelector('.right-sidebar');
+    const filterLabel = toggleButton.querySelector('.filter-label');
+    const filterIcon = toggleButton.querySelector('i');
+
+    if (!toggleButton || !leftSidebar || !rightSidebar) return;
+
+    function updateButtonState() {
+        if (!filterState.leftSidebar && !filterState.rightSidebar) {
+            // State 1: No sidebars open
+            filterIcon.className = 'fas fa-filter';
+            filterLabel.textContent = 'Filters';
+            leftSidebar.classList.remove('visible');
+            rightSidebar.classList.remove('visible');
+            leftSidebar.style.display = 'none';
+            rightSidebar.style.display = 'none';
+        } else if (filterState.leftSidebar) {
+            // State 2: Left sidebar open
+            filterIcon.className = 'fas fa-chevron-right';
+            filterLabel.textContent = 'Next';
+            leftSidebar.style.display = 'flex';
+            leftSidebar.classList.add('visible');
+            rightSidebar.classList.remove('visible');
+            rightSidebar.style.display = 'none';
+        } else {
+            // State 3: Right sidebar open
+            filterIcon.className = 'fas fa-times';
+            filterLabel.textContent = 'Close';
+            leftSidebar.classList.remove('visible');
+            leftSidebar.style.display = 'none';
+            rightSidebar.style.display = 'flex';
+            rightSidebar.classList.add('visible');
+        }
+    }
+
+    toggleButton.addEventListener('click', () => {
+        if (!filterState.leftSidebar && !filterState.rightSidebar) {
+            // Open left sidebar
+            filterState.leftSidebar = true;
+        } else if (filterState.leftSidebar) {
+            // Close left, open right
+            filterState.leftSidebar = false;
+            filterState.rightSidebar = true;
+        } else {
+            // Close right sidebar
+            filterState.rightSidebar = false;
+        }
+        updateButtonState();
+    });
+
+    // Close sidebars when clicking outside
+    document.addEventListener('click', (e) => {
+        if (filterState.leftSidebar || filterState.rightSidebar) {
+            const isClickInsideSidebar = leftSidebar.contains(e.target) || rightSidebar.contains(e.target);
+            const isClickOnToggle = toggleButton.contains(e.target);
+            
+            if (!isClickInsideSidebar && !isClickOnToggle) {
+                filterState.leftSidebar = false;
+                filterState.rightSidebar = false;
+                updateButtonState();
+            }
+        }
+    });
+
+    // Handle escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && (filterState.leftSidebar || filterState.rightSidebar)) {
+            filterState.leftSidebar = false;
+            filterState.rightSidebar = false;
+            updateButtonState();
+        }
+    });
+
+    // Initialize state
+    updateButtonState();
 }
