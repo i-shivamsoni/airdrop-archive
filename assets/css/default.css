@@ -283,10 +283,13 @@ li {
     }
 
     .search-bar input {
-        opacity: 0;
-        width: 0;
-        padding: 0;
-        transition: all 0.3s ease;
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0.25rem 0.5rem;
+        width: 100%;
+        color: var(--dark, #1e293b);
+        font-family: var(--font-family, 'Inter', sans-serif);
     }
 
     .search-bar.expanded input {
@@ -302,6 +305,12 @@ li {
         right: 4px;
         top: 50%;
         transform: translateY(-50%);
+        color: var(--dark-light);
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .search-bar.expanded button {
