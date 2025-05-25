@@ -227,8 +227,7 @@ function getActiveFilters() {
         status: [],
         ecosystem: [],
         rewardedActivity: [],
-        blockchain_stack: [],
-        blockchain_type: []
+        blockchain_stack: []
     };
 
     // Get timeframe filters
@@ -258,11 +257,6 @@ function getActiveFilters() {
     // Get blockchain stack filters
     document.querySelectorAll('.stack-layer[data-selected="true"]').forEach(layer => {
         filters.blockchain_stack.push(layer.dataset.layer);
-    });
-
-    // Get blockchain type filters
-    document.querySelectorAll('.type-filter input[type="checkbox"]:checked').forEach(checkbox => {
-        filters.blockchain_type.push(checkbox.nextElementSibling.nextElementSibling.textContent);
     });
 
     return filters;
@@ -514,16 +508,6 @@ function filterProjects(projects, filters) {
             }
         }
 
-        // Blockchain type filter
-        if (filters.blockchain_type && filters.blockchain_type.length > 0) {
-            if (!project.blockchain_type || !Array.isArray(project.blockchain_type) || project.blockchain_type.length === 0) {
-                return false;
-            }
-            if (!project.blockchain_type.some(t => filters.blockchain_type.includes(t))) {
-                return false;
-            }
-        }
-
         return true;
     });
 }
@@ -581,11 +565,6 @@ function getBlockchainStackFilters() {
         .map(layer => layer.dataset.layer);
 }
 
-function getBlockchainTypeFilters() {
-    return Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]:checked'))
-        .map(cb => cb.nextElementSibling.nextElementSibling.textContent);
-}
-
 // Helper functions for restoring filter states
 function restoreTimeframeFilters(timeframes) {
     timeframes.forEach(year => {
@@ -636,18 +615,9 @@ function restoreBlockchainStackFilters(stacks) {
     });
 }
 
-function restoreBlockchainTypeFilters(types) {
-    types.forEach(type => {
-        const checkbox = Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]')).find(cb => 
-            cb.nextElementSibling.nextElementSibling.textContent === type
-        );
-        if (checkbox) checkbox.checked = true;
-    });
-}
-
 // Validation function
 function validateFilterState(state) {
-    const requiredKeys = ['timeframe', 'categories', 'status', 'ecosystem', 'rewardedActivity', 'blockchain_stack', 'blockchain_type'];
+    const requiredKeys = ['timeframe', 'categories', 'status', 'ecosystem', 'rewardedActivity', 'blockchain_stack'];
     return requiredKeys.every(key => Array.isArray(state[key]));
 }
 
@@ -672,8 +642,7 @@ function saveFilterStates() {
         status: getStatusFilters(),
         ecosystem: getEcosystemFilters(),
         rewardedActivity: getDistributionFilters(),
-        blockchain_stack: getBlockchainStackFilters(),
-        blockchain_type: getBlockchainTypeFilters()
+        blockchain_stack: getBlockchainStackFilters()
     };
     
     console.log('Saving filter states:', filterStates);
@@ -722,9 +691,6 @@ function restoreFilterStates() {
             
             console.log('Restoring blockchain stack filters:', filterStates.blockchain_stack);
             restoreBlockchainStackFilters(filterStates.blockchain_stack);
-            
-            console.log('Restoring blockchain type filters:', filterStates.blockchain_type);
-            restoreBlockchainTypeFilters(filterStates.blockchain_type);
             
             console.log('All filters restored successfully');
         } else {
@@ -814,15 +780,6 @@ function addFilterChangeListeners() {
             console.log('Blockchain stack filter clicked:', layer.dataset.layer);
             debouncedSaveFilterStates();
             updateStackSelection();
-        });
-    });
-
-    // Blockchain type filters
-    document.querySelectorAll('.type-filter input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            console.log('Blockchain type filter changed:', checkbox.nextElementSibling.nextElementSibling.textContent, checkbox.checked);
-            debouncedSaveFilterStates();
-            updateFilters();
         });
     });
 }
@@ -993,11 +950,6 @@ function updateActiveFilters(filters) {
             layer.dataset.selected = 'false';
         });
 
-        // Clear blockchain type filters
-        document.querySelectorAll('.type-filter input[type="checkbox"]').forEach(checkbox => {
-            checkbox.checked = false;
-        });
-
         // Reset all status checkboxes to checked
         document.querySelectorAll('.status-toggles input[type="checkbox"]').forEach(checkbox => {
             checkbox.checked = true;
@@ -1013,8 +965,7 @@ function updateActiveFilters(filters) {
             status: [],
             ecosystem: [],
             rewardedActivity: [],
-            blockchain_stack: [],
-            blockchain_type: []
+            blockchain_stack: []
         };
         updateFilters();
         updateActiveFilters(emptyFilters);
@@ -1098,19 +1049,6 @@ function updateActiveFilters(filters) {
         });
     }
 
-    // Add blockchain type filters
-    if (filters.blockchain_type && filters.blockchain_type.length > 0) {
-        filters.blockchain_type.forEach(type => {
-            const tag = document.createElement('div');
-            tag.className = 'filter-tag';
-            tag.innerHTML = `
-                <span>Type: ${type}</span>
-                <button><i class="fas fa-times"></i></button>
-            `;
-            filterTags.appendChild(tag);
-        });
-    }
-
     // Add event listeners to remove buttons
     filterTags.querySelectorAll('.filter-tag button').forEach(button => {
         button.addEventListener('click', function() {
@@ -1151,12 +1089,6 @@ function updateActiveFilters(filters) {
                 case 'stack':
                     const stackLayer = document.querySelector(`.stack-layer[data-layer="${filterValue}"]`);
                     if (stackLayer) stackLayer.dataset.selected = 'false';
-                    break;
-                case 'type':
-                    const typeCheckbox = Array.from(document.querySelectorAll('.type-filter input[type="checkbox"]')).find(cb => 
-                        cb.nextElementSibling.nextElementSibling.textContent === filterValue
-                    );
-                    if (typeCheckbox) typeCheckbox.checked = false;
                     break;
             }
             
@@ -1932,3 +1864,159 @@ function initMobileFilterToggle() {
         }
     }
 }
+
+// Real-time search functionality
+function initSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const searchResults = document.getElementById('search-results-container');
+    const noResults = document.getElementById('no-results');
+    const searchLoading = document.getElementById('search-loading');
+    
+    if (!searchInput) return;
+
+    // Debounce function for search
+    const debouncedSearch = debounce((query) => {
+        performSearch(query);
+    }, 300);
+
+    // Real-time search on input
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+        if (query.length > 0) {
+            searchLoading.classList.remove('hidden');
+            debouncedSearch(query);
+        } else {
+            searchResults.innerHTML = '';
+            noResults.classList.add('hidden');
+            searchLoading.classList.add('hidden');
+        }
+    });
+
+    // Search button click handler
+    searchButton.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if (query.length > 0) {
+            searchLoading.classList.remove('hidden');
+            performSearch(query);
+        }
+    });
+
+    // Enter key handler
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const query = searchInput.value.trim();
+            if (query.length > 0) {
+                searchLoading.classList.remove('hidden');
+                performSearch(query);
+            }
+        }
+    });
+}
+
+function performSearch(query) {
+    const searchResults = document.getElementById('search-results-container');
+    const noResults = document.getElementById('no-results');
+    const searchLoading = document.getElementById('search-loading');
+    const resultsCount = document.getElementById('results-count');
+    const searchTime = document.getElementById('search-time');
+    
+    // Get all projects
+    const projects = getProjects();
+    
+    // Start timing
+    const startTime = performance.now();
+    
+    // Filter projects based on search query
+    const filteredProjects = projects.filter(project => {
+        const searchableText = [
+            project.title,
+            project.description,
+            project.tags?.join(' '),
+            project.ecosystem,
+            project.blockchain_stack?.join(' ')
+        ].filter(Boolean).join(' ').toLowerCase();
+        
+        return searchableText.includes(query.toLowerCase());
+    });
+    
+    // Calculate search time
+    const endTime = performance.now();
+    const searchDuration = ((endTime - startTime) / 1000).toFixed(2);
+    
+    // Update results count and search time
+    resultsCount.textContent = filteredProjects.length;
+    searchTime.textContent = `in ${searchDuration}s`;
+    
+    // Clear previous results
+    searchResults.innerHTML = '';
+    
+    // Show/hide no results message
+    if (filteredProjects.length === 0) {
+        noResults.classList.remove('hidden');
+    } else {
+        noResults.classList.add('hidden');
+        
+        // Display results
+        filteredProjects.forEach(project => {
+            const resultCard = createSearchResultCard(project);
+            searchResults.appendChild(resultCard);
+        });
+    }
+    
+    // Hide loading indicator
+    searchLoading.classList.add('hidden');
+}
+
+function createSearchResultCard(project) {
+    const card = document.createElement('div');
+    card.className = 'search-result';
+    
+    const title = document.createElement('h3');
+    const titleLink = document.createElement('a');
+    titleLink.href = project.url;
+    titleLink.textContent = project.title;
+    title.appendChild(titleLink);
+    
+    const meta = document.createElement('div');
+    meta.className = 'search-result-meta';
+    
+    const type = document.createElement('span');
+    type.className = 'result-type';
+    type.textContent = project.pagetype || 'Project';
+    
+    const date = document.createElement('span');
+    date.className = 'result-date';
+    date.textContent = formatDate(project.date);
+    
+    meta.appendChild(type);
+    meta.appendChild(date);
+    
+    const excerpt = document.createElement('p');
+    excerpt.className = 'search-result-excerpt';
+    excerpt.textContent = project.description;
+    
+    const tags = document.createElement('div');
+    tags.className = 'search-result-tags';
+    
+    if (project.tags) {
+        project.tags.forEach(tag => {
+            const tagSpan = document.createElement('span');
+            tagSpan.className = 'tag';
+            tagSpan.textContent = tag;
+            tags.appendChild(tagSpan);
+        });
+    }
+    
+    card.appendChild(title);
+    card.appendChild(meta);
+    card.appendChild(excerpt);
+    card.appendChild(tags);
+    
+    return card;
+}
+
+// Initialize search when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initSearch();
+});

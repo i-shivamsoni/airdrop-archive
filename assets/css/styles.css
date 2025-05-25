@@ -1502,8 +1502,6 @@ footer {
 }
 
 @media (max-width: 992px) {
-
-
     .main-content {
         position: static;
         left: unset;
@@ -1579,12 +1577,12 @@ footer {
     /* Improve filter sections on mobile */
     .filter-section {
         padding: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
     }
 
     .category-group,
     .activity-group {
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
     }
 
     .category-header,
@@ -1595,6 +1593,11 @@ footer {
     .category-items,
     .activity-items {
         padding: 0.5rem 1rem;
+    }
+
+    /* Remove extra margin from last filter section */
+    .left-sidebar .filter-section:last-child {
+        margin-bottom: 0;
     }
 }
 

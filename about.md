@@ -52,20 +52,14 @@ sources:
 sources_disclaimer: |
   _We strive to use only the most reliable and verifiable sources for our research._
 team:
-  - name: Alice Example
+  - name: Shivam Soni
     role: Founder & Lead Researcher
-    image: /assets/images/team/alice.jpg
+    image: /assets/images/team/seeker.jpg
     social:
-      twitter: https://twitter.com/alice
-      github: https://github.com/alice
-      linkedin: https://linkedin.com/in/alice
-  - name: Bob Example
-    role: Data Analyst
-    image: /assets/images/team/bob.jpg
-    social:
-      twitter: https://twitter.com/bob
-      github: https://github.com/bob
-      linkedin: https://linkedin.com/in/bob
+      twitter: https://twitter.com/0x0_seeker
+      github: https://github.com/0xdroidan
+      linkedin: https://linkedin.com/in/
+
 timeline:
   - year: 2021
     title: Project Launched
