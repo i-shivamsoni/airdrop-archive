@@ -74,6 +74,12 @@ function updateYearOverview(year) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Add loading state
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.classList.add('loading');
+    }
+
     // Year tab switching
     const yearTabs = document.querySelectorAll('.year-tab');
     const yearTimelines = document.querySelectorAll('.year-timeline');
@@ -256,3 +262,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Scroll to Top functionality
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
