@@ -305,7 +305,7 @@ main {
 .timeline-hero h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--dark);
     margin-bottom: 1rem;
 }
 
@@ -1400,4 +1400,42 @@ main {
 .dark-mode .chart-bar:hover .bar-value {
     background: var(--light);
 }
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: var(--light);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.dark-mode .scroll-to-top {
+    background: var(--primary-light);
+}
+
+.dark-mode .scroll-to-top:hover {
+    background: var(--primary);
 }

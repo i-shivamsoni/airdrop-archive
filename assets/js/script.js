@@ -947,6 +947,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Initializing ecosystem filters...');
         initEcosystemFilters();
 
+        // Initialize mobile filter toggle
+        initMobileFilterToggle();
+
     } catch (error) {
         console.error('Error during initialization:', error);
     }
@@ -1799,4 +1802,133 @@ function createEcosystemItem(ecosystem, iconName) {
     }
     
     return item;
+}
+
+// Mobile Filter Toggle State Management
+let filterState = {
+    currentSidebar: null // 'left', 'right', or null
+};
+
+// Initialize mobile filter toggle
+function initMobileFilterToggle() {
+    const toggleBtn = document.querySelector('.mobile-filter-toggle');
+    const leftSidebar = document.querySelector('.left-sidebar');
+    const rightSidebar = document.querySelector('.right-sidebar');
+    const overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+    document.body.appendChild(overlay);
+
+    function updateButtonState() {
+        // Update button icon based on current state
+        switch(filterState.currentSidebar) {
+            case 'left':
+                toggleBtn.innerHTML = '<i class="fas fa-arrow-right"></i>';
+                break;
+            case 'right':
+                toggleBtn.innerHTML = '<i class="fas fa-times"></i>';
+                break;
+            default:
+                toggleBtn.innerHTML = '<i class="fas fa-filter"></i><span class="filter-label">Filters</span>';
+        }
+    }
+
+    function closeAllSidebars() {
+        leftSidebar.classList.remove('visible');
+        rightSidebar.classList.remove('visible');
+        overlay.classList.remove('visible');
+        document.body.style.overflow = '';
+        filterState.currentSidebar = null;
+    }
+
+    function openSidebar(sidebar) {
+        // Close all sidebars first
+        closeAllSidebars();
+        
+        // Open the specified sidebar
+        sidebar.classList.add('visible');
+        overlay.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+        
+        // Update state
+        filterState.currentSidebar = sidebar === leftSidebar ? 'left' : 'right';
+    }
+
+    function switchToRightSidebar() {
+        closeAllSidebars();
+        openSidebar(rightSidebar);
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        switch(filterState.currentSidebar) {
+            case null:
+                // Initial state - open left sidebar
+                openSidebar(leftSidebar);
+                break;
+            case 'left':
+                // Left sidebar is open - switch to right sidebar
+                switchToRightSidebar();
+                break;
+            case 'right':
+                // Right sidebar is open - close everything
+                closeAllSidebars();
+                break;
+        }
+        updateButtonState();
+    });
+
+    overlay.addEventListener('click', () => {
+        closeAllSidebars();
+        updateButtonState();
+    });
+
+    // Handle window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (window.innerWidth > 992) {
+                closeAllSidebars();
+                updateButtonState();
+            }
+        }, 250);
+    });
+
+    // Handle escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllSidebars();
+            updateButtonState();
+        }
+    });
+
+    // Add touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe right - open left sidebar if nothing is open
+                if (!filterState.currentSidebar) {
+                    openSidebar(leftSidebar);
+                }
+            } else {
+                // Swipe left - close all sidebars
+                closeAllSidebars();
+            }
+            updateButtonState();
+        }
+    }
 }
