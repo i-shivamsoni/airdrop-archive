@@ -210,7 +210,7 @@ main {
         padding-right: var(--spacing-sm);
     }
     main {
-        padding-top: calc(70px + var(--spacing));
+        padding-top: calc(10px + var(--spacing));
     }
     .enhanced-hero {
         margin-top: var(--spacing-sm);
@@ -430,7 +430,7 @@ main {
 .post-content h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--text-main);
     margin: 2.5rem 0 1.2rem;
     padding-bottom: 0.2rem;
     border-bottom: 1px solid var(--border);
@@ -541,3 +541,53 @@ html {
     animation: heading-highlight 1.5s ease-out;
     padding-top: 0.2rem;
 } 
+
+
+@media (max-width: 410px) {
+    .container {
+        padding-left: calc(30px + var(--spacing));
+        padding-right: calc(30px + var(--spacing));
+    }
+    main {
+        padding-top: calc(30px + var(--spacing));
+    }
+}
+
+/* Table Responsive Styles */
+@media (max-width:550px) {
+    .container {
+        padding-left: calc(30px + var(--spacing));
+        padding-right: calc(30px + var(--spacing));
+    }
+    main {
+        padding-top: calc(30px + var(--spacing));
+    }
+    .table-wrapper {
+        margin: 1rem 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        scrollbar-color: var(--primary) var(--border);
+        min-width: auto;
+        width: 100%;
+    }
+
+    .table-wrapper::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .table-wrapper::-webkit-scrollbar-track {
+        background: var(--border);
+        border-radius: 3px;
+    }
+
+    .table-wrapper::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 3px;
+    }
+
+    /* .post-content table {
+        min-width: auto;
+        width: 100%;
+    } */
+}
