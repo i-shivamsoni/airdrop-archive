@@ -672,37 +672,3 @@ li {
     outline: none;
     box-shadow: 0 0 0 2px var(--primary, #4f46e5);
 }
-
-/* Search bar */
-.search-bar {
-    display: flex;
-    align-items: center;
-    background-color: var(--light-dark, #e2e8f0);
-    border-radius: var(--radius-full, 50px);
-    padding: var(--spacing-xs, 0.25rem) var(--spacing-sm, 0.5rem);
-    width: 200px;
-    border: none;
-    box-shadow: none;
-}
-
-.search-bar input {
-    background: none;
-    border: none;
-    outline: none;
-    padding: var(--spacing-xs, 0.25rem) var(--spacing-sm, 0.5rem);
-    width: 100%;
-    color: var(--dark, #1e293b);
-    font-family: var(--font-family, 'Inter', sans-serif);
-}
-
-.search-bar button {
-    color: var(--dark-light, #334155);
-    width: 30px;
-    height: 30px;
-    border-radius: var(--radius-full, 50%);
-    border: none;
-    background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 

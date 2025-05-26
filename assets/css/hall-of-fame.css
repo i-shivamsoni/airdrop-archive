@@ -235,38 +235,7 @@ nav a.active {
     color: var(--light);
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    background-color: var(--light-dark);
-    border-radius: var(--radius-full);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    width: 200px;
-}
 
-.search-bar input {
-    background: none;
-    border: none;
-    outline: none;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    width: 100%;
-    color: var(--dark);
-    font-family: var(--font-family);
-}
-
-.search-bar button {
-    color: var(--dark-light);
-    width: 30px;
-    height: 30px;
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-bar button:hover {
-    color: var(--primary);
-}
 
 /* Main Content */
 main {
