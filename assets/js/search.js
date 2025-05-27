@@ -48,19 +48,7 @@ async function initializeSearch() {
         
         // Create search index
         searchIndex = lunr(function() {
-            // Add a custom pipeline function for partial matching
-            this.pipeline.add(function(token) {
-                // Store the original token
-                const original = token.toString();
-                // Add the original token
-                const tokens = [original];
-                // Add partial matches (3+ characters)
-                if (original.length >= 3) {
-                    tokens.push(original + '*');
-                }
-                return tokens;
-            });
-
+            // Configure fields with case-insensitive search
             this.field('title', { boost: 10 });
             this.field('description', { boost: 5 });
             this.field('content');
@@ -73,10 +61,17 @@ async function initializeSearch() {
                 if (Array.isArray(searchData[type])) {
                     searchData[type].forEach(doc => {
                         if (doc && doc.title && doc.url) {
-                            this.add({
+                            // Pre-process the content to improve searchability
+                            const processedDoc = {
                                 ...doc,
-                                type: type
-                            });
+                                type: type,
+                                // Add lowercase versions of fields for better matching
+                                title_lower: doc.title.toLowerCase(),
+                                description_lower: doc.description ? doc.description.toLowerCase() : '',
+                                content_lower: doc.content ? doc.content.toLowerCase() : '',
+                                tags_lower: doc.tags ? doc.tags.map(tag => tag.toLowerCase()) : []
+                            };
+                            this.add(processedDoc);
                         }
                     });
                 }
@@ -169,11 +164,22 @@ async function performSearch(query) {
         
         let results = [];
         searchTerms.forEach(term => {
-            // Add wildcard for partial matching
-            const searchTerm = term.length >= 3 ? term + '*' : term;
-            const termResults = searchIndex.search(searchTerm);
-            console.log(`Results for term "${searchTerm}":`, termResults);
-            results = results.concat(termResults);
+            // Try different search strategies
+            const searchStrategies = [
+                term,                    // Exact match
+                term + '*',             // Prefix match
+                '*' + term + '*',       // Contains match
+                term.toLowerCase(),     // Lowercase match
+                term.toLowerCase() + '*' // Lowercase prefix match
+            ];
+            
+            console.log(`Searching with strategies:`, searchStrategies);
+            
+            searchStrategies.forEach(strategy => {
+                const termResults = searchIndex.search(strategy);
+                console.log(`Results for strategy "${strategy}":`, termResults);
+                results = results.concat(termResults);
+            });
         });
         
         // Remove duplicates and sort by score
