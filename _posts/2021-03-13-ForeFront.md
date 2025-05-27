@@ -13,6 +13,7 @@ website: "https://forefront.gitbook.io/forefront/token-distribution/community-ai
 ticker: "FF"
 description: "A community-driven platform and marketplace for social tokens and Web3 communities."
 ---
+
 ## Airdrop Details
 
 | Information              | Details                |
@@ -38,40 +39,39 @@ description: "A community-driven platform and marketplace for social tokens and 
 | Median/Average | ~238 FF per social token held (base) |
 | Minimum        | 238 FF per eligible social token     |
 
-## Eligibility Criteria
+## [Eligibility Criteria](https://forefront.gitbook.io/forefront/token-distribution/community-airdrop)
 
-The FF airdrop allocations were determined based on the number of unique social tokens held, with a **minimum token requirement** for access to token-permissioned groups.
+Eligibility for the ForeFront airdrop was based on the following requirements:
 
-- Users qualified for the airdrop if they met the minimum social token threshold required to join the token-permissioned chat.
-- If no specific threshold was set, the **default minimum was 10 tokens** (except for $RLY).
-- The **airdrop snapshot was taken on March 12, 2021, at 12 PM UTC**, before the Roll social token hack, ensuring an accurate representation of the community.
+### Social Token Holdings
+- Must meet minimum token threshold for token-permissioned groups
+- Default minimum requirement of 10 tokens (except $RLY)
+- Snapshot taken on March 12, 2021, at 12 PM UTC
+- Must hold tokens before the Roll social token hack
 
-#### **Minimum Token Requirements**
+### Minimum Token Requirements
+- FWB: 55 tokens
+- JAMM: 1000 tokens
+- WHALE: 17 tokens
+- Other tokens: Default minimum of 10 (except $RLY)
 
-To qualify for the airdrop, wallets needed to hold at least:
-
-- **FWB:** 55 tokens
-- **JAMM:** 1000 tokens
-- **WHALE:** 17 tokens
-- **Other tokens:** Default minimum of 10 (except $RLY)
-
-#### **Allocation Breakdown**
-
-- **Base Allocation:** Each qualifying wallet received **~238 FF per eligible social token held**.
-- **Bonus Multipliers:**
-  - **SWAGG holders:** 2x allocation
-  - **FWB holders:** 1.25x allocation
-  - **WHALE holders:** 1.15x allocation
-- **Stacking Allocations:** If a wallet held multiple eligible tokens, the base allocations stacked rather than being capped at 238 FF.
-  This structure ensured a fair and proportional distribution of FF tokens among the social token community.
+### Allocation Structure
+- Base allocation: ~238 FF per eligible social token held
+- Bonus multipliers:
+  - SWAGG holders: 2x allocation
+  - FWB holders: 1.25x allocation
+  - WHALE holders: 1.15x allocation
+- Multiple token holdings: Base allocations stack (no cap at 238 FF)
 
 ## Important Links
 
-- Price Tracking: [CoinMarketCap](https://web.archive.org/web/20211101154334/https://coinmarketcap.com/currencies/forefront/)
-- [Claim Data Breakdown](https://github.com/ffdao/ffclaim/blob/main/FFClaim.csv)
-- [Airdrop Details](https://forefront.gitbook.io/forefront/token-distribution/community-airdrop)
+- **Official Website**: [ForeFront](https://forefront.gitbook.io/forefront/token-distribution/community-airdrop)
+- **Price Tracking**: [CoinMarketCap](https://web.archive.org/web/20211101154334/https://coinmarketcap.com/currencies/forefront/)
+- **Claim Data**: [GitHub Breakdown](https://github.com/ffdao/ffclaim/blob/main/FFClaim.csv)
 
 ## Additional Information
 
-- Any unclaimed FF tokens after **March 14, 2021 - 11 PM UTC** were rolled over to the **community treasury**.
-- The snapshot was taken **before the Roll social token hack** to maintain an accurate representation of the social token community.
+- Unclaimed FF tokens after March 14, 2021 (11 PM UTC) were transferred to community treasury
+- Snapshot timing ensured accurate representation of social token community
+- Distribution designed to reward active social token community members
+- Fair and proportional distribution based on token holdings and multipliers
