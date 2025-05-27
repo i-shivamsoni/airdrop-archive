@@ -3,9 +3,9 @@ layout: "post"
 title: "Puffer Finance"
 date: "2024-10-14"
 timeframe: ["2024"]
-ecosystem: ["not-known"]
-rewardedActivity: ["retroactive"]
-category: [defi]
+ecosystem: ["ethereum"]
+rewardedActivity: ["retroactive", "binance-alpha"]
+category: ["defi"]
 function: ["defi", "restaking", "yield"]
 status: ["alive"]
 pagetype: "project"
@@ -13,54 +13,81 @@ website: "https://www.puffer.fi/"
 ticker: "PUFFER"
 description: "Puffer Finance is a decentralized Ethereum infrastructure protocol focused on liquid restaking (LRT) and preconfirmation services, including Puffer UniFi and UniFi AVS."
 ---
+
 ## Airdrop Details
 
 | Information              | Details                                         |
 | ------------------------ | ----------------------------------------------- |
-| Airdrop Type             | Retroactive                                     |
-| Total Airdrop Amount     | 75 million PUFFER tokens (7.5% of total supply) |
+| Rewarded Activity        | Crunchy Carrot Quest Season One participation   |
+| Total Airdrop Amount     | 75 million PUFFER (7.5% of total supply)        |
 | Number of Eligible Users | Not Known                                       |
 | Number of Claimants      | Not Known                                       |
+| Average Allocation       | Not Known                                       |
 
 ## Timeline
 
 | Event               | Date                        |
 | ------------------- | --------------------------- |
-| Blockchain Snapshot | October 5, 2024             |
+| Snapshot Date       | October 5, 2024             |
 | Claiming Started    | October 14, 2024, 11 AM UTC |
 | Claiming Ends       | January 14, 2025, 11 PM UTC |
+| Binance Alpha Start | May 12, 2024                |
 
 ## Token Distribution
 
-| Distribution   | Amount    |
-| -------------- | --------- |
-| Maximum        | Not Known |
-| Median/Average | Not Known |
-| Minimum        | Not Known |
+| Tier/Category      | Amount    | Source                    |
+| ------------------ | --------- | ------------------------- |
+| Maximum Allocation | Not Known | Primary Airdrop           |
+| Median Allocation  | Not Known | Primary Airdrop           |
+| Minimum Allocation | Not Known | Primary Airdrop           |
+| Binance Alpha      | 362 PUFFER| Binance Alpha Airdrop     |
 
 ## [Eligibility Criteria](https://medium.com/puffer-fi/puffer-tokenomics-utility-c789352629e6)
 
-- Users must have participated in the **Crunchy Carrot Quest Season One** campaign.
-- A snapshot of eligible users was taken on **October 5, 2024**.
-- 50% of the airdrop is available immediately, with the remaining **vested over 6 months** for larger depositors.
+### Primary Requirements
+
+- Users must have participated in the **Crunchy Carrot Quest Season One** campaign
+- A snapshot of eligible users was taken on **October 5, 2024**
+- 50% of the airdrop is available immediately
+- Remaining 50% vests over 6 months for larger depositors
+
+### Additional Airdrop Opportunities
+
+#### Exchange Airdrops
+
+##### Binance Alpha Airdrop
+- Users with ≥ 186 Alpha Points received 362 PUFFER tokens
+- Users with 147-185 Alpha Points and UIDs ending in 5 received 362 PUFFER tokens
+- Distribution date: May 12, 2024
+
+### Additional Notes
+
+- Total PUFFER Supply: 1,000,000,000 tokens
+- 5.5% of PUFFER supply allocated for Season 2 Crunchy Carrot Quest participants
+- 1% of PUFFER supply allocated to Protocol Guild over 4-year vesting period
+- Holders can stake PUFFER to mint vePUFFER and participate in governance
 
 ## Important Links
 
-- [Claim Airdrop](https://claims.puffer.fi)
-- [Price Tracking: CoinMarketCap](https://coinmarketcap.com/currencies/puffer)
-- [Price Tracking: CoinGecko](https://www.coingecko.com/en/coins/puffer)
-- [Official Announcement](https://medium.com/puffer-fi/puffer-tokenomics-utility-c789352629e6)
-- [Puffer X (Twitter)](https://x.com/puffer_finance)
-- [Official Tweet Announcement](https://x.com/puffer_finance/status/1844234772274729416)
-- [Puffer UniFi X (Twitter)](https://x.com/puffer_unifi)
-- [Crunchy Carrot Quest Season 2](https://quest.puffer.fi)
+### Official Links
 
-## Additional Information
+- Official Website: [Puffer Finance](https://www.puffer.fi/)
+- Token Claim: [Claim Portal](https://claims.puffer.fi)
+- Documentation: [Tokenomics](https://medium.com/puffer-fi/puffer-tokenomics-utility-c789352629e6)
+- Quest Platform: [Crunchy Carrot Quest](https://quest.puffer.fi)
 
-- **Total PUFFER Supply:** 1,000,000,000 tokens.
-- **Community Allocation:** 7.5% of total supply for Season 1 airdrop.
-- **Ethereum Support:** 1% of PUFFER supply allocated to **Protocol Guild** over a 4-year vesting period.
-- **Vesting for Larger Depositors:** 50% of tokens are claimable immediately, and the remaining portion vests over 6 months.
-- **Future Airdrops:** 5.5% of PUFFER supply is allocated for **Season 2 Crunchy Carrot Quest** participants.
-- **Governance:** Holders can stake PUFFER to mint **vePUFFER** and participate in governance decisions.
-- **Security Reminder:** Users should **only** use official links to avoid phishing scams.
+### Source References
+
+- Tokenomics Announcement: [Medium Post](https://medium.com/puffer-fi/puffer-tokenomics-utility-c789352629e6)
+- Official Tweet: [Puffer Finance](https://x.com/puffer_finance/status/1844234772274729416)
+- Binance Alpha: [Binance Tweet](https://x.com/binance/status/1921849600484294946)
+
+### Price Tracking
+
+- CoinMarketCap: [PUFFER Price](https://coinmarketcap.com/currencies/puffer)
+- CoinGecko: [PUFFER Price](https://www.coingecko.com/en/coins/puffer)
+
+### Social Media
+
+- Twitter: [Puffer Finance](https://x.com/puffer_finance)
+- Twitter: [Puffer UniFi](https://x.com/puffer_unifi)

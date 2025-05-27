@@ -7,7 +7,7 @@ ecosystem: ["bnb"]
 rewardedActivity: ["loyalty", "testnet", "quest"]
 category: ["ai", "privacy"]
 function: ["ai", "privacy", "platform"]
-status: ["upcoming"]
+status: ["alive"]
 pagetype: "project"
 website: "https://www.privasea.ai/"
 ticker: "PRAI"
