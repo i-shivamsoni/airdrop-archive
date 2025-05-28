@@ -1,3 +1,16 @@
+// Debounce function to limit how often a function can be called
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 // Initialize search index
 let searchIndex;
 let searchData;
@@ -342,11 +355,17 @@ function findDocument(url) {
 }
 
 // Handle search input
-function handleSearch() {
-    const searchInput = document.getElementById('search-input');
-    const query = searchInput.value.trim();
-    if (query) {
-        window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+function handleSearchInput(event) {
+    const query = event.target.value.trim();
+    if (query.length >= 2) { // Only search if query is at least 2 characters
+        performSearch(query);
+    } else {
+        // Clear results if query is too short
+        const container = document.getElementById('search-results-container');
+        if (container) {
+            container.innerHTML = '';
+        }
+        updateSearchStats(0);
     }
 }
 
@@ -372,41 +391,43 @@ function toggleView(view) {
     }
 }
 
-// Initialize search on search page
-if (window.location.pathname === '/search/') {
-    // Initialize search immediately
-    initializeSearch();
-    
-    // Get search query from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('q');
-    
-    if (query) {
-        const searchInput = document.getElementById('search-input');
-        if (searchInput) {
-            searchInput.value = query;
-        }
-    }
-    
-    // Handle search bar on search page
+// Initialize search functionality
+document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-button');
     
-    if (searchButton) {
-        searchButton.addEventListener('click', () => handleSearch());
-    }
-    
     if (searchInput) {
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                handleSearch();
+        // Add real-time search with debounce
+        searchInput.addEventListener('input', debounce(handleSearchInput, 300));
+        
+        // Keep the search button for explicit searches
+        searchButton.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                performSearch(query);
+            }
+        });
+        
+        // Allow Enter key to trigger search
+        searchInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                const query = searchInput.value.trim();
+                if (query) {
+                    performSearch(query);
+                }
             }
         });
     }
     
+    // Initialize search
+    initializeSearch();
+});
+    
     // Handle filter changes
     document.querySelectorAll('input[name="search-type"]').forEach(input => {
         input.addEventListener('change', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
             if (query) {
                 performSearch(query);
             }
@@ -417,6 +438,8 @@ if (window.location.pathname === '/search/') {
     const sortSelect = document.getElementById('sort-by');
     if (sortSelect) {
         sortSelect.addEventListener('change', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
             if (query) {
                 performSearch(query);
             }
@@ -429,4 +452,3 @@ if (window.location.pathname === '/search/') {
             toggleView(button.dataset.view);
         });
     });
-} 

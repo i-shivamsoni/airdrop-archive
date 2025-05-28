@@ -87,13 +87,21 @@
     background: none;
     padding: 0.5rem;
     font-size: 1.1rem;
-    color: white;
-    min-width: 200px;
-    width: 100%;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
 }
 
 .search-bar input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);
+    transition: opacity 0.1s ease;
+}
+
+.search-bar input:focus::placeholder {
+    opacity: 0;
 }
 
 .search-bar input:focus {
@@ -139,20 +147,19 @@
 }
 
 .search-tag {
-    display: inline-flex;
-    align-items: center;
+    cursor: pointer;
+    border: none;
+    background: var(--bg-primary);
     padding: 0.4rem 0.8rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-full);
+    border-radius: 20px;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
+    color: var(--text-secondary);
     transition: all 0.2s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-tag:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--bg-secondary);
+    color: var(--text-color);
     transform: translateY(-1px);
 }
 
@@ -184,6 +191,12 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.search-results.loading {
+    opacity: 0.7;
 }
 
 .search-result {
@@ -455,4 +468,80 @@ nav a:hover, nav a.active {
     .search-result {
         padding: var(--spacing-md);
     }
+}
+
+#search-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-primary);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loading-spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--bg-secondary);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add smooth transitions for results */
+#search-results-container {
+    transition: opacity 0.3s ease;
+}
+
+#search-results-container.loading {
+    opacity: 0.5;
+}
+
+/* Improve loading state visibility */
+#search-loading {
+    display: none;
+}
+
+#search-loading:not(.hidden) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Add fade effect for results */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-result-item {
+    animation: fadeIn 0.3s ease-out;
 }

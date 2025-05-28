@@ -14,8 +14,7 @@ layout: default
                     <i class="fas fa-search search-icon"></i>
                     <input type="text" 
                            id="search-input" 
-                           placeholder="Search projects and guides..." 
-                           value="{{ page.url | split: 'q=' | last | url_decode }}"
+                           placeholder="Start typing to search..." 
                            autocomplete="off">
                     <button id="search-button" class="search-button">
                         <span>Search</span>
@@ -24,9 +23,9 @@ layout: default
                 </div>
                 <div class="search-tags">
                     <span class="search-tag">Popular:</span>
-                    <a href="/search/?q=airdrop" class="search-tag">airdrop</a>
-                    <a href="/search/?q=defi" class="search-tag">defi</a>
-                    <a href="/search/?q=guide" class="search-tag">guide</a>
+                    <button class="search-tag" onclick="document.getElementById('search-input').value='airdrop'; performSearch('airdrop')">airdrop</button>
+                    <button class="search-tag" onclick="document.getElementById('search-input').value='defi'; performSearch('defi')">defi</button>
+                    <button class="search-tag" onclick="document.getElementById('search-input').value='guide'; performSearch('guide')">guide</button>
                 </div>
             </div>
             <div class="search-filters">
@@ -550,4 +549,30 @@ layout: default
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
-<script src="{{ '/assets/js/search.js' | relative_url }}"></script> 
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    
+    // Set initial value from URL if exists
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryParam = urlParams.get('q');
+    if (queryParam) {
+        searchInput.value = decodeURIComponent(queryParam);
+    }
+    
+    // Handle focus to select all text for easy replacement
+    searchInput.addEventListener('focus', function() {
+        if (this.value) {
+            this.select();
+        }
+    });
+    
+    // Optional: Clear on click if you want placeholder-like behavior
+    searchInput.addEventListener('click', function() {
+        if (this.value && this.value === decodeURIComponent(queryParam || '')) {
+            this.value = '';
+        }
+    });
+});
+</script> 
