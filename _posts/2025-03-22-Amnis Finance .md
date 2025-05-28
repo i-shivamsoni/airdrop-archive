@@ -54,6 +54,7 @@ Participants accumulate points through these activities, influencing the amount 
 - Official Documentation: [Amnis Finance Docs](https://docs.amnis.finance/)
 - Price Tracking: [CoinMarketCap](https://coinmarketcap.com/currencies/amnis-finance)
 - Price Tracking: [CoinGecko](https://www.coingecko.com/en/coins/amnis-finance)
+- Criteria [Amnis Retroactive](https://x.com/AmnisFinance/status/1904503689764872221)
 
 ## Additional Information
 

@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "MapleStory NEXPACE"
-date: "2025-05-27"
+date: "2025-05-15"
 timeframe: ["2025"]
 ecosystem: ["avalanche", "bnb"]
 rewardedActivity: ["binance-alpha", "gaming", "loyalty", "testnet", "kaito"]
