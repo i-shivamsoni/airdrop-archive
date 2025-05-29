@@ -74,6 +74,6 @@ testimonials:
     author: "John Smith"
 contact :
   - email: "contact@airdroparchive.com" 
-  - twitter: "airdrparchive"  
-  - github: "airdrparchive"   
+  - twitter: "airdrop_archive"  
+  - github: "airdroparchive"   
 ---
