@@ -1,0 +1,137 @@
+name: "Build and Deploy"
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # submodules: true
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DATA_REPO_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Clone Data Repository
+        run: |
+          git clone git@github.com:i-shivamsoni/airdroparchivedata.git data-repo
+          cp -r data-repo/* _posts/
+          rm -rf data-repo
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+
+      - name: Install Dependencies
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          bundle install
+
+      - name: Debug Environment
+        if: ${{ inputs.debug == true || runner.debug == '1' }}
+        run: |
+          echo "Current environment variables:"
+          echo "JEKYLL_ENV: ${{ vars.JEKYLL_ENV || 'production' }}"
+          echo "JEKYLL_URL: ${{ vars.JEKYLL_URL || 'https://airdroparchive.com' }}"
+          echo "JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || '' }}"
+          echo "Ruby version: $(ruby --version)"
+          echo "Bundler version: $(bundle --version)"
+          echo "Jekyll version: $(bundle exec jekyll --version)"
+          echo "Current directory contents:"
+          ls -la
+
+      - name: Build site
+        run: |
+          echo "Starting Jekyll build..."
+          bundle exec jekyll build --verbose
+        env:
+          JEKYLL_ENV: "production"
+          JEKYLL_URL: ${{ vars.JEKYLL_URL || "https://airdroparchive.com" }}
+          JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || "" }}
+
+      - name: Check build output
+        if: failure()
+        run: |
+          echo "Build failed. Checking for common issues..."
+          if [ -d "_layouts" ]; then
+            echo "Contents of _layouts directory:"
+            ls -la _layouts/
+          else
+            echo "_layouts directory not found"
+          fi
+
+          if [ -f "_layouts/learn.html" ]; then
+            echo "Contents of learn.html:"
+            cat _layouts/learn.html
+          else
+            echo "learn.html not found in _layouts"
+          fi
+
+          if [ -f "_config.yml" ]; then
+            echo "Jekyll configuration:"
+            cat _config.yml
+          else
+            echo "_config.yml not found"
+          fi
+
+          echo "Checking for Gemfile:"
+          if [ -f "Gemfile" ]; then
+            cat Gemfile
+          else
+            echo "Gemfile not found"
+          fi
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    if: success()
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
