@@ -232,12 +232,17 @@ layout: default
         </div>
         <div class="contribution">
           <h3>Help Improve This Archive</h3>
+          <!-- <p>Found an error or have additional information? <a href="https://github.com/i-shivamsoni/airdroparchivedata/tree/master/archviedProjects/{{ page.path | split: '/' | last }}" class="contribute-link">Contribute to this archive</a> to help make it more accurate and comprehensive.</p> -->
           <p>Found an error or have additional information? <a href="/about/#contact" class="contribute-link">Contribute to this archive</a> to help make it more accurate and comprehensive.</p>
         </div>
       </div>
       <div class="footer-bottom">
         <p>Last updated: {{ page.date | date: "%B %d, %Y" }}</p>
-        <p class="copyright">© {{ site.time | date: '%Y' }} Crypto Airdrop Archive. All rights reserved.</p>
+        <p class="copyright">
+          <a href="https://github.com/i-shivamsoni/airdroparchivedata">Crypto Airdrop Archives Data</a> © {{ site.time | date: '%Y' }} by <a href="https://github.com/i-shivamsoni">Shivam Soni</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+          <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+        </p>
       </div>
     </div>
   </footer>

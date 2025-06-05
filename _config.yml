@@ -67,3 +67,4 @@ overlay:
   enabled: false  # Set to false to disable the screen size overlay
   min_width: 1400  # Minimum screen width in pixels
   min_height: 900  # Minimum screen height in pixels
+  
