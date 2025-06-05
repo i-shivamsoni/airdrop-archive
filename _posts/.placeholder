@@ -1,7 +1,0 @@
-blockchain-type:
-["rollup"]
-["multi-vm"]
-["zk"]
-["arbitrum-orbit"]
-["zk-rollup"]
-["hybrid-consensus"]
