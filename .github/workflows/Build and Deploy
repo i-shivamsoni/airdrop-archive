@@ -41,6 +41,19 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DATA_REPO_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Clone Data Repository
+        run: |
+          git clone git@github.com:i-shivamsoni/airdroparchivedata.git data-repo
+          cp -r data-repo/* _posts/
+          rm -rf data-repo
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
