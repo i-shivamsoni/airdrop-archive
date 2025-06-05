@@ -82,10 +82,6 @@ jobs:
         run: |
           echo "Starting Jekyll build..."
           bundle exec jekyll build --verbose
-        env:
-          JEKYLL_ENV: "production"
-          JEKYLL_URL: ${{ vars.JEKYLL_URL || "https://airdroparchive.com" }}
-          JEKYLL_BASEURL: ${{ vars.JEKYLL_BASEURL || "" }}
 
       - name: Check build output
         if: failure()
