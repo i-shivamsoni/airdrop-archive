@@ -1,7 +1,8 @@
 # Crypto Airdrop Archive
 
+[![Build and Deploy](https://github.com/i-shivamsoni/airdrop-archive/actions/workflows/BuildandDeploy.yml/badge.svg)](https://github.com/i-shivamsoni/airdrop-archive/actions/workflows/BuildandDeploy.yml)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fairdroparchive.com)](https://airdroparchive.com)
-[![GitHub](https://img.shields.io/github/license/airdroparchive/airdrop-archive)](LICENSE)
+[![GitHub](https://img.shields.io/github/license/i-shivamsoni/airdrop-archive)](LICENSE)
 
 Your One-Stop Destination for Everything About Historical Airdrops
 
@@ -36,7 +37,7 @@ The Crypto Airdrop Archive is a comprehensive database documenting the history o
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/airdroparchive/airdrop-archive.git
+git clone https://github.com/i-shivamsoni/airdrop-archive.git
 cd airdrop-archive
 ```
 
@@ -72,7 +73,7 @@ We gather information from:
 
 - Email: contact@airdroparchive.com
 - Twitter: [@airdrop_archive](https://twitter.com/airdrop_archive)
-- GitHub: [airdroparchive](https://github.com/airdroparchive)
+- GitHub: [i-shivamsoni](https://github.com/i-shivamsoni)
 
 ## License
 
