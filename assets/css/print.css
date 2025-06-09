@@ -1,0 +1,112 @@
+/* Print styles */
+@media print {
+  /* Hide non-essential elements */
+  .sidebar-toggle,
+  .sidebar-overlay,
+  .post-sidebar,
+  .loading-indicator,
+  .error-boundary,
+  .skip-link {
+    display: none !important;
+  }
+
+  /* Reset colors and backgrounds */
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  /* Improve text readability */
+  .post-content {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Ensure links are visible */
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  /* Add URL after links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
+
+  /* Improve table printing */
+  .table-wrapper {
+    overflow: visible !important;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #000;
+    padding: 8px;
+  }
+
+  /* Ensure images print properly */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Avoid breaking inside elements */
+  h1, h2, h3, h4, h5, h6,
+  p, blockquote, ul, ol, dl {
+    page-break-inside: avoid;
+  }
+
+  /* Add page breaks before major sections */
+  h1 {
+    page-break-before: always;
+  }
+
+  h2 {
+    page-break-before: auto;
+  }
+
+  /* Improve footer printing */
+  .post-footer {
+    border-top: 1px solid #000;
+    margin-top: 2em;
+    padding-top: 1em;
+  }
+
+  /* Hide decorative elements */
+  .hero-svg-decor {
+    display: none !important;
+  }
+
+  /* Ensure proper margins */
+  @page {
+    margin: 2cm;
+  }
+
+  /* Improve list printing */
+  ul, ol {
+    margin-left: 1.5em;
+  }
+
+  /* Ensure proper spacing */
+  .post-hero {
+    margin-bottom: 2em;
+  }
+
+  .post-meta-row {
+    margin-bottom: 1em;
+  }
+
+  /* Improve code block printing */
+  pre, code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid #000;
+    background: #fff !important;
+    color: #000 !important;
+  }
+} 

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /_layouts/
+Disallow: /_includes/
+Disallow: /_drafts/
+
+Sitemap: https://airdroparchive.com/sitemap.xml 
