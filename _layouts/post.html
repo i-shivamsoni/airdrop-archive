@@ -57,8 +57,8 @@ layout: default
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "{{ page.title }} Airdrop Eligibility Criteria & Requirements",
-        "description": "Complete guide to {{ page.title }} airdrop eligibility criteria, requirements, and claiming process. Learn how to qualify for the {{ page.title }} airdrop and claim your tokens.",
-        "image": "{{ site.url }} /assets/images/posts/{{ page.title | slugify }} .png",
+        "description": "{{ page.description }}",
+        "image": "{{ site.url }}/assets/images/posts/{{ page.title | slugify }}.png",
         "datePublished": "{{ page.date | date_to_xmlschema }}",
         "dateModified": "{{ page.date | date_to_xmlschema }}",
         "author": {
@@ -71,39 +71,58 @@ layout: default
           "name": "Crypto Airdrop Archive",
           "logo": {
             "@type": "ImageObject",
-            "url": "{{ site.url }} /assets/images/logo.png"
+            "url": "{{ site.url }}/assets/images/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": "{{ page.url | absolute_url }}"
         },
-        "keywords": "{{ page.title }} airdrop eligibility criteria, {{ page.title }} airdrop criteria, {{ page.title }} eligibility requirements, {% if page.ecosystem %}{% for eco in page.ecosystem %}{{ eco }} airdrops, {{ page.title }} {{ eco }} airdrop, {% endfor %}{% endif %}{% if page.category %}{{ page.category | join: ', ' }} , {% endif %}{% if page.tags %}{{ page.tags | join: ', ' }} , {% endif %} crypto airdrop, cryptocurrency, blockchain, {% if page.ticker %} {{ page.ticker | downcase }} {% endif %}",
-      "articleSection": "{% if page.category %} {{ page.category | first }} {% endif %}",
-      "articleBody": {
-        "@type": "WebPage",
-        "mainContent": {
-          "@type": "ItemList",
-          "itemListElement": [{
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Airdrop Details",
-              "description": "{% if page.airdrop_details %}{% for detail in page.airdrop_details %}{{ detail.info }}: {{ detail.details }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}"
-        }, {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Timeline",
-          "description": "{% if page.timeline %}{% for event in page.timeline %}{{ event.name }}: {{ event.date }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}"
-    }, {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Token Distribution",
-      "description": "{% if page.token_distribution %}{% for dist in page.token_distribution %}{{ dist.tier }}: {{ dist.amount }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}"
-}, {
-  "@type": "ListItem",
-  "position": 4,
-  "name": "Eligibility Criteria",
-  "description": "{% if page.eligibility.primary %}{% for req in page.eligibility.primary %}{{ req }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}"}]}},"about": {"@type": "Thing","name": "{{ page.title }}","description": "{{ page.description }}","category": "{% if page.category %} {{ page.category | join: ', ' }} {% endif %}","ecosystem": "{% if page.ecosystem %} {{ page.ecosystem | join: ', ' }} {% endif %}","status": "{% if page.status %} {{ page.status | join: ', ' }} {% endif %}","ticker": "{{ page.ticker }}","website": "{{ page.website }}"},"offers": {"@type": "Offer","availability": "{% if page.status contains 'alive' %} InStock{% else %}OutOfStock{% endif %}","price": "0","priceCurrency": "{{ page.ticker }}"}}
+        "keywords": "{{ page.title }} airdrop, {{ page.title }} eligibility, {% assign eco = page.ecosystem %}{% if eco %}{% if eco.first %}{% for e in eco %}{{ e }} airdrop, {% endfor %}{% else %}{{ eco }} airdrop, {% endif %}{% endif %}{% if page.category %}{{ page.category | join: ', ' }}, {% endif %}{% if page.tags %}{{ page.tags | join: ', ' }}, {% endif %}crypto airdrop, cryptocurrency, blockchain, {% if page.ticker %}{{ page.ticker | downcase }}{% endif %}",
+        "articleSection": "{% if page.category %}{{ page.category | first }}{% endif %}",
+        "articleBody": {
+          "@type": "WebPage",
+          "mainContent": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Airdrop Details",
+                "description": "{% if page.airdrop_details %}{% if page.airdrop_details.first %}{% for detail in page.airdrop_details %}{{ detail.info }}: {{ detail.details }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ page.airdrop_details }}{% endif %}{% else %}See post content for airdrop details.{% endif %}"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Timeline",
+                "description": "{% if page.timeline %}{% if page.timeline.first %}{% for event in page.timeline %}{{ event.name }}: {{ event.date }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ page.timeline }}{% endif %}{% else %}See post content for timeline.{% endif %}"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Token Distribution",
+                "description": "{% if page.token_distribution %}{% if page.token_distribution.first %}{% for dist in page.token_distribution %}{{ dist.tier }}: {{ dist.amount }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ page.token_distribution }}{% endif %}{% else %}See post content for token distribution.{% endif %}"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Eligibility Criteria",
+                "description": "{% if page.eligibility and page.eligibility.primary %}{% if page.eligibility.primary.first %}{% for req in page.eligibility.primary %}{{ req }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ page.eligibility.primary }}{% endif %}{% else %}See post content for eligibility criteria.{% endif %}"
+              }
+            ]
+          }
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "{{ page.title }}",
+          "description": "{{ page.description }}",
+          "category": "{% if page.category %}{% if page.category.first %}{{ page.category | join: ', ' }}{% else %}{{ page.category }}{% endif %}{% endif %}",
+          "ecosystem": "{% assign eco = page.ecosystem %}{% if eco %}{% if eco.first %}{{ eco | join: ', ' }}{% else %}{{ eco }}{% endif %}{% endif %}",
+          "status": "{% if page.status %}{% if page.status.first %}{{ page.status | join: ', ' }}{% else %}{{ page.status }}{% endif %}{% endif %}",
+          "ticker": "{{ page.ticker }}",
+          "website": "{{ page.website }}"
+        }
+      }
     </script>
 
   <!-- FAQ Structured Data -->
@@ -111,32 +130,49 @@ layout: default
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [{
+        "mainEntity": [
+          {
             "@type": "Question",
             "name": "What are the eligibility criteria for {{ page.title }} airdrop?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "{% if page.eligibility.primary %}{% for req in page.eligibility.primary %}{{ req }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}"
-        }
-      }, {
-        "@type": "Question",
-        "name": "How to claim {{ page.title }} airdrop?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "{% if page.eligibility.claim_process %}{% for step in page.eligibility.claim_process %}{{ step }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}"
-    }
-  }, {
-    "@type": "Question",
-    "name": "What are the special conditions for {{ page.title }} airdrop?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "{% if page.eligibility.special_conditions %}{% for condition in page.eligibility.special_conditions %}{{ condition }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}"
-}}, {
-"@type": "Question",
-"name": "What is the token distribution for {{ page.title }} airdrop?",
-"acceptedAnswer": {
-  "@type": "Answer",
-  "text": "{% if page.token_distribution %}{% for dist in page.token_distribution %}{{ dist.tier }}: {{ dist.amount }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}"}}{% if page.faq %}{% for faq in page.faq %}, {"@type": "Question","name": "{{ faq.question }}","acceptedAnswer": {"@type": "Answer","text": "{{ faq.answer }}"}}{% endfor %}{% endif %}]}
+              "text": "{% if page.eligibility and page.eligibility.primary %}{% if page.eligibility.primary.first %}{% for req in page.eligibility.primary %}{{ req }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ page.eligibility.primary }}{% endif %}{% else %}See post content for eligibility criteria.{% endif %}"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to claim {{ page.title }} airdrop?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "{% if page.eligibility and page.eligibility.claim_process %}{% if page.eligibility.claim_process.first %}{% for step in page.eligibility.claim_process %}{{ step }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ page.eligibility.claim_process }}{% endif %}{% else %}See post content for claim process.{% endif %}"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the token distribution for {{ page.title }} airdrop?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "{% if page.token_distribution %}{% if page.token_distribution.first %}{% for dist in page.token_distribution %}{{ dist.tier }}: {{ dist.amount }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ page.token_distribution }}{% endif %}{% else %}See post content for token distribution.{% endif %}"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is the {{ page.title }} airdrop snapshot date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "{% if page.timeline %}{% if page.timeline.first %}{% for event in page.timeline %}{% if event.name contains 'Snapshot' %}{{ event.date }}{% endif %}{% endfor %}{% else %}{% if page.timeline contains 'Snapshot' %}{{ page.timeline }}{% endif %}{% endif %}{% else %}See post content for snapshot date.{% endif %}"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the total airdrop amount for {{ page.title }}?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "{% if page.airdrop_details %}{% if page.airdrop_details.first %}{% for detail in page.airdrop_details %}{% if detail.info contains 'Total Airdrop Amount' %}{{ detail.details }}{% endif %}{% endfor %}{% else %}{% if page.airdrop_details contains 'Total Airdrop Amount' %}{{ page.airdrop_details }}{% endif %}{% endif %}{% else %}See post content for total airdrop amount.{% endif %}"
+            }
+          }
+        ]
+      }
     </script>
   <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
