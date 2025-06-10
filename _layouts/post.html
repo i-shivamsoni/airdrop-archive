@@ -16,7 +16,7 @@ layout: default
   <!-- Primary Meta Tags -->
   <title>{{ page.title }} - Crypto Airdrop Archive</title>
   <meta name="title" content="{{ page.title }} - Crypto Airdrop Archive">
-  <meta name="description" content="{{ page.description }}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Complete guide to {{ page.title }} airdrop eligibility criteria, requirements, and claim process. Find detailed information about token distribution, snapshot dates, and how to participate in the {{ page.title }} airdrop.{% endif %}">
   <meta name="keywords" content="{{ page.title }} airdrop eligibility criteria, {{ page.title }} airdrop criteria, {{ page.title }} eligibility requirements, {% if page.ecosystem %}{% for eco in page.ecosystem %}{{ eco }} airdrops, {{ page.title }} {{ eco }} airdrop, {% endfor %}{% endif %}{% if page.category %}{{ page.category | join: ', ' }}, {% endif %}{% if page.tags %}{{ page.tags | join: ', ' }}, {% endif %}crypto airdrop, cryptocurrency, blockchain, {% if page.ticker %}{{ page.ticker | downcase }}{% endif %}" />
   <meta name="author" content="Crypto Airdrop Archive">
   <meta name="robots" content="index, follow">
