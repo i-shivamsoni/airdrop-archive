@@ -11,11 +11,14 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      debug:
-        description: 'Enable debug output'
+      source:
+        description: 'Source of the trigger'
         required: false
-        default: false
-        type: boolean
+        type: string
+      timestamp:
+        description: 'Timestamp of the trigger'
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -31,6 +34,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Log Trigger Source
+        run: |
+          echo "Workflow triggered by: ${{ github.event.inputs.source || 'Manual trigger from UI' }}"
+          echo "Trigger timestamp: ${{ github.event.inputs.timestamp || 'N/A' }}"
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
