@@ -19,6 +19,9 @@ on:
         description: 'Timestamp of the trigger'
         required: false
         type: string
+  # Handle repository dispatch events
+  repository_dispatch:
+    types: [workflow_dispatch]
 
 permissions:
   contents: read
@@ -36,8 +39,14 @@ jobs:
     steps:
       - name: Log Trigger Source
         run: |
-          echo "Workflow triggered by: ${{ github.event.inputs.source || 'Manual trigger from UI' }}"
-          echo "Trigger timestamp: ${{ github.event.inputs.timestamp || 'N/A' }}"
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "Workflow triggered by repository dispatch"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Workflow triggered by: ${{ github.event.inputs.source || 'Manual trigger from UI' }}"
+            echo "Trigger timestamp: ${{ github.event.inputs.timestamp || 'N/A' }}"
+          else
+            echo "Workflow triggered by push event"
+          fi
 
       - name: Checkout
         uses: actions/checkout@v4
