@@ -219,12 +219,15 @@ layout: default
             {% if page.blockchain-stack %}
               <span class="meta-item"><i class="fas fa-cubes" aria-hidden="true"></i><span>{% for stack in page.blockchain-stack %}{{ stack }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span></span>
             {% endif %}
-            {% if page.ticker %}
-              <span class="meta-item ticker-badge" title="Ticker"><i class="fas fa-coins" aria-hidden="true"></i><span>{{ page.ticker }}</span></span>
+            {% if page.blockchain-type %}
+              <span class="meta-item"><i class="fas fa-link" aria-hidden="true"></i><span>{% for type in page.blockchain-type %}{{ type }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span></span>
+            {% endif %}
+            {% if page.funded-by %}
+              <span class="meta-item"><i class="fas fa-hand-holding-dollar" aria-hidden="true"></i><span>{% for funder in page.funded-by %}{{ funder | replace: "-", " " | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span></span>
             {% endif %}
             {% if page.website %}
               <span class="meta-item website-link" title="Website"><a href="{{ page.website }}" target="_blank" rel="noopener"><i class="fas fa-link" aria-hidden="true"></i><span>Website</span></a></span>
-              {% endif %}
+            {% endif %}
 
             {% if page.author %}
               <span class="meta-item"><i class="fas fa-user" aria-hidden="true"></i><span itemprop="author">{{ page.author }}</span></span>
@@ -232,6 +235,128 @@ layout: default
           </div>
           {% if page.description %}
             <div class="post-description" itemprop="description">{{ page.description }}</div>
+          {% endif %}
+
+          <!-- Token Price and Market Data Card -->
+          {% if page.current_price or page.market_cap or page.market_cap_rank %}
+          <div class="token-data-card">
+            <div class="token-data-header">
+              <div class="header-left">
+                <h3>
+                  <i class="fas fa-chart-line"></i> Token Data 
+                  {% if page.ticker %}
+                  <span class="token-ticker">{{ page.ticker }}</span>
+                  {% endif %}
+                  {% if page.market_cap_rank %}
+                  <span class="rank-info">Marketcap Rank: {{ page.market_cap_rank }}</span>
+                  {% endif %}
+                  {% if page["mis-data-source"] == "coingecko" %}
+                    <span class="data-source">Powered by <a href="https://www.coingecko.com/en/api" target="_blank" rel="noopener noreferrer">CoinGecko API</a></span>
+                  {% elsif page["mis-data-source"] == "manual" and page.manual_source %}
+                    <span class="data-source">Powered by <a href="{{ page.manual_source }}" target="_blank" rel="noopener noreferrer">Source</a></span>
+                  {% endif %}
+                </h3>
+              </div>
+              <div class="header-right">
+                <span class="data-source">
+                  {% if page.mis_data_source == 'coingecko' %}
+                    <i class="fas fa-database"></i> <a href="https://www.coingecko.com/en/api" target="_blank" rel="noopener">CoinGecko API</a>
+                  {% elsif page.mis_data_source == 'manual' %}
+                    <i class="fas fa-database"></i> <a href="{{ page.manual_source }}" target="_blank" rel="noopener">Source</a>
+                  {% endif %}
+                </span>
+                {% if page.last_updated %}
+                <span class="last-updated">
+                  <i class="far fa-clock"></i> {{ page.last_updated | date: "%B %d, %Y %H:%M UTC" }}
+                </span>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="token-data-grid">
+              {% if page.current_price %}
+              <div class="data-item highlight">
+                <span class="data-label"><i class="fas fa-dollar-sign"></i> Current Price</span>
+                <span class="data-value">${{ page.current_price | number_with_delimiter }}</span>
+              </div>
+              {% endif %}
+              
+              {% if page.market_cap %}
+              <div class="data-item highlight">
+                <span class="data-label"><i class="fas fa-chart-pie"></i> Market Cap</span>
+                <span class="data-value">${{ page.market_cap | number_with_delimiter }}</span>
+              </div>
+              {% endif %}
+              
+              {% if page.circulating_supply %}
+              <div class="data-item highlight">
+                <span class="data-label"><i class="fas fa-coins"></i> Circulating Supply</span>
+                <span class="data-value">{{ page.circulating_supply | number_with_delimiter }}</span>
+              </div>
+              {% endif %}
+              
+              {% if page.total_supply %}
+              <div class="data-item">
+                <span class="data-label"><i class="fas fa-coins"></i> Total Supply</span>
+                <span class="data-value">{{ page.total_supply | number_with_delimiter }}</span>
+              </div>
+              {% endif %}
+              
+              {% if page.fully_diluted_valuation %}
+              <div class="data-item">
+                <span class="data-label"><i class="fas fa-calculator"></i> FDV</span>
+                <span class="data-value">${{ page.fully_diluted_valuation | number_with_delimiter }}</span>
+              </div>
+              {% endif %}
+              
+              {% if page.ath %}
+              <div class="data-item">
+                <div class="data-label-row">
+                  <div class="data-label">
+                    <i class="fas fa-arrow-trend-up"></i>
+                    ATH
+                  </div>
+                  {% if page.ath_date %}
+                  <span class="data-date">{{ page.ath_date | date: "%b %d, %Y" }}</span>
+                  {% endif %}
+                </div>
+                <div class="data-value">
+                  ${{ page.ath | default: "N/A" }}
+                  {% if page.ath_change_percentage %}
+                  <span class="change-percentage {% if page.ath_change_percentage > 0 %}positive{% else %}negative{% endif %}">
+                    {{ page.ath_change_percentage | round: 2 }}%
+                  </span>
+                  {% endif %}
+                </div>
+              </div>
+              {% endif %}
+              
+              {% if page.atl %}
+              <div class="data-item">
+                <div class="data-label-row">
+                  <div class="data-label">
+                    <i class="fas fa-arrow-trend-down"></i>
+                    ATL
+                  </div>
+                  {% if page.atl_date %}
+                  <span class="data-date">{{ page.atl_date | date: "%b %d, %Y" }}</span>
+                  {% endif %}
+                </div>
+                <div class="data-value">
+                  ${{ page.atl | default: "N/A" }}
+                  {% if page.atl_change_percentage %}
+                  <span class="change-percentage {% if page.atl_change_percentage > 0 %}positive{% else %}negative{% endif %}">
+                    {{ page.atl_change_percentage | round: 2 }}%
+                  </span>
+                  {% endif %}
+                </div>
+              </div>
+              {% endif %}
+            </div>
+
+
+
+
           {% endif %}
         </div>
         <div class="hero-svg-decor" aria-hidden="true">
