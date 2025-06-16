@@ -52,13 +52,14 @@ main {
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
     padding: 2.5rem 2rem 2rem 2rem;
-    margin-top: var(0); /* Add margin top */
+    margin-top: var(0);
     margin-bottom: var(--spacing);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     position: relative;
     overflow: visible;
+    min-height: 200px; /* Add minimum height */
 }
 .enhanced-hero::before { display: none !important; }
 .hero-content, .post-title, .enhanced-meta-row, .post-description {
@@ -66,11 +67,17 @@ main {
     z-index: 2;
     color: #fff;
 }
+.hero-content {
+    width: 100%; /* Ensure full width */
+    display: flex;
+    flex-direction: column;
+}
 .post-title {
     font-size: 2.25rem;
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
     line-height: 1.2;
+    width: 100%; /* Ensure full width */
 }
 .enhanced-meta-row {
     display: flex;
@@ -83,6 +90,8 @@ main {
     padding: var(--spacing-xs) var(--spacing-sm);
     margin-bottom: var(--spacing-xs);
     border: 1px solid rgba(255,255,255,0.13);
+    min-height: 2.5rem;
+    width: 100%; /* Ensure full width */
 }
 .meta-item {
     display: flex;
@@ -135,6 +144,10 @@ main {
     border: 1px solid rgba(255,255,255,0.13);
     margin-top: var(--spacing-xs);
     font-weight: 500;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure full width */
 }
 .hero-svg-decor {
     display: none;
@@ -701,6 +714,10 @@ html {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.13);
   transition: all 0.3s ease;
+  min-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure full width */
 }
 
 .token-data-card:hover {
