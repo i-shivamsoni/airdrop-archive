@@ -323,7 +323,7 @@ layout: default
                 <div class="data-value">
                   ${{ page.ath | default: "N/A" }}
                   {% if page.ath_change_percentage %}
-                  <span class="change-percentage {% if page.ath_change_percentage > 0 %}positive{% else %}negative{% endif %}">
+                  <span class="change-percentage {% if page.ath_change_percentage | plus: 0 > 0 %}positive{% else %}negative{% endif %}">
                     {{ page.ath_change_percentage | round: 2 }}%
                   </span>
                   {% endif %}
@@ -345,7 +345,7 @@ layout: default
                 <div class="data-value">
                   ${{ page.atl | default: "N/A" }}
                   {% if page.atl_change_percentage %}
-                  <span class="change-percentage {% if page.atl_change_percentage > 0 %}positive{% else %}negative{% endif %}">
+                  <span class="change-percentage {% if page.atl_change_percentage | plus: 0 > 0 %}positive{% else %}negative{% endif %}">
                     {{ page.atl_change_percentage | round: 2 }}%
                   </span>
                   {% endif %}
