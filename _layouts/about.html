@@ -290,7 +290,7 @@ description: Learn about our mission to create the most comprehensive cryptocurr
                             Send Email <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
-                    
+
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fab fa-twitter"></i>
@@ -300,18 +300,18 @@ description: Learn about our mission to create the most comprehensive cryptocurr
                             <p class="contact-value">@airdrparchive</p>
                             <p class="contact-description">Follow us for updates and announcements</p>
                         </div>
-                        <a href="https://twitter.com/airdrparchive" target="_blank" class="contact-link">
+                        <a href="https://twitter.com/" target="_blank" class="contact-link">
                             Follow Us <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
-                    
+
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
                         </div>
                         <div class="contact-info">
                             <h3 class="contact-title">GitHub</h3>
-                            <p class="contact-value">airdrparchive</p>
+                            <p class="contact-value">airdrop_archive</p>
                             <p class="contact-description">Contribute to our open-source project</p>
                         </div>
                         <a href="https://github.com/i-shivamsoni/airdroparchivedata" target="_blank" class="contact-link">
@@ -342,10 +342,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // FAQ Toggle functionality
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        
+
         question.addEventListener('click', () => {
             // Close other items
             faqItems.forEach(otherItem => {
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     otherItem.classList.remove('active');
                 }
             });
-            
+
             // Toggle current item
             item.classList.toggle('active');
         });
