@@ -8,7 +8,7 @@ vision: A world where token distribution mechanisms are transparent, fair, and w
 stats:
   - value: 1000+
     label: Projects Tracked
-  - value: 50+
+  - value: 10+
     label: Research Sources
   - value: 2017
     label: Since
