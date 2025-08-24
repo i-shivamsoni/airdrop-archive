@@ -23,6 +23,9 @@
     {% if page.url contains '/about' %}
     <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
     {% endif %}
+    {% if page.url contains '/contribute' %}
+    <link rel="stylesheet" href="{{ '/assets/css/contribute.css' | relative_url }}">
+    {% endif %}
     {% if page.custom_css %}
         {% for stylesheet in page.custom_css %}
         <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
@@ -93,6 +96,7 @@
                     <li><a href="{{ '/timeline' | relative_url }}" {% if page.url contains '/timeline' %}class="active"{% endif %} aria-current="{% if page.url contains '/timeline' %}page{% endif %}">Timeline</a></li>
                     <li><a href="{{ '/hall-of-fame' | relative_url }}" {% if page.url contains '/hall-of-fame' %}class="active"{% endif %} aria-current="{% if page.url contains '/hall-of-fame' %}page{% endif %}">Hall of Fame</a></li>
                     <li><a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %} aria-current="{% if page.url contains '/about' %}page{% endif %}">About</a></li>
+                    <li><a href="{{ '/contribute' | relative_url }}" {% if page.url contains '/contribute' %}class="active"{% endif %} aria-current="{% if page.url contains '/contribute' %}page{% endif %}">Contribute</a></li>
                 </ul>
             </nav>
 

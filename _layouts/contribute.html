@@ -1,126 +1,472 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - Crypto Airdrop Archive</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/hall-of-fame.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Crypto Airdrop Archive">
-                <span>Crypto Airdrop Archive</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="{{ '/' | relative_url }}">HOME</a></li>
-                    <li><a href="{{ '/learn' | relative_url }}">LEARN</a></li>
-                    <li><a href="{{ '/timeline' | relative_url }}">TIMELINE</a></li>
-                    <li><a href="{{ '/hall-of-fame' | relative_url }}">HALL OF FAME</a></li>
-                    <li><a href="{{ '/about' | relative_url }}">ABOUT</a></li>
-                    <li><a href="{{ '/contribute' | relative_url }}" class="active">CONTRIBUTE</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <section class="hero">
+---
+layout: default
+title: Contribute
+description: Contribute to our comprehensive collection of educational resources about crypto airdrops, from basic concepts to advanced strategies.
+---
+
+<main class="contribute-page">
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="contribute-hero">
+            <div class="contribute-hero-content">
                 <h1>{{ page.title }}</h1>
-                <p>{{ page.description }}</p>
-            </section>
-            <div class="main-content">
-                {{ content }}
-                <section class="nomination-section">
-                    <h2>Nominate an Airdrop for Hall of Fame</h2>
-                    <div class="nomination-intro">
-                        <p>Do you think an airdrop deserves to be in our Hall of Fame? Submit your nomination through our standardized process.</p>
+                <p class="subtitle">{{ page.description }}</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">{{ page.stats.airdrops | default: "500+" }}</span>
+                        <span class="stat-label">Airdrops Archived</span>
                     </div>
-                    <form class="nomination-form">
-                        <div class="form-group">
-                            <label for="project-name">Project Name</label>
-                            <input type="text" id="project-name" placeholder="e.g., Uniswap, dYdX, Optimism">
+                    <div class="stat-item">
+                        <span class="stat-number">{{ page.stats.members | default: "10K+" }}</span>
+                        <span class="stat-label">Community Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">{{ page.stats.contributors | default: "50+" }}</span>
+                        <span class="stat-label">Contributors</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-svg-decor" aria-hidden="true">
+                <!-- Decorative SVG illustration -->
+                <svg viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="contributeGradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#4f46e5"/>
+                            <stop offset="100%" stop-color="#10b981"/>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="170" cy="170" rx="150" ry="120" fill="url(#contributeGradient)" fill-opacity="0.18"/>
+                    <ellipse cx="220" cy="120" rx="60" ry="40" fill="url(#contributeGradient)" fill-opacity="0.12"/>
+                    <ellipse cx="100" cy="220" rx="40" ry="30" fill="url(#contributeGradient)" fill-opacity="0.10"/>
+                    <path d="M60 60 Q170 10 280 60 Q330 170 280 280 Q170 330 60 280 Q10 170 60 60 Z" stroke="url(#contributeGradient)" stroke-width="3" fill="none" opacity="0.18"/>
+                </svg>
+            </div>
+        </section>
+
+        <div class="content-wrapper">
+            <div class="contribute-main-content">
+      
+                
+                <!-- Contribution Options Grid -->
+                <div class="about-section contribute-options-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-hands-helping"></i>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="airdrop-year">Year of Airdrop</label>
-                                <input type="number" id="airdrop-year" placeholder="e.g., 2023" min="2010" max="2025">
+                        <div>
+                            <h2>{{ page.contribution_options.title | default: "Ways to Contribute" }}</h2>
+                            <p class="section-description">{{ page.contribution_options.description | default: "Choose from multiple ways to contribute to our archive and help the crypto community." }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-content">
+                        <div class="contribute-intro">
+                            <p>We welcome contributions from everyone, regardless of your technical background. Choose the option that best fits your skills and interests:</p>
+                        </div>
+                        
+                        <div class="contribute-categories">
+                            <div class="category-tabs">
+                                <button class="category-tab active" data-category="all">
+                                    <i class="fas fa-th-large"></i>
+                                    <span>All Options</span>
+                                </button>
+                                <button class="category-tab" data-category="content">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Content</span>
+                                </button>
+                                <button class="category-tab" data-category="development">
+                                    <i class="fas fa-code"></i>
+                                    <span>Development</span>
+                                </button>
+                                <button class="category-tab" data-category="social">
+                                    <i class="fas fa-share-alt"></i>
+                                    <span>Social</span>
+                                </button>
+                                <button class="category-tab" data-category="financial">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Financial</span>
+                                </button>
                             </div>
-                            <div class="form-group">
-                                <label for="total-value">Estimated Total Value (USD)</label>
-                                <input type="text" id="total-value" placeholder="e.g., 500000000">
+                        </div>
+                        
+                        <div class="options-grid">
+                            {% for option in page.contribution_options.items %}
+                            {% assign categories = option.category | split: ',' %}
+                            <div class="option-card" {% for cat in categories %}data-category="{{ cat | strip }}" {% endfor %}>
+                                <div class="option-header">
+                                    <div class="option-icon">
+                                        <i class="{{ option.icon }}" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="option-content">
+                                    <h3>{{ option.title }}</h3>
+                                    <p>{{ option.description }}</p>
+                                    
+                                    <div class="option-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>No experience required</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-users"></i>
+                                            <span>Community driven</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-star"></i>
+                                            <span>Make a difference</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="option-footer">
+                                    <a href="{{ option.link }}" target="_blank" rel="noopener noreferrer" class="option-btn" aria-label="Learn more about {{ option.title }}">
+                                        <span>{{ option.button_text | default: "Get Started" }}</span>
+                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                    {% if option.site_link %}
+                                    <div class="site-link">
+                                        <a href="{{ option.site_link.url }}" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           class="site-link-btn">
+                                            <i class="{{ option.site_link.icon }}" aria-hidden="true"></i>
+                                            <span>{{ option.site_link.text }}</span>
+                                        </a>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    {% if option.social_share %}
+                                    <div class="social-share">
+                                        <span class="share-label">Share:</span>
+                                        {% for social in option.social_share %}
+                                        <a href="{{ social.link }}" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           class="social-btn {{ social.platform }}"
+                                           aria-label="Share on {{ social.platform | capitalize }}">
+                                            <i class="{{ social.icon }}" aria-hidden="true"></i>
+                                        </a>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                            
+                            <!-- Financial Support Options -->
+                            {% for donation in page.support.items %}
+                            <div class="option-card financial-card" data-category="financial">
+                                <div class="option-header">
+                                    <div class="option-icon financial-icon">
+                                        <i class="{{ donation.icon }}" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="option-content">
+                                    <h3>{{ donation.title }}</h3>
+                                    <p>{{ donation.description }}</p>
+                                    
+                                    {% if donation.address %}
+                                    <div class="donation-address">
+                                        <h4>Donation Address:</h4>
+                                        <div class="address-container">
+                                            <code class="wallet-address" id="address-{{ forloop.index }}">{{ donation.address }}</code>
+                                            <button class="copy-btn" 
+                                                    onclick="copyToClipboard('{{ donation.address }}', 'address-{{ forloop.index }}')"
+                                                    aria-label="Copy {{ donation.title }} address to clipboard">
+                                                <i class="fas fa-copy" aria-hidden="true"></i>
+                                                <span class="copy-text">Copy</span>
+                                            </button>
+                                        </div>
+                                        <div class="copy-feedback" id="copy-feedback-{{ forloop.index }}"></div>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    <div class="option-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Secure transactions</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-users"></i>
+                                            <span>Support development</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-star"></i>
+                                            <span>Help the community</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="option-footer">
+                                    {% if donation.link %}
+                                    <a href="{{ donation.link }}" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="option-btn primary">
+                                        <i class="{{ donation.link_icon }}" aria-hidden="true"></i>
+                                        <span>{{ donation.link_text }}</span>
+                                    </a>
+                                    {% endif %}
+                                    
+                                    {% if donation.site_link %}
+                                    <div class="site-link">
+                                        <a href="{{ donation.site_link.url }}" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           class="site-link-btn">
+                                            <i class="{{ donation.site_link.icon }}" aria-hidden="true"></i>
+                                            <span>{{ donation.site_link.text }}</span>
+                                        </a>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    {% if donation.social_share %}
+                                    <div class="social-share">
+                                        <span class="share-label">Share:</span>
+                                        {% for social in donation.social_share %}
+                                        <a href="{{ social.link }}" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           class="social-btn {{ social.platform }}"
+                                           aria-label="Share on {{ social.platform | capitalize }}">
+                                            <i class="{{ social.icon }}" aria-hidden="true"></i>
+                                        </a>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+                <!-- Community Section -->
+                <div class="about-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h2>{{ page.community.title | default: "Join Our Community" }}</h2>
+                            <p class="section-description">{{ page.community.description | default: "Connect with fellow crypto enthusiasts and stay updated on the latest airdrops and projects." }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-content">
+                        <div class="community-grid">
+                            {% for platform in page.community.platforms %}
+                            <a href="{{ platform.link }}" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="community-card"
+                               data-platform="{{ platform.name | downcase }}">
+                                <div class="platform-icon">
+                                    <i class="{{ platform.icon }}" aria-hidden="true"></i>
+                                </div>
+                                <div class="platform-content">
+                                    <h3>{{ platform.name }}</h3>
+                                    <p>{{ platform.description }}</p>
+                                    {% if platform.member_count %}
+                                    <span class="member-count">
+                                        <i class="fas fa-users" aria-hidden="true"></i>
+                                        {{ platform.member_count }} members
+                                    </span>
+                                    {% endif %}
+                                </div>
+                                <div class="platform-arrow">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="about-section faq-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div>
+                            <h2>Frequently Asked Questions</h2>
+                            <p class="section-description">Common questions about contributing to our archive.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-content">
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-1">
+                                    <h3>How do I submit a new airdrop project?</h3>
+                                    <div class="toggle-icon">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer" id="faq-answer-1">
+                                    <p>You can submit new airdrop projects through our GitHub repository. Fork the repository, create a new markdown file with the project details, and submit a pull request. We'll review and merge valid submissions.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-2">
+                                    <h3>What information should I include when contributing?</h3>
+                                    <div class="toggle-icon">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer" id="faq-answer-2">
+                                    <p>Include project name, description, eligibility criteria, token distribution details, timeline, and any relevant links. The more comprehensive the information, the better it helps our community.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-3">
+                                    <h3>How can I report incorrect information?</h3>
+                                    <div class="toggle-icon">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer" id="faq-answer-3">
+                                    <p>You can report incorrect information by creating an issue on our GitHub repository or contacting us directly. Please provide the correct information and sources when possible.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-4">
+                                    <h3>Can I contribute if I'm not a developer?</h3>
+                                    <div class="toggle-icon">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer" id="faq-answer-4">
+                                    <p>Absolutely! We welcome contributions from everyone. You can help by submitting new airdrop information, reporting bugs, suggesting features, or helping with documentation and community support.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="recipients">Approximate Number of Recipients</label>
-                            <input type="text" id="recipients" placeholder="e.g., 250000">
-                        </div>
-                        <div class="form-group">
-                            <label for="significance">Why is this airdrop significant?</label>
-                            <textarea id="significance" rows="4" placeholder="Describe what makes this airdrop historically significant or innovative..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email (optional)</label>
-                            <input type="email" id="email" placeholder="For follow-up questions (we won't share your email)">
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="submit-btn">Submit Nomination</button>
-                        </div>
-                    </form>
-                </section>
-                <section class="blog-section form-section">
-                    <h2>Submit a Blog or Article</h2>
-                    <form class="blog-form">
-                        <div class="form-group">
-                            <label for="blog-title">Title</label>
-                            <input type="text" id="blog-title" placeholder="e.g., The Evolution of Airdrops">
-                        </div>
-                        <div class="form-group">
-                            <label for="blog-link">Link to the Article</label>
-                            <input type="url" id="blog-link" placeholder="e.g., https://medium.com/...">
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="submit-btn">Submit Article</button>
-                        </div>
-                    </form>
-                </section>
-                <section class="project-addition-section form-section" style="margin-bottom: 2rem;">
-                    <h2>Request a Project Addition to the Airdrop Archive</h2>
-                    <form class="project-addition-form">
-                        <div class="form-group">
-                            <label for="project-add-name">Project Name</label>
-                            <input type="text" id="project-add-name" placeholder="e.g., NewToken">
-                        </div>
-                        <div class="form-group">
-                            <label for="coingecko-link">CoinGecko Link</label>
-                            <input type="url" id="coingecko-link" placeholder="e.g., https://www.coingecko.com/en/coins/newtoken">
-                        </div>
-                        <div class="form-group">
-                            <label for="coinmarketcap-link">CoinMarketCap Link</label>
-                            <input type="url" id="coinmarketcap-link" placeholder="e.g., https://coinmarketcap.com/currencies/newtoken/">
-                        </div>
-                        <div class="form-group">
-                            <label for="announcement-tweet">Announcement Tweet (or Thread)</label>
-                            <input type="url" id="announcement-tweet" placeholder="e.g., https://twitter.com/project/status/1234567890">
-                        </div>
-                        <div class="form-group">
-                            <label for="eligibility-source">Eligibility Criteria / Official Source</label>
-                            <input type="text" id="eligibility-source" placeholder="e.g., https://docs.project.com/airdrop-criteria">
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="submit-btn">Request Addition</button>
-                        </div>
-                    </form>
-                </section>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
-    <script src="/assets/js/hall-of-fame.js"></script>
-</body>
-</html> 
+    </div>
+</main>
+
+<!-- Include contribute page JavaScript -->
+<script src="{{ '/assets/js/contribute.js' | relative_url }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Category filtering functionality
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    const optionCards = document.querySelectorAll('.option-card');
+
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const selectedCategory = tab.getAttribute('data-category');
+            
+            // Update active tab
+            categoryTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Filter cards
+            optionCards.forEach(card => {
+                const cardCategories = [];
+                // Get all data-category attributes for this card
+                for (let i = 0; i < card.attributes.length; i++) {
+                    if (card.attributes[i].name === 'data-category') {
+                        cardCategories.push(card.attributes[i].value);
+                    }
+                }
+                
+                if (selectedCategory === 'all' || cardCategories.includes(selectedCategory)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // FAQ Toggle functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        question.addEventListener('click', () => {
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
+            
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherAnswer.style.display = 'none';
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            question.setAttribute('aria-expanded', !isExpanded);
+            answer.style.display = isExpanded ? 'none' : 'block';
+            item.classList.toggle('active');
+        });
+
+        // Keyboard support
+        question.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                question.click();
+            }
+        });
+    });
+
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.about-section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Copy to clipboard functionality
+    window.copyToClipboard = function(text, elementId) {
+        navigator.clipboard.writeText(text).then(() => {
+            const feedback = document.getElementById('copy-feedback-' + elementId.split('-')[1]);
+            const button = document.querySelector(`[onclick*="${elementId}"]`);
+            const copyText = button.querySelector('.copy-text');
+            
+            if (feedback) {
+                feedback.textContent = 'Copied!';
+                feedback.style.display = 'block';
+                setTimeout(() => {
+                    feedback.style.display = 'none';
+                }, 2000);
+            }
+            
+            if (copyText) {
+                copyText.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyText.textContent = 'Copy';
+                }, 2000);
+            }
+        }).catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+    };
+});
+</script>
